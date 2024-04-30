@@ -1,6 +1,5 @@
 
-<img src="https://github.com/transition-zero/V20/blob/main/data/assets/tz-logo.jpg" alt="TransitionZero logo" width="280" align="right">
-<img src="https://github.com/transition-zero/V20/blob/main/data/assets/v20-logo.png" alt="V20 logo" width="240">
+<img src="https://github.com/transition-zero/V20/blob/main/data/assets/readme-banner.png" alt="" width="280" align="center">
 <br>
 
 # The Vulnerable Twenty (V20)
