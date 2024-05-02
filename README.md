@@ -25,7 +25,7 @@ The data and code provided here was developed by the following modellers/analyst
 # Getting started
 
 ## Setup
-Firstly, clone or download this repository (or an older version). 
+<!-- Firstly, clone or download this repository (or an older version). 
 
 Next, create a project environment using the yaml file in the repository as below.
 
@@ -43,7 +43,7 @@ mamba env update -n GPO --file environment.yml
 conda activate ./env
 ```
 
-Additionally, install a solver for optimisation. We recommend using [Gurobi](https://www.gurobi.com/downloads/), which is free for academic use.
+Additionally, install a solver for optimisation. We recommend using [Gurobi](https://www.gurobi.com/downloads/), which is free for academic use. -->
 
 ## Usage (running a model)
 
