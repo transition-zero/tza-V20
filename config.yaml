@@ -1,0 +1,5 @@
+
+
+# OPTIONS
+include_captive_plants: False
+operating_status: ['committed', 'planned', 'operating']
