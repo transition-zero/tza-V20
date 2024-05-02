@@ -1,0 +1,21 @@
+ADM1_PCODE,ADM1_EN,technology,capacity,unit
+PK1,Azad Kashmir,hydro,3000,MW
+PK2,Balochistan,gas,1215,MW
+PK2,Balochistan,solar,21,MW
+PK2,Balochistan,oil,1292,MW
+PK2,Balochistan,coal,1320,MW
+PK5,Khyber Pakhtunkhwa,hydro,5562,MW
+PK5,Khyber Pakhtunkhwa,solar,34,MW
+PK6,Punjab,biomass,142,MW
+PK6,Punjab,coal,1320,MW
+PK6,Punjab,gas,8599,MW
+PK6,Punjab,hydro,184,MW
+PK6,Punjab,gas,1473.6,MW
+PK6,Punjab,solar,524.5,MW
+PK6,Punjab,nuclear,1330,MW
+PK6,Punjab,coal,120,MW
+PK7,Sindh,gas,2000,MW
+PK7,Sindh,oil,500,MW
+PK7,Sindh,solar,150,MW
+PK7,Sindh,nuclear,2200,MW
+PK7,Sindh,Wind-onshore,1841,MW
