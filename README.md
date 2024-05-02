@@ -1,19 +1,19 @@
 
-<img src="https://github.com/transition-zero/V20/blob/main/data/assets/readme-banner.png" alt="" width="650" align="center">
+<img src="https://github.com/transition-zero/V20/blob/main/data/images/readme-banner.png" alt="" width="650" align="center">
 
 # The Vulnerable Twenty (V20)
 
-TransitionZero has partnered with the [V20 group](https://www.v-20.org/) to produce electricity sector data and modelling for a set of developing countries that are acutely vulnerable to climate change. The outputs of this modelling will be used in Climate Prosperity Plans (CPP) to be published by V20. We have developed customised scenarios based on each country’s CPP and in conjunction with Financial Futures Center (FCC), as well as regional stakeholders.
+TransitionZero has partnered with the [V20 group](https://www.v-20.org/) to produce electricity sector data and modelling for a set of developing countries that are acutely vulnerable to climate change. The outputs of this modelling will be used in [Climate Prosperity Plans (CPP)](https://www.v-20.org/climate-prosperity-plans) to be published by V20. We have developed customised scenarios based on each country’s CPP and in conjunction with [Financial Futures Center (FCC)](https://financialfutures.ngo/), as well as regional stakeholders.
 
 Specifically, we have collated data and developed models for:
 
-- 🇭🇹 Haiti
-- 🇲🇬 Madagascar
-- 🇰🇬 Kyrgyzstan
-- 🇬🇲 The Gambia
-- 🇳🇦 Namibia 
-- 🇬🇦 Gabon
-- 🇵🇰 Pakistan
+- 🇭🇹 [Haiti](https://github.com/transition-zero/V20/blob/main/models/HTI.yaml)
+- 🇲🇬 [Madagascar](https://github.com/transition-zero/V20/blob/main/models/MDG.yaml)
+- 🇰🇬 [Kyrgyzstan](https://github.com/transition-zero/V20/blob/main/models/KGZ.yaml)
+- 🇬🇲 [The Gambia](https://github.com/transition-zero/V20/blob/main/models/GMB.yaml)
+- 🇳🇦 [Namibia](https://github.com/transition-zero/V20/blob/main/models/NAM.yaml) 
+- 🇬🇦 [Gabon](https://github.com/transition-zero/V20/blob/main/models/GAB.yaml)
+- 🇵🇰 [Pakistan](https://github.com/transition-zero/V20/blob/main/models/PAK.yaml)
 
 # Contributors
 The data and code provided here was developed by the following modellers/analysts at TransitionZero:

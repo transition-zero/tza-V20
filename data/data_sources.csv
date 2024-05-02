@@ -1,0 +1,3 @@
+﻿name,type,path,source
+Pakistan admin zones,geospatial,data/geospatial/PAK-admin-zones.geojson,https://data.humdata.org/dataset/cod-ab-pak?
+Pakistan power plants,power plants,data/power-infra-assets/PAK-power-plants.csv,tz-platform
