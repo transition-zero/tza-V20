@@ -19,9 +19,9 @@ technologies:
         description: default generation mode
         output_activity_ratio:
           ELC: 1.0
-        opex_variable: 0.3
         emission_activity_ratio:
           CO2: 0.075
+        opex_variable: "${variable_opex.coal}"
     # load from other yaml files
     residual_capacity: "${residual_capacity.coal}"
     capex: "${capex.coal}"
@@ -44,9 +44,9 @@ technologies:
         description: default generation mode
         output_activity_ratio:
           ELC: 1.0
-        opex_variable: 0.3
         emission_activity_ratio:
           CO2: 0.075
+        opex_variable: "${variable_opex.gas}"
     # load from other yaml files
     residual_capacity: "${residual_capacity.gas}"
     capex: "${capex.gas}"
@@ -78,12 +78,12 @@ technologies:
                 1.
         to_storage: null
         from_storage: null
-        opex_variable: 0.
+        opex_variable: "${variable_opex.solar-pv}"
     # load from other yaml files
     residual_capacity: "${residual_capacity.solar-pv}"
     capex: "${capex.solar-pv}"
     opex_fixed: "${opex_fixed.solar-pv}"
-    capacity_factor: 0.2 #"${capacity_factor.solar-pv}"
+    capacity_factor: "${capacity_factors.solar-pv}"
 
   # -------
   # ONSHORE WIND
@@ -110,18 +110,12 @@ technologies:
                 1.
         to_storage: null
         from_storage: null
-        opex_variable: 0.
+        opex_variable: "${variable_opex.wind-on}"
     # load from other yaml files
     residual_capacity: "${residual_capacity.wind-on}"
     capex: "${capex.wind-on}"
     opex_fixed: "${opex_fixed.wind-on}"
-    capacity_factor: 0.2 #"${capacity_factor.wind-on}"
-
-  # # -------
-  # # OFFSHORE WIND
-  # # -------
-
-  # - id: wind-off
+    capacity_factor: "${capacity_factors.wind-on}"
 
   # -------
   # NUCLEAR
@@ -141,12 +135,12 @@ technologies:
         #   URN: 1.
         output_activity_ratio:
           ELC: 1.
-        opex_variable: 1.5
+        opex_variable: "${variable_opex.nuclear}"
     # load from other yaml files
     residual_capacity: "${residual_capacity.nuclear}"
     capex: "${capex.nuclear}"
     opex_fixed: "${opex_fixed.nuclear}"
-    capacity_factor: 0.2 #"${capacity_factor.nuclear}"
+    capacity_factor: "${capacity_factors.nuclear}"
 
   # -------
   # HYDRO
@@ -169,6 +163,7 @@ technologies:
         #   HYD: 1.
         output_activity_ratio:
           ELC: 1.
+        opex_variable: "${variable_opex.hydro}"
     # load from other yaml files
     residual_capacity: "${residual_capacity.hydro}"
     capex: "${capex.hydro}"

@@ -97,3 +97,47 @@ opex_fixed:
 # -------
 # Variable O&M costs
 # -------
+
+variable_opex:
+  coal:
+    # all regions
+    "*" :
+      # all years
+      "*" :
+        # all timeslices
+        "*" : 0.3
+  gas:
+    # all regions
+    "*" :
+      # all years
+      "*" :
+        # all timeslices
+        "*" : 0.3
+  hydro:
+    # all regions
+    "*" :
+      # all years
+      "*" :
+        # all timeslices
+        "*" : 0
+  nuclear:
+    # all regions
+    "*" :
+      # all years
+      "*" :
+        # all timeslices
+        "*" : 1.5
+  solar-pv:
+    # all regions
+    "*" :
+      # all years
+      "*" :
+        # all timeslices
+        "*" : 0
+  wind-on:
+    # all regions
+    "*" :
+      # all years
+      "*" :
+        # all timeslices
+        "*" : 0

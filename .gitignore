@@ -1,4 +1,5 @@
 .DS_Store
+*.pyc
 
 data/geospatial/*
 data/power-infra-assets/*
