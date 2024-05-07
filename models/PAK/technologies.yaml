@@ -21,7 +21,7 @@ technologies:
           ELC: 1.0
         emission_activity_ratio:
           CO2: 0.075
-        opex_variable: "${variable_opex.coal}"
+        #opex_variable: "${variable_opex.coal}"
     # load from other yaml files
     residual_capacity: "${residual_capacity.coal}"
     capex: "${capex.coal}"
@@ -46,7 +46,7 @@ technologies:
           ELC: 1.0
         emission_activity_ratio:
           CO2: 0.075
-        opex_variable: "${variable_opex.gas}"
+        #opex_variable: "${variable_opex.gas}"
     # load from other yaml files
     residual_capacity: "${residual_capacity.gas}"
     capex: "${capex.gas}"
@@ -78,7 +78,7 @@ technologies:
                 1.
         to_storage: null
         from_storage: null
-        opex_variable: "${variable_opex.solar-pv}"
+        #opex_variable: "${variable_opex.solar-pv}"
     # load from other yaml files
     residual_capacity: "${residual_capacity.solar-pv}"
     capex: "${capex.solar-pv}"
@@ -110,12 +110,12 @@ technologies:
                 1.
         to_storage: null
         from_storage: null
-        opex_variable: "${variable_opex.wind-on}"
+        #opex_variable: "${variable_opex.wind-on}"
     # load from other yaml files
     residual_capacity: "${residual_capacity.wind-on}"
     capex: "${capex.wind-on}"
     opex_fixed: "${opex_fixed.wind-on}"
-    capacity_factor: "${capacity_factors.wind-on}"
+    capacity_factor: 0.2 #"${capacity_factors.wind-on}"
 
   # -------
   # NUCLEAR
@@ -135,7 +135,7 @@ technologies:
         #   URN: 1.
         output_activity_ratio:
           ELC: 1.
-        opex_variable: "${variable_opex.nuclear}"
+        #opex_variable: "${variable_opex.nuclear}"
     # load from other yaml files
     residual_capacity: "${residual_capacity.nuclear}"
     capex: "${capex.nuclear}"
@@ -151,8 +151,6 @@ technologies:
     capacity_activity_unit_ratio: 31.536
     residual_capacity: 0.1
     operating_life: 100
-    capex: "${capex.hydro}"
-    opex_fixed: "${opex_fixed.hydro}"
     include_in_joint_reserve_margin: true
     is_renewable: true
     operating_modes:

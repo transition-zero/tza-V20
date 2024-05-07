@@ -103,41 +103,29 @@ variable_opex:
     # all regions
     "*" :
       # all years
-      "*" :
-        # all timeslices
-        "*" : 0.3
+      "*" : 0.3
   gas:
     # all regions
     "*" :
       # all years
-      "*" :
-        # all timeslices
-        "*" : 0.3
+      "*" : 0.3
   hydro:
     # all regions
     "*" :
       # all years
-      "*" :
-        # all timeslices
-        "*" : 0
+      "*" : 0.
   nuclear:
     # all regions
     "*" :
       # all years
-      "*" :
-        # all timeslices
-        "*" : 1.5
+      "*" : 1.5
   solar-pv:
     # all regions
     "*" :
       # all years
-      "*" :
-        # all timeslices
-        "*" : 0
+      "*" : 0.
   wind-on:
     # all regions
     "*" :
       # all years
-      "*" :
-        # all timeslices
-        "*" : 0
+      "*" : 0.
