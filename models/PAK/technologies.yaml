@@ -1,0 +1,176 @@
+# -------------------
+# TECHNOLOGIES
+# -------------------
+
+technologies:
+
+  # -------
+  # COAL
+  # -------
+
+  - id: coal
+    long_name: Coal-fired power stations
+    capacity_activity_unit_ratio: 30.41667
+    include_in_joint_reserve_margin: true
+    operating_life: 40
+    operating_modes:
+      - id: GEN
+        long_name: generation mode
+        description: default generation mode
+        output_activity_ratio:
+          ELC: 1.0
+        opex_variable: 0.3
+        emission_activity_ratio:
+          CO2: 0.075
+    # load from other yaml files
+    residual_capacity: "${residual_capacity.coal}"
+    capex: "${capex.coal}"
+    opex_fixed: "${opex_fixed.coal}"
+    capacity_factor: "${capacity_factors.coal}"
+
+  # -------
+  # GAS
+  # -------
+
+  - id: gas
+    long_name: Gas-fired power stations
+    capacity_factor: 0.8
+    capacity_activity_unit_ratio: 30.41667
+    include_in_joint_reserve_margin: true
+    operating_life: 40
+    operating_modes:
+      - id: GEN
+        long_name: generation mode
+        description: default generation mode
+        output_activity_ratio:
+          ELC: 1.0
+        opex_variable: 0.3
+        emission_activity_ratio:
+          CO2: 0.075
+    # load from other yaml files
+    residual_capacity: "${residual_capacity.gas}"
+    capex: "${capex.gas}"
+    opex_fixed: "${opex_fixed.gas}"
+    capacity_factor: "${capacity_factors.gas}"
+  
+  # -------
+  # SOLAR PV
+  # -------
+
+  - id: solar-pv
+    long_name: solar photovoltaic
+    description: solar photovoltaic
+    capacity_activity_unit_ratio: 31.536
+    capacity_one_tech_unit: null
+    availability_factor: 1.
+    operating_life: 25
+    is_renewable: true
+    operating_modes:
+      - id: GEN
+        long_name: generation mode
+        description: default generation mode
+        emission_activity_ratio: {"CO2": 0.}
+        input_activity_ratio: null
+        output_activity_ratio:
+          "*":            # all regions
+            ELC:
+              "*":        # all years
+                1.
+        to_storage: null
+        from_storage: null
+        opex_variable: 0.
+    # load from other yaml files
+    residual_capacity: "${residual_capacity.solar-pv}"
+    capex: "${capex.solar-pv}"
+    opex_fixed: "${opex_fixed.solar-pv}"
+    capacity_factor: 0.2 #"${capacity_factor.solar-pv}"
+
+  # -------
+  # ONSHORE WIND
+  # -------
+
+  - id: wind-on
+    long_name: Onshore wind
+    description: Onshore wind
+    capacity_activity_unit_ratio: 31.536
+    capacity_one_tech_unit: null
+    availability_factor: 1.
+    operating_life: 25
+    is_renewable: true
+    operating_modes:
+      - id: GEN
+        long_name: generation mode
+        description: default generation mode
+        emission_activity_ratio: {"CO2": 0.}
+        input_activity_ratio: null
+        output_activity_ratio:
+          "*":            # all regions
+            ELC:
+              "*":        # all years
+                1.
+        to_storage: null
+        from_storage: null
+        opex_variable: 0.
+    # load from other yaml files
+    residual_capacity: "${residual_capacity.wind-on}"
+    capex: "${capex.wind-on}"
+    opex_fixed: "${opex_fixed.wind-on}"
+    capacity_factor: 0.2 #"${capacity_factor.wind-on}"
+
+  # # -------
+  # # OFFSHORE WIND
+  # # -------
+
+  # - id: wind-off
+
+  # -------
+  # NUCLEAR
+  # -------
+
+  - id: nuclear
+    long_name: Nuclear power plant
+    capacity_activity_unit_ratio: 31.536
+    include_in_joint_reserve_margin: true
+    is_renewable: false
+    operating_life: 40
+    operating_modes:
+      - id: GEN
+        long_name: generation mode
+        description: default generation mode
+        # input_activity_ratio:
+        #   URN: 1.
+        output_activity_ratio:
+          ELC: 1.
+        opex_variable: 1.5
+    # load from other yaml files
+    residual_capacity: "${residual_capacity.nuclear}"
+    capex: "${capex.nuclear}"
+    opex_fixed: "${opex_fixed.nuclear}"
+    capacity_factor: 0.2 #"${capacity_factor.nuclear}"
+
+  # -------
+  # HYDRO
+  # -------
+
+  - id: hydro
+    long_name: Hydropower plants
+    capacity_activity_unit_ratio: 31.536
+    residual_capacity: 0.1
+    operating_life: 100
+    capex: "${capex.hydro}"
+    opex_fixed: "${opex_fixed.hydro}"
+    include_in_joint_reserve_margin: true
+    is_renewable: true
+    operating_modes:
+      - id: GEN
+        long_name: generation mode
+        description: default generation mode
+        # input_activity_ratio:
+        #   HYD: 1.
+        output_activity_ratio:
+          ELC: 1.
+    # load from other yaml files
+    residual_capacity: "${residual_capacity.hydro}"
+    capex: "${capex.hydro}"
+    opex_fixed: "${opex_fixed.hydro}"
+    capacity_factor: "${capacity_factors.hydro}"

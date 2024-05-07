@@ -1,0 +1,33 @@
+# -------------------
+# TIME DEFINITION
+# -------------------
+
+time_definition:
+  id: v20_default
+  years: [2020, 2025, 2030]
+  # years: "range(1990,2011)"
+  seasons: [1,2,3]
+  day_types: [1]
+  daily_time_brackets: [1,2]
+  timeslices: ["ID", "IN", "SD", "SN", "WD", "WN"]
+  timeslice_in_season:
+    ID: 1
+    IN: 1
+    SD: 2
+    SN: 2
+    WD: 3
+    WN: 3
+  timeslice_in_daytype:
+    ID: 1
+    IN: 1
+    SD: 1
+    SN: 1
+    WD: 1
+    WN: 1
+  timeslice_in_timebracket:
+    ID: 1
+    IN: 2
+    SD: 1
+    SN: 2
+    WD: 1
+    WN: 2

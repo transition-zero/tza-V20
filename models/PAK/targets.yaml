@@ -1,0 +1,22 @@
+# -------------------
+# TARGETS
+# -------------------
+
+# -------
+# Emissions targets
+# -------
+
+impacts:
+  - id: CO2
+    long_name: equivalent carbon dioxide emissions
+    description: equivalent carbon dioxide emissions
+    exogenous_annual: 0.
+    exogenous_total: null
+    constraint_annual: null
+    constraint_total: null
+
+# -------
+# Other parameters
+# -------
+
+reserve_margin: 1

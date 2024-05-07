@@ -1,0 +1,19 @@
+# -------------------
+# DEFINE REGIONS (NODES)
+# -------------------
+
+regions:
+  - id: PK1
+    long_name: Azad Kashmir
+  - id: PK2
+    long_name: Balochistan
+  - id: PK3
+    long_name: Gilgit Baltistan
+  - id: PK4
+    long_name: Islamabad
+  - id: PK5
+    long_name: Khyber Pakhtunkhwa
+  - id: PK6
+    long_name: Punjab
+  - id: PK7
+    long_name: Sindh

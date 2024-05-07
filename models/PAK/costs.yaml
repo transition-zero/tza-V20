@@ -1,0 +1,99 @@
+# -------------------
+# COSTS
+# -------------------
+
+
+# -------
+# Financial methods
+# -------
+
+depreciation_method: "straight-line"
+discount_rate: 0.05
+
+# -------
+# Capital costs
+# -------
+
+capex:
+  coal:
+    # all regions
+    "*":
+      2020: 1400
+      2025: 1400
+      2030: 1400
+  gas:
+    # all regions
+    "*":
+      2020: 1400
+      2025: 1400
+      2030: 1400
+  hydro:
+    # all regions
+    "*":
+      2020: 1400
+      2025: 1400
+      2030: 1400
+  nuclear:
+    # all regions
+    "*":
+      2020: 2000
+      2025: 2000
+      2030: 2000
+  solar-pv:
+    # all regions
+    "*":
+      2020: 2000
+      2025: 2500
+      2030: 3000
+  wind-on:
+    # all regions
+    "*":
+      2020: 2000
+      2025: 2500
+      2030: 3000
+
+# -------
+# Fixed O&M costs
+# -------
+
+opex_fixed:
+  coal:
+    # all regions
+    "*":
+      2020: 250
+      2025: 250
+      2030: 250
+  gas:
+    # all regions
+    "*":
+      2020: 250
+      2025: 250
+      2030: 250
+  hydro:
+    # all regions
+    "*":
+      2020: 0
+      2025: 0
+      2030: 0
+  nuclear:
+    # all regions
+    "*":
+      2020: 50
+      2025: 50
+      2030: 50
+  solar-pv:
+    # all regions
+    "*":
+      2020: 0
+      2025: 0
+      2030: 0
+  wind-on:
+    # all regions
+    "*":
+      2020: 0
+      2025: 0
+      2030: 0
+  
+# -------
+# Variable O&M costs
+# -------

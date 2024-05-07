@@ -1,0 +1,104 @@
+# -------
+# Capacity factors
+# -------
+
+capacity_factors:
+
+  coal:
+    # all regions
+    "*" :
+      # all years      
+      "*" :
+        # all timeslices    
+        "*" : 0.8
+  
+  gas:
+    # all regions
+    "*" :
+      # all years      
+      "*" :
+        # all timeslices    
+        "*" : 0.8
+  hydro:
+    "*" :
+      "*" :          
+        ID : 0.27
+        IN : 0.27
+        SD : 0.27
+        SN : 0.27
+        WD : 0.27
+        WN : 0.27
+  
+  nuclear:
+    # all regions
+    "*" :
+      # all years      
+      "*" :
+        # all timeslices    
+        "*" : 0.8
+  
+  solar-pv:
+
+    PK1:
+      # all years
+      "*" :
+        ID : 0.27
+        IN : 0.27
+        SD : 0.27
+        SN : 0.27
+        WD : 0.27
+        WN : 0.27
+    PK2:
+      # all years
+      "*" :
+        ID : 0.27
+        IN : 0.27
+        SD : 0.27
+        SN : 0.27
+        WD : 0.27
+        WN : 0.27
+    PK3:
+      # all years
+      "*" :
+        ID : 0.27
+        IN : 0.27
+        SD : 0.27
+        SN : 0.27
+        WD : 0.27
+        WN : 0.27
+    PK4:
+      # all years
+      "*" :
+        ID : 0.27
+        IN : 0.27
+        SD : 0.27
+        SN : 0.27
+        WD : 0.27
+        WN : 0.27
+    PK5:
+      # all years
+      "*" :
+        ID : 0.27
+        IN : 0.27
+        SD : 0.27
+        SN : 0.27
+        WD : 0.27
+        WN : 0.27
+    PK6:
+      # all years
+      "*" :
+        ID : 0.27
+        IN : 0.27
+        SD : 0.27
+        SN : 0.27
+        WD : 0.27
+        WN : 0.27
+    PK7:
+      # all years
+      "*" :
+        ID : 0.27
+        IN : 0.27
+        SD : 0.27
+        SN : 0.27
+        WD : 0.27
+        WN : 0.27
