@@ -7,13 +7,13 @@ TransitionZero has partnered with the [V20 group](https://www.v-20.org/) to prod
 
 Specifically, we have collated data and developed models for:
 
-- 🇭🇹 [Haiti](https://github.com/transition-zero/V20/blob/main/models/HTI.yaml)
-- 🇲🇬 [Madagascar](https://github.com/transition-zero/V20/blob/main/models/MDG.yaml)
-- 🇰🇬 [Kyrgyzstan](https://github.com/transition-zero/V20/blob/main/models/KGZ.yaml)
-- 🇬🇲 [The Gambia](https://github.com/transition-zero/V20/blob/main/models/GMB.yaml)
-- 🇳🇦 [Namibia](https://github.com/transition-zero/V20/blob/main/models/NAM.yaml) 
-- 🇬🇦 [Gabon](https://github.com/transition-zero/V20/blob/main/models/GAB.yaml)
-- 🇵🇰 [Pakistan](https://github.com/transition-zero/V20/blob/main/models/PAK.yaml)
+- 🇭🇹 [Haiti]()
+- 🇲🇬 [Madagascar]()
+- 🇰🇬 [Kyrgyzstan]()
+- 🇬🇲 [The Gambia]()
+- 🇳🇦 [Namibia]() 
+- 🇬🇦 [Gabon]()
+- 🇵🇰 [Pakistan](https://github.com/transition-zero/V20/tree/main/models/PAK)
 
 # Contributors
 The data and code provided here was developed by the following modellers/analysts at TransitionZero:
