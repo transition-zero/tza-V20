@@ -1,6 +1,38 @@
 # -------------------
 # CAPACITIES
+# 
+#   Regions:
+#     - PK1: Azad Kashmir  
+#     - PK2: Balochistan
+#     - PK3: Gilgit Baltistan  
+#     - PK4: Islamabad
+#     - PK5: Khyber Pakhtunkhwa  
+#     - PK6: Punjab
+#     - PK7: Sindh
+#
+#   Technologies:
+#     - coal
+#     - gas
+#     - hydro
+#     - nuclear
+#     - solar-pv
+#     - wind-on
+#
+#   Years:
+#     - 2020
+#     - 2025
+#     - 2030
+#
+#   Time slices:
+#     - ID
+#     - IN
+#     - SD
+#     - SN
+#     - WD
+#     - WN
+#
 # -------------------
+
 
 # -------
 # Residual capacities
@@ -8,11 +40,26 @@
 
 residual_capacity:
 
+  # -------
+  # COAL
+  # -------
+
   coal:
+
+    # ---
+    # Define residual capacity in each region by year
+    # ---
+
     PK2:
       2020: 1320
+      # 2025: 1320
+      # 2030: 1320
     PK6:
       2020: 1440
+
+  # -------
+  # GAS
+  # -------
 
   gas:
     PK2:
@@ -22,6 +69,10 @@ residual_capacity:
     PK7:
       2020: 2000
 
+  # -------
+  # HYDRO
+  # -------
+
   hydro:
     PK1:
       2020: 3000
@@ -30,11 +81,19 @@ residual_capacity:
     PK6:
       2020: 184
 
+  # -------
+  # NUCLEAR
+  # -------
+
   nuclear:
     PK6:
       2020: 1330
     PK7:
       2020: 2200
+
+  # -------
+  # SOLAR-PV
+  # -------
 
   solar-pv:
     PK2:
@@ -45,7 +104,11 @@ residual_capacity:
       2020: 524
     PK7:
       2020: 150
-      
+
+  # -------
+  # ONSHORE WIND
+  # -------
+
   wind-on:
     PK7:
       2020: 1841

@@ -1,8 +1,43 @@
-# -------
-# Capacity factors
-# -------
+# -------------------
+# CAPACITY FACTORS
+# 
+#   Regions:
+#     - PK1: Azad Kashmir  
+#     - PK2: Balochistan
+#     - PK3: Gilgit Baltistan  
+#     - PK4: Islamabad
+#     - PK5: Khyber Pakhtunkhwa  
+#     - PK6: Punjab
+#     - PK7: Sindh
+#
+#   Technologies:
+#     - coal
+#     - gas
+#     - hydro
+#     - nuclear
+#     - solar-pv
+#     - wind-on
+#
+#   Years:
+#     - 2020
+#     - 2025
+#     - 2030
+#
+#   Time slices:
+#     - ID
+#     - IN
+#     - SD
+#     - SN
+#     - WD
+#     - WN
+#
+# -------------------
 
 capacity_factors:
+
+  # -------
+  # COAL
+  # -------
 
   coal:
     # all regions
@@ -12,6 +47,10 @@ capacity_factors:
         # all timeslices    
         "*" : 0.8
   
+  # -------
+  # GAS
+  # -------
+
   gas:
     # all regions
     "*" :
@@ -19,7 +58,11 @@ capacity_factors:
       "*" :
         # all timeslices    
         "*" : 0.8
-        
+  
+  # -------
+  # HYDRO
+  # -------
+
   hydro:
     "*" :
       "*" :          
@@ -30,6 +73,10 @@ capacity_factors:
         WD : 0.27
         WN : 0.27
   
+  # -------
+  # NUCLEAR
+  # -------
+
   nuclear:
     # all regions
     "*" :
@@ -38,26 +85,34 @@ capacity_factors:
         # all timeslices    
         "*" : 0.8
   
+  # -------
+  # SOLAR PV
+  # -------
+  
   solar-pv:
 
+    # ---
+    # Define capacity factor in each region
+    # ---
+
     PK1:
-      # all years
-      "*" :
+      "*" : # all years
         ID : 0.27
         IN : 0.27
         SD : 0.27
         SN : 0.27
         WD : 0.27
         WN : 0.27
+
     PK2:
-      # all years
-      "*" :
+      "*" : # all years
         ID : 0.27
         IN : 0.27
         SD : 0.27
         SN : 0.27
         WD : 0.27
         WN : 0.27
+
     PK3:
       # all years
       "*" :
@@ -67,102 +122,109 @@ capacity_factors:
         SN : 0.27
         WD : 0.27
         WN : 0.27
+
     PK4:
-      # all years
-      "*" :
+      "*" : # all years
         ID : 0.27
         IN : 0.27
         SD : 0.27
         SN : 0.27
         WD : 0.27
         WN : 0.27
+
     PK5:
-      # all years
-      "*" :
+      "*" : # all years
         ID : 0.27
         IN : 0.27
         SD : 0.27
         SN : 0.27
         WD : 0.27
         WN : 0.27
+
     PK6:
-      # all years
-      "*" :
+      "*" : # all years
         ID : 0.27
         IN : 0.27
         SD : 0.27
         SN : 0.27
         WD : 0.27
         WN : 0.27
+
     PK7:
-      # all years
-      "*" :
+      "*" : # all years
         ID : 0.27
         IN : 0.27
         SD : 0.27
         SN : 0.27
         WD : 0.27
         WN : 0.27
+
+  # -------
+  # ONSHORE WIND
+  # -------
 
   wind-on:
 
+    # ---
+    # Define capacity factor in each region
+    # ---
+
     PK1:
-      # all years
-      "*" :
+      "*" : # all years
         ID : 0.27
         IN : 0.27
         SD : 0.27
         SN : 0.27
         WD : 0.27
         WN : 0.27
+
     PK2:
-      # all years
-      "*" :
+      "*" : # all years
         ID : 0.27
         IN : 0.27
         SD : 0.27
         SN : 0.27
         WD : 0.27
         WN : 0.27
+
     PK3:
-      # all years
-      "*" :
+      "*" : # all years
         ID : 0.27
         IN : 0.27
         SD : 0.27
         SN : 0.27
         WD : 0.27
         WN : 0.27
+    
     PK4:
-      # all years
-      "*" :
+      "*" : # all years
         ID : 0.27
         IN : 0.27
         SD : 0.27
         SN : 0.27
         WD : 0.27
         WN : 0.27
+
     PK5:
-      # all years
-      "*" :
+      "*" : # all years
         ID : 0.27
         IN : 0.27
         SD : 0.27
         SN : 0.27
         WD : 0.27
         WN : 0.27
+    
     PK6:
-      # all years
-      "*" :
+      "*" : # all years
         ID : 0.27
         IN : 0.27
         SD : 0.27
         SN : 0.27
         WD : 0.27
         WN : 0.27
+    
     PK7:
-      # all years
-      "*" :
+      "*" : # all years
         ID : 0.27
         IN : 0.27
         SD : 0.27
