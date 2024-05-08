@@ -3,6 +3,7 @@
 
 data/geospatial/*
 data/power-infra-assets/*
-notebooks/*
+
+notebooks/scrap*
 
 tz-osemosys/*
