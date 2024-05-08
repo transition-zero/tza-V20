@@ -33,7 +33,7 @@ def get_centroids(
 
 
 def get_powerplants(
-        file_path: str = '../data/power-infra-assets/PAK-power-plants.csv',
+        file_path: str = '../data/power-plants/PAK-power-plants.csv',
         crs: int = 4326,
 ):
     include_captive_plants = config_data['include_captive_plants']
@@ -60,7 +60,7 @@ def sjoin_powerplants(
         iso_code: str,
 ):
     polygons = get_polygons(file_path = f'../data/geospatial/{iso_code}-admin-zones.geojson')
-    power_plants = get_powerplants(file_path = f'../data/power-infra-assets/{iso_code}-power-plants.csv')
+    power_plants = get_powerplants(file_path = f'../data/power-plants/{iso_code}-power-plants.csv')
     return (
         gpd
         .sjoin(
