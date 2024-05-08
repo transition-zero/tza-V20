@@ -1,14 +1,58 @@
 # -------------------
 # COSTS
+#
+#   Regions:
+#     - PK1: Azad Kashmir  
+#     - PK2: Balochistan
+#     - PK3: Gilgit Baltistan  
+#     - PK4: Islamabad
+#     - PK5: Khyber Pakhtunkhwa  
+#     - PK6: Punjab
+#     - PK7: Sindh
+#
+#   Years:
+#     - 2020
+#     - 2025
+#     - 2030
+#
+#   Time slices:
+#     - ID
+#     - IN
+#     - SD
+#     - SN
+#     - WD
+#     - WN
+#
 # -------------------
-
 
 # -------
 # Financial methods
 # -------
 
 depreciation_method: "straight-line"
-discount_rate: 0.05
+
+# ---
+# social discount rate by region
+discount_rate: 
+  PK1: 0.05
+  PK2: 0.05
+  PK3: 0.05
+  PK4: 0.05
+  PK5: 0.05
+  PK6: 0.05
+  PK7: 0.05
+
+# ---
+# cost of capital by technology
+cost_of_capital:
+  # all regions
+  "*" :
+    coal: 0.1
+    gas: 0.1
+    hydro: 0.1
+    nuclear: 0.1
+    solar-pv: 0.1
+    wind-on: 0.1
 
 # -------
 # Capital costs
