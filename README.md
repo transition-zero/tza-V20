@@ -26,35 +26,45 @@ The data and code provided here was developed by the following modellers/analyst
 # Getting started
 
 ## Setup
-<!-- Firstly, clone or download this repository (or an older version). 
+
+Firstly, clone or download this repository (or an older version). 
 
 Next, create a project environment using the yaml file in the repository as below.
 
 conda:
 
 ```
-conda env create --prefix ./env --file environment.yml
+conda env create --prefix ./env --file environment_v20.yml
 conda activate ./env
 ```
 
 mamba:
 
 ```
-mamba env update -n GPO --file environment.yml
+mamba env update -n V20 --file environment_v20.yml
 conda activate ./env
 ```
 
-Additionally, install a solver for optimisation. We recommend using [Gurobi](https://www.gurobi.com/downloads/), which is free for academic use. -->
+Additionally, install a solver for optimisation. We recommend using [HiGHS](https://highs.dev/), which is free and open source.
 
 ## Usage (running a model)
+You can run a model with just three lines of `python` code. For instance, you can run the Pakistan model as below:
+
+```python
+from tz.osemosys import Model
+model = Model.from_yaml( path/to/pakistan/directory )
+model.solve()
+```
+
+More information can be found in the [example notebook here](https://github.com/transition-zero/V20/blob/main/notebooks/run_model.ipynb).
 
 # Contributing and Support
 
 We strongly welcome anyone interested in contributing to this project. If you have any ideas, suggestions or encounter problems, feel invited to file issues or make pull requests on GitHub.
 
-To discuss ideas for the project, please contact one of the main contributors. 
+To discuss ideas for the project, please contact [@amanmajid](mailto:aman.m@transitionzero.org)
 
-# Relevant outputs
+<!-- # Relevant outputs -->
 
 # Licence
 
