@@ -54,17 +54,39 @@ cost_of_capital:
     solar-pv: 0.1
     wind-on: 0.1
 
+# ---
+# cost of capital for storage technologies
+# cost_of_capital_storage:
+#   # all regions
+#   "*" :
+#     battery: 0.1
+#     hydrogen: 0.1
+
 # -------
 # Capital costs
 # -------
+
+baseline_cost:
+  coal: 1000
+  gas: 900
+  hydro: 1100
+  nuclear: 1400
+  solar-pv: 500
+  wind-on: 550
+
+tech_cost_reduction:
+  coal: 0.02
+  gas: 0.02
+  hydro: 0.02
+  nuclear: 0.02
+  solar-pv: -0.01
+  wind-on: -0.01
 
 capex:
   coal:
     # all regions
     "*":
-      2020: 1400
-      2025: 1400
-      2030: 1400
+      "*" : "{y: y for y in ${time_definition.years}}"
   gas:
     # all regions
     "*":
@@ -173,3 +195,5 @@ variable_opex:
     "*" :
       # all years
       "*" : 0.
+
+# # "{y: ${baseline_cost.coal} * (1+${tech_cost_reduction.coal})**(y-min(${time_definition.years})) for y in ${time_definition.years}}"
