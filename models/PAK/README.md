@@ -4,6 +4,8 @@
 
 # Model structure
 
+<img src="https://github.com/transition-zero/V20/blob/main/data/images/pakistan-res.png" alt="" width="650" align="center">
+
 ## Regions
 
 ID  | Name 
