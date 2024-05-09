@@ -1,233 +1,137 @@
-# -------------------
+# -------------------------------------------------------------------------
 # CAPACITY FACTORS
-# 
-#   Regions:
-#     - PK1: Azad Kashmir  
-#     - PK2: Balochistan
-#     - PK3: Gilgit Baltistan  
-#     - PK4: Islamabad
-#     - PK5: Khyber Pakhtunkhwa  
-#     - PK6: Punjab
-#     - PK7: Sindh
 #
-#   Technologies:
-#     - coal
-#     - gas
-#     - hydro
-#     - nuclear
-#     - solar-pv
-#     - wind-on
+#   Defining technological capacity and availability factors. Here, capacity 
+#     factors are only applied for renewables. For thermal power plants, we
+#     apply an "availability_factor", which accounts for maintenance shutdowns
+#     but we allow the model to choose when to do this. 
 #
-#   Years:
-#     - 2020
-#     - 2025
-#     - 2030
+#     Link to docs: 
+#       https://docs.feo.transitionzero.org/docs/tz-osemosys/technology/
 #
-#   Time slices:
-#     - ID
-#     - IN
-#     - SD
-#     - SN
-#     - WD
-#     - WN
+#     Authors:
+#       - @amanmajid
+#       - @abhishek0208
+#       - @Handriyanti
 #
-# -------------------
+# -------------------------------------------------------------------------
 
-capacity_factors:
 
-  # -------
-  # COAL
-  # -------
+# --------------------------------------------
+#
+#   AVAILABILITY FACTOR
+#     - Applied only to thermal power plants.
+#     - Defined as a normalised quantity between 0 and 1.
+#
+# --------------------------------------------
 
-  coal:
+availability_factor:
+
+  coal-supercritical:
     # all regions
     "*" :
       # all years      
-      "*" :
-        # all timeslices    
-        "*" : 0.8
-  
-  # -------
-  # GAS
-  # -------
+      "*" : 0.9
 
-  gas:
+  gas-ccgt:
     # all regions
     "*" :
       # all years      
-      "*" :
-        # all timeslices    
-        "*" : 0.8
+      "*" : 0.9
   
-  # -------
-  # HYDRO
-  # -------
-
-  hydro:
-    "*" :
-      "*" :          
-        ID : 0.27
-        IN : 0.27
-        SD : 0.27
-        SN : 0.27
-        WD : 0.27
-        WN : 0.27
-  
-  # -------
-  # NUCLEAR
-  # -------
-
   nuclear:
     # all regions
     "*" :
       # all years      
-      "*" :
-        # all timeslices    
-        "*" : 0.8
-  
-  # -------
-  # SOLAR PV
-  # -------
+      "*" : 0.9
+
+# --------------------------------------------
+#
+#   CAPACITY FACTOR
+#     - Applied only to renewable power plants.
+#     - Defined as a normalised quantity between 0 and 1.
+#
+# --------------------------------------------
+
+capacity_factors:
+
+  hydro-reservoir:
+    "*" :
+      "*" :          
+        ID : 0.5
+        IN : 0.5
+        SD : 0.25
+        SN : 0.25
+        WD : 0.75
+        WN : 0.75
   
   solar-pv:
-
-    # ---
     # Define capacity factor in each region
-    # ---
-
     PK1:
       "*" : # all years
-        ID : 0.27
-        IN : 0.27
-        SD : 0.27
-        SN : 0.27
-        WD : 0.27
-        WN : 0.27
-
+        ID : 0.6
+        IN : 0
+        SD : 0.8
+        SN : 0
+        WD : 0.4
+        WN : 0
     PK2:
       "*" : # all years
-        ID : 0.27
-        IN : 0.27
-        SD : 0.27
-        SN : 0.27
-        WD : 0.27
-        WN : 0.27
-
+        ID : 0.6
+        IN : 0
+        SD : 0.8
+        SN : 0
+        WD : 0.4
+        WN : 0
     PK3:
       # all years
       "*" :
-        ID : 0.27
-        IN : 0.27
-        SD : 0.27
-        SN : 0.27
-        WD : 0.27
-        WN : 0.27
-
+        ID : 0.6
+        IN : 0
+        SD : 0.8
+        SN : 0
+        WD : 0.4
+        WN : 0
     PK4:
       "*" : # all years
-        ID : 0.27
-        IN : 0.27
-        SD : 0.27
-        SN : 0.27
-        WD : 0.27
-        WN : 0.27
-
+        ID : 0.6
+        IN : 0
+        SD : 0.8
+        SN : 0
+        WD : 0.4
+        WN : 0
     PK5:
       "*" : # all years
-        ID : 0.27
-        IN : 0.27
-        SD : 0.27
-        SN : 0.27
-        WD : 0.27
-        WN : 0.27
-
+        ID : 0.6
+        IN : 0
+        SD : 0.8
+        SN : 0
+        WD : 0.4
+        WN : 0
     PK6:
       "*" : # all years
-        ID : 0.27
-        IN : 0.27
-        SD : 0.27
-        SN : 0.27
-        WD : 0.27
-        WN : 0.27
-
+        ID : 0.6
+        IN : 0
+        SD : 0.8
+        SN : 0
+        WD : 0.4
+        WN : 0
     PK7:
       "*" : # all years
-        ID : 0.27
-        IN : 0.27
-        SD : 0.27
-        SN : 0.27
-        WD : 0.27
-        WN : 0.27
+        ID : 0.6
+        IN : 0
+        SD : 0.8
+        SN : 0
+        WD : 0.4
+        WN : 0
 
-  # -------
-  # ONSHORE WIND
-  # -------
-
-  wind-on:
-
-    # ---
-    # Define capacity factor in each region
-    # ---
-
-    PK1:
+  wind-onshore:
+    # all regions
+    "*":
       "*" : # all years
         ID : 0.27
         IN : 0.27
-        SD : 0.27
-        SN : 0.27
-        WD : 0.27
-        WN : 0.27
-
-    PK2:
-      "*" : # all years
-        ID : 0.27
-        IN : 0.27
-        SD : 0.27
-        SN : 0.27
-        WD : 0.27
-        WN : 0.27
-
-    PK3:
-      "*" : # all years
-        ID : 0.27
-        IN : 0.27
-        SD : 0.27
-        SN : 0.27
-        WD : 0.27
-        WN : 0.27
-    
-    PK4:
-      "*" : # all years
-        ID : 0.27
-        IN : 0.27
-        SD : 0.27
-        SN : 0.27
-        WD : 0.27
-        WN : 0.27
-
-    PK5:
-      "*" : # all years
-        ID : 0.27
-        IN : 0.27
-        SD : 0.27
-        SN : 0.27
-        WD : 0.27
-        WN : 0.27
-    
-    PK6:
-      "*" : # all years
-        ID : 0.27
-        IN : 0.27
-        SD : 0.27
-        SN : 0.27
-        WD : 0.27
-        WN : 0.27
-    
-    PK7:
-      "*" : # all years
-        ID : 0.27
-        IN : 0.27
-        SD : 0.27
-        SN : 0.27
+        SD : 0.40
+        SN : 0.40
         WD : 0.27
         WN : 0.27
