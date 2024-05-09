@@ -1,37 +1,22 @@
-# -------------------
-# CAPACITIES
-# 
-#   Regions:
-#     - PK1: Azad Kashmir  
-#     - PK2: Balochistan
-#     - PK3: Gilgit Baltistan  
-#     - PK4: Islamabad
-#     - PK5: Khyber Pakhtunkhwa  
-#     - PK6: Punjab
-#     - PK7: Sindh
+# -------------------------------------------------------------------------
 #
-#   Technologies:
-#     - coal
-#     - gas
-#     - hydro
-#     - nuclear
-#     - solar-pv
-#     - wind-on
+#   CAPACITIES
+#   
+#     Define capacity attributes for each technology in each region.
 #
-#   Years:
-#     - 2020
-#     - 2025
-#     - 2030
+#     There are two capacity components here:
+#       - Residual capacities
+#       - Residual capacity of storages
 #
-#   Time slices:
-#     - ID
-#     - IN
-#     - SD
-#     - SN
-#     - WD
-#     - WN
+#     Link to docs: 
+#       - https://docs.feo.transitionzero.org/docs/tz-osemosys/technology/
 #
-# -------------------
+#     Authors:
+#       - @amanmajid
+#       - @abhishek0208
+#       - @Handriyanti
+#
+# -------------------------------------------------------------------------
 
 
 # -------
@@ -40,75 +25,75 @@
 
 residual_capacity:
 
-  # -------
-  # COAL
-  # -------
-
-  coal:
-
-    # ---
-    # Define residual capacity in each region by year
-    # ---
-
+  coal-supercritical:
     PK2:
-      2020: 1320
-      # 2025: 1320
-      # 2030: 1320
+      2024: 1320
     PK6:
-      2020: 1440
+      2024: 1440
 
-  # -------
-  # GAS
-  # -------
 
-  gas:
+  gas-ccgt:
     PK2:
-      2020: 1215
+      2024: 1215
     PK6:
-      2020: 10073
+      2024: 10073
     PK7:
-      2020: 2000
+      2024: 2000
 
-  # -------
-  # HYDRO
-  # -------
 
-  hydro:
+  hydro-reservoir:
     PK1:
-      2020: 3000
+      2024: 3000
     PK5:
-      2020: 5562
+      2024: 0
     PK6:
-      2020: 184
+      2024: 184
 
-  # -------
-  # NUCLEAR
-  # -------
 
   nuclear:
     PK6:
-      2020: 1330
+      2024: 1330
     PK7:
-      2020: 2200
+      2024: 2200
 
-  # -------
-  # SOLAR-PV
-  # -------
 
   solar-pv:
     PK2:
-      2020: 21
+      2024: 21
     PK5:
-      2020: 34
+      2024: 0
     PK6:
-      2020: 524
+      2024: 99999
     PK7:
-      2020: 150
+      2024: 150
 
-  # -------
-  # ONSHORE WIND
-  # -------
 
-  wind-on:
+  wind-onshore:
     PK7:
-      2020: 1841
+      2024: 1841
+  
+  transmission:
+    # all regions
+    "*" :
+      # all years
+      "*" : 9999
+
+
+  # battery:
+  #   PK6:
+  #     2024: 9999
+
+
+# # -------
+# # Residual capacity storage
+# # -------
+
+# residual_capacity_storage:
+
+#   # -------
+#   # GRID STORAGE
+#   # -------
+
+#   grid-level-battery-storage:
+#     PK6:
+#       2024: 9999
