@@ -15,7 +15,7 @@
 regions:
 
   - id: HTI
-    long_name: Gambia
-    description: A node representing the whole of Gambia.
+    long_name: Haiti
+    description: A node representing the whole of Haiti.
 
 # -------------------------------------------------------------------------  

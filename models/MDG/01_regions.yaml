@@ -4,18 +4,18 @@
 #   
 #     Define each spatial domain in the model.
 #
-#     Our Madagascar model is single-node, meaning it is a national-level model.
-#
 #     Link to docs: 
 #       - https://docs.feo.transitionzero.org/docs/tz-osemosys/technology/
 #
 #     Authors:
-#       - @amanmajid
-#       - @abhishek0208
-#       - @Handriyanti
+#       - xx
 #
 # -------------------------------------------------------------------------
 
 regions:
+
   - id: MDG
     long_name: Madagascar
+    description: A node representing the whole of Madagascar.
+
+# -------------------------------------------------------------------------  
