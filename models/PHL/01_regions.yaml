@@ -4,32 +4,30 @@
 #   
 #     Define each spatial domain in the model.
 #
-#     Our Philippines model has 3 regions based on the main islands of the country:
-#       - Luzon
-#       - Visayas
-#       - Mindanao
-#
 #     Link to docs: 
 #       - https://docs.feo.transitionzero.org/docs/tz-osemosys/technology/
 #
 #     Authors:
-#       - @amanmajid
-#       - @abhishek0208
-#       - @Handriyanti
+#       - xx
 #
 # -------------------------------------------------------------------------
+# START
 
 regions:
 
   - id: PHL-LU
     long_name: Philippines - Luzon
-    description: Luzon sits at the northern end of the Philippines, and is the largest and most populous island.
+    description: Northernmost island of the three main islands of the Philippines.
     # trade_routes: {PHL-VI: {"gas": {"*": True}}, PHL-MI: {"gas": {"*": True}}}
 
   - id: PHL-VI
     long_name: Philippines - Visayas
-    description: Visayas is one of the 3 main island groups in the Philippines, located centrally between Luzon and Mindanao.
+    description: Central island of the three main islands of the Philippines.
 
   - id: PHL-MI
     long_name: Philippines - Mindanao
-    description: Mindanao encompasses the large island of Mindanao plus smaller islands in the southern Philippines.
+    description: Southernmost island of the three main islands of the Philippines.
+
+
+# END
+# -------------------------------------------------------------------------  

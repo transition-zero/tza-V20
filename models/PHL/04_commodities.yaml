@@ -9,37 +9,64 @@
 #       https://docs.feo.transitionzero.org/docs/tz-osemosys/commodity/
 #
 #     Authors:
-#       - @amanmajid
-#       - @abhishek0208
-#       - @Handriyanti
+#       - xx
 #
 # -------------------------------------------------------------------------
 
 commodities:
 
-  - id: coal
-    long_name: Coal resource
+
+  - id: coal-brown
+    long_name: Brown coal
     is_renewable: false
-    
+
+  - id: coal-hard
+    long_name: Hard coal
+    is_renewable: false  
+
+  - id: gas-liquefied
+    long_name: Liquefied gas
+    is_renewable: false
+
   - id: gas
-    long_name: Natural gas resource
+    long_name: Aggregated gas commodity (both domestic and import)
     is_renewable: false
+
+  - id: oil-fuel-oil
+    long_name: Fuel oil used in power plants
+    is_renewable: false  
+
+  - id: oil-diesel
+    long_name: Diesel 
+    is_renewable: false  
 
   - id: solar
     long_name: Solar resource
-    is_renewable: true
+    is_renewable: false
+  
+  - id: wind-onshore
+    long_name: Wind onshore resource
+    is_renewable: false
 
-  - id: wind
-    long_name: Wind resource
-    is_renewable: true
+  - id: wind-offshore
+    long_name: Wind offshore resource
+    is_renewable: false
+
+  - id: hydro 
+    long_name: Hydro resource
+    is_renewable: false
 
   - id: uranium
     long_name: Uranium resource
     is_renewable: false
 
-  - id: river
-    long_name: River resource
-    is_renewable: true
+  - id: geothermal
+    long_name: Geothermal resource
+    is_renewable: false
+
+  - id: bioenergy
+    long_name: Bioenergy resource
+    is_renewable: false
 
   - id: primary-electricity
     long_name: Primary electricity
@@ -138,7 +165,7 @@ commodities:
         2048: 236.12
         2049: 244.26
         2050: 252.43
-
+        
     # specify demand profile for each region
     demand_profile:
       # all regions

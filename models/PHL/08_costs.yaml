@@ -51,6 +51,18 @@ discount_rate:
 # Capital costs
 # --------------
 
+# capex_base_costs:
+#   coal-supercritical: 1503.2
+  # coal-subcritical: 1852
+  # solar-pv: 930
+  # wind-onshore: 1547
+
+# capex_cagr:
+  # coal-supercritical: 0.0190
+  # coal-subcritical: 0.0192
+  # solar-pv: 0.0198
+  # wind-onshore: 0.0197
+
 capex:
   coal-supercritical:
     # all regions
@@ -62,6 +74,20 @@ capex:
       "*": 1503
     PHL-VI: 
       "*": 1503
+    # IDN-JW: 
+    #   "*": 1488
+    # IDN-SU: 
+    #   "*": 1488
+    # IDN-KA: 
+    #   "*": 1488
+    # IDN-NU: 
+    #   "*": 1488
+    # IDN-SL: 
+    #   "*": 1488
+    # IDN-ML: 
+    #   "*": 1488
+    # IDN-PP: 
+    #   "*": 1488
   coal-subcritical:
     PHL-LU:
       "*": 1852
@@ -69,6 +95,20 @@ capex:
       "*": 1852
     PHL-VI: 
       "*": 1852
+    # IDN-JW: 
+    #   "*": 1748
+    # IDN-SU: 
+    #   "*": 1748
+    # IDN-KA: 
+    #   "*": 1748
+    # IDN-NU: 
+    #   "*": 1748
+    # IDN-SL: 
+    #   "*": 1748
+    # IDN-ML: 
+    #   "*": 1748
+    # IDN-PP: 
+    #   "*": 1748
   coal-ultrasupercritical:
     PHL-LU:
       "*": 1609
@@ -76,6 +116,20 @@ capex:
       "*": 1609
     PHL-VI: 
       "*": 1609
+    # IDN-JW: 
+    #   "*": 1652
+    # IDN-SU: 
+    #   "*": 1652
+    # IDN-KA: 
+    #   "*": 1652
+    # IDN-NU: 
+    #   "*": 1652
+    # IDN-SL: 
+    #   "*": 1652
+    # IDN-ML: 
+    #   "*": 1652
+    # IDN-PP: 
+    #   "*": 1652
   gas-CCGT:    
     PHL-LU:
       "*": 1014
@@ -83,6 +137,20 @@ capex:
       "*": 1014
     PHL-VI: 
       "*": 1014
+    # IDN-JW: 
+    #   "*": 907
+    # IDN-SU: 
+    #   "*": 907
+    # IDN-KA: 
+    #   "*": 907
+    # IDN-NU: 
+    #   "*": 907
+    # IDN-SL: 
+    #   "*": 907
+    # IDN-ML: 
+    #   "*": 907
+    # IDN-PP: 
+    #   "*": 907  
   gas-OCGT:
     PHL-LU:
       "*": 1042
@@ -90,20 +158,62 @@ capex:
       "*": 1042
     PHL-VI: 
       "*": 1042
+    # IDN-JW: 
+    #   "*": 838
+    # IDN-SU: 
+    #   "*": 838
+    # IDN-KA: 
+    #   "*": 838
+    # IDN-NU: 
+    #   "*": 838
+    # IDN-SL: 
+    #   "*": 838
+    # IDN-ML: 
+    #   "*": 838
+    # IDN-PP: 
+    #   "*": 838 
   oil-internal-combustion-engine:
     PHL-LU:
       "*": 736
     PHL-MI: 
       "*": 736
     PHL-VI: 
-      "*": 736        
+      "*": 736
+    # IDN-JW: 
+    #   "*": 848
+    # IDN-SU: 
+    #   "*": 848
+    # IDN-KA: 
+    #   "*": 848
+    # IDN-NU: 
+    #   "*": 848
+    # IDN-SL: 
+    #   "*": 848
+    # IDN-ML: 
+    #   "*": 848
+    # IDN-PP: 
+    #   "*": 848         
   solar-pv: 
     PHL-LU:
       "*": 893
     PHL-MI: 
       "*": 893
     PHL-VI: 
-      "*": 893 
+      "*": 893
+    # IDN-JW: 
+    #   "*": 930
+    # IDN-SU: 
+    #   "*": 930
+    # IDN-KA: 
+    #   "*": 930
+    # IDN-NU: 
+    #   "*": 930
+    # IDN-SL: 
+    #   "*": 930
+    # IDN-ML: 
+    #   "*": 930
+    # IDN-PP: 
+    #   "*": 930  
   windonshore-power:
     PHL-LU:
       "*": 1547
@@ -111,6 +221,20 @@ capex:
       "*": 1547
     PHL-VI: 
       "*": 1547
+    # IDN-JW: 
+    #   "*": 1534
+    # IDN-SU: 
+    #   "*": 1534
+    # IDN-KA: 
+    #   "*": 1534
+    # IDN-NU: 
+    #   "*": 1534
+    # IDN-SL: 
+    #   "*": 1534
+    # IDN-ML: 
+    #   "*": 1534
+    # IDN-PP: 
+    #   "*": 1534
   windoffshore-power:
     PHL-LU:
       "*": 3544
@@ -118,6 +242,20 @@ capex:
       "*": 3544
     PHL-VI: 
       "*": 3544
+    # IDN-JW: 
+    #   "*": 3813
+    # IDN-SU: 
+    #   "*": 3813
+    # IDN-KA: 
+    #   "*": 3813
+    # IDN-NU: 
+    #   "*": 3813
+    # IDN-SL: 
+    #   "*": 3813
+    # IDN-ML: 
+    #   "*": 3813
+    # IDN-PP: 
+    #   "*": 3813
   hydropower: # using hydro-large value
     PHL-LU:
       "*": 1803
@@ -125,6 +263,20 @@ capex:
       "*": 1803
     PHL-VI: 
       "*": 1803
+    # IDN-JW: 
+    #   "*": 2046
+    # IDN-SU: 
+    #   "*": 2046
+    # IDN-KA: 
+    #   "*": 2046
+    # IDN-NU: 
+    #   "*": 2046
+    # IDN-SL: 
+    #   "*": 2046
+    # IDN-ML: 
+    #   "*": 2046
+    # IDN-PP: 
+    #   "*": 2046
   geo-power: # using geothermal binary value
     PHL-LU:
       "*": 5001
@@ -132,6 +284,20 @@ capex:
       "*": 5001
     PHL-VI: 
       "*": 5001
+    # IDN-JW: 
+    #   "*": 5115
+    # IDN-SU: 
+    #   "*": 5115
+    # IDN-KA: 
+    #   "*": 5115
+    # IDN-NU: 
+    #   "*": 5115
+    # IDN-SL: 
+    #   "*": 5115
+    # IDN-ML: 
+    #   "*": 5115
+    # IDN-PP: 
+    #   "*": 5115
   bioenergy-power: # using biomass small value
     PHL-LU:
       "*": 1996
@@ -139,6 +305,20 @@ capex:
       "*": 1996
     PHL-VI: 
       "*": 1996
+    # IDN-JW: 
+    #   "*": 2120
+    # IDN-SU: 
+    #   "*": 2120
+    # IDN-KA: 
+    #   "*": 2120
+    # IDN-NU: 
+    #   "*": 2120
+    # IDN-SL: 
+    #   "*": 2120
+    # IDN-ML: 
+    #   "*": 2120
+    # IDN-PP: 
+    #   "*": 2120 
   nuclear-power: # using SMR value
     PHL-LU:
       "*": 9456
@@ -146,6 +326,20 @@ capex:
       "*": 9456
     PHL-VI: 
       "*": 9456
+    # IDN-JW: 
+    #   "*": 8928
+    # IDN-SU: 
+    #   "*": 8928
+    # IDN-KA: 
+    #   "*": 8928
+    # IDN-NU: 
+    #   "*": 8928
+    # IDN-SL: 
+    #   "*": 8928
+    # IDN-ML: 
+    #   "*": 8928
+    # IDN-PP: 
+    #   "*": 8928
   regasification-floating:
     "*" :
       "*": 1.700117
@@ -158,6 +352,18 @@ capex:
 # Fixed O&M costs
 # ----------------
 
+# opex_base_cost:
+#   coal-supercritical: 42.447
+#   # coal-subcritical: 50.826
+#   solar-pv: 11.637
+#   # wind-onshore: 40.440
+
+# opex_cagr:
+#   coal-supercritical: -0.023
+#   # coal-subcritical: -0.023
+#   solar-pv: -0.024
+#   # wind-onshore: -0.024
+
 opex_fixed:
   coal-supercritical:
     # all regions
@@ -169,6 +375,20 @@ opex_fixed:
       "*": 42.4
     PHL-VI: 
       "*": 42.4
+    # IDN-JW: 
+    #   "*": 43.7
+    # IDN-SU: 
+    #   "*": 43.7
+    # IDN-KA: 
+    #   "*": 43.7
+    # IDN-NU: 
+    #   "*": 43.7
+    # IDN-SL: 
+    #   "*": 43.7
+    # IDN-ML: 
+    #   "*": 43.7
+    # IDN-PP: 
+    #   "*": 43.7
   coal-subcritical:
     PHL-LU:
       "*": 50.8
@@ -176,6 +396,20 @@ opex_fixed:
       "*": 50.8
     PHL-VI: 
       "*": 50.8
+    # IDN-JW: 
+    #   "*": 48.0
+    # IDN-SU: 
+    #   "*": 48.0
+    # IDN-KA: 
+    #   "*": 48.0
+    # IDN-NU: 
+    #   "*": 48.0
+    # IDN-SL: 
+    #   "*": 48.0
+    # IDN-ML: 
+    #   "*": 48.0
+    # IDN-PP: 
+    #   "*": 48.0
   coal-ultrasupercritical:
     PHL-LU:
       "*": 61.8
@@ -183,6 +417,20 @@ opex_fixed:
       "*": 61.8
     PHL-VI: 
       "*": 61.8
+    # IDN-JW: 
+    #   "*": 60.0
+    # IDN-SU: 
+    #   "*": 60.0
+    # IDN-KA: 
+    #   "*": 60.0
+    # IDN-NU: 
+    #   "*": 60.0
+    # IDN-SL: 
+    #   "*": 60.0
+    # IDN-ML: 
+    #   "*": 60.0
+    # IDN-PP: 
+    #   "*": 60.0
   gas-CCGT:    
     PHL-LU:
       "*": 27.7
@@ -190,27 +438,83 @@ opex_fixed:
       "*": 27.7
     PHL-VI: 
       "*": 27.7
+    # IDN-JW: 
+    #   "*": 24.9
+    # IDN-SU: 
+    #   "*": 24.9
+    # IDN-KA: 
+    #   "*": 24.9
+    # IDN-NU: 
+    #   "*": 24.9
+    # IDN-SL: 
+    #   "*": 24.9
+    # IDN-ML: 
+    #   "*": 24.9
+    # IDN-PP: 
+    #   "*": 24.9 
   gas-OCGT:
     PHL-LU:
       "*": 24.8
     PHL-MI: 
       "*": 24.8
     PHL-VI: 
-      "*": 24.8 
+      "*": 24.8
+    # IDN-JW: 
+    #   "*": 24.6
+    # IDN-SU: 
+    #   "*": 24.6
+    # IDN-KA: 
+    #   "*": 24.6
+    # IDN-NU: 
+    #   "*": 24.6
+    # IDN-SL: 
+    #   "*": 24.6
+    # IDN-ML: 
+    #   "*": 24.6
+    # IDN-PP: 
+    #   "*": 24.6 
   oil-internal-combustion-engine:
     PHL-LU:
       "*": 9.4
     PHL-MI: 
       "*": 9.4
     PHL-VI: 
-      "*": 9.4        
+      "*": 9.4
+    # IDN-JW: 
+    #   "*": 8.4
+    # IDN-SU: 
+    #   "*": 8.4
+    # IDN-KA: 
+    #   "*": 8.4
+    # IDN-NU: 
+    #   "*": 8.4
+    # IDN-SL: 
+    #   "*": 8.4
+    # IDN-ML: 
+    #   "*": 8.4
+    # IDN-PP: 
+    #   "*": 8.4         
   solar-pv: 
     PHL-LU:
       "*": 11.5
     PHL-MI: 
       "*": 11.5
     PHL-VI: 
-      "*": 11.5 
+      "*": 11.5
+    # IDN-JW: 
+    #   "*": 6.9
+    # IDN-SU: 
+    #   "*": 6.9
+    # IDN-KA: 
+    #   "*": 6.9
+    # IDN-NU: 
+    #   "*": 6.9
+    # IDN-SL: 
+    #   "*": 6.9
+    # IDN-ML: 
+    #   "*": 6.9
+    # IDN-PP: 
+    #   "*": 6.9  
   windonshore-power:
     PHL-LU:
       "*": 40.4
@@ -218,6 +522,20 @@ opex_fixed:
       "*": 40.4
     PHL-VI: 
       "*": 40.4
+    # IDN-JW: 
+    #   "*": 37.2
+    # IDN-SU: 
+    #   "*": 37.2
+    # IDN-KA: 
+    #   "*": 37.2
+    # IDN-NU: 
+    #   "*": 37.2
+    # IDN-SL: 
+    #   "*": 37.2
+    # IDN-ML: 
+    #   "*": 37.2
+    # IDN-PP: 
+    #   "*": 37.2
   windoffshore-power:
     PHL-LU:
       "*": 91.6
@@ -225,6 +543,20 @@ opex_fixed:
       "*": 91.6
     PHL-VI: 
       "*": 91.6
+    # IDN-JW: 
+    #   "*": 110.4
+    # IDN-SU: 
+    #   "*": 110.4
+    # IDN-KA: 
+    #   "*": 110.4
+    # IDN-NU: 
+    #   "*": 110.4
+    # IDN-SL: 
+    #   "*": 110.4
+    # IDN-ML: 
+    #   "*": 110.4
+    # IDN-PP: 
+    #   "*": 110.4
   hydropower: # using hydro-large value
     PHL-LU:
       "*": 39.6
@@ -232,6 +564,20 @@ opex_fixed:
       "*": 39.6
     PHL-VI: 
       "*": 39.6
+    # IDN-JW: 
+    #   "*": 40.0
+    # IDN-SU: 
+    #   "*": 40.0
+    # IDN-KA: 
+    #   "*": 40.0
+    # IDN-NU: 
+    #   "*": 40.0
+    # IDN-SL: 
+    #   "*": 40.0
+    # IDN-ML: 
+    #   "*": 40.0
+    # IDN-PP: 
+    #   "*": 40.0
   geo-power: # using geothermal binary value
     PHL-LU:
       "*": 78.2
@@ -239,6 +585,20 @@ opex_fixed:
       "*": 78.2
     PHL-VI: 
       "*": 78.2
+    # IDN-JW: 
+    #   "*": 134.8
+    # IDN-SU: 
+    #   "*": 134.8
+    # IDN-KA: 
+    #   "*": 134.8
+    # IDN-NU: 
+    #   "*": 134.8
+    # IDN-SL: 
+    #   "*": 134.8
+    # IDN-ML: 
+    #   "*": 134.8
+    # IDN-PP: 
+    #   "*": 134.8
   bioenergy-power: # using biomass small value
     PHL-LU:
       "*": 50.8
@@ -246,6 +606,20 @@ opex_fixed:
       "*": 50.8
     PHL-VI: 
       "*": 50.8
+    # IDN-JW: 
+    #   "*": 50.2
+    # IDN-SU: 
+    #   "*": 50.2
+    # IDN-KA: 
+    #   "*": 50.2
+    # IDN-NU: 
+    #   "*": 50.2
+    # IDN-SL: 
+    #   "*": 50.2
+    # IDN-ML: 
+    #   "*": 50.2
+    # IDN-PP: 
+    #   "*": 50.2 
   nuclear-power: # using SMR value
     PHL-LU:
       "*": 108.3
@@ -253,6 +627,20 @@ opex_fixed:
       "*": 108.3
     PHL-VI: 
       "*": 108.3
+    # IDN-JW: 
+    #   "*": 102.3
+    # IDN-SU: 
+    #   "*": 102.3
+    # IDN-KA: 
+    #   "*": 102.3
+    # IDN-NU: 
+    #   "*": 102.3
+    # IDN-SL: 
+    #   "*": 102.3
+    # IDN-ML: 
+    #   "*": 102.3
+    # IDN-PP: 
+    #   "*": 102.3
   regasification-floating:
     "*" :
       "*": 1.700117
@@ -260,9 +648,6 @@ opex_fixed:
     "*" :
       "*": 698 # need to be checked (the value is too high??)
 
-# ----------------
-# Variable O&M costs
-# ----------------
 
 opex_variable:
   coal-supercritical: 
@@ -272,6 +657,20 @@ opex_variable:
       "*": 1.06
     PHL-VI: 
       "*": 1.06
+    # IDN-JW: 
+    #   "*": 1.30
+    # IDN-SU: 
+    #   "*": 1.30
+    # IDN-KA: 
+    #   "*": 1.30
+    # IDN-NU: 
+    #   "*": 1.30
+    # IDN-SL: 
+    #   "*": 1.30
+    # IDN-ML: 
+    #   "*": 1.30
+    # IDN-PP: 
+    #   "*": 1.30
   coal-ultrasupercritical:
     PHL-LU:
       "*": 0.64
@@ -279,6 +678,20 @@ opex_variable:
       "*": 0.64
     PHL-VI: 
       "*": 0.64
+    # IDN-JW: 
+    #   "*": 1.16
+    # IDN-SU: 
+    #   "*": 1.16
+    # IDN-KA: 
+    #   "*": 1.16
+    # IDN-NU: 
+    #   "*": 1.16
+    # IDN-SL: 
+    #   "*": 1.16
+    # IDN-ML: 
+    #   "*": 1.16
+    # IDN-PP: 
+    #   "*": 1.16
   coal-subcritical:
     PHL-LU:
       "*": 1.48
@@ -286,6 +699,20 @@ opex_variable:
       "*": 1.48
     PHL-VI: 
       "*": 1.48
+    # IDN-JW: 
+    #   "*": 1.39
+    # IDN-SU: 
+    #   "*": 1.39
+    # IDN-KA: 
+    #   "*": 1.39
+    # IDN-NU: 
+    #   "*": 1.39
+    # IDN-SL: 
+    #   "*": 1.39
+    # IDN-ML: 
+    #   "*": 1.39
+    # IDN-PP: 
+    #   "*": 1.39
   oil-internal-combustion-engine:
     PHL-LU:
       "*": 6.78
@@ -293,6 +720,20 @@ opex_variable:
       "*": 6.78
     PHL-VI: 
       "*": 6.78
+    # IDN-JW: 
+    #   "*": 6.78
+    # IDN-SU: 
+    #   "*": 6.78
+    # IDN-KA: 
+    #   "*": 6.78
+    # IDN-NU: 
+    #   "*": 6.78
+    # IDN-SL: 
+    #   "*": 6.78
+    # IDN-ML: 
+    #   "*": 6.78
+    # IDN-PP: 
+    #   "*": 6.78
   gas-CCGT:
     PHL-LU:
       "*": 1.44
@@ -300,6 +741,20 @@ opex_variable:
       "*": 1.44
     PHL-VI: 
       "*": 1.44
+    # IDN-JW: 
+    #   "*": 2.42
+    # IDN-SU: 
+    #   "*": 2.42
+    # IDN-KA: 
+    #   "*": 2.42
+    # IDN-NU: 
+    #   "*": 2.42
+    # IDN-SL: 
+    #   "*": 2.42
+    # IDN-ML: 
+    #   "*": 2.42
+    # IDN-PP: 
+    #   "*": 2.42
   gas-OCGT: 
     PHL-LU:
       "*": 1.67
@@ -307,6 +762,20 @@ opex_variable:
       "*": 1.67
     PHL-VI: 
       "*": 1.67
+    # IDN-JW: 
+    #   "*": 3.35
+    # IDN-SU: 
+    #   "*": 3.35
+    # IDN-KA: 
+    #   "*": 3.35
+    # IDN-NU: 
+    #   "*": 3.35
+    # IDN-SL: 
+    #   "*": 3.35
+    # IDN-ML: 
+    #   "*": 3.35
+    # IDN-PP: 
+    #   "*": 3.35
   solar-pv:
     "*":
       "*": 0.
@@ -317,6 +786,20 @@ opex_variable:
       "*": 1.82
     PHL-VI: 
       "*": 1.82
+    # IDN-JW: 
+    #   "*": 0.
+    # IDN-SU: 
+    #   "*": 0.
+    # IDN-KA: 
+    #   "*": 0.
+    # IDN-NU: 
+    #   "*": 0.
+    # IDN-SL: 
+    #   "*": 0.
+    # IDN-ML: 
+    #   "*": 0.
+    # IDN-PP: 
+    #   "*": 0.
   windoffshore-power:
     PHL-LU:
       "*": 5.16
@@ -324,6 +807,20 @@ opex_variable:
       "*": 5.16
     PHL-VI: 
       "*": 5.16
+    # IDN-JW: 
+    #   "*": 5.11
+    # IDN-SU: 
+    #   "*": 5.11
+    # IDN-KA: 
+    #   "*": 5.11
+    # IDN-NU: 
+    #   "*": 5.11
+    # IDN-SL: 
+    #   "*": 5.11
+    # IDN-ML: 
+    #   "*": 5.11
+    # IDN-PP: 
+    #   "*": 5.11
   nuclear-power: 
     PHL-LU:
       "*": 2.17
@@ -331,6 +828,20 @@ opex_variable:
       "*": 2.17
     PHL-VI: 
       "*": 2.17
+    # IDN-JW: 
+    #   "*": 2.05
+    # IDN-SU: 
+    #   "*": 2.05
+    # IDN-KA: 
+    #   "*": 2.05
+    # IDN-NU: 
+    #   "*": 2.05
+    # IDN-SL: 
+    #   "*": 2.05
+    # IDN-ML: 
+    #   "*": 2.05
+    # IDN-PP: 
+    #   "*": 2.05
   hydropower: 
     PHL-LU:
       "*": 0.68
@@ -338,6 +849,20 @@ opex_variable:
       "*": 0.68
     PHL-VI: 
       "*": 0.68
+    # IDN-JW: 
+    #   "*": 0.69
+    # IDN-SU: 
+    #   "*": 0.69
+    # IDN-KA: 
+    #   "*": 0.69
+    # IDN-NU: 
+    #   "*": 0.69
+    # IDN-SL: 
+    #   "*": 0.69
+    # IDN-ML: 
+    #   "*": 0.69
+    # IDN-PP: 
+    #   "*": 0.69
   geo-power: 
     PHL-LU:
       "*": 0.38
@@ -345,6 +870,20 @@ opex_variable:
       "*": 0.38
     PHL-VI: 
       "*": 0.38
+    # IDN-JW: 
+    #   "*": 0.36
+    # IDN-SU: 
+    #   "*": 0.36
+    # IDN-KA: 
+    #   "*": 0.36
+    # IDN-NU: 
+    #   "*": 0.36
+    # IDN-SL: 
+    #   "*": 0.36
+    # IDN-ML: 
+    #   "*": 0.36
+    # IDN-PP: 
+    #   "*": 0.36
   bioenergy-power: 
     PHL-LU:
       "*": 3.24
@@ -352,6 +891,20 @@ opex_variable:
       "*": 3.24
     PHL-VI: 
       "*": 3.24
+    # IDN-JW: 
+    #   "*": 3.16
+    # IDN-SU: 
+    #   "*": 3.16
+    # IDN-KA: 
+    #   "*": 3.16
+    # IDN-NU: 
+    #   "*": 3.16
+    # IDN-SL: 
+    #   "*": 3.16
+    # IDN-ML: 
+    #   "*": 3.16
+    # IDN-PP: 
+    #   "*": 3.16
   transmission: 
     "*":
       "*": 3.0 # need to be checked
@@ -464,20 +1017,20 @@ opex_variable:
       "*": 3.49
     PHL-VI: 
       "*": 3.49
-    IDN-JW: 
-      "*": 2.98
-    IDN-SU: 
-      "*": 2.98
-    IDN-KA: 
-      "*": 2.98
-    IDN-NU: 
-      "*": 2.98
-    IDN-SL: 
-      "*": 2.98
-    IDN-ML: 
-      "*": 2.98
-    IDN-PP: 
-      "*": 2.98
+    # IDN-JW: 
+    #   "*": 2.98
+    # IDN-SU: 
+    #   "*": 2.98
+    # IDN-KA: 
+    #   "*": 2.98
+    # IDN-NU: 
+    #   "*": 2.98
+    # IDN-SL: 
+    #   "*": 2.98
+    # IDN-ML: 
+    #   "*": 2.98
+    # IDN-PP: 
+    #   "*": 2.98
   gas-domestic-step-2: 
     PHL-LU:
       "*": 3.80
@@ -485,20 +1038,20 @@ opex_variable:
       "*": 3.80
     PHL-VI: 
       "*": 3.80
-    IDN-JW: 
-      "*": 3.33
-    IDN-SU: 
-      "*": 3.33
-    IDN-KA: 
-      "*": 3.33
-    IDN-NU: 
-      "*": 3.33
-    IDN-SL: 
-      "*": 3.33
-    IDN-ML: 
-      "*": 3.33
-    IDN-PP: 
-      "*": 3.33
+    # IDN-JW: 
+    #   "*": 3.33
+    # IDN-SU: 
+    #   "*": 3.33
+    # IDN-KA: 
+    #   "*": 3.33
+    # IDN-NU: 
+    #   "*": 3.33
+    # IDN-SL: 
+    #   "*": 3.33
+    # IDN-ML: 
+    #   "*": 3.33
+    # IDN-PP: 
+    #   "*": 3.33
   gas-domestic-step-3: 
     PHL-LU:
       "*": 3.89
@@ -506,20 +1059,20 @@ opex_variable:
       "*": 3.89
     PHL-VI: 
       "*": 3.89
-    IDN-JW: 
-      "*": 3.43
-    IDN-SU: 
-      "*": 3.43
-    IDN-KA: 
-      "*": 3.43
-    IDN-NU: 
-      "*": 3.43
-    IDN-SL: 
-      "*": 3.43
-    IDN-ML: 
-      "*": 3.43
-    IDN-PP: 
-      "*": 3.43
+    # IDN-JW: 
+    #   "*": 3.43
+    # IDN-SU: 
+    #   "*": 3.43
+    # IDN-KA: 
+    #   "*": 3.43
+    # IDN-NU: 
+    #   "*": 3.43
+    # IDN-SL: 
+    #   "*": 3.43
+    # IDN-ML: 
+    #   "*": 3.43
+    # IDN-PP: 
+    #   "*": 3.43
   gas-domestic-step-4:
     PHL-LU:
       "*": 4.12
@@ -527,20 +1080,20 @@ opex_variable:
       "*": 4.12
     PHL-VI: 
       "*": 4.12
-    IDN-JW: 
-      "*": 3.68
-    IDN-SU: 
-      "*": 3.68
-    IDN-KA: 
-      "*": 3.68
-    IDN-NU: 
-      "*": 3.68
-    IDN-SL: 
-      "*": 3.68
-    IDN-ML: 
-      "*": 3.68
-    IDN-PP: 
-      "*": 3.68
+    # IDN-JW: 
+    #   "*": 3.68
+    # IDN-SU: 
+    #   "*": 3.68
+    # IDN-KA: 
+    #   "*": 3.68
+    # IDN-NU: 
+    #   "*": 3.68
+    # IDN-SL: 
+    #   "*": 3.68
+    # IDN-ML: 
+    #   "*": 3.68
+    # IDN-PP: 
+    #   "*": 3.68
   gas-domestic-step-5:
     PHL-LU:
       "*": 4.21
@@ -548,20 +1101,20 @@ opex_variable:
       "*": 4.21
     PHL-VI: 
       "*": 4.21
-    IDN-JW: 
-      "*": 3.78
-    IDN-SU: 
-      "*": 3.78
-    IDN-KA: 
-      "*": 3.78
-    IDN-NU: 
-      "*": 3.78
-    IDN-SL: 
-      "*": 3.78
-    IDN-ML: 
-      "*": 3.78
-    IDN-PP: 
-      "*": 3.78
+    # IDN-JW: 
+    #   "*": 3.78
+    # IDN-SU: 
+    #   "*": 3.78
+    # IDN-KA: 
+    #   "*": 3.78
+    # IDN-NU: 
+    #   "*": 3.78
+    # IDN-SL: 
+    #   "*": 3.78
+    # IDN-ML: 
+    #   "*": 3.78
+    # IDN-PP: 
+    #   "*": 3.78
   gas-domestic-step-6: 
     PHL-LU:
       "*": 4.25
@@ -569,20 +1122,20 @@ opex_variable:
       "*": 4.25
     PHL-VI: 
       "*": 4.25
-    IDN-JW: 
-      "*": 3.83
-    IDN-SU: 
-      "*": 3.83
-    IDN-KA: 
-      "*": 3.83
-    IDN-NU: 
-      "*": 3.83
-    IDN-SL: 
-      "*": 3.83
-    IDN-ML: 
-      "*": 3.83
-    IDN-PP: 
-      "*": 3.83
+    # IDN-JW: 
+    #   "*": 3.83
+    # IDN-SU: 
+    #   "*": 3.83
+    # IDN-KA: 
+    #   "*": 3.83
+    # IDN-NU: 
+    #   "*": 3.83
+    # IDN-SL: 
+    #   "*": 3.83
+    # IDN-ML: 
+    #   "*": 3.83
+    # IDN-PP: 
+    #   "*": 3.83
   gas-domestic-step-7: 
     PHL-LU:
       "*": 4.30
@@ -590,20 +1143,20 @@ opex_variable:
       "*": 4.30
     PHL-VI: 
       "*": 4.30
-    IDN-JW: 
-      "*": 3.88
-    IDN-SU: 
-      "*": 3.88
-    IDN-KA: 
-      "*": 3.88
-    IDN-NU: 
-      "*": 3.88
-    IDN-SL: 
-      "*": 3.88
-    IDN-ML: 
-      "*": 3.88
-    IDN-PP: 
-      "*": 3.88
+    # IDN-JW: 
+    #   "*": 3.88
+    # IDN-SU: 
+    #   "*": 3.88
+    # IDN-KA: 
+    #   "*": 3.88
+    # IDN-NU: 
+    #   "*": 3.88
+    # IDN-SL: 
+    #   "*": 3.88
+    # IDN-ML: 
+    #   "*": 3.88
+    # IDN-PP: 
+    #   "*": 3.88
   gas-domestic-step-8:
     PHL-LU:
       "*": 4.34
@@ -611,6 +1164,20 @@ opex_variable:
       "*": 4.34
     PHL-VI: 
       "*": 4.34
+    # IDN-JW: 
+    #   "*": 3.93
+    # IDN-SU: 
+    #   "*": 3.93
+    # IDN-KA: 
+    #   "*": 3.93
+    # IDN-NU: 
+    #   "*": 3.93
+    # IDN-SL: 
+    #   "*": 3.93
+    # IDN-ML: 
+    #   "*": 3.93
+    # IDN-PP: 
+    #   "*": 3.93
   gas-domestic-step-9: 
     PHL-LU:
       "*": 4.52
@@ -618,6 +1185,20 @@ opex_variable:
       "*": 4.52
     PHL-VI: 
       "*": 4.52
+    # IDN-JW: 
+    #   "*": 4.13
+    # IDN-SU: 
+    #   "*": 4.13
+    # IDN-KA: 
+    #   "*": 4.13
+    # IDN-NU: 
+    #   "*": 4.13
+    # IDN-SL: 
+    #   "*": 4.13
+    # IDN-ML: 
+    #   "*": 4.13
+    # IDN-PP: 
+    #   "*": 4.13
   gas-domestic-step-10: 
     PHL-LU:
       "*": 4.70
@@ -625,6 +1206,20 @@ opex_variable:
       "*": 4.70
     PHL-VI: 
       "*": 4.70
+    # IDN-JW: 
+    #   "*": 4.33
+    # IDN-SU: 
+    #   "*": 4.33
+    # IDN-KA: 
+    #   "*": 4.33
+    # IDN-NU: 
+    #   "*": 4.33
+    # IDN-SL: 
+    #   "*": 4.33
+    # IDN-ML: 
+    #   "*": 4.33
+    # IDN-PP: 
+    #   "*": 4.33
   gas-domestic-step-11:
     PHL-LU:
       "*": 4.79
@@ -632,6 +1227,20 @@ opex_variable:
       "*": 4.79
     PHL-VI: 
       "*": 4.79
+    # IDN-JW: 
+    #   "*": 4.43
+    # IDN-SU: 
+    #   "*": 4.43
+    # IDN-KA: 
+    #   "*": 4.43
+    # IDN-NU: 
+    #   "*": 4.43
+    # IDN-SL: 
+    #   "*": 4.43
+    # IDN-ML: 
+    #   "*": 4.43
+    # IDN-PP: 
+    #   "*": 4.43
   gas-domestic-step-12: 
     PHL-LU:
       "*": 4.88
@@ -639,6 +1248,20 @@ opex_variable:
       "*": 4.88
     PHL-VI: 
       "*": 4.88
+    # IDN-JW: 
+    #   "*": 4.53
+    # IDN-SU: 
+    #   "*": 4.53
+    # IDN-KA: 
+    #   "*": 4.53
+    # IDN-NU: 
+    #   "*": 4.53
+    # IDN-SL: 
+    #   "*": 4.53
+    # IDN-ML: 
+    #   "*": 4.53
+    # IDN-PP: 
+    #   "*": 4.53
   gas-domestic-step-13: 
     PHL-LU:
       "*": 5.20
@@ -646,6 +1269,20 @@ opex_variable:
       "*": 5.20
     PHL-VI: 
       "*": 5.20
+    # IDN-JW: 
+    #   "*": 4.88
+    # IDN-SU: 
+    #   "*": 4.88
+    # IDN-KA: 
+    #   "*": 4.88
+    # IDN-NU: 
+    #   "*": 4.88
+    # IDN-SL: 
+    #   "*": 4.88
+    # IDN-ML: 
+    #   "*": 4.88
+    # IDN-PP: 
+    #   "*": 4.88
   gas-domestic-step-14: 
     PHL-LU:
       "*": 5.24
@@ -653,6 +1290,20 @@ opex_variable:
       "*": 5.24
     PHL-VI: 
       "*": 5.24
+    # IDN-JW: 
+    #   "*": 4.93
+    # IDN-SU: 
+    #   "*": 4.93
+    # IDN-KA: 
+    #   "*": 4.93
+    # IDN-NU: 
+    #   "*": 4.93
+    # IDN-SL: 
+    #   "*": 4.93
+    # IDN-ML: 
+    #   "*": 4.93
+    # IDN-PP: 
+    #   "*": 4.93
   gas-domestic-step-15: 
     PHL-LU:
       "*": 5.56
@@ -660,6 +1311,20 @@ opex_variable:
       "*": 5.56
     PHL-VI: 
       "*": 5.56
+    # IDN-JW: 
+    #   "*": 5.28
+    # IDN-SU: 
+    #   "*": 5.28
+    # IDN-KA: 
+    #   "*": 5.28
+    # IDN-NU: 
+    #   "*": 5.28
+    # IDN-SL: 
+    #   "*": 5.28
+    # IDN-ML: 
+    #   "*": 5.28
+    # IDN-PP: 
+    #   "*": 5.28
   gas-domestic-step-16: 
     PHL-LU:
       "*": 5.91
@@ -667,6 +1332,20 @@ opex_variable:
       "*": 5.91
     PHL-VI: 
       "*": 5.91
+    # IDN-JW: 
+    #   "*": 5.68
+    # IDN-SU: 
+    #   "*": 5.68
+    # IDN-KA: 
+    #   "*": 5.68
+    # IDN-NU: 
+    #   "*": 5.68
+    # IDN-SL: 
+    #   "*": 5.68
+    # IDN-ML: 
+    #   "*": 5.68
+    # IDN-PP: 
+    #   "*": 5.68
   gas-domestic-step-17: 
     PHL-LU:
       "*": 7.22
@@ -674,6 +1353,20 @@ opex_variable:
       "*": 7.22
     PHL-VI: 
       "*": 7.22
+    # IDN-JW: 
+    #   "*": 7.13
+    # IDN-SU: 
+    #   "*": 7.13
+    # IDN-KA: 
+    #   "*": 7.13
+    # IDN-NU: 
+    #   "*": 7.13
+    # IDN-SL: 
+    #   "*": 7.13
+    # IDN-ML: 
+    #   "*": 7.13
+    # IDN-PP: 
+    #   "*": 7.13
   gas-domestic-step-18: 
     "*": 
       "*": 7.98
