@@ -1,0 +1,57 @@
+# -------------------------------------------------------------------------
+#
+#   TARGETS
+#   
+#     Defining the emissions intensities and targets for the model.
+#
+#     We look at three main pollutants:
+#       - CO2
+#       - NOx
+#       - SOx
+#
+#     Link to docs: 
+#       https://docs.feo.transitionzero.org/docs/tz-osemosys/impact/
+#
+#     Authors:
+#       - @amanmajid
+#       - @abhishek0208
+#       - @Handriyanti
+#
+# -------------------------------------------------------------------------
+
+# -------
+# Emissions targets
+# -------
+
+impacts:
+  - id: CO2
+    long_name: equivalent carbon dioxide emissions
+    description: equivalent carbon dioxide emissions
+    exogenous_annual: 0.
+    exogenous_total: null
+    constraint_annual: 
+    constraint_total: null
+    penalty: # mn$/mntonne
+      PHL-LU: 0.
+      PHL-VI: 0.
+      PHL-MI: 0.
+  - id: NOx
+    long_name: equivalent nitric oxide emissions
+    description: equivalent nitric oxide emissions
+    exogenous_annual: 0.
+    exogenous_total: null
+    constraint_annual: 
+    constraint_total: null
+  - id: SOx
+    long_name: equivalent sulphur oxide emissions
+    description: equivalent sulphur oxide emissions
+    exogenous_annual: 0.
+    exogenous_total: null
+    constraint_annual: 
+    constraint_total: null
+
+# -------
+# Other parameters
+# -------
+
+reserve_margin: 1.2

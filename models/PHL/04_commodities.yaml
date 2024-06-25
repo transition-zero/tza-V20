@@ -1,0 +1,160 @@
+# -------------------------------------------------------------------------
+#
+#   COMMODITIES (DEMAND)
+#   
+#     Define the commodities that are used in the model, as well as 
+#       the demand for each commodity in each region.
+#
+#     Link to docs: 
+#       https://docs.feo.transitionzero.org/docs/tz-osemosys/commodity/
+#
+#     Authors:
+#       - @amanmajid
+#       - @abhishek0208
+#       - @Handriyanti
+#
+# -------------------------------------------------------------------------
+
+commodities:
+
+  - id: coal
+    long_name: Coal resource
+    is_renewable: false
+    
+  - id: gas
+    long_name: Natural gas resource
+    is_renewable: false
+
+  - id: solar
+    long_name: Solar resource
+    is_renewable: true
+
+  - id: wind
+    long_name: Wind resource
+    is_renewable: true
+
+  - id: uranium
+    long_name: Uranium resource
+    is_renewable: false
+
+  - id: river
+    long_name: River resource
+    is_renewable: true
+
+  - id: primary-electricity
+    long_name: Primary electricity
+    is_renewable: false
+
+  - id: secondary-electricity
+    long_name: Secondary electricity
+    is_renewable: false
+    # specify annual demands
+    demand_annual: 
+      # define demand for each region
+      PHL-LU:
+        2023: 283.68
+        2024: 291.78
+        2025: 315.76
+        2026: 335.27
+        2027: 354.74
+        2028: 374.26
+        2029: 393.73
+        2030: 413.28
+        2031: 436.25
+        2032: 459.14
+        2033: 482
+        2034: 504.9
+        2035: 527.65
+        2036: 554.26
+        2037: 580.9
+        2038: 607.54
+        2039: 634.21
+        2040: 660.74
+        2041: 689.08
+        2042: 717.44
+        2043: 745.81
+        2044: 774
+        2045: 802.19
+        2046: 832.1
+        2047: 862.13
+        2048: 892.26
+        2049: 922.36
+        2050: 952.42
+      PHL-VI:
+        2023: 56.05
+        2024: 57.89
+        2025: 62.86
+        2026: 66.96
+        2027: 71.1
+        2028: 75.2
+        2029: 79.34
+        2030: 83.45
+        2031: 88.2
+        2032: 92.99
+        2033: 97.81
+        2034: 102.56
+        2035: 107.39
+        2036: 112.93
+        2037: 118.48
+        2038: 124.02
+        2039: 129.56
+        2040: 135.18
+        2041: 141.08
+        2042: 146.99
+        2043: 152.89
+        2044: 158.8
+        2045: 164.66
+        2046: 171
+        2047: 177.3
+        2048: 183.56
+        2049: 189.86
+        2050: 196.13
+      PHL-MI:
+        2023: 70.6
+        2024: 73.01
+        2025: 79.38
+        2026: 84.74
+        2027: 90.11
+        2028: 95.51
+        2029: 100.87
+        2030: 106.2
+        2031: 112.39
+        2032: 118.62
+        2033: 124.88
+        2034: 131.15
+        2035: 137.48
+        2036: 144.72
+        2037: 151.92
+        2038: 159.12
+        2039: 166.28
+        2040: 173.48
+        2041: 181.04
+        2042: 188.57
+        2043: 196.09
+        2044: 203.8
+        2045: 211.54
+        2046: 219.82
+        2047: 227.99
+        2048: 236.12
+        2049: 244.26
+        2050: 252.43
+
+    # specify demand profile for each region
+    demand_profile:
+      # all regions
+      "*" :
+        # all years
+        "*" :
+          # demand by timeslice
+          s1-h1: 0.02 # 0 - 4
+          s1-h2: 0.02 # 5 - 8
+          s1-h3: 0.04 # 9 - 12
+          s1-h4: 0.09 # 13 - 16
+          s1-h5: 0.13 # 17 - 20
+          s1-h6: 0.20 # 21 - 24
+          s2-h1: 0.02 # 0 - 4
+          s2-h2: 0.02 # 5 - 8
+          s2-h3: 0.04 # 9 - 12
+          s2-h4: 0.09 # 13 - 16
+          s2-h5: 0.13 # 17 - 20
+          s2-h6: 0.20 # 21 - 24
