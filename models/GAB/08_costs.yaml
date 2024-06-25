@@ -14,198 +14,324 @@
 #       https://docs.feo.transitionzero.org/docs/tz-osemosys/technology/
 #
 #     Authors:
-#       - @amanmajid
-#       - @abhishek0208
-#       - @Handriyanti
+#       - xx
 #
 # -------------------------------------------------------------------------
 
-# -------
+# ------------------
 # Financial methods
-# -------
+# ------------------
 
 depreciation_method: "straight-line"
 
-# ---
+# -------------------------------
 # social discount rate by region
+# -------------------------------
 discount_rate: 
-  PK1: 0.05
-  PK2: 0.05
-  PK3: 0.05
-  PK4: 0.05
-  PK5: 0.05
-  PK6: 0.05
-  PK7: 0.05
+  "*": 0.05
 
-# ---
+# ------------------------------
 # cost of capital by technology
-cost_of_capital:
+# ------------------------------
+cost_of_capital: # WACC
   # all regions
   "*" :
-    coal-supercritical: 0.1
-    gas-ccgt: 0.1
-    hydro-reservoir: 0.1
-    nuclear: 0.1
-    solar-pv: 0.1
-    wind-onshore: 0.1
+    # all technologies
+    "*": 0.11
+    # coal-supercritical: 0.11
+    # coal-subcritical: 0.11
+    # nuclear: 0.11
+    # solar-pv: 0.11
+    # windonshore-power: 0.11
+    # hydropower: 0.11
+    # geo-power: 0.11
+    # biogas-power: 0.11
+    # transmission: 0.11
 
-# ---
-# cost of capital for storage technologies
-# cost_of_capital_storage:
-#   # all regions
-#   "*" :
-#     battery: 0.1
-#     hydrogen: 0.1
 
-# -------
+# --------------
 # Capital costs
-# -------
-
-# baseline_cost:
-#   coal-supercritical: 1000
-#   gas: 900
-#   hydro: 1100
-#   nuclear: 1400
-#   solar-pv: 500
-#   wind-on: 550
-
-# tech_cost_reduction:
-#   coal-supercritical: 0.02
-#   gas: 0.02
-#   hydro: 0.02
-#   nuclear: 0.02
-#   solar-pv: -0.01
-#   wind-on: -0.01
+# --------------
 
 capex:
-
   coal-supercritical:
     # all regions
-    "*" :
+    GAB: 
       # all years
-      "*" : 900
-      #"*" : "{y: y for y in ${time_definition.years}}"
-      #"*" : "{y: ${baseline_cost.coal} * (1+${tech_cost_reduction.coal})**(y-min(${time_definition.years})) for y in ${time_definition.years}}"
+      "*": 1503
+      # "*": "{y: ${capex_base_cost.coal-supercritical} * (1+${capex_cagr.coal-supercritical})**(y-min(${time_definition.years})) for y in ${time_definition.years}}"
+
+  coal-subcritical:
+    GAB:
+      "*": 1852
+
+  coal-ultrasupercritical:
+    GAB:
+      "*": 1609
+
+  gas-CCGT:    
+    GAB:
+      "*": 1014
   
-  gas-ccgt:
-    # all regions
-    "*" :
-      # all years
-      "*" : 900
+  gas-OCGT:
+    GAB:
+      "*": 1042
 
-  hydro-reservoir:
-    # all regions
-    "*" :
-      # all years
-      "*" : 750
+  oil-internal-combustion-engine:
+    GAB:
+      "*": 736
+        
+  solar-pv: 
+    GAB:
+      "*": 893
 
-  nuclear:
-    # all regions
-    "*" :
-      # all years
-      "*" : 2000
+  windonshore-power:
+    GAB:
+      "*": 1547
 
-  solar-pv:
-    # all regions
-    "*" :
-      # all years
-      "*" : 500
+  windoffshore-power:
+    GAB:
+      "*": 3544
 
-  wind-onshore:
-    # all regions
+  hydropower: # using hydro-large value
+    GAB:
+      "*": 1803
+
+  geo-power: # using geothermal binary value
+    GAB:
+      "*": 5001
+
+  bioenergy-power: # using biomass small value
+    GAB:
+      "*": 1996
+
+  nuclear-power: # using SMR value
+    GAB:
+      "*": 9456
+
+  regasification-floating:
     "*" :
-      # all years
-      "*" : 550
+      "*": 1.700117
 
   transmission:
-    # all regions
-      "*" :
-        # all years
-        "*" : 250
+    "*" :
+      "*": 448
 
-# -------
+
+# ----------------
 # Fixed O&M costs
-# -------
+# ----------------
 
 opex_fixed:
-
   coal-supercritical:
     # all regions
-    "*":
-      # all year
-      "*" : 100
-  
-  gas-ccgt:
-    # all regions
-    "*":
-      # all year
-      "*" : 100
-  
-  hydro-reservoir:
-    # all regions
-    "*":
-      # all year
-      "*" : 20
+    GAB: 
+      # all years
+      "*": 42.4
+      #"{y: ${opex_base_cost.coal-supercritical} * (1+${opex_cagr.coal-supercritical})**(y-min(${time_definition.years})) for y in ${time_definition.years}}"
 
-  nuclear:
-    # all regions
-    "*":
-      # all year
-      "*" : 100
+  coal-subcritical:
+    GAB:
+      "*": 50.8
+
+  coal-ultrasupercritical:
+    GAB:
+      "*": 61.8
+
+  gas-CCGT:    
+    GAB:
+      "*": 27.7
+
+  gas-OCGT:
+    GAB:
+      "*": 24.8
+
+  oil-internal-combustion-engine:
+    GAB:
+      "*": 9.4
+        
+  solar-pv: 
+    GAB:
+      "*": 11.5
+
+  windonshore-power:
+    GAB:
+      "*": 40.4
+
+  windoffshore-power:
+    GAB:
+      "*": 91.6
+
+  hydropower: # using hydro-large value
+    GAB:
+      "*": 39.6
+
+  geo-power: # using geothermal binary value
+    GAB:
+      "*": 78.2
+
+  bioenergy-power: # using biomass small value
+    GAB:
+      "*": 50.8
+
+  nuclear-power: # using SMR value
+    GAB:
+      "*": 108.3
+
+  regasification-floating:
+    "*" :
+      "*": 1.700117
+
+  transmission: 
+    "*" :
+      "*": 698 # need to be checked (the value is too high??)
+
+
+opex_variable:
+  coal-supercritical: 
+    GAB:
+      "*": 1.06
+
+  coal-ultrasupercritical:
+    GAB:
+      "*": 0.64
+
+  coal-subcritical:
+    GAB:
+      "*": 1.48
+
+  oil-internal-combustion-engine:
+    GAB:
+      "*": 6.78
+
+  gas-CCGT:
+    GAB:
+      "*": 1.44
+
+  gas-OCGT: 
+    GAB:
+      "*": 1.67
 
   solar-pv:
-    # all regions
     "*":
-      # all year
-      "*" : 0
+      "*": 0.
 
-  wind-onshore:
-    # all regions
+  windonshore-power:
+    GAB:
+      "*": 1.82
+
+  windoffshore-power:
+    GAB:
+      "*": 5.16
+
+  nuclear-power: 
+    GAB:
+      "*": 2.17
+
+  hydropower: 
+    GAB:
+      "*": 0.68
+
+  geo-power: 
+    GAB:
+      "*": 0.38
+
+  bioenergy-power: 
+    GAB:
+      "*": 3.24
+
+  transmission: 
     "*":
-      # all year
-      "*" : 0
-  
-  transmission:
-    # all regions
+      "*": 3.0 # need to be checked
+
+  gas-import-liquefied:
+    "*": 
+      2023: 9.05697343932461
+      2024: 7.91953268103077
+      2025: 7.36976964785541
+      2026: 6.97166538245257
+      2027: 6.76313457676537
+      2028: 6.71574121183646
+      2029: 6.7441772307938
+      2030: 6.82000661468006
+      2031: 6.94322936349522
+      2032: 7.10436680425352
+      2033: 7.30341893695494
+      2034: 7.44559903174167
+      2035: 7.54986443458527
+      2036: 7.55934310757105
+      2037: 7.60673647249996
+      2038: 7.72995922131513
+      2039: 7.65412983742887
+      2040: 7.7963099322156
+      2041: 7.87213931610186
+      2042: 7.86266064311608
+      2043: 7.80578860520138
+      2044: 7.76787391325826
+      2045: 7.76787391325826
+      2046: 7.76787391325826
+      2047: 7.72995922131513
+      2048: 7.71100187534357
+      2049: 7.64465116444309
+      2050: 7.63517249145731
+
+  coal-import-hard:
     "*":
-      # all year
-      "*" : 0
+      2023: 10.4436860068259
+      2024: 9.419795221843
+      2025: 8.39590443686007
+      2026: 7.37201365187713
+      2027: 6.3481228668942
+      2028: 5.32423208191126
+      2029: 4.30034129692833
+      2030: 3.27645051194539
+      2031: 3.24402730375427
+      2032: 3.21160409556314
+      2033: 3.17918088737201
+      2034: 3.14675767918089
+      2035: 3.11433447098976
+      2036: 3.08191126279864
+      2037: 3.04948805460751
+      2038: 3.01706484641638
+      2039: 2.98464163822526
+      2040: 2.95221843003413
+      2041: 2.919795221843
+      2042: 2.88737201365188
+      2043: 2.85494880546075
+      2044: 2.82252559726963
+      2045: 2.7901023890785
+      2046: 2.75767918088737
+      2047: 2.72525597269625
+      2048: 2.69283276450512
+      2049: 2.66040955631399
+      2050: 2.62798634812287
+
+  oil-diesel-production: 
+    "*":
+      "*": 15.14
+
+  oil-fuel-oil-production:
+    "*":
+      "*": 15.14
+
+  coal-hard-domestic-step-1: 
+    "*":
+      "*": 1.75
+
+  coal-brown-domestic-step-1: 
+    "*":
+      "*": 1.12
+
+  gas-domestic-step-1: 
+    GAB:
+      "*": 3.49
+
 
 # ---------------------------
 # Fuel prices (M$/PJ or $/GJ)
 # ---------------------------
 
 fuel_price:
-
-  coal-domestic:
-    # all regions
+  uranium:
     "*" :
-      # all years
-      "*" : 3 # M$/PJ or $/GJ
-  coal-imports:
-    # all regions
-    "*" :
-      # all years
-      "*" : 5 # M$/PJ or $/GJ
-  gas-domestic-low:
-    # all regions
-    "*" :
-      # all years
-      "*" : 1 # M$/PJ or $/GJ
-  gas-domestic-high:
-    # all regions
-    "*" :
-      # all years
-      "*" : 2 # M$/PJ or $/GJ
-  gas-imports:
-    # all regions
-    "*" :
-      # all years
-      "*" : 5 # M$/PJ or $/GJ
-  nuclear:
-    # all regions
-    "*" :
-      # all years
-      "*" : 1.5
-
-# # "{y: ${baseline_cost.coal} * (1+${tech_cost_reduction.coal})**(y-min(${time_definition.years})) for y in ${time_definition.years}}"
+      "*" : 0.27 # source: https://www.osti.gov/servlets/purl/840500
