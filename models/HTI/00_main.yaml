@@ -1,0 +1,5 @@
+# Model Nameplate
+id: haiti
+long_name: "Haiti: V20 model"
+description: >
+  A single-node (i.e., national) model of Haiti.
