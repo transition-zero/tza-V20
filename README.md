@@ -7,13 +7,13 @@ TransitionZero has partnered with the [V20 group](https://www.v-20.org/) to prod
 
 Specifically, we have collated data and developed models for:
 
-- 🇭🇹 [Haiti]()
-- 🇲🇬 [Madagascar]()
-- 🇰🇬 [Kyrgyzstan]()
-- 🇬🇲 [The Gambia]()
-- 🇳🇦 [Namibia]() 
-- 🇬🇦 [Gabon]()
-- 🇵🇰 [Pakistan](https://github.com/transition-zero/V20/tree/main/models/PAK)
+1. 🇬🇦 [Gabon]()
+2. 🇬🇲 [The Gambia]()
+3. 🇭🇹 [Haiti]()
+4. 🇲🇬 [Madagascar]()
+5. 🇵🇰 [Pakistan](https://github.com/transition-zero/V20/tree/main/models/PAK)
+6. 🇵🇭 [Philippines]()
+7. 🇷🇼 [Rwanda]() 
 
 # Contributors
 The data and code provided here was developed by the following modellers/analysts at TransitionZero:
