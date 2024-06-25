@@ -12,10 +12,7 @@
 #       - https://docs.feo.transitionzero.org/docs/tz-osemosys/technology/
 #
 #     Authors:
-#       - @amanmajid
-#       - @abhishek0208
-#       - @Handriyanti
-#
+#       -xx
 # -------------------------------------------------------------------------
 
 
@@ -23,77 +20,88 @@
 # Residual capacities
 # -------
 
-residual_capacity:
+residual_capacity: 
+
+  regasification-floating:
+    "*": 
+      2023: 256.845025
 
   coal-supercritical:
-    PK2:
-      2024: 1320
-    PK6:
-      2024: 1440
+    "*": 
+      2023: 1.978
 
+  coal-subcritical:
+    "*": 
+      2023: 7.2546
 
-  gas-ccgt:
-    PK2:
-      2024: 1215
-    PK6:
-      2024: 10073
-    PK7:
-      2024: 2000
+  coal-ultrasupercritical:
+    "*": 
+      2023: 0.
 
+  gas-CCGT:
+    "*":
+      2023: 3.73
 
-  hydro-reservoir:
-    PK1:
-      2024: 3000
-    PK5:
-      2024: 0
-    PK6:
-      2024: 184
+  gas-OCGT:
+    "*":
+      2023: 0.
 
-
-  nuclear:
-    PK6:
-      2024: 1330
-    PK7:
-      2024: 2200
-
+  oil-internal-combustion-engine:
+    "*":
+      2023: 0.
 
   solar-pv:
-    PK2:
-      2024: 21
-    PK5:
-      2024: 0
-    PK6:
-      2024: 99999
-    PK7:
-      2024: 150
+    "*": 
+      2023: 0.9883
 
+  windonshore-power:
+    "*": 
+      2023: 0.016
+      
+  windoffshore-power:
+    "*": 
+      2023: 1.524
 
-  wind-onshore:
-    PK7:
-      2024: 1841
-  
+  hydropower:
+    "*": 
+      2023: 2.9503
+
+  geo-power:
+    "*": 
+      2023: 0.961
+
+  bioenergy-power:
+    "*": 
+      2023: 0.
+
+  nuclear-power:
+    "*": 
+      2023: 0.
+
   transmission:
-    # all regions
-    "*" :
-      # all years
-      "*" : 9999
+    "*": 
+      2023: 0.
 
 
-  # battery:
-  #   PK6:
-  #     2024: 9999
+# -------
+# Activity constraints
+# -------
 
+activity_total_max:
 
-# # -------
-# # Residual capacity storage
-# # -------
-
-# residual_capacity_storage:
-
-#   # -------
-#   # GRID STORAGE
-#   # -------
-
-#   grid-level-battery-storage:
-#     PK6:
-#       2024: 9999
+  gas-domestic-step-1:
+    "*": 283.73184                
+  coal-hard-domestic-step-1:
+    "*": 252.0488
+  coal-brown-domestic-step-1:
+    "*": 110.96
+  coal-brown-domestic-step-2:
+    "*": 360.62
+  coal-brown-domestic-step-3:
+    "*": 332.88
+  coal-brown-domestic-step-4:
+    "*": 832.2
+  coal-brown-domestic-step-5:
+    "*": 332.88
+  coal-brown-domestic-step-6:
+    "*": 804.46

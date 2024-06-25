@@ -9,37 +9,64 @@
 #       https://docs.feo.transitionzero.org/docs/tz-osemosys/commodity/
 #
 #     Authors:
-#       - @amanmajid
-#       - @abhishek0208
-#       - @Handriyanti
+#       - xx
 #
 # -------------------------------------------------------------------------
 
 commodities:
 
-  - id: coal
-    long_name: Coal resource
+
+  - id: coal-brown
+    long_name: Brown coal
     is_renewable: false
-    
+
+  - id: coal-hard
+    long_name: Hard coal
+    is_renewable: false  
+
+  - id: gas-liquefied
+    long_name: Liquefied gas
+    is_renewable: false
+
   - id: gas
-    long_name: Natural gas resource
+    long_name: Aggregated gas commodity (both domestic and import)
     is_renewable: false
+
+  - id: oil-fuel-oil
+    long_name: Fuel oil used in power plants
+    is_renewable: false  
+
+  - id: oil-diesel
+    long_name: Diesel 
+    is_renewable: false  
 
   - id: solar
     long_name: Solar resource
-    is_renewable: true
+    is_renewable: false
+  
+  - id: wind-onshore
+    long_name: Wind onshore resource
+    is_renewable: false
 
-  - id: wind
-    long_name: Wind resource
-    is_renewable: true
+  - id: wind-offshore
+    long_name: Wind offshore resource
+    is_renewable: false
+
+  - id: hydro 
+    long_name: Hydro resource
+    is_renewable: false
 
   - id: uranium
     long_name: Uranium resource
     is_renewable: false
 
-  - id: river
-    long_name: River resource
-    is_renewable: true
+  - id: geothermal
+    long_name: Geothermal resource
+    is_renewable: false
+
+  - id: bioenergy
+    long_name: Bioenergy resource
+    is_renewable: false
 
   - id: primary-electricity
     long_name: Primary electricity
@@ -50,63 +77,37 @@ commodities:
     is_renewable: false
     # specify annual demands
     demand_annual: 
-      # define demand for each region
-      PK1:
-        2024 : 100
-        2025 : 150
-        2026 : 200
-        2027 : 250
-        2028 : 300
-        2029 : 350
-        2030 : 400
-      PK2:
-        2024 : 50
-        2025 : 100
-        2026 : 150
-        2027 : 200
-        2028 : 250
-        2029 : 300
-        2030 : 350
-      PK3:
-        2024 : 500
-        2025 : 550
-        2026 : 600
-        2027 : 650
-        2028 : 700
-        2029 : 750
-        2030 : 800
-      PK4:
-        2024 : 500
-        2025 : 550
-        2026 : 600
-        2027 : 650
-        2028 : 700
-        2029 : 750
-        2030 : 800
-      PK5:
-        2024 : 500
-        2025 : 650
-        2026 : 700
-        2027 : 850
-        2028 : 900
-        2029 : 950
-        2030 : 1000
-      PK6:
-        2024 : 24
-        2025 : 50
-        2026 : 100
-        2027 : 120
-        2028 : 130
-        2029 : 190
-        2030 : 210
-      PK7:
-        2024 : 500
-        2025 : 550
-        2026 : 600
-        2027 : 650
-        2028 : 700
-        2029 : 750
-        2030 : 800
+      # define demand for all regions
+      '*':
+        2023: 283.68
+        2024: 291.78
+        2025: 315.76
+        2026: 335.27
+        2027: 354.74
+        2028: 374.26
+        2029: 393.73
+        2030: 413.28
+        2031: 436.25
+        2032: 459.14
+        2033: 482
+        2034: 504.9
+        2035: 527.65
+        2036: 554.26
+        2037: 580.9
+        2038: 607.54
+        2039: 634.21
+        2040: 660.74
+        2041: 689.08
+        2042: 717.44
+        2043: 745.81
+        2044: 774
+        2045: 802.19
+        2046: 832.1
+        2047: 862.13
+        2048: 892.26
+        2049: 922.36
+        2050: 952.42
+        
     # specify demand profile for each region
     demand_profile:
       # all regions
@@ -114,9 +115,15 @@ commodities:
         # all years
         "*" :
           # demand by timeslice
-          ID : 0.15
-          IN : 0.05
-          SD : 0.15
-          SN : 0.05
-          WD : 0.5
-          WN : 0.1
+          s1-h1: 0.02 # 0 - 4
+          s1-h2: 0.02 # 5 - 8
+          s1-h3: 0.04 # 9 - 12
+          s1-h4: 0.09 # 13 - 16
+          s1-h5: 0.13 # 17 - 20
+          s1-h6: 0.20 # 21 - 24
+          s2-h1: 0.02 # 0 - 4
+          s2-h2: 0.02 # 5 - 8
+          s2-h3: 0.04 # 9 - 12
+          s2-h4: 0.09 # 13 - 16
+          s2-h5: 0.13 # 17 - 20
+          s2-h6: 0.20 # 21 - 24
