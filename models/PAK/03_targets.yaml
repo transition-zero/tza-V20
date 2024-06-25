@@ -29,25 +29,33 @@ impacts:
     description: equivalent carbon dioxide emissions
     exogenous_annual: 0.
     exogenous_total: null
-    constraint_annual: null
+    constraint_annual: 
     constraint_total: null
+    penalty: # mn$/mntonne
+      PK1: 0.
+      PK2: 0.
+      PK3: 0.
+      PK4: 0.
+      PK5: 0.
+      PK6: 0.
+      PK7: 0.
   - id: NOx
-    long_name: equivalent carbon dioxide emissions
-    description: equivalent carbon dioxide emissions
+    long_name: equivalent nitric oxide emissions
+    description: equivalent nitric oxide emissions
     exogenous_annual: 0.
     exogenous_total: null
-    constraint_annual: null
+    constraint_annual: 
     constraint_total: null
   - id: SOx
-    long_name: equivalent carbon dioxide emissions
-    description: equivalent carbon dioxide emissions
+    long_name: equivalent sulphur oxide emissions
+    description: equivalent sulphur oxide emissions
     exogenous_annual: 0.
     exogenous_total: null
-    constraint_annual: null
+    constraint_annual: 
     constraint_total: null
 
 # -------
 # Other parameters
 # -------
 
-reserve_margin: 1
+reserve_margin: 1.2
