@@ -81,6 +81,14 @@ residual_capacity:
   transmission:
     MDG: 
       2023: 0.
+  
+  battery-technology:
+    MDG: 
+      2023: 0.
+  
+  battery-storage:
+    MDG: 
+      2023: 0.
 
 
 # -------
