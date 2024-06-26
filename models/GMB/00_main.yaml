@@ -3,3 +3,9 @@ id: gambia
 long_name: "Gambia: V20 model"
 description: >
   A single-node (i.e., national) model of Gambia.
+
+# Global variables
+global_variables:
+  base_year: 2023
+  base_demand: 200
+  demand_growth_pcgt: 0.0459 # 4.59% growth rate
