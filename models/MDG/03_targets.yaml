@@ -32,7 +32,7 @@ impacts:
     constraint_annual: 
     constraint_total: null
     penalty: # mn$/mntonne
-      MDG: 0.
+      GAB: 0.
   - id: NOx
     long_name: equivalent nitric oxide emissions
     description: equivalent nitric oxide emissions
@@ -47,6 +47,13 @@ impacts:
     exogenous_total: null
     constraint_annual: 
     constraint_total: null
+
+# -------
+# Renewable targets
+# -------
+
+# renewable_production_target:
+#   GAB: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
 
 # -------
 # Other parameters
