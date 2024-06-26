@@ -15,7 +15,6 @@
 
 commodities:
 
-
   - id: coal-brown
     long_name: Brown coal
     is_renewable: false
@@ -79,34 +78,7 @@ commodities:
     demand_annual: 
       # define demand for each region
       RWA:
-        2023: 283.68
-        2024: 291.78
-        2025: 315.76
-        2026: 335.27
-        2027: 354.74
-        2028: 374.26
-        2029: 393.73
-        2030: 413.28
-        2031: 436.25
-        2032: 459.14
-        2033: 482
-        2034: 504.9
-        2035: 527.65
-        2036: 554.26
-        2037: 580.9
-        2038: 607.54
-        2039: 634.21
-        2040: 660.74
-        2041: 689.08
-        2042: 717.44
-        2043: 745.81
-        2044: 774
-        2045: 802.19
-        2046: 832.1
-        2047: 862.13
-        2048: 892.26
-        2049: 922.36
-        2050: 952.42
+        "{ y : (${global_variables.base_demand}*(1+${global_variables.demand_growth_pcgt})**(y-${global_variables.base_year})) for y in ${time_definition.years} }"
         
     # specify demand profile for each region
     demand_profile:
