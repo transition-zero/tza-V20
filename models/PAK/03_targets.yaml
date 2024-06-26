@@ -55,6 +55,19 @@ impacts:
     constraint_total: null
 
 # -------
+# Renewable targets
+# -------
+
+# renewable_production_target:
+#   PK1: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
+#   PK2: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
+#   PK3: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
+#   PK4: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
+#   PK5: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
+#   PK6: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
+#   PK7: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
+
+# -------
 # Other parameters
 # -------
 
