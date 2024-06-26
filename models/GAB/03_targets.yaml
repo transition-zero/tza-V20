@@ -49,6 +49,13 @@ impacts:
     constraint_total: null
 
 # -------
+# Renewable targets
+# -------
+
+# renewable_production_target:
+#   GAB: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
+
+# -------
 # Other parameters
 # -------
 
