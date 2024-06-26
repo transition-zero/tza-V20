@@ -81,6 +81,14 @@ residual_capacity:
   transmission:
     RWA: 
       2023: 0.
+  
+  battery-technology:
+    RWA: 
+      2023: 0.
+  
+  battery-storage:
+    RWA: 
+      2023: 0.
 
 
 # -------
