@@ -3,3 +3,9 @@ id: haiti
 long_name: "Haiti: V20 model"
 description: >
   A single-node (i.e., national) model of Haiti.
+
+# Global variables
+global_variables:
+  base_year: 2023
+  base_demand: 200
+  demand_growth_pcgt: 0.0459 # 4.59% growth rate
