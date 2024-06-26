@@ -81,6 +81,15 @@ residual_capacity:
   transmission:
     "*": 
       2023: 0.
+  
+  battery-technology:
+    "*": 
+      2023: 0.
+  
+  battery-storage:
+    "*": 
+      2023: 0.
+
 
 
 # -------
