@@ -82,6 +82,13 @@ residual_capacity:
     GMB: 
       2023: 0.
 
+  battery-technology:
+    GMB: 
+      2023: 0.
+  
+  battery-storage:
+    GMB: 
+      2023: 0.
 
 # -------
 # Activity constraints
