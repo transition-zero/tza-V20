@@ -49,6 +49,15 @@ impacts:
     exogenous_total: null
     constraint_annual: 
     constraint_total: null
+  
+# -------
+# Renewable targets
+# -------
+
+# renewable_production_target:
+#   PHL-LU: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
+#   PHL-VI: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
+#   PHL-MI: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
 
 # -------
 # Other parameters

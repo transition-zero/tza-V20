@@ -15,7 +15,6 @@
 
 commodities:
 
-
   - id: coal-brown
     long_name: Brown coal
     is_renewable: false
