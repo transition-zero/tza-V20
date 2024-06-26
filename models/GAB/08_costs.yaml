@@ -202,6 +202,9 @@ opex_fixed:
     "*" :
       "*": 0
 
+# ----------------
+# Variable O&M costs
+# ----------------
 
 opex_variable:
   coal-supercritical: 

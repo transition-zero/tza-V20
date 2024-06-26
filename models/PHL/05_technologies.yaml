@@ -25,7 +25,8 @@ technologies:
 
   # --------------------------------------------
   #
-  #   SUPPLY
+  #   SUPPLY RESOURCES
+  #   - Represents the primary energy system
   #   - Defined in Petajoules (PJ)
   #
   # --------------------------------------------
@@ -34,7 +35,7 @@ technologies:
     long_name: Coal Hard (bituminous, anthracite) resource cost step 1
     operating_life: 1 # years
     operating_modes:
-      - id: GEN
+      - id: PRIMARY_PRODUCTION
         long_name: generation mode
         description: default generation mode
         output_activity_ratio:
@@ -42,150 +43,23 @@ technologies:
         opex_variable: "${opex_variable.coal-hard-domestic-step-1}" # from costs.yaml
     activity_total_max: "${activity_total_max.coal-hard-domestic-step-1}" # from capacities.yaml
 
-
-  - id: coal-hard-domestic-step-2
-    long_name: Coal Hard (bituminous, anthracite) resource cost step 2
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          coal-hard: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.coal-hard-domestic-step-2}" # from costs.yaml
-    activity_total_max: "${activity_total_max.coal-hard-domestic-step-2}" # from capacities.yaml
-
-
-  - id: coal-hard-domestic-step-3
-    long_name: Coal Hard (bituminous, anthracite) resource cost step 3
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          coal-hard: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.coal-hard-domestic-step-3}" # from costs.yaml
-    activity_total_max: "${activity_total_max.coal-hard-domestic-step-3}" # from capacities.yaml
-
-
-  - id: coal-hard-domestic-step-4
-    long_name: Coal Hard (bituminous, anthracite) resource cost step 4
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          coal-hard: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.coal-hard-domestic-step-4}" # from costs.yaml
-    activity_total_max: "${activity_total_max.coal-hard-domestic-step-4}" # from capacities.yaml
-
-
-  - id: coal-hard-domestic-step-5
-    long_name: Coal Hard (bituminous, anthracite) resource cost step 5
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          coal-hard: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.coal-hard-domestic-step-5}" # from costs.yaml
-    activity_total_max: "${activity_total_max.coal-hard-domestic-step-5}" # from capacities.yaml
-
-
-  - id: coal-hard-domestic-step-6
-    long_name: Coal Hard (bituminous, anthracite) resource cost step 6
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          coal-hard: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.coal-hard-domestic-step-6}" # from costs.yaml
-    activity_total_max: "${activity_total_max.coal-hard-domestic-step-6}" # from capacities.yaml
-
-
   - id: coal-brown-domestic-step-1
     long_name: Coal Brown (lignite) resource step 1
     operating_life: 1 # years
     operating_modes:
-      - id: GEN
+      - id: PRIMARY_PRODUCTION
         long_name: generation mode
         description: default generation mode
         output_activity_ratio:
           coal-brown: 1.0 # PJ/PJ
         opex_variable: "${opex_variable.coal-brown-domestic-step-1}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.coal-brown-domestic-step-1}" # from capacities.yaml
-
-  - id: coal-brown-domestic-step-2
-    long_name: Coal Brown (lignite) resource step 2
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          coal-brown: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.coal-brown-domestic-step-2}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.coal-brown-domestic-step-2}" # from capacities.yaml
-
-
-  - id: coal-brown-domestic-step-3
-    long_name: Coal Brown (lignite) resource step 3
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          coal-brown: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.coal-brown-domestic-step-3}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.coal-brown-domestic-step-3}" # from capacities.yaml
-
-  - id: coal-brown-domestic-step-4
-    long_name: Coal Brown (lignite) resource step 4
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          coal-brown: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.coal-brown-domestic-step-4}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.coal-brown-domestic-step-4}" # from capacities.yaml
-
-  - id: coal-brown-domestic-step-5
-    long_name: Coal Brown (lignite) resource step 5
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          coal-brown: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.coal-brown-domestic-step-5}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.coal-brown-domestic-step-5}" # from capacities.yaml
-
-  - id: coal-brown-domestic-step-6
-    long_name: Coal Brown (lignite) resource step 6
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          coal-brown: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.coal-brown-domestic-step-6}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.coal-brown-domestic-step-6}" # from capacities.yaml     
+    activity_total_max: "${activity_total_max.coal-brown-domestic-step-1}" # from capacities.yaml  
 
   - id: gas-domestic-step-1
     long_name: Domestic gas production resource cost step 1
     operating_life: 1 # years
     operating_modes:
-      - id: GEN
+      - id: PRIMARY_PRODUCTION
         long_name: generation mode
         description: default generation mode
         output_activity_ratio:
@@ -193,221 +67,11 @@ technologies:
         opex_variable: "${opex_variable.gas-domestic-step-1}"  # from costs.yaml
     activity_total_max: "${activity_total_max.gas-domestic-step-1}"  # from capacities.yaml
 
-  - id: gas-domestic-step-2
-    long_name: Domestic gas production resource cost step 2
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic-step-2}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.gas-domestic-step-2}"  # from capacities.yaml
-
-  - id: gas-domestic-step-3
-    long_name: Domestic gas production resource cost step 3
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic-step-3}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.gas-domestic-step-3}"  # from capacities.yaml
-
-  - id: gas-domestic-step-4
-    long_name: Domestic gas production resource cost step 4
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic-step-4}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.gas-domestic-step-4}"  # from capacities.yaml
-
-  - id: gas-domestic-step-5
-    long_name: Domestic gas production resource cost step 5
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic-step-5}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.gas-domestic-step-5}"  # from capacities.yaml
-
-
-  - id: gas-domestic-step-6
-    long_name: Domestic gas production resource cost step 6
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic-step-6}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.gas-domestic-step-6}"  # from capacities.yaml
-
-  - id: gas-domestic-step-7
-    long_name: Domestic gas production resource cost step 7
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic-step-7}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.gas-domestic-step-7}"  # from capacities.yaml
-
-  - id: gas-domestic-step-8
-    long_name: Domestic gas production resource cost step 8
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic-step-8}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.gas-domestic-step-8}"  # from capacities.yaml
-
-
-  - id: gas-domestic-step-9
-    long_name: Domestic gas production resource cost step 9
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic-step-9}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.gas-domestic-step-9}"  # from capacities.yaml
-
-
-  - id: gas-domestic-step-10
-    long_name: Domestic gas production resource cost step 10
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic-step-10}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.gas-domestic-step-10}"  # from capacities.yaml
-
-  - id: gas-domestic-step-11
-    long_name: Domestic gas production resource cost step 11
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic-step-11}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.gas-domestic-step-11}"  # from capacities.yaml
-
-  - id: gas-domestic-step-12
-    long_name: Domestic gas production resource cost step 12
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic-step-12}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.gas-domestic-step-12}"  # from capacities.yaml
-
-
-  - id: gas-domestic-step-13
-    long_name: Domestic gas production resource cost step 13
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic-step-13}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.gas-domestic-step-13}"  # from capacities.yaml
-
-  - id: gas-domestic-step-14
-    long_name: Domestic gas production resource cost step 14
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic-step-14}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.gas-domestic-step-14}"  # from capacities.yaml
-
-  - id: gas-domestic-step-15
-    long_name: Domestic gas production resource cost step 15
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic-step-15}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.gas-domestic-step-15}"  # from capacities.yaml
-
-  - id: gas-domestic-step-16
-    long_name: Domestic gas production resource cost step 16
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic-step-16}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.gas-domestic-step-16}"  # from capacities.yaml
-
-  - id: gas-domestic-step-17
-    long_name: Domestic gas production resource cost step 17
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic-step-17}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.gas-domestic-step-17}"  # from capacities.yaml
-
-
-  - id: gas-domestic-step-18
-    long_name: Domestic gas production resource cost step 18
-    operating_life: 1 # years    
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic-step-18}"  # from costs.yaml
-    activity_total_max: "${activity_total_max.gas-domestic-step-18}"  # from capacities.yaml
-
-  
   - id: uranium-resource
     long_name: uranium resource
     operating_life: 100 # years
     operating_modes:
-      - id: GEN
+      - id: PRIMARY_PRODUCTION
         long_name: generation mode
         description: default generation mode
         output_activity_ratio:
@@ -419,7 +83,7 @@ technologies:
     long_name: Solar resources
     operating_life: 100 # years
     operating_modes:
-      - id: GEN
+      - id: PRIMARY_PRODUCTION
         long_name: generation mode
         description: default generation mode
         output_activity_ratio:
@@ -430,7 +94,7 @@ technologies:
     long_name: Wind onshore resources
     operating_life: 100 # years
     operating_modes:
-      - id: GEN
+      - id: PRIMARY_PRODUCTION
         long_name: generation mode
         description: default generation mode
         output_activity_ratio:
@@ -445,7 +109,7 @@ technologies:
     long_name: Wind offshore resources
     operating_life: 100 # years
     operating_modes:
-      - id: GEN
+      - id: PRIMARY_PRODUCTION
         long_name: generation mode
         description: default generation mode
         output_activity_ratio:
@@ -460,7 +124,7 @@ technologies:
     long_name: river flow resources
     operating_life: 100 # years
     operating_modes:
-      - id: GEN
+      - id: PRIMARY_PRODUCTION
         long_name: generation mode
         description: default generation mode
         output_activity_ratio:
@@ -475,7 +139,7 @@ technologies:
     long_name: Geothermal resources
     operating_life: 100 # years
     operating_modes:
-      - id: GEN
+      - id: PRIMARY_PRODUCTION
         long_name: generation mode
         description: default generation mode
         output_activity_ratio:
@@ -490,19 +154,18 @@ technologies:
     long_name: Bioenergy resources
     operating_life: 100 # years
     operating_modes:
-      - id: GEN
+      - id: PRIMARY_PRODUCTION
         long_name: generation mode
         description: default generation mode
         output_activity_ratio:
           bioenergy: 1.0 # PJ/PJ
         opex_variable: 0.001 
 
-
   - id: gas-import-liquefied
     long_name: Imported liquefied natural gas
     capacity_activity_unit_ratio: 1
     operating_modes:
-      - id: GEN
+      - id: PRIMARY_PRODUCTION
         long_name: generation mode
         description: default generation mode
         output_activity_ratio:
@@ -513,7 +176,7 @@ technologies:
     long_name: Imported hard coal
     capacity_activity_unit_ratio: 1
     operating_modes:
-      - id: GEN
+      - id: PRIMARY_PRODUCTION
         long_name: generation mode
         description: default generation mode
         output_activity_ratio:
@@ -524,7 +187,7 @@ technologies:
     long_name: Process producing diesel
     capacity_activity_unit_ratio: 1
     operating_modes:
-      - id: GEN
+      - id: PRIMARY_PRODUCTION
         long_name: generation mode
         description: default generation mode
         output_activity_ratio:
@@ -535,7 +198,7 @@ technologies:
     long_name: Process producing diesel
     capacity_activity_unit_ratio: 1
     operating_modes:
-      - id: GEN
+      - id: PRIMARY_PRODUCTION
         long_name: generation mode
         description: default generation mode
         output_activity_ratio:
@@ -547,7 +210,7 @@ technologies:
     capacity_activity_unit_ratio: 1
     operating_life:  60 # years
     operating_modes:
-      - id: GEN
+      - id: PRIMARY_PRODUCTION
         long_name: generation mode
         description: default generation mode
         input_activity_ratio:
@@ -573,9 +236,9 @@ technologies:
     include_in_joint_reserve_margin: true
     operating_life: 30
     operating_modes:
-      - id: GEN_H
-        long_name: hard coal input
-        description: default generation mode
+      - id: GENERATION_HARD_COAL
+        long_name: generation mode with hard coal input
+        description: generation mode with hard coal input
         # Note:
         #   Below we define the input-output ratios. In the example below, 
         #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
@@ -586,9 +249,9 @@ technologies:
         emission_activity_ratio: 
           CO2: 0.09  
         opex_variable: "${opex_variable.coal-supercritical}" # from costs.yaml
-      - id: GEN_B
-        long_name: brown coal input
-        description: default generation mode
+      - id: GENERATION_BROWN_COAL
+        long_name: generation mode with brown coal input
+        description: generation mode with brown coal input
         # Note:
         #   Below we define the input-output ratios. In the example below, 
         #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
@@ -611,9 +274,9 @@ technologies:
     include_in_joint_reserve_margin: true
     operating_life: 30
     operating_modes:
-      - id: GEN_H
-        long_name: hard coal input
-        description: default generation mode
+      - id: GENERATION_HARD_COAL
+        long_name: generation mode with hard coal input
+        description: generation mode with hard coal input
         # Note:
         #   Below we define the input-output ratios. In the example below, 
         #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
@@ -624,9 +287,9 @@ technologies:
         emission_activity_ratio: 
           CO2: 0.09  
         opex_variable: "${opex_variable.coal-subcritical}" # from costs.yaml
-      - id: GEN_B
-        long_name: brown coal input
-        description: default generation mode
+      - id: GENERATION_BROWN_COAL
+        long_name: generation mode with brown coal input
+        description: generation mode with brown coal input
         # Note:
         #   Below we define the input-output ratios. In the example below, 
         #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
@@ -649,7 +312,7 @@ technologies:
     include_in_joint_reserve_margin: true
     operating_life: 30
     operating_modes:
-      - id: GEN_H
+      - id: GENERATION_HARD_COAL
         long_name: hard coal input
         description: default generation mode
         # Note:
@@ -662,7 +325,7 @@ technologies:
         emission_activity_ratio: 
           CO2: 0.09  
         opex_variable: "${opex_variable.coal-ultrasupercritical}" # from costs.yaml
-      - id: GEN_B
+      - id: GENERATION_BROWN_COAL
         long_name: brown coal input
         description: default generation mode
         # Note:
@@ -688,7 +351,7 @@ technologies:
     include_in_joint_reserve_margin: false
     operating_life: 25
     operating_modes:
-      - id: GEN
+      - id: GENERATION
         long_name: generation mode
         description: default generation mode
         # Note:
@@ -712,7 +375,7 @@ technologies:
     include_in_joint_reserve_margin: true
     operating_life: 40
     operating_modes:
-      - id: GEN
+      - id: GENERATION
         long_name: generation mode
         description: default generation mode
         # Note:
@@ -742,7 +405,7 @@ technologies:
     include_in_joint_reserve_margin: true
     operating_life: 40
     operating_modes:
-      - id: GEN
+      - id: GENERATION
         long_name: generation mode
         description: default generation mode
         # Note:
@@ -767,9 +430,9 @@ technologies:
     include_in_joint_reserve_margin: true
     operating_life: 40
     operating_modes:
-      - id: GEN_DSL
-        long_name: generation mode
-        description: default generation mode
+      - id: GENERATION_DIESEL
+        long_name: generation mode with diesel oil input
+        description: generation mode with diesel oil input
         # Note:
         #   Below we define the input-output ratios. In the example below, 
         #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
@@ -780,9 +443,9 @@ technologies:
         emission_activity_ratio: 
           CO2: 0.07
         opex_variable: "${opex_variable.oil-internal-combustion-engine}" # from costs.yaml
-      - id: GEN_FO
-        long_name: generation mode
-        description: default generation mode
+      - id: GENERATION_FUEL_OIL
+        long_name: generation mode with fuel oil input
+        description: generation mode with fuel oil input
         # Note:
         #   Below we define the input-output ratios. In the example below, 
         #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
@@ -806,7 +469,7 @@ technologies:
     include_in_joint_reserve_margin: false
     operating_life: 27
     operating_modes:
-      - id: GEN
+      - id: GENERATION
         long_name: generation mode
         description: default generation mode
         # Note:
@@ -829,7 +492,7 @@ technologies:
     include_in_joint_reserve_margin: false
     operating_life: 27
     operating_modes:
-      - id: GEN
+      - id: GENERATION
         long_name: generation mode
         description: default generation mode
         # Note:
@@ -852,7 +515,7 @@ technologies:
     include_in_joint_reserve_margin: true
     operating_life: 50
     operating_modes:
-      - id: GEN
+      - id: GENERATION
         long_name: generation mode
         description: default generation mode
         # Note:
@@ -875,7 +538,7 @@ technologies:
     include_in_joint_reserve_margin: true
     operating_life: 30
     operating_modes:
-      - id: GEN
+      - id: GENERATION
         long_name: generation mode
         description: default generation mode
         # Note:
@@ -898,7 +561,7 @@ technologies:
     include_in_joint_reserve_margin: true
     operating_life: 25
     operating_modes:
-      - id: GEN
+      - id: GENERATION
         long_name: generation mode
         description: default generation mode
         # Note:
@@ -921,7 +584,7 @@ technologies:
     include_in_joint_reserve_margin: true
     operating_life: 40
     operating_modes:
-      - id: GEN
+      - id: GENERATION
         long_name: generation mode
         description: default generation mode
         # Note:
@@ -952,7 +615,7 @@ technologies:
     include_in_joint_reserve_margin: false
     operating_life: 50
     operating_modes:
-      - id: GEN
+      - id: GENERATION
         long_name: generation mode
         description: default generation mode
         # Note:
@@ -966,3 +629,70 @@ technologies:
     residual_capacity: "${residual_capacity.transmission}" # from capacities.yaml
     capex: "${capex.transmission}" # from costs.yaml
     opex_fixed: "${opex_fixed.transmission}" # from costs.yaml
+
+
+  # --------------------------------------------
+  #
+  #   STORAGE TECHNOLOGIES
+  #   - Inputs are in petajoules (PJ)
+  #   - Outputs are in petajoules (PJ)
+  #
+  # --------------------------------------------
+
+  - id: battery-technology
+    long_name: Battery technology
+    capacity_activity_unit_ratio: 31.536
+    opex_fixed: 0
+    capex: 0
+    operating_life: 40
+    operating_modes:
+      - id: GEN
+        long_name: discharging mode
+        description: discharging mode
+        output_activity_ratio:
+          primary-electricity: 1.
+        from_storage: {
+          # all regions
+          "*": 
+            # storage unit
+            {"battery-storage": True}
+        }
+        opex_variable: 0
+      - id: CHARGE
+        long_name: charging mode
+        description: charging mode
+        input_activity_ratio:
+          primary-electricity: 1.
+        to_storage: {
+          # all region
+          "*":
+            # storage unit
+            {"battery-storage": True}
+        }
+        opex_variable: 0
+    capacity_gross_min: 0
+    # load from other yaml files
+    # residual_capacity: "${residual_capacity.hydro}"
+    # capex: "${capex.hydro}"
+    # opex_fixed: "${opex_fixed.hydro}"
+    # capacity_factor: "${capacity_factors.hydro}"
+
+
+# --------------------------------------------
+#
+#   STORAGE UNITS
+#   - Inputs are in petajoules (PJ)
+#   - Outputs are in petajoules (PJ)
+#
+# --------------------------------------------
+
+storage:
+
+- id: battery-storage
+  capex: 0
+  operating_life: 100
+  residual_capacity: 0
+  minimum_charge: 0
+  initial_level: 0
+  # max_discharge_rate: None
+  # max_charge_rate: None

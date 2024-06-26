@@ -81,6 +81,14 @@ residual_capacity:
   transmission:
     PHL-LU: 
       2023: 0.
+  
+  battery-technology:
+    PHL-LU: 
+      2023: 0.
+  
+  battery-storage:
+    PHL-LU: 
+      2023: 0.
 
 
 # -------
@@ -93,119 +101,121 @@ activity_total_max:
     PHL-LU: 283.73184
     PHL-VI: 0.
     PHL-MI: 0.
-  gas-domestic-step-2:
-    PHL-LU: 177.3324
-    PHL-VI: 0.
-    PHL-MI: 0.    
-  gas-domestic-step-3:
-    PHL-LU: 531.9972
-    PHL-VI: 0.
-    PHL-MI: 0.    
-  gas-domestic-step-4:
-    PHL-LU: 106.39944
-    PHL-VI: 0.
-    PHL-MI: 0.  
-  gas-domestic-step-5:
-    PHL-LU: 141.86592
-    PHL-VI: 0.
-    PHL-MI: 0.  
-  gas-domestic-step-6:
-    PHL-LU: 177.3324
-    PHL-VI: 0.
-    PHL-MI: 0.
-  gas-domestic-step-7:
-    PHL-LU: 319.19832
-    PHL-VI: 0.
-    PHL-MI: 0.    
-  gas-domestic-step-8:
-    PHL-LU: 567.46368
-    PHL-VI: 0.
-    PHL-MI: 0.    
-  gas-domestic-step-9:
-    PHL-LU: 70.93296
-    PHL-VI: 0.
-    PHL-MI: 0.    
-  gas-domestic-step-10:
-    PHL-LU: 212.79888
-    PHL-VI: 0.
-    PHL-MI: 0.    
-  gas-domestic-step-11:
-    PHL-LU: 319.19832
-    PHL-VI: 0.
-    PHL-MI: 0.    
-  gas-domestic-step-12:
-    PHL-LU: 70.93296
-    PHL-VI: 0.
-    PHL-MI: 0.    
-  gas-domestic-step-13:
-    PHL-LU: 141.86592
-    PHL-VI: 0.
-    PHL-MI: 0.    
-  gas-domestic-step-14:
-    PHL-LU: 212.79888
-    PHL-VI: 0.
-    PHL-MI: 0.    
-  gas-domestic-step-15:
-    PHL-LU: 35.46648
-    PHL-VI: 0.
-    PHL-MI: 0.    
-  gas-domestic-step-16:
-    PHL-LU: 106.39944
-    PHL-VI: 0.
-    PHL-MI: 0.    
-  gas-domestic-step-17:
-    PHL-LU: 35.46648
-    PHL-VI: 0.
-    PHL-MI: 0.    
-  gas-domestic-step-18:
-    PHL-LU: 35.46648
-    PHL-VI: 0.
-    PHL-MI: 0.                           
+  # gas-domestic-step-2:
+  #   PHL-LU: 177.3324
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.    
+  # gas-domestic-step-3:
+  #   PHL-LU: 531.9972
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.    
+  # gas-domestic-step-4:
+  #   PHL-LU: 106.39944
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.  
+  # gas-domestic-step-5:
+  #   PHL-LU: 141.86592
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.  
+  # gas-domestic-step-6:
+  #   PHL-LU: 177.3324
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.
+  # gas-domestic-step-7:
+  #   PHL-LU: 319.19832
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.    
+  # gas-domestic-step-8:
+  #   PHL-LU: 567.46368
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.    
+  # gas-domestic-step-9:
+  #   PHL-LU: 70.93296
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.    
+  # gas-domestic-step-10:
+  #   PHL-LU: 212.79888
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.    
+  # gas-domestic-step-11:
+  #   PHL-LU: 319.19832
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.    
+  # gas-domestic-step-12:
+  #   PHL-LU: 70.93296
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.    
+  # gas-domestic-step-13:
+  #   PHL-LU: 141.86592
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.    
+  # gas-domestic-step-14:
+  #   PHL-LU: 212.79888
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.    
+  # gas-domestic-step-15:
+  #   PHL-LU: 35.46648
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.    
+  # gas-domestic-step-16:
+  #   PHL-LU: 106.39944
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.    
+  # gas-domestic-step-17:
+  #   PHL-LU: 35.46648
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.    
+  # gas-domestic-step-18:
+  #   PHL-LU: 35.46648
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.  
+
   coal-hard-domestic-step-1:
     PHL-LU: 252.0488
     PHL-VI: 0.
     PHL-MI: 0.
-  coal-hard-domestic-step-2:
-    PHL-LU: 819.1586
-    PHL-VI: 0.
-    PHL-MI: 0.
-  coal-hard-domestic-step-3:
-    PHL-LU: 756.1464
-    PHL-VI: 0.
-    PHL-MI: 0.
-  coal-hard-domestic-step-4:
-    PHL-LU: 1890.366
-    PHL-VI: 0.
-    PHL-MI: 0.
-  coal-hard-domestic-step-5:
-    PHL-LU: 756.1464
-    PHL-VI: 0.
-    PHL-MI: 0.
-  coal-hard-domestic-step-6:
-    PHL-LU: 1827.3538
-    PHL-VI: 0.
-    PHL-MI: 0.
+  # coal-hard-domestic-step-2:
+  #   PHL-LU: 819.1586
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.
+  # coal-hard-domestic-step-3:
+  #   PHL-LU: 756.1464
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.
+  # coal-hard-domestic-step-4:
+  #   PHL-LU: 1890.366
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.
+  # coal-hard-domestic-step-5:
+  #   PHL-LU: 756.1464
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.
+  # coal-hard-domestic-step-6:
+  #   PHL-LU: 1827.3538
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.
+
   coal-brown-domestic-step-1:
     PHL-LU: 110.96
     PHL-VI: 0.
     PHL-MI: 0.
-  coal-brown-domestic-step-2:
-    PHL-LU: 360.62
-    PHL-VI: 0.
-    PHL-MI: 0.
-  coal-brown-domestic-step-3:
-    PHL-LU: 332.88
-    PHL-VI: 0.
-    PHL-MI: 0.
-  coal-brown-domestic-step-4:
-    PHL-LU: 832.2
-    PHL-VI: 0.
-    PHL-MI: 0.
-  coal-brown-domestic-step-5:
-    PHL-LU: 332.88
-    PHL-VI: 0.
-    PHL-MI: 0.
-  coal-brown-domestic-step-6:
-    PHL-LU: 804.46
-    PHL-VI: 0.
-    PHL-MI: 0.
+  # coal-brown-domestic-step-2:
+  #   PHL-LU: 360.62
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.
+  # coal-brown-domestic-step-3:
+  #   PHL-LU: 332.88
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.
+  # coal-brown-domestic-step-4:
+  #   PHL-LU: 832.2
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.
+  # coal-brown-domestic-step-5:
+  #   PHL-LU: 332.88
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.
+  # coal-brown-domestic-step-6:
+  #   PHL-LU: 804.46
+  #   PHL-VI: 0.
+  #   PHL-MI: 0.
