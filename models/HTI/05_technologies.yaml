@@ -629,3 +629,70 @@ technologies:
     residual_capacity: "${residual_capacity.transmission}" # from capacities.yaml
     capex: "${capex.transmission}" # from costs.yaml
     opex_fixed: "${opex_fixed.transmission}" # from costs.yaml
+
+
+  # --------------------------------------------
+  #
+  #   STORAGE TECHNOLOGIES
+  #   - Inputs are in petajoules (PJ)
+  #   - Outputs are in petajoules (PJ)
+  #
+  # --------------------------------------------
+
+  - id: battery-technology
+    long_name: Battery technology
+    capacity_activity_unit_ratio: 31.536
+    opex_fixed: 0
+    capex: 0
+    operating_life: 40
+    operating_modes:
+      - id: GEN
+        long_name: discharging mode
+        description: discharging mode
+        output_activity_ratio:
+          primary-electricity: 1.
+        from_storage: {
+          # all regions
+          "*": 
+            # storage unit
+            {"battery-storage": True}
+        }
+        opex_variable: 0
+      - id: CHARGE
+        long_name: charging mode
+        description: charging mode
+        input_activity_ratio:
+          primary-electricity: 1.
+        to_storage: {
+          # all region
+          "*":
+            # storage unit
+            {"battery-storage": True}
+        }
+        opex_variable: 0
+    capacity_gross_min: 0
+    # load from other yaml files
+    # residual_capacity: "${residual_capacity.hydro}"
+    # capex: "${capex.hydro}"
+    # opex_fixed: "${opex_fixed.hydro}"
+    # capacity_factor: "${capacity_factors.hydro}"
+
+
+# --------------------------------------------
+#
+#   STORAGE UNITS
+#   - Inputs are in petajoules (PJ)
+#   - Outputs are in petajoules (PJ)
+#
+# --------------------------------------------
+
+storage:
+
+- id: battery-storage
+  capex: 0
+  operating_life: 100
+  residual_capacity: 0
+  minimum_charge: 0
+  initial_level: 0
+  # max_discharge_rate: None
+  # max_charge_rate: None

@@ -116,6 +116,14 @@ capex:
   transmission:
     "*" :
       "*": 448
+  
+  battery-technology:
+    "*" :
+      "*": 0
+  
+  battery-storage:
+    "*" :
+      "*": 0
 
 
 # ----------------
@@ -185,6 +193,14 @@ opex_fixed:
   transmission: 
     "*" :
       "*": 698 # need to be checked (the value is too high??)
+  
+  battery-technology:
+    "*" :
+      "*": 0
+  
+  battery-storage:
+    "*" :
+      "*": 0
 
 
 opex_variable:
@@ -243,6 +259,14 @@ opex_variable:
   transmission: 
     "*":
       "*": 3.0 # need to be checked
+  
+  battery-technology:
+    "*" :
+      "*": 0
+  
+  battery-storage:
+    "*" :
+      "*": 0
 
   gas-import-liquefied:
     "*": 

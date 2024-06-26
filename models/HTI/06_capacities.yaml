@@ -81,6 +81,14 @@ residual_capacity:
   transmission:
     HTI: 
       2023: 0.
+  
+  battery-technology:
+    GAB: 
+      2023: 0.
+  
+  battery-storage:
+    GAB: 
+      2023: 0.
 
 
 # -------
