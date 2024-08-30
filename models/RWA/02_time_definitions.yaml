@@ -17,47 +17,40 @@
 time_definition:
   id: "${global_variables.base_year}_2050_annual_2hourly"
   years: "range(${global_variables.base_year},2051)"
-  seasons: [1, 2] # s1: dry season, s2: rainy season
-  daily_time_brackets: [1, 2, 3, 4, 5, 6]
+  seasons: ["nh_spring-summer", "nh_fall-winter"] # s1: dry season, s2: rainy season
+  daily_time_brackets: [
+    "00h00-06h00-utc", 
+    "06h00-12h00-utc", 
+    "12h00-18h00-utc", 
+    "18h00-24h00-utc",
+  ]
   timeslices: [
-    "s1-h1", 
-    "s1-h2", 
-    "s1-h3", 
-    "s1-h4", 
-    "s1-h5", 
-    "s1-h6", 
-    "s2-h1", 
-    "s2-h2", 
-    "s2-h3", 
-    "s2-h4", 
-    "s2-h5", 
-    "s2-h6",
+    "nh_spring-summer-00h00-06h00-utc", 
+    "nh_spring-summer-06h00-12h00-utc", 
+    "nh_spring-summer-12h00-18h00-utc", 
+    "nh_spring-summer-18h00-24h00-utc", 
+    "nh_fall-winter-00h00-06h00-utc", 
+    "nh_fall-winter-06h00-12h00-utc", 
+    "nh_fall-winter-12h00-18h00-utc", 
+    "nh_fall-winter-18h00-24h00-utc", 
   ]
   timeslice_in_season: {
-    "s1-h1": 1, 
-    "s1-h2": 1, 
-    "s1-h3": 1, 
-    "s1-h4": 1, 
-    "s1-h5": 1, 
-    "s1-h6": 1,
-    "s2-h1": 2, 
-    "s2-h2": 2, 
-    "s2-h3": 2, 
-    "s2-h4": 2, 
-    "s2-h5": 2, 
-    "s2-h6": 2,
+    "nh_spring-summer-00h00-06h00-utc": 1, 
+    "nh_spring-summer-06h00-12h00-utc": 1, 
+    "nh_spring-summer-12h00-18h00-utc": 1, 
+    "nh_spring-summer-18h00-24h00-utc": 1, 
+    "nh_fall-winter-00h00-06h00-utc": 2, 
+    "nh_fall-winter-06h00-12h00-utc": 2, 
+    "nh_fall-winter-12h00-18h00-utc": 2, 
+    "nh_fall-winter-18h00-24h00-utc": 2, 
   }
   timeslice_in_timebracket: {
-    "s1-h1": 1,
-    "s1-h2": 2,
-    "s1-h3": 3,
-    "s1-h4": 4,
-    "s1-h5": 5,
-    "s1-h6": 6,
-    "s2-h1": 1,
-    "s2-h2": 2,
-    "s2-h3": 3,
-    "s2-h4": 4,
-    "s2-h5": 5,
-    "s2-h6": 6,
+    "nh_spring-summer-00h00-06h00-utc": 1,
+    "nh_spring-summer-06h00-12h00-utc": 2,
+    "nh_spring-summer-12h00-18h00-utc": 3,
+    "nh_spring-summer-18h00-24h00-utc": 4,
+    "nh_fall-winter-00h00-06h00-utc": 1,
+    "nh_fall-winter-06h00-12h00-utc": 2,
+    "nh_fall-winter-12h00-18h00-utc": 3,
+    "nh_fall-winter-18h00-24h00-utc": 4,
   }

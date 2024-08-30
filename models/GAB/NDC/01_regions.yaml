@@ -1,0 +1,21 @@
+# -------------------------------------------------------------------------
+#
+#   REGIONS (NODES)
+#   
+#     Define each spatial domain in the model.
+#
+#     Link to docs: 
+#       - https://docs.feo.transitionzero.org/docs/tz-osemosys/technology/
+#
+#     Authors:
+#       - xx
+#
+# -------------------------------------------------------------------------
+
+regions:
+
+  - id: GAB
+    long_name: Gabon
+    description: A node representing the whole of Gabon.
+
+# -------------------------------------------------------------------------  
