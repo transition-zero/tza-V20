@@ -71,3 +71,9 @@ To discuss ideas for the project, please contact [@amanmajid](mailto:aman.m@tran
 Copyright 2020-2023 [TransitionZero](https://www.transitionzero.org/)
 
 This repository is licensed under the open source [XXX](...).
+
+# TODO
+
+- [ ] Add data from Google spreadsheet into yaml files for each country
+- [ ] Create folders per scenario (BAU, CPP, NDC) for each country 
+- [ ] Check the emissions budgets because they look wrong
