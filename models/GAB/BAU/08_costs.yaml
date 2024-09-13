@@ -53,312 +53,461 @@ cost_of_capital: # WACC
 # Capital costs
 # --------------
 
+capex_base_cost: # unit: $/kW
+  coal-supercritical: 2500
+  coal-subcritical: 2500
+  coal-ultrasupercritical: 2500
+  gas-CCGT: 1200
+  gas-OCGT: 1200
+  oil-internal-combustion-engine: 1450
+  solar-pv: 1063
+  solar-csp: 3427
+  windonshore-power: 1251
+  windoffshore-power: 3211
+  hydropower: 3000
+  geo-power: 4000
+  bioenergy-power: 2500
+  nuclear-power: 6137
+  battery-technology: 463 # USD/kWh; Source: mid value of https://www.nrel.gov/docs/fy23osti/85332.pdf
+  # transmission: 
+
+capex_cagr: 
+  coal-supercritical: 1
+  coal-subcritical: 1
+  coal-ultrasupercritical: 1
+  gas-CCGT: 1
+  gas-OCGT: 1
+  oil-internal-combustion-engine: 1
+  solar-pv: 0.98528
+  solar-csp: 0.98887
+  windonshore-power: 0.98878
+  windoffshore-power: 0.98683
+  hydropower: 1
+  geo-power: 1
+  bioenergy-power: 1
+  nuclear-power: 1
+  battery-technology: 0.97279 # Source: mid value of https://www.nrel.gov/docs/fy23osti/85332.pdf
+  # transmission: 
+
+
 capex:
   coal-supercritical:
     # all regions
     GAB: 
       # all years
-      "*": 1503
+      "{y: ${capex_base_cost.coal-supercritical} * (${capex_cagr.coal-supercritical} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
       # "*": "{y: ${capex_base_cost.coal-supercritical} * (1+${capex_cagr.coal-supercritical})**(y-min(${time_definition.years})) for y in ${time_definition.years}}"
 
   coal-subcritical:
     GAB:
-      "*": 1852
+      "{y: ${capex_base_cost.coal-subcritical} * (${capex_cagr.coal-subcritical} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
   coal-ultrasupercritical:
     GAB:
-      "*": 1609
+      "{y: ${capex_base_cost.coal-ultrasupercritical} * (${capex_cagr.coal-ultrasupercritical} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
   gas-CCGT:    
     GAB:
-      "*": 1014
+      "{y: ${capex_base_cost.gas-CCGT} * (${capex_cagr.gas-CCGT} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   
   gas-OCGT:
     GAB:
-      "*": 1042
+      "{y: ${capex_base_cost.gas-OCGT} * (${capex_cagr.gas-OCGT} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
   oil-internal-combustion-engine:
     GAB:
-      "*": 736
+      "{y: ${capex_base_cost.oil-internal-combustion-engine} * (${capex_cagr.oil-internal-combustion-engine} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
         
   solar-pv: 
     GAB:
-      "*": 893
+      "{y: ${capex_base_cost.solar-pv} * (${capex_cagr.solar-pv} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+
+  solar-csp: 
+    GAB:
+      "{y: ${capex_base_cost.solar-csp} * (${capex_cagr.solar-csp} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
   windonshore-power:
     GAB:
-      "*": 1547
+      "{y: ${capex_base_cost.windonshore-power} * (${capex_cagr.windonshore-power} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
   windoffshore-power:
     GAB:
-      "*": 3544
+      "{y: ${capex_base_cost.windoffshore-power} * (${capex_cagr.windoffshore-power} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
-  hydropower: # using hydro-large value
+  hydropower: 
     GAB:
-      "*": 1803
+      "{y: ${capex_base_cost.hydropower} * (${capex_cagr.hydropower} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
-  geo-power: # using geothermal binary value
+  geo-power: 
     GAB:
-      "*": 5001
+      "{y: ${capex_base_cost.geo-power} * (${capex_cagr.geo-power} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
-  bioenergy-power: # using biomass small value
+  bioenergy-power: 
     GAB:
-      "*": 1996
+      "{y: ${capex_base_cost.bioenergy-power} * (${capex_cagr.bioenergy-power} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
-  nuclear-power: # using SMR value
+  nuclear-power: 
     GAB:
-      "*": 9456
+      "{y: ${capex_base_cost.nuclear-power} * (${capex_cagr.nuclear-power} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
-  regasification-floating:
-    "*" :
-      "*": 1.700117
-
-  transmission:
-    "*" :
-      "*": 448
-  
   battery-technology:
     "*" :
-      "*": 0
+      "{y: ${capex_base_cost.battery-technology} * (${capex_cagr.battery-technology} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   
-  battery-storage:
-    "*" :
-      "*": 0
+  # transmission:
+  #   "*" :
+  #     "*": 0
 
 
 # ----------------
 # Fixed O&M costs
 # ----------------
 
+opex_fixed_base_cost: # unit: $/kW
+  coal-supercritical: 78
+  coal-subcritical: 78
+  coal-ultrasupercritical: 78
+  gas-CCGT: 35
+  gas-OCGT: 20
+  oil-internal-combustion-engine: 35
+  solar-pv: 13.8
+  solar-csp: 34.4
+  windonshore-power: 50
+  windoffshore-power: 128.4
+  hydropower: 90
+  geo-power: 120
+  bioenergy-power: 75
+  nuclear-power: 184.1
+  battery-technology: 0 # Still cannot find reference for BESS FOM
+  # transmission: 
+
+opex_fixed_cagr: 
+  coal-supercritical: 1
+  coal-subcritical: 1
+  coal-ultrasupercritical: 1
+  gas-CCGT: 1
+  gas-OCGT: 1
+  oil-internal-combustion-engine: 1
+  solar-pv: 0.98534
+  solar-csp: 0.98881
+  windonshore-power: 0.98880
+  windoffshore-power: 0.98380
+  hydropower: 1
+  geo-power: 1
+  bioenergy-power: 1
+  nuclear-power: 1
+  battery-technology: 1 # Still cannot find reference for BESS FOM
+  # transmission: 
+
+
 opex_fixed:
   coal-supercritical:
     # all regions
     GAB: 
       # all years
-      "*": 42.4
-      #"{y: ${opex_base_cost.coal-supercritical} * (1+${opex_cagr.coal-supercritical})**(y-min(${time_definition.years})) for y in ${time_definition.years}}"
+      "{y: ${opex_fixed_base_cost.coal-supercritical} * (${opex_fixed_cagr.coal-supercritical} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
   coal-subcritical:
     GAB:
-      "*": 50.8
+      "{y: ${opex_fixed_base_cost.coal-subcritical} * (${opex_fixed_cagr.coal-subcritical} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
   coal-ultrasupercritical:
     GAB:
-      "*": 61.8
+      "{y: ${opex_fixed_base_cost.coal-ultrasupercritical} * (${opex_fixed_cagr.coal-ultrasupercritical} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
   gas-CCGT:    
     GAB:
-      "*": 27.7
-
+      "{y: ${opex_fixed_base_cost.gas-CCGT} * (${opex_fixed_cagr.gas-CCGT} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+  
   gas-OCGT:
     GAB:
-      "*": 24.8
+      "{y: ${opex_fixed_base_cost.gas-OCGT} * (${opex_fixed_cagr.gas-OCGT} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
   oil-internal-combustion-engine:
     GAB:
-      "*": 9.4
+      "{y: ${opex_fixed_base_cost.oil-internal-combustion-engine} * (${opex_fixed_cagr.oil-internal-combustion-engine} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
         
   solar-pv: 
     GAB:
-      "*": 11.5
+      "{y: ${opex_fixed_base_cost.solar-pv} * (${opex_fixed_cagr.solar-pv} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+
+  solar-csp: 
+    GAB:
+      "{y: ${opex_fixed_base_cost.solar-csp} * (${opex_fixed_cagr.solar-csp} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
   windonshore-power:
     GAB:
-      "*": 40.4
+      "{y: ${opex_fixed_base_cost.windonshore-power} * (${opex_fixed_cagr.windonshore-power} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
   windoffshore-power:
     GAB:
-      "*": 91.6
+      "{y: ${opex_fixed_base_cost.windoffshore-power} * (${opex_fixed_cagr.windoffshore-power} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
-  hydropower: # using hydro-large value
+  hydropower: 
     GAB:
-      "*": 39.6
+      "{y: ${opex_fixed_base_cost.hydropower} * (${opex_fixed_cagr.hydropower} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
-  geo-power: # using geothermal binary value
+  geo-power: 
     GAB:
-      "*": 78.2
+      "{y: ${opex_fixed_base_cost.geo-power} * (${opex_fixed_cagr.geo-power} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
-  bioenergy-power: # using biomass small value
+  bioenergy-power: 
     GAB:
-      "*": 50.8
+      "{y: ${opex_fixed_base_cost.bioenergy-power} * (${opex_fixed_cagr.bioenergy-power} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
-  nuclear-power: # using SMR value
+  nuclear-power: 
     GAB:
-      "*": 108.3
+      "{y: ${opex_fixed_base_cost.nuclear-power} * (${opex_fixed_cagr.nuclear-power} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
-  regasification-floating:
-    "*" :
-      "*": 1.700117
-
-  transmission: 
-    "*" :
-      "*": 698 # need to be checked (the value is too high??)
-  
   battery-technology:
     "*" :
-      "*": 0
+      "{y: ${opex_fixed_base_cost.battery-technology} * (${opex_fixed_cagr.battery-technology} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   
-  battery-storage:
-    "*" :
-      "*": 0
+  # transmission:
+  #   "*" :
+  #     "*": 0
 
 # ----------------
 # Variable O&M costs
 # ----------------
 
-opex_variable:
-  coal-supercritical: 
-    GAB:
-      "*": 1.06
+# Note: no VOM listed in the V20 sheet
 
-  coal-ultrasupercritical:
-    GAB:
-      "*": 0.64
+opex_variable_base_cost: # unit: $/kW
+  coal-supercritical: 0
+  coal-subcritical: 0
+  coal-ultrasupercritical: 0
+  gas-CCGT: 0
+  gas-OCGT: 0
+  oil-internal-combustion-engine: 0
+  solar-pv: 0
+  solar-csp: 0
+  windonshore-power: 0
+  windoffshore-power: 0
+  hydropower: 0
+  geo-power: 0
+  bioenergy-power: 0
+  nuclear-power: 0
+  battery-technology: 0 
+  # transmission: 
+
+opex_variable_cagr: 
+  coal-supercritical: 1
+  coal-subcritical: 1
+  coal-ultrasupercritical: 1
+  gas-CCGT: 1
+  gas-OCGT: 1
+  oil-internal-combustion-engine: 1
+  solar-pv: 1
+  solar-csp: 1
+  windonshore-power: 1
+  windoffshore-power: 1
+  hydropower: 1
+  geo-power: 1
+  bioenergy-power: 1
+  nuclear-power: 1
+  battery-technology: 1 
+  # transmission: 
+
+
+opex_variable:
+  coal-supercritical:
+    # all regions
+    GAB: 
+      # all years
+      "{y: ${opex_variable_base_cost.coal-supercritical} * (${opex_variable_cagr.coal-supercritical} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
   coal-subcritical:
     GAB:
-      "*": 1.48
+      "{y: ${opex_variable_base_cost.coal-subcritical} * (${opex_variable_cagr.coal-subcritical} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+
+  coal-ultrasupercritical:
+    GAB:
+      "{y: ${opex_variable_base_cost.coal-ultrasupercritical} * (${opex_variable_cagr.coal-ultrasupercritical} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+
+  gas-CCGT:    
+    GAB:
+      "{y: ${opex_variable_base_cost.gas-CCGT} * (${opex_variable_cagr.gas-CCGT} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+  
+  gas-OCGT:
+    GAB:
+      "{y: ${opex_variable_base_cost.gas-OCGT} * (${opex_variable_cagr.gas-OCGT} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
   oil-internal-combustion-engine:
     GAB:
-      "*": 6.78
-
-  gas-CCGT:
+      "{y: ${opex_variable_base_cost.oil-internal-combustion-engine} * (${opex_variable_cagr.oil-internal-combustion-engine} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+        
+  solar-pv: 
     GAB:
-      "*": 1.44
+      "{y: ${opex_variable_base_cost.solar-pv} * (${opex_variable_cagr.solar-pv} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
-  gas-OCGT: 
+  solar-csp: 
     GAB:
-      "*": 1.67
-
-  solar-pv:
-    "*":
-      "*": 0.
+      "{y: ${opex_variable_base_cost.solar-csp} * (${opex_variable_cagr.solar-csp} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
   windonshore-power:
     GAB:
-      "*": 1.82
+      "{y: ${opex_variable_base_cost.windonshore-power} * (${opex_variable_cagr.windonshore-power} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
   windoffshore-power:
     GAB:
-      "*": 5.16
-
-  nuclear-power: 
-    GAB:
-      "*": 2.17
+      "{y: ${opex_variable_base_cost.windoffshore-power} * (${opex_variable_cagr.windoffshore-power} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
   hydropower: 
     GAB:
-      "*": 0.68
+      "{y: ${opex_variable_base_cost.hydropower} * (${opex_variable_cagr.hydropower} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
   geo-power: 
     GAB:
-      "*": 0.38
+      "{y: ${opex_variable_base_cost.geo-power} * (${opex_variable_cagr.geo-power} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
   bioenergy-power: 
     GAB:
-      "*": 3.24
+      "{y: ${opex_variable_base_cost.bioenergy-power} * (${opex_variable_cagr.bioenergy-power} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
 
-  transmission: 
-    "*":
-      "*": 3.0 # need to be checked
-  
+  nuclear-power: 
+    GAB:
+      "{y: ${opex_variable_base_cost.nuclear-power} * (${opex_variable_cagr.nuclear-power} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+
   battery-technology:
     "*" :
-      "*": 0
+      "{y: ${opex_variable_base_cost.battery-technology} * (${opex_variable_cagr.battery-technology} ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   
-  battery-storage:
-    "*" :
-      "*": 0
-
-  gas-import-liquefied:
-    "*": 
-      2023: 9.05697343932461
-      2024: 7.91953268103077
-      2025: 7.36976964785541
-      2026: 6.97166538245257
-      2027: 6.76313457676537
-      2028: 6.71574121183646
-      2029: 6.7441772307938
-      2030: 6.82000661468006
-      2031: 6.94322936349522
-      2032: 7.10436680425352
-      2033: 7.30341893695494
-      2034: 7.44559903174167
-      2035: 7.54986443458527
-      2036: 7.55934310757105
-      2037: 7.60673647249996
-      2038: 7.72995922131513
-      2039: 7.65412983742887
-      2040: 7.7963099322156
-      2041: 7.87213931610186
-      2042: 7.86266064311608
-      2043: 7.80578860520138
-      2044: 7.76787391325826
-      2045: 7.76787391325826
-      2046: 7.76787391325826
-      2047: 7.72995922131513
-      2048: 7.71100187534357
-      2049: 7.64465116444309
-      2050: 7.63517249145731
-
-  coal-import-hard:
-    "*":
-      2023: 10.4436860068259
-      2024: 9.419795221843
-      2025: 8.39590443686007
-      2026: 7.37201365187713
-      2027: 6.3481228668942
-      2028: 5.32423208191126
-      2029: 4.30034129692833
-      2030: 3.27645051194539
-      2031: 3.24402730375427
-      2032: 3.21160409556314
-      2033: 3.17918088737201
-      2034: 3.14675767918089
-      2035: 3.11433447098976
-      2036: 3.08191126279864
-      2037: 3.04948805460751
-      2038: 3.01706484641638
-      2039: 2.98464163822526
-      2040: 2.95221843003413
-      2041: 2.919795221843
-      2042: 2.88737201365188
-      2043: 2.85494880546075
-      2044: 2.82252559726963
-      2045: 2.7901023890785
-      2046: 2.75767918088737
-      2047: 2.72525597269625
-      2048: 2.69283276450512
-      2049: 2.66040955631399
-      2050: 2.62798634812287
-
-  oil-diesel-production: 
-    "*":
-      "*": 15.14
-
-  oil-fuel-oil-production:
-    "*":
-      "*": 15.14
-
-  coal-hard-domestic-step-1: 
-    "*":
-      "*": 1.75
-
-  coal-brown-domestic-step-1: 
-    "*":
-      "*": 1.12
-
-  gas-domestic-step-1: 
-    GAB:
-      "*": 3.49
+  # transmission:
+  #   "*" :
+  #     "*": 0
 
 
 # ---------------------------
 # Fuel prices (M$/PJ or $/GJ)
 # ---------------------------
 
-fuel_price:
+fuel_price: # Unit: $/MWh
+
+  bioenergy:
+    GAB:
+      "*": 6.3 
+
+  coal:
+    GAB: # Decided to use the annual values with no change in 5-years because the growth is not linear
+      2023: 18.9	
+      2024: 18.9	
+      2025: 19.1
+      2026: 19.1
+      2027: 19.1
+      2028: 19.1
+      2029: 19.1	
+      2030: 19.8
+      2031: 19.8
+      2032: 19.8
+      2033: 19.8
+      2034: 19.8	
+      2035: 20.5
+      2036: 20.5
+      2037: 20.5
+      2038: 20.5
+      2039: 20.5	
+      2040: 21.2
+      2041: 21.2
+      2042: 21.2
+      2043: 21.2
+      2044: 21.2	
+      2045: 21.2
+      2046: 21.2
+      2047: 21.2
+      2048: 21.2
+      2049: 21.2	
+      2050: 21.24
+
+  gas:
+    GAB: # Decided to use the annual values with no change in 5-years because the growth is not linear
+      2023: 33.4
+      2024: 33.4	
+      2025: 34.0
+      2026: 34.0
+      2027: 34.0
+      2028: 34.0
+      2029: 34.0	
+      2030: 37.1
+      2031: 37.1
+      2032: 37.1
+      2033: 37.1
+      2034: 37.1	
+      2035: 38.3
+      2036: 38.3
+      2037: 38.3
+      2038: 38.3
+      2039: 38.3	
+      2040: 39.6
+      2041: 39.6
+      2042: 39.6
+      2043: 39.6
+      2044: 39.6	
+      2045: 39.6
+      2046: 39.6
+      2047: 39.6
+      2048: 39.6
+      2049: 39.6
+      2050: 39.6
+
+  oil-diesel:
+    GAB: # Decided to use the annual values with no change in 5-years because the growth is not linear
+      2023: 55.1	
+      2024: 55.1
+      2025: 55.5
+      2026: 55.5
+      2027: 55.5
+      2028: 55.5
+      2029: 55.5	
+      2030: 62.1
+      2031: 62.1
+      2032: 62.1
+      2033: 62.1
+      2034: 62.1	
+      2035: 67.8
+      2036: 67.8
+      2037: 67.8
+      2038: 67.8
+      2039: 67.8	
+      2040: 73.5
+      2041: 73.5
+      2042: 73.5
+      2043: 73.5
+      2044: 73.5	
+      2045: 79.2
+      2046: 79.2
+      2047: 79.2
+      2048: 79.2
+      2049: 79.2	
+      2050: 85.0
+
   uranium:
-    "*" :
-      "*" : 0.27 # source: https://www.osti.gov/servlets/purl/840500
+    GAB: # Decided to use the annual values with no change in 5-years because the growth is not linear
+      2023: 0.5	
+      2024: 0.5	
+      2025: 0.5
+      2026: 0.5
+      2027: 0.5
+      2028: 0.5
+      2029: 0.5	
+      2030: 0.6
+      2031: 0.6
+      2032: 0.6
+      2033: 0.6
+      2034: 0.6	
+      2035: 0.6
+      2036: 0.6
+      2037: 0.6
+      2038: 0.6
+      2039: 0.6	
+      2040: 0.6
+      2041: 0.6
+      2042: 0.6
+      2043: 0.6
+      2044: 0.6
+      2045: 0.6
+      2046: 0.6
+      2047: 0.6
+      2048: 0.6
+      2049: 0.6
+      2050: 0.7

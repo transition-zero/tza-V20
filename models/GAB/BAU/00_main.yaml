@@ -7,5 +7,5 @@ description: >
 # Global variables
 global_variables:
   base_year: 2023
-  base_demand: 200
-  demand_growth_pcgt: 0.0459 # 4.59% growth rate
+  base_demand: 10.5 # from Ember version Sept 2024 (PJ)
+  demand_growth_pcgt: 0.0371 # 3.71% growth rate from Ember version Sept 2024

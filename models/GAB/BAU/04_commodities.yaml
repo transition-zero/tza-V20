@@ -15,25 +15,13 @@
 
 commodities:
 
-  - id: coal-brown
-    long_name: Brown coal
-    is_renewable: false
-
-  - id: coal-hard
-    long_name: Hard coal
-    is_renewable: false  
-
-  - id: gas-liquefied
-    long_name: Liquefied gas
-    is_renewable: false
+  - id: coal
+    long_name: Coal resource
+    is_renewable: false 
 
   - id: gas
-    long_name: Aggregated gas commodity (both domestic and import)
+    long_name: Gas resource
     is_renewable: false
-
-  - id: oil-fuel-oil
-    long_name: Fuel oil used in power plants
-    is_renewable: false  
 
   - id: oil-diesel
     long_name: Diesel 
@@ -87,15 +75,13 @@ commodities:
         # all years
         "*" :
           # demand by timeslice
-          s1-h1: 0.02 # 0 - 4
-          s1-h2: 0.02 # 5 - 8
-          s1-h3: 0.04 # 9 - 12
-          s1-h4: 0.09 # 13 - 16
-          s1-h5: 0.13 # 17 - 20
-          s1-h6: 0.20 # 21 - 24
-          s2-h1: 0.02 # 0 - 4
-          s2-h2: 0.02 # 5 - 8
-          s2-h3: 0.04 # 9 - 12
-          s2-h4: 0.09 # 13 - 16
-          s2-h5: 0.13 # 17 - 20
-          s2-h6: 0.20 # 21 - 24
+          # source: Global interconnector study 
+          # (https://github.com/transition-zero/feo-esmod-osemosys/blob/master/resources/data/custom_nodes/specified_demand_profile.csv)
+          s1-h1: 0.10617
+          s1-h2: 0.10832
+          s1-h3: 0.11112
+          s1-h4: 0.08834
+          s2-h1: 0.14989
+          s2-h2: 0.15235
+          s2-h3: 0.15679
+          s2-h4: 0.12456

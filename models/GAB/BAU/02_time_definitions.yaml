@@ -54,3 +54,7 @@ time_definition:
     "nh_fall-winter-12h00-18h00-utc": 3,
     "nh_fall-winter-18h00-24h00-utc": 4,
   }
+
+  # Note: Seasons follow the condition per country. 
+  # Long dry to small rainy season: May-Nov
+  # Small dry to long dry season: Dec-Apr
