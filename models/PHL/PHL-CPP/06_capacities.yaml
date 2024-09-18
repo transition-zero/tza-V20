@@ -791,10 +791,10 @@ activity_total_max:
     PHL-VI: 0.
     PHL-MI: 0.   
 
- coal-hard-domestic-step-1:
-   PHL-LU: 228.83
-   PHL-VI: 0.
-   PHL-MI: 0.
+  coal-hard-domestic-step-1:
+    PHL-LU: 228.83
+    PHL-VI: 0.
+    PHL-MI: 0.
     
   coal-hard-domestic-step-2:
     PHL-LU: 848.73
