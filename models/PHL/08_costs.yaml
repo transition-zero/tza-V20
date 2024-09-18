@@ -48,125 +48,70 @@ cost_of_capital: # WACC
 
 capex:
   coal-supercritical:
-    PHL-LU: 
+    # all regions
+    "*": 
       # all years
-      "*": 1503
-    PHL-MI: 
-      "*": 1503
-    PHL-VI: 
-      "*": 1503
-
+      "{y: 1503 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   coal-subcritical:
-    PHL-LU:
-      "*": 1852
-    PHL-MI: 
-      "*": 1852
-    PHL-VI: 
-      "*": 1852
-
+    "*":
+      "{y: 1852 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   coal-ultrasupercritical:
-    PHL-LU:
-      "*": 1609
-    PHL-MI: 
-      "*": 1609
-    PHL-VI: 
-      "*": 1609
-
+    "*":
+      "{y: 1652 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   gas-CCGT:    
-    PHL-LU:
-      "*": 1014
-    PHL-MI: 
-      "*": 1014
-    PHL-VI: 
-      "*": 1014
-  
+    "*":
+      "{y: 930 * (0.995 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   gas-OCGT:
-    PHL-LU:
-      "*": 1042
-    PHL-MI: 
-      "*": 1042
-    PHL-VI: 
-      "*": 1042
-
+    "*":
+      "{y: 838 * (0.996 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   oil-internal-combustion-engine:
-    PHL-LU:
-      "*": 736
-    PHL-MI: 
-      "*": 736
-    PHL-VI: 
-      "*": 736
-        
+    "*":
+      "{y: 736 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   solar-pv: 
-    PHL-LU:
-      "*": 893
-    PHL-MI: 
-      "*": 893
-    PHL-VI: 
-      "*": 893
-  
+    "*":
+      "{y: 945 * (0.975 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   windonshore-power:
-    PHL-LU:
-      "*": 1547
-    PHL-MI: 
-      "*": 1547
-    PHL-VI: 
-      "*": 1547
-
+    "*":
+      "{y: 1575 * (0.984 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   windoffshore-power:
-    PHL-LU:
-      "*": 3544
-    PHL-MI: 
-      "*": 3544
-    PHL-VI: 
-      "*": 3544
+    "*":
+      "{y: 3544 * (0.983 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   hydropower: # using hydro-large value
-    PHL-LU:
-      "*": 1803
-    PHL-MI: 
-      "*": 1803
-    PHL-VI: 
-      "*": 1803
-
+    "*":
+      "{y: 1850 * (0.997 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   geo-power: # using geothermal binary value
-    PHL-LU:
-      "*": 5001
-    PHL-MI: 
-      "*": 5001
-    PHL-VI: 
-      "*": 5001
-
+    "*":
+      "{y: 5100 * (0.995 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   bioenergy-power: # using biomass small value
-    PHL-LU:
-      "*": 1996
-    PHL-MI: 
-      "*": 1996
-    PHL-VI: 
-      "*": 1996
-
-  nuclear-power: # using SMR value
-    PHL-LU:
-      "*": 9456
-    PHL-MI: 
-      "*": 9456
-    PHL-VI: 
-      "*": 9456
-
+    "*":
+      "{y: 2040 * (0.991 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+  nuclear-power: 
+    "*":
+      "{y: 9000 * (0.99 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+  gas-CCGT-CCS:
+    "*":
+      "{y: 2390 * (0.99 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+  coal-supercritical-CCS:
+    "*":
+      "{y: 3840 * (0.99 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"           
+  battery-technology:
+    "*":
+      "{y: 1256 * (0.974 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   regasification-floating:
     "*" :
-      "*": 1.700117
-
-  transmission:
+      "*": 3.41 # OIES
+  regasification-onshore:
     "*" :
-      "*": 448
-  
-  battery-technology:
+      "*": 5.69 # OIES
+  liquefaction-onshore:
     "*" :
-      "*": 0
-  
-  battery-storage:
+      "*": 13.741         
+  transmission: # inside a node for primary- to secondary-electricity
     "*" :
-      "*": 0
-
+      "*": 276.74
+  pumped-hydro:
+    "*":
+      "*": 1045
 
 # ----------------
 # Fixed O&M costs
@@ -174,722 +119,310 @@ capex:
 
 opex_fixed:
   coal-supercritical:
-    PHL-LU: 
-      "*": 42.4
-    PHL-MI: 
-      "*": 42.4
-    PHL-VI: 
-      "*": 42.4
-
+    # all regions
+    "*": 
+      # all years
+      "{y: 42.4 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   coal-subcritical:
-    PHL-LU:
-      "*": 50.8
-    PHL-MI: 
-      "*": 50.8
-    PHL-VI: 
-      "*": 50.8
-
+    "*":
+      "{y: 50.8 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   coal-ultrasupercritical:
-    PHL-LU:
-      "*": 61.8
-    PHL-MI: 
-      "*": 61.8
-    PHL-VI: 
-      "*": 61.8
-
+    "*":
+      "{y: 61.8 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   gas-CCGT:    
-    PHL-LU:
-      "*": 27.7
-    PHL-MI: 
-      "*": 27.7
-    PHL-VI: 
-      "*": 27.7
-
+    "*":
+      "{y: 28.08 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   gas-OCGT:
-    PHL-LU:
-      "*": 24.8
-    PHL-MI: 
-      "*": 24.8
-    PHL-VI: 
-      "*": 24.8
-
+    "*":
+      "{y: 24.8 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   oil-internal-combustion-engine:
-    PHL-LU:
-      "*": 9.4
-    PHL-MI: 
-      "*": 9.4
-    PHL-VI: 
-      "*": 9.4
-      
+    "*":
+      "{y: 9.4 * (0.997 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   solar-pv: 
-    PHL-LU:
-      "*": 11.5
-    PHL-MI: 
-      "*": 11.5
-    PHL-VI: 
-      "*": 11.5
- 
+    "*":
+      "{y: 11.5 * (0.975 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   windonshore-power:
-    PHL-LU:
-      "*": 40.4
-    PHL-MI: 
-      "*": 40.4
-    PHL-VI: 
-      "*": 40.4
-
+    "*":
+      "{y: 41 * (0.984 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   windoffshore-power:
-    PHL-LU:
-      "*": 91.6
-    PHL-MI: 
-      "*": 91.6
-    PHL-VI: 
-      "*": 91.6
-
+    "*":
+      "{y: 91.6 * (0.983 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   hydropower: # using hydro-large value
-    PHL-LU:
-      "*": 39.6
-    PHL-MI: 
-      "*": 39.6
-    PHL-VI: 
-      "*": 39.6
-
+    "*":
+      "{y: 40.35 * (0.996 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   geo-power: # using geothermal binary value
-    PHL-LU:
-      "*": 78.2
-    PHL-MI: 
-      "*": 78.2
-    PHL-VI: 
-      "*": 78.2
-
+    "*":
+      "{y: 82.9 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   bioenergy-power: # using biomass small value
-    PHL-LU:
-      "*": 50.8
-    PHL-MI: 
-      "*": 50.8
-    PHL-VI: 
-      "*": 50.8
-    # IDN-JW: 
-    #   "*": 50.2
-    # IDN-SU: 
-    #   "*": 50.2
-    # IDN-KA: 
-    #   "*": 50.2
-    # IDN-NU: 
-    #   "*": 50.2
-    # IDN-SL: 
-    #   "*": 50.2
-    # IDN-ML: 
-    #   "*": 50.2
-    # IDN-PP: 
-    #   "*": 50.2 
+    "*":
+      "{y: 51.75 * (0.991 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   nuclear-power: # using SMR value
-    PHL-LU:
-      "*": 108.3
-    PHL-MI: 
-      "*": 108.3
-    PHL-VI: 
-      "*": 108.3
-
+    "*":
+      "{y: 127 * (0.996 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+  gas-CCGT-CCS:
+    "*":
+      "{y: 59 * (0.984 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+  coal-supercritical-CCS:
+    "*":
+      "{y: 97 * (0.989 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"    
+  battery-technology:
+    "*": 
+      "{y: 31.39 * (0.974 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"    
   regasification-floating:
     "*" :
-      "*": 1.700117
+      "*": 0.09
+  regasification-onshore:
+    "*" :
+      "*": 0.14
+  liquefaction-onshore:
+    "*" :
+      "*": 0.34  
+  transmission: # inside a node for primary- to secondary-electricity
+    "*" :
+      "*": 9.69    
+  pumped-hydro:
+    "*":
+      "*": 13.51    
 
-  transmission: 
-    "*" :
-      "*": 698 # need to be checked (the value is too high??)
-    
-  battery-technology:
-    "*" :
-      "*": 0
-  
-  battery-storage:
-    "*" :
-      "*": 0
-
-# ----------------
-# Variable O&M costs
-# ----------------
 
 opex_variable:
   coal-supercritical: 
-    PHL-LU:
-      "*": 1.06
-    PHL-MI: 
-      "*": 1.06
-    PHL-VI: 
-      "*": 1.06
-
+    "*":
+      "{y: 0.29 * (0.983 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   coal-ultrasupercritical:
-    PHL-LU:
-      "*": 0.64
-    PHL-MI: 
-      "*": 0.64
-    PHL-VI: 
-      "*": 0.64
-
+    "*":
+      "{y: 0.18 * (0.997 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   coal-subcritical:
-    PHL-LU:
-      "*": 1.48
-    PHL-MI: 
-      "*": 1.48
-    PHL-VI: 
-      "*": 1.48
-
+    "*":
+      "{y: 0.41 * (0.997 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   oil-internal-combustion-engine:
-    PHL-LU:
-      "*": 6.78
-    PHL-MI: 
-      "*": 6.78
-    PHL-VI: 
-      "*": 6.78
-
+    "*":
+      "{y: 1.88 * (0.995 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   gas-CCGT:
-    PHL-LU:
-      "*": 1.44
-    PHL-MI: 
-      "*": 1.44
-    PHL-VI: 
-      "*": 1.44
-
+    "*":
+      "{y: 0.43 * (0.993 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   gas-OCGT: 
-    PHL-LU:
-      "*": 1.67
-    PHL-MI: 
-      "*": 1.67
-    PHL-VI: 
-      "*": 1.67
-
+    "*":
+      "{y: 0.47 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   solar-pv:
     "*":
       "*": 0.
-
   windonshore-power:
-    PHL-LU:
-      "*": 1.82
-    PHL-MI: 
-      "*": 1.82
-    PHL-VI: 
-      "*": 1.82
-
+    "*":
+      "{y: 0.49 * (0.985 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   windoffshore-power:
-    PHL-LU:
-      "*": 5.16
-    PHL-MI: 
-      "*": 5.16
-    PHL-VI: 
-      "*": 5.16
-
+    "*":
+      "{y: 1.43 * (0.983 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   nuclear-power: 
-    PHL-LU:
-      "*": 2.17
-    PHL-MI: 
-      "*": 2.17
-    PHL-VI: 
-      "*": 2.17
-
+    "*":
+      "{y: 0.67 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   hydropower: 
-    PHL-LU:
-      "*": 0.68
-    PHL-MI: 
-      "*": 0.68
-    PHL-VI: 
-      "*": 0.68
-
+    "*":
+      "{y: 0.19 * (0.996 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   geo-power: 
-    PHL-LU:
-      "*": 0.38
-    PHL-MI: 
-      "*": 0.38
-    PHL-VI: 
-      "*": 0.38
-
+    "*":
+      "{y: 0.11 * (0.995 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   bioenergy-power: 
-    PHL-LU:
-      "*": 3.24
-    PHL-MI: 
-      "*": 3.24
-    PHL-VI: 
-      "*": 3.24
-
+    "*":
+      "{y: 0.92 * (0.991 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+  gas-CCGT-CCS:
+    "*":
+      "{y: 0.89 * (0.988 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"    
+  coal-supercritical-CCS:
+    "*":
+      "{y: 0.98 * (0.99 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"          
+  battery-technology:
+    "*": 
+      "*": 0.
   transmission: 
     "*":
       "*": 3.0 # need to be checked
-  
-  battery-technology:
-    "*" :
-      "*": 0
-  
-  battery-storage:
-    "*" :
-      "*": 0
-
   gas-import-liquefied:
     "*": 
-      2023: 9.05697343932461
-      2024: 7.91953268103077
-      2025: 7.36976964785541
-      2026: 6.97166538245257
-      2027: 6.76313457676537
-      2028: 6.71574121183646
-      2029: 6.7441772307938
-      2030: 6.82000661468006
-      2031: 6.94322936349522
-      2032: 7.10436680425352
-      2033: 7.30341893695494
-      2034: 7.44559903174167
-      2035: 7.54986443458527
-      2036: 7.55934310757105
-      2037: 7.60673647249996
-      2038: 7.72995922131513
-      2039: 7.65412983742887
-      2040: 7.7963099322156
-      2041: 7.87213931610186
-      2042: 7.86266064311608
-      2043: 7.80578860520138
-      2044: 7.76787391325826
-      2045: 7.76787391325826
-      2046: 7.76787391325826
-      2047: 7.72995922131513
-      2048: 7.71100187534357
-      2049: 7.64465116444309
-      2050: 7.63517249145731
+      2023: 15.03
+      2024: 14.09
+      2025: 13.15
+      2026: 12.21
+      2027: 11.27
+      2028: 10.32
+      2029: 9.38
+      2030: 8.44
+      2031: 8.41
+      2032: 8.38
+      2033: 8.35
+      2034: 8.32
+      2035: 8.29
+      2036: 8.26
+      2037: 8.23
+      2038: 8.2
+      2039: 8.17
+      2040: 8.14
+      2041: 8.11
+      2042: 8.08
+      2043: 8.05
+      2044: 8.02
+      2045: 7.99
+      2046: 7.96
+      2047: 7.93
+      2048: 7.9
+      2049: 7.87
+      2050: 7.84
   coal-import-hard:
-    "*":
-      2023: 10.4436860068259
-      2024: 9.419795221843
-      2025: 8.39590443686007
-      2026: 7.37201365187713
-      2027: 6.3481228668942
-      2028: 5.32423208191126
-      2029: 4.30034129692833
-      2030: 3.27645051194539
-      2031: 3.24402730375427
-      2032: 3.21160409556314
-      2033: 3.17918088737201
-      2034: 3.14675767918089
-      2035: 3.11433447098976
-      2036: 3.08191126279864
-      2037: 3.04948805460751
-      2038: 3.01706484641638
-      2039: 2.98464163822526
-      2040: 2.95221843003413
-      2041: 2.919795221843
-      2042: 2.88737201365188
-      2043: 2.85494880546075
-      2044: 2.82252559726963
-      2045: 2.7901023890785
-      2046: 2.75767918088737
-      2047: 2.72525597269625
-      2048: 2.69283276450512
-      2049: 2.66040955631399
-      2050: 2.62798634812287
-  oil-diesel-production: 
-    "*":
-      "*": 15.14
-  oil-fuel-oil-production:
-    "*":
-      "*": 15.14
-      
+    "*": 
+      2023: 10.44
+      2024: 9.42
+      2025: 8.4
+      2026: 7.37
+      2027: 6.35
+      2028: 5.32
+      2029: 4.3
+      2030: 3.28
+      2031: 3.24
+      2032: 3.21
+      2033: 3.18
+      2034: 3.15
+      2035: 3.11
+      2036: 3.08
+      2037: 3.05
+      2038: 3.02
+      2039: 2.98
+      2040: 2.95
+      2041: 2.92
+      2042: 2.89
+      2043: 2.85
+      2044: 2.82
+      2045: 2.79
+      2046: 2.76
+      2047: 2.73
+      2048: 2.69
+      2049: 2.66
+      2050: 2.63
+  oil-refined-import:
+    "*": 
+      2023: 20.29
+      2024: 19.95
+      2025: 19.61
+      2026: 19.26
+      2027: 18.92
+      2028: 18.58
+      2029: 18.24
+      2030: 17.89
+      2031: 17.87
+      2032: 17.85
+      2033: 17.83
+      2034: 17.81
+      2035: 17.79
+      2036: 17.77
+      2037: 17.75
+      2038: 17.73
+      2039: 17.71
+      2040: 17.68
+      2041: 17.66
+      2042: 17.64
+      2043: 17.62
+      2044: 17.6
+      2045: 17.58
+      2046: 17.56
+      2047: 17.54
+      2048: 17.52
+      2049: 17.49
+      2050: 17.47
   coal-hard-domestic-step-1: 
     "*":
-      "*": 1.75
-  # coal-hard-domestic-step-2: 
-  #   "*":
-  #     "*": 2.12
-  # coal-hard-domestic-step-3: 
-  #   "*":
-  #     "*": 2.83
-  # coal-hard-domestic-step-4: 
-  #   "*":
-  #     "*": 3.49
-  # coal-hard-domestic-step-5: 
-  #   "*":
-  #     "*": 4.53
-  # coal-hard-domestic-step-6: 
-  #   "*":
-  #     "*": 5.90
-
+      "*": 2.75
+  coal-hard-domestic-step-2: 
+    "*":
+      "*": 3.33
+  coal-hard-domestic-step-3: 
+    "*":
+      "*": 4.42
+  coal-hard-domestic-step-4: 
+    "*":
+      "*": 5.49
+  coal-hard-domestic-step-5: 
+    "*":
+      "*": 7.12
+  coal-hard-domestic-step-6: 
+    "*":
+      "*": 9.27
   coal-brown-domestic-step-1: 
     "*":
-      "*": 1.12
-  # coal-brown-domestic-step-2: 
-  #   "*":
-  #     "*": 1.76
-  # coal-brown-domestic-step-3: 
-  #   "*":
-  #     "*": 2.97
-  # coal-brown-domestic-step-4: 
-  #   "*":
-  #     "*": 4.11
-  # coal-brown-domestic-step-5: 
-  #   "*":
-  #     "*": 5.89
-  # coal-brown-domestic-step-6: 
-  #   "*":
-  #     "*": 8.24
-
+      "*": 1.76
+  coal-brown-domestic-step-2: 
+    "*":
+      "*": 2.75
+  coal-brown-domestic-step-3: 
+    "*":
+      "*": 4.63
+  coal-brown-domestic-step-4: 
+    "*":
+      "*": 6.47
+  coal-brown-domestic-step-5: 
+    "*":
+      "*": 9.26
+  coal-brown-domestic-step-6: 
+    "*":
+      "*": 12.94
   gas-domestic-step-1: 
-    PHL-LU:
-      "*": 3.49
-    PHL-MI: 
-      "*": 3.49
-    PHL-VI: 
-      "*": 3.49
-
-  #   # IDN-JW: 
-  #   #   "*": 2.98
-  #   # IDN-SU: 
-  #   #   "*": 2.98
-  #   # IDN-KA: 
-  #   #   "*": 2.98
-  #   # IDN-NU: 
-  #   #   "*": 2.98
-  #   # IDN-SL: 
-  #   #   "*": 2.98
-  #   # IDN-ML: 
-  #   #   "*": 2.98
-  #   # IDN-PP: 
-  #   #   "*": 2.98
-  # gas-domestic-step-2: 
-  #   PHL-LU:
-  #     "*": 3.80
-  #   PHL-MI: 
-  #     "*": 3.80
-  #   PHL-VI: 
-  #     "*": 3.80
-  #   # IDN-JW: 
-  #   #   "*": 3.33
-  #   # IDN-SU: 
-  #   #   "*": 3.33
-  #   # IDN-KA: 
-  #   #   "*": 3.33
-  #   # IDN-NU: 
-  #   #   "*": 3.33
-  #   # IDN-SL: 
-  #   #   "*": 3.33
-  #   # IDN-ML: 
-  #   #   "*": 3.33
-  #   # IDN-PP: 
-  #   #   "*": 3.33
-  # gas-domestic-step-3: 
-  #   PHL-LU:
-  #     "*": 3.89
-  #   PHL-MI: 
-  #     "*": 3.89
-  #   PHL-VI: 
-  #     "*": 3.89
-  #   # IDN-JW: 
-  #   #   "*": 3.43
-  #   # IDN-SU: 
-  #   #   "*": 3.43
-  #   # IDN-KA: 
-  #   #   "*": 3.43
-  #   # IDN-NU: 
-  #   #   "*": 3.43
-  #   # IDN-SL: 
-  #   #   "*": 3.43
-  #   # IDN-ML: 
-  #   #   "*": 3.43
-  #   # IDN-PP: 
-  #   #   "*": 3.43
-  # gas-domestic-step-4:
-  #   PHL-LU:
-  #     "*": 4.12
-  #   PHL-MI: 
-  #     "*": 4.12
-  #   PHL-VI: 
-  #     "*": 4.12
-  #   # IDN-JW: 
-  #   #   "*": 3.68
-  #   # IDN-SU: 
-  #   #   "*": 3.68
-  #   # IDN-KA: 
-  #   #   "*": 3.68
-  #   # IDN-NU: 
-  #   #   "*": 3.68
-  #   # IDN-SL: 
-  #   #   "*": 3.68
-  #   # IDN-ML: 
-  #   #   "*": 3.68
-  #   # IDN-PP: 
-  #   #   "*": 3.68
-  # gas-domestic-step-5:
-  #   PHL-LU:
-  #     "*": 4.21
-  #   PHL-MI: 
-  #     "*": 4.21
-  #   PHL-VI: 
-  #     "*": 4.21
-  #   # IDN-JW: 
-  #   #   "*": 3.78
-  #   # IDN-SU: 
-  #   #   "*": 3.78
-  #   # IDN-KA: 
-  #   #   "*": 3.78
-  #   # IDN-NU: 
-  #   #   "*": 3.78
-  #   # IDN-SL: 
-  #   #   "*": 3.78
-  #   # IDN-ML: 
-  #   #   "*": 3.78
-  #   # IDN-PP: 
-  #   #   "*": 3.78
-  # gas-domestic-step-6: 
-  #   PHL-LU:
-  #     "*": 4.25
-  #   PHL-MI: 
-  #     "*": 4.25
-  #   PHL-VI: 
-  #     "*": 4.25
-  #   # IDN-JW: 
-  #   #   "*": 3.83
-  #   # IDN-SU: 
-  #   #   "*": 3.83
-  #   # IDN-KA: 
-  #   #   "*": 3.83
-  #   # IDN-NU: 
-  #   #   "*": 3.83
-  #   # IDN-SL: 
-  #   #   "*": 3.83
-  #   # IDN-ML: 
-  #   #   "*": 3.83
-  #   # IDN-PP: 
-  #   #   "*": 3.83
-  # gas-domestic-step-7: 
-  #   PHL-LU:
-  #     "*": 4.30
-  #   PHL-MI: 
-  #     "*": 4.30
-  #   PHL-VI: 
-  #     "*": 4.30
-  #   # IDN-JW: 
-  #   #   "*": 3.88
-  #   # IDN-SU: 
-  #   #   "*": 3.88
-  #   # IDN-KA: 
-  #   #   "*": 3.88
-  #   # IDN-NU: 
-  #   #   "*": 3.88
-  #   # IDN-SL: 
-  #   #   "*": 3.88
-  #   # IDN-ML: 
-  #   #   "*": 3.88
-  #   # IDN-PP: 
-  #   #   "*": 3.88
-  # gas-domestic-step-8:
-  #   PHL-LU:
-  #     "*": 4.34
-  #   PHL-MI: 
-  #     "*": 4.34
-  #   PHL-VI: 
-  #     "*": 4.34
-  #   # IDN-JW: 
-  #   #   "*": 3.93
-  #   # IDN-SU: 
-  #   #   "*": 3.93
-  #   # IDN-KA: 
-  #   #   "*": 3.93
-  #   # IDN-NU: 
-  #   #   "*": 3.93
-  #   # IDN-SL: 
-  #   #   "*": 3.93
-  #   # IDN-ML: 
-  #   #   "*": 3.93
-  #   # IDN-PP: 
-  #   #   "*": 3.93
-  # gas-domestic-step-9: 
-  #   PHL-LU:
-  #     "*": 4.52
-  #   PHL-MI: 
-  #     "*": 4.52
-  #   PHL-VI: 
-  #     "*": 4.52
-  #   # IDN-JW: 
-  #   #   "*": 4.13
-  #   # IDN-SU: 
-  #   #   "*": 4.13
-  #   # IDN-KA: 
-  #   #   "*": 4.13
-  #   # IDN-NU: 
-  #   #   "*": 4.13
-  #   # IDN-SL: 
-  #   #   "*": 4.13
-  #   # IDN-ML: 
-  #   #   "*": 4.13
-  #   # IDN-PP: 
-  #   #   "*": 4.13
-  # gas-domestic-step-10: 
-  #   PHL-LU:
-  #     "*": 4.70
-  #   PHL-MI: 
-  #     "*": 4.70
-  #   PHL-VI: 
-  #     "*": 4.70
-  #   # IDN-JW: 
-  #   #   "*": 4.33
-  #   # IDN-SU: 
-  #   #   "*": 4.33
-  #   # IDN-KA: 
-  #   #   "*": 4.33
-  #   # IDN-NU: 
-  #   #   "*": 4.33
-  #   # IDN-SL: 
-  #   #   "*": 4.33
-  #   # IDN-ML: 
-  #   #   "*": 4.33
-  #   # IDN-PP: 
-  #   #   "*": 4.33
-  # gas-domestic-step-11:
-  #   PHL-LU:
-  #     "*": 4.79
-  #   PHL-MI: 
-  #     "*": 4.79
-  #   PHL-VI: 
-  #     "*": 4.79
-  #   # IDN-JW: 
-  #   #   "*": 4.43
-  #   # IDN-SU: 
-  #   #   "*": 4.43
-  #   # IDN-KA: 
-  #   #   "*": 4.43
-  #   # IDN-NU: 
-  #   #   "*": 4.43
-  #   # IDN-SL: 
-  #   #   "*": 4.43
-  #   # IDN-ML: 
-  #   #   "*": 4.43
-  #   # IDN-PP: 
-  #   #   "*": 4.43
-  # gas-domestic-step-12: 
-  #   PHL-LU:
-  #     "*": 4.88
-  #   PHL-MI: 
-  #     "*": 4.88
-  #   PHL-VI: 
-  #     "*": 4.88
-  #   # IDN-JW: 
-  #   #   "*": 4.53
-  #   # IDN-SU: 
-  #   #   "*": 4.53
-  #   # IDN-KA: 
-  #   #   "*": 4.53
-  #   # IDN-NU: 
-  #   #   "*": 4.53
-  #   # IDN-SL: 
-  #   #   "*": 4.53
-  #   # IDN-ML: 
-  #   #   "*": 4.53
-  #   # IDN-PP: 
-  #   #   "*": 4.53
-  # gas-domestic-step-13: 
-  #   PHL-LU:
-  #     "*": 5.20
-  #   PHL-MI: 
-  #     "*": 5.20
-  #   PHL-VI: 
-  #     "*": 5.20
-  #   # IDN-JW: 
-  #   #   "*": 4.88
-  #   # IDN-SU: 
-  #   #   "*": 4.88
-  #   # IDN-KA: 
-  #   #   "*": 4.88
-  #   # IDN-NU: 
-  #   #   "*": 4.88
-  #   # IDN-SL: 
-  #   #   "*": 4.88
-  #   # IDN-ML: 
-  #   #   "*": 4.88
-  #   # IDN-PP: 
-  #   #   "*": 4.88
-  # gas-domestic-step-14: 
-  #   PHL-LU:
-  #     "*": 5.24
-  #   PHL-MI: 
-  #     "*": 5.24
-  #   PHL-VI: 
-  #     "*": 5.24
-  #   # IDN-JW: 
-  #   #   "*": 4.93
-  #   # IDN-SU: 
-  #   #   "*": 4.93
-  #   # IDN-KA: 
-  #   #   "*": 4.93
-  #   # IDN-NU: 
-  #   #   "*": 4.93
-  #   # IDN-SL: 
-  #   #   "*": 4.93
-  #   # IDN-ML: 
-  #   #   "*": 4.93
-  #   # IDN-PP: 
-  #   #   "*": 4.93
-  # gas-domestic-step-15: 
-  #   PHL-LU:
-  #     "*": 5.56
-  #   PHL-MI: 
-  #     "*": 5.56
-  #   PHL-VI: 
-  #     "*": 5.56
-  #   # IDN-JW: 
-  #   #   "*": 5.28
-  #   # IDN-SU: 
-  #   #   "*": 5.28
-  #   # IDN-KA: 
-  #   #   "*": 5.28
-  #   # IDN-NU: 
-  #   #   "*": 5.28
-  #   # IDN-SL: 
-  #   #   "*": 5.28
-  #   # IDN-ML: 
-  #   #   "*": 5.28
-  #   # IDN-PP: 
-  #   #   "*": 5.28
-  # gas-domestic-step-16: 
-  #   PHL-LU:
-  #     "*": 5.91
-  #   PHL-MI: 
-  #     "*": 5.91
-  #   PHL-VI: 
-  #     "*": 5.91
-  #   # IDN-JW: 
-  #   #   "*": 5.68
-  #   # IDN-SU: 
-  #   #   "*": 5.68
-  #   # IDN-KA: 
-  #   #   "*": 5.68
-  #   # IDN-NU: 
-  #   #   "*": 5.68
-  #   # IDN-SL: 
-  #   #   "*": 5.68
-  #   # IDN-ML: 
-  #   #   "*": 5.68
-  #   # IDN-PP: 
-  #   #   "*": 5.68
-  # gas-domestic-step-17: 
-  #   PHL-LU:
-  #     "*": 7.22
-  #   PHL-MI: 
-  #     "*": 7.22
-  #   PHL-VI: 
-  #     "*": 7.22
-  #   # IDN-JW: 
-  #   #   "*": 7.13
-  #   # IDN-SU: 
-  #   #   "*": 7.13
-  #   # IDN-KA: 
-  #   #   "*": 7.13
-  #   # IDN-NU: 
-  #   #   "*": 7.13
-  #   # IDN-SL: 
-  #   #   "*": 7.13
-  #   # IDN-ML: 
-  #   #   "*": 7.13
-  #   # IDN-PP: 
-  #   #   "*": 7.13
-  # gas-domestic-step-18: 
-  #   "*": 
-  #     "*": 7.98
-
+    "*":
+      "*": 5.70
+  gas-domestic-step-2: 
+    "*":
+      "*": 6.12
+  gas-domestic-step-3: 
+    "*":
+      "*": 6.23
+  gas-domestic-step-4:
+    "*":
+      "*": 6.52
+  gas-domestic-step-5:
+    "*":
+      "*": 6.65
+  gas-domestic-step-6: 
+    "*":
+      "*": 6.70
+  gas-domestic-step-7: 
+    "*":
+      "*": 6.79
+  gas-domestic-step-8:
+    "*":
+      "*": 6.80
+  gas-domestic-step-9: 
+    "*":
+      "*": 7.03
+  gas-domestic-step-10: 
+    "*":
+      "*": 7.32
+  gas-domestic-step-11:
+    "*":
+      "*": 7.39
+  gas-domestic-step-12: 
+    "*":
+      "*": 7.55
+  gas-domestic-step-13: 
+    "*":
+      "*": 7.98
+  gas-domestic-step-14: 
+    "*":
+      "*": 8.04
+  gas-domestic-step-15: 
+    "*":
+      "*": 8.45
+  gas-domestic-step-16: 
+    "*":
+      "*": 8.90
+  gas-domestic-step-17: 
+    "*":
+      "*": 10.63
+  gas-domestic-step-18: 
+    "*": 
+      "*": 11.62
+  carbon-capture-and-storage-transmission-and-distribution:
+    "*":
+      "*": 30 # unit is dollars per ton of CO2 transported; taken high end of CO2 T&S costs from: https://zeroemissionsplatform.eu/co2-storage-cost/
+  pumped-hydro:
+    "*":
+      "*": 0.32    
 
 # ---------------------------
 # Fuel prices (M$/PJ or $/GJ)
@@ -898,4 +431,4 @@ opex_variable:
 fuel_price:
   uranium:
     "*" :
-      "*" : 0.27 # source: https://www.osti.gov/servlets/purl/840500
+      "*" : 0.8 # average EIA AEO 2022 uranium costs

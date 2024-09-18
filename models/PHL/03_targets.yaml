@@ -31,10 +31,17 @@ impacts:
     exogenous_total: null
     constraint_annual: 
     constraint_total: null
-    penalty: # mn$/mntonne
-      PHL-LU: 0.
-      PHL-VI: 0.
-      PHL-MI: 0.
+    penalty: 0. # mn$/mntonne
+  - id: SEQCO2
+    long_name: equivalent carbon dioxide emissions sequestered
+    description: equivalent carbon dioxide emissions
+    exogenous_annual: 0.
+    exogenous_total: null
+    constraint_annual: 
+    constraint_total: 
+      PHL-LU: 251 # from Global CCS Institute (p. 38) and ADB (p. 68): https://www.globalccsinstitute.com/wp-content/uploads/2020/01/Consoli_Global-CCS-Institue_2015_Global-Storage-Portfolio-1.pdf; https://www.adb.org/sites/default/files/publication/31122/carbon-capture-storage-southeast-asia.pdf
+      PHL-VI: 0
+      PHL-MI: 0
   - id: NOx
     long_name: equivalent nitric oxide emissions
     description: equivalent nitric oxide emissions
@@ -49,18 +56,11 @@ impacts:
     exogenous_total: null
     constraint_annual: 
     constraint_total: null
-  
-# -------
-# Renewable targets
-# -------
-
-# renewable_production_target:
-#   PHL-LU: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
-#   PHL-VI: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
-#   PHL-MI: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
 
 # -------
 # Other parameters
 # -------
 
-reserve_margin: 1.2
+reserve_margin: 1.2 
+
+renewable_production_target: 
