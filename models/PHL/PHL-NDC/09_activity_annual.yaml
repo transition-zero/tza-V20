@@ -1,0 +1,617 @@
+# -------------------------------------------------------------------------
+#
+#   ACTIVITY
+#   
+#     Define total maximum level of activity allowed for a technology in model period and
+#     one year. In this model, maximum annual activity represent total 
+#     renewable energy potential (MW) in each region. 
+#
+#     Link to docs: 
+#       - https://docs.feo.transitionzero.org/docs/tz-osemosys/technology/
+#
+#     Authors:
+#       - xx
+#
+# -------------------------------------------------------------------------
+
+capacity_gross_max: 
+
+  solar-pv:
+    PHL-LU: 
+      "*": 86.29
+    PHL-VI: 
+      "*": 36.61
+    PHL-MI: 
+      "*": 82.84
+
+  windonshore-power:
+    PHL-LU: 
+      "*": 21.09
+    PHL-VI: 
+      "*": 6.56
+    PHL-MI: 
+      "*": 6.92
+
+  windoffshore-power:
+    PHL-LU: 
+      "*": 229.58
+    PHL-VI: 
+      "*": 69.64
+    PHL-MI: 
+      "*": 74.83
+  
+  hydropower:
+    PHL-LU: 
+      "*": 11.64
+    PHL-MI: 
+      "*": 4.86
+    PHL-VI: 
+      "*": 0.15 # Updated from 0.1
+
+  pumped-hydro:
+    PHL-LU: 
+      "*": 3.236 # taken existing capacity and added 2.5 GW of under considerations projects
+    PHL-MI: 
+      "*": 0.1 # placeholder
+    PHL-VI: 
+      "*": 0.1 # placeholder
+
+  geo-power:
+    PHL-LU: 
+      "*": 1.5 # Updated from 1
+    PHL-VI: 
+      "*": 2.42
+    PHL-MI: 
+      "*": 0.82
+
+  bioenergy-power:
+    PHL-LU: 
+      "*": 0.32 # 3.05 GW taken from NGFS average across GCAM scenarios for IDN and split based on DOE's bioenergy committed capacity share
+    PHL-VI: 
+      "*": 2.23
+    PHL-MI: 
+      "*": 0.51
+
+  regasification-onshore:
+    PHL-LU:
+      "*": 776.01 # based on largest regasification capacity in ASEAN region
+    PHL-VI:
+      "*": 100  
+    PHL-MI:
+      "*": 100 
+  
+  regasification-floating:
+    PHL-LU:
+      "*": 776.01 # based on largest regasification capacity in ASEAN region
+    PHL-VI:
+      "*": 100  
+    PHL-MI:
+      "*": 100 
+
+  liquefaction-onshore:
+    PHL-LU:
+      "*": 0.
+
+capacity_additional_max_growth_rate:
+
+  solar-pv:
+    "*": 0.38
+
+  windonshore-power:
+    "*": 0.17    
+
+  windoffshore-power:
+    "*": 0.17
+
+  bioenergy-power:
+    "*": 0.2
+
+  geo-power:
+    "*": 0.2  
+   
+  gas-CCGT:
+    "*": 0.2
+  
+  gas-OCGT:
+    "*": 0.2
+
+  coal-subcritical:
+    "*": 0.2
+
+  coal-supercritical:
+    "*": 0.2
+
+  coal-ultrasupercritical:
+    "*": 0.2
+
+  oil-internal-combustion-engine:
+    "*": 0.2      
+
+  nuclear-power:
+    "*": 0.2      
+
+  gas-CCGT-CCS:
+    "*": 0.2  
+
+  coal-supercritical-CCS:
+    "*": 0.2    
+
+  gas-domestic-step-1:
+    "*": 1.22  
+
+  gas-domestic-step-2:
+    "*": 1.22  
+
+  gas-domestic-step-3:
+    "*": 1.22  
+
+  gas-domestic-step-4:
+    "*": 1.22  
+
+  gas-domestic-step-5:
+    "*": 1.22  
+
+  gas-domestic-step-6:
+    "*": 1.22 
+
+  gas-domestic-step-7:
+    "*": 1.22  
+
+  gas-domestic-step-8:
+    "*": 1.22  
+
+  gas-domestic-step-9:
+    "*": 1.22  
+
+  gas-domestic-step-10:
+    "*": 1.22  
+
+  gas-domestic-step-11:
+    "*": 1.22  
+
+  gas-domestic-step-12:
+    "*": 1.22  
+
+  gas-domestic-step-13:
+    "*": 1.22  
+
+  gas-domestic-step-14:
+    "*": 1.22  
+
+  gas-domestic-step-15:
+    "*": 1.22  
+
+  gas-domestic-step-16:
+    "*": 1.22  
+
+  gas-domestic-step-17:
+    "*": 1.22  
+
+  gas-domestic-step-18:
+    "*": 1.22  
+
+capacity_additional_max_floor:
+
+  solar-pv:
+    "*": 2. # Previous number is: 0.08, changed this into 2 GW following DOE's committed capacity (rounding the max)
+
+  windonshore-power:
+    "*": 0.8 # Previous number is: 0.4, changed this into 0.8 GW following DOE's committed capacity (rounding the max)
+      
+  windoffshore-power:
+    "*": 0.4
+
+  bioenergy-power:
+    "*": 0.2
+
+  geo-power:
+    "*": 0.3 # Previous number is: 0.2, changed this into 0.3 GW following sum of DOE's committed capacity (rounding the max)
+  
+  gas-CCGT:
+    "*": 0.273 # 10% of installed Luzon capacity
+
+  gas-OCGT:
+    "*": 0.273
+
+  coal-subcritical:
+    "*": 0.2 
+
+  coal-supercritical:
+    "*": 0.2
+
+  coal-ultrasupercritical:
+    "*": 0.2  
+
+  oil-internal-combustion-engine:
+    "*": 0.2
+
+  nuclear-power:
+    "*": 0.62 # installed capacity of unused Bataan        
+
+  gas-CCGT-CCS:
+    "*": 0.8   
+
+  coal-supercritical-CCS:
+    "*": 0.8     
+
+  gas-domestic-step-1:
+    "*": 6.85  
+
+  gas-domestic-step-2:
+    "*": 4.11  
+
+  gas-domestic-step-3:
+    "*": 12.69   
+
+  gas-domestic-step-4:
+    "*": 2.74  
+
+  gas-domestic-step-5:
+    "*": 2.66  
+
+  gas-domestic-step-6:
+    "*": 4.73 
+
+  gas-domestic-step-7:
+    "*": 7.63  
+
+  gas-domestic-step-8:
+    "*": 12.69  
+
+  gas-domestic-step-9:
+    "*": 2.28  
+
+  gas-domestic-step-10:
+    "*": 5.09  
+
+  gas-domestic-step-11:
+    "*": 7.63  
+
+  gas-domestic-step-12:
+    "*": 1.60  
+
+  gas-domestic-step-13:
+    "*": 2.82  
+
+  gas-domestic-step-14:
+    "*": 5.09  
+
+  gas-domestic-step-15:
+    "*": 1.37  
+
+  gas-domestic-step-16:
+    "*": 1.89  
+
+  gas-domestic-step-17:
+    "*": 1.09  
+
+  gas-domestic-step-18:
+    "*": 0.9  
+    
+capacity_additional_min:
+
+  regasification-onshore:
+    PHL-LU:
+      2025: 154.107
+      
+  regasification-floating:
+    PHL-LU:
+      2024: 256.845
+
+  coal-subcritical: # based on DOE's committed capacity
+    PHL-MI:
+      2027: 0.27
+    PHL-VI:
+      2027: 0.135
+
+  coal-supercritical: # based on DOE's committed capacity
+    PHL-LU:
+      2024: 0.45
+      2025: 0.35
+      2026: 0.35
+
+  coal-ultrasupercritical: # based on DOE's committed capacity
+    PHL-LU:
+      2024: 0.7
+
+  oil-internal-combustion-engine: # based on DOE's committed capacity
+    PHL-LU:
+      2024: 0.011
+    PHL-MI:
+      2025: 0.056
+    PHL-VI:
+      2024: 0.0085
+      2031: 0.00952
+      2032: 0.00952
+      2033: 0.00952
+      2034: 0.00952
+      2035: 0.00952
+      2036: 0.00952
+      2037: 0.00952
+      2038: 0.00952
+      2039: 0.00952
+      2040: 0.00952
+
+  gas-CCGT: # based on DOE's committed capacity
+    PHL-LU:
+      2024: 1.32
+      2029: 1.1
+      2031: 0.065
+      2032: 0.065
+      2033: 0.065
+      2034: 0.065
+      2035: 0.065
+      2036: 0.065
+      2037: 0.065
+      2038: 0.065
+      2039: 0.065
+      2040: 0.065
+  
+  geo-power: # based on DOE's committed capacity
+    PHL-LU:
+      2024: 0.06757
+    PHL-VI:
+      2024: 0.01365
+      2025: 0.028
+      2027: 0.042
+
+  hydropower: # based on DOE's committed capacity
+    PHL-LU: 
+      2024: 0.02552
+      2025: 0.06025
+      2030: 0.5
+      2031: 0.00674
+      2032: 0.00674
+      2033: 0.00674
+      2034: 0.00674
+      2035: 0.00674
+      2036: 0.00674
+      2037: 0.00674
+      2038: 0.00674
+      2039: 0.00674
+      2040: 0.00674
+    PHL-MI: 
+      2024: 0.0325
+      2025: 0.03955
+      2030: 0.032
+      2031: 0.001033
+      2032: 0.001033
+      2033: 0.001033
+      2034: 0.001033
+      2035: 0.001033
+      2036: 0.001033
+      2037: 0.001033
+      2038: 0.001033
+      2039: 0.001033
+      2040: 0.001033
+    PHL-VI:
+      2024: 0.02226
+      2025: 0.028
+      2029: 0.0053
+
+  bioenergy-power:
+    PHL-LU: 
+      2024: 0.00508
+      2025: 0.0012
+    PHL-MI:
+      2024: 0.01
+    PHL-VI:
+      2024: 0.014
+      2025: 0.030
+
+  solar-pv: # based on DOE's committed capacity
+    PHL-LU:
+      2024: 1.72027
+      2025: 1.65621
+      2026: 0.98637
+      2027: 0.058
+    PHL-MI:
+      2025: 0.128
+      2026: 0.040
+    PHL-VI:
+      2025: 0.52684
+      2026: 0.213
+
+  windonshore-power: # based on DOE's committed capacity
+    PHL-LU:
+      2024: 0.160
+      2025: 0.55695
+      2026: 0.72999
+      2027: 0.1008
+    PHL-VI:
+      2025: 0.0132
+      2026: 0.502
+
+  battery-technology:
+    PHL-LU:
+      2024: 0.260
+      2025: 0.020
+      2031: 0.106
+      2032: 0.106
+      2033: 0.106
+      2034: 0.106
+      2035: 0.106
+      2036: 0.106
+      2037: 0.106
+      2038: 0.106
+      2039: 0.106
+      2040: 0.106
+    PHL-MI:
+      2024: 0.140
+      2031: 0.008
+      2032: 0.008
+      2033: 0.008
+      2034: 0.008
+      2035: 0.008
+      2036: 0.008
+      2037: 0.008
+      2038: 0.008
+      2039: 0.008
+      2040: 0.008
+    PHL-VI:
+      2024: 0.080
+      2025: 0.030
+      2031: 0.02
+      2032: 0.02
+      2033: 0.02
+      2034: 0.02
+      2035: 0.02
+      2036: 0.02
+      2037: 0.02
+      2038: 0.02
+      2039: 0.02
+      2040: 0.02
+
+
+capacity_additional_max:
+
+  nuclear-power:
+    PHL-LU: 
+      2023: 0.
+      2024: 0.
+      2025: 0.
+      2026: 0.
+      2027: 0.
+      2028: 0.
+      2029: 0.
+    PHL-VI:
+      2023: 0.
+      2024: 0.
+      2025: 0.
+      2026: 0
+      2027: 0.
+      2028: 0.
+      2029: 0.
+    PHL-MI:
+      2023: 0.
+      2024: 0.
+      2025: 0.
+      2026: 0.
+      2027: 0.
+      2028: 0.
+      2029: 0.
+      
+  coal-supercritical-CCS:
+    PHL-LU: 
+      2023: 0.
+      2024: 0.
+      2025: 0.
+      2026: 0.
+      2027: 0.
+      2028: 0.
+      2029: 0.
+    PHL-VI:
+      2023: 0.
+      2024: 0.
+      2025: 0.
+      2026: 0.
+      2027: 0.
+      2028: 0.
+      2029: 0.
+    PHL-MI:
+      2023: 0.
+      2024: 0.
+      2025: 0.
+      2026: 0.
+      2027: 0.
+      2028: 0.
+      2029: 0. 
+
+  gas-CCGT-CCS:
+    PHL-LU: 
+      2023: 0.
+      2024: 0.
+      2025: 0.
+      2026: 0.
+      2027: 0.
+      2028: 0.
+      2029: 0.
+    PHL-VI:
+      2023: 0.
+      2024: 0.
+      2025: 0.
+      2026: 0.
+      2027: 0.
+      2028: 0.
+      2029: 0.
+    PHL-MI:
+      2023: 0.
+      2024: 0.
+      2025: 0.
+      2026: 0.
+      2027: 0.
+      2028: 0.
+      2029: 0.
+
+  oil-internal-combustion-engine:
+    "*":
+      2041: 0.
+      2042: 0.
+      2043: 0.
+      2044: 0.
+      2045: 0.
+      2046: 0.
+      2047: 0.
+      2048: 0.
+      2049: 0.
+      2050: 0.
+
+  gas-CCGT:
+    "*":
+      2023: 0.
+
+  gas-OCGT:
+    "*":
+      2023: 0.
+  
+  solar-pv:
+    "*":
+      2023: 0.
+
+  hydropower:
+    "*":
+      2023: 0.
+
+  geo-power:
+    "*":
+      2023: 0.
+
+  windonshore-power:
+    "*":
+      2023: 0.
+
+  windoffshore-power:
+    "*":
+      2023: 0.
+
+  bioenergy-power:
+    "*":
+      2023: 0.
+
+  coal-subcritical:
+    PHL-LU:
+      2023: 0.
+    PHL-VI:
+      2023: 0.
+    PHL-MI:
+      2023: 0.
+
+  coal-supercritical:
+    PHL-LU:
+      2023: 0.
+    PHL-VI:
+      2023: 0.
+    PHL-MI:
+      2023: 0.
+
+  coal-ultrasupercritical:
+    PHL-LU:
+      2023: 0.
+    PHL-VI:
+      2023: 0.
+    PHL-MI:
+      2023: 0.
+
+  battery-technology:
+    "*":
+      2023: 0.

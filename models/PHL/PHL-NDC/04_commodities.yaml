@@ -1,0 +1,225 @@
+# -------------------------------------------------------------------------
+#
+#   COMMODITIES (DEMAND)
+#   
+#     Define the commodities that are used in the model, as well as 
+#       the demand for each commodity in each region.
+#
+#     Link to docs: 
+#       https://docs.feo.transitionzero.org/docs/tz-osemosys/commodity/
+#
+#     Authors:
+#       - xx
+#
+# -------------------------------------------------------------------------
+
+commodities:
+
+  - id: coal-brown
+    long_name: Brown coal
+    is_renewable: false
+
+  - id: coal-hard
+    long_name: Hard coal
+    is_renewable: false  
+
+  - id: gas-liquefied
+    long_name: Liquefied gas
+    is_renewable: false
+
+  - id: gas
+    long_name: Aggregated gas commodity (both domestic and import)
+    is_renewable: false
+
+  - id: oil-fuel-oil
+    long_name: Fuel oil used in power plants
+    is_renewable: false  
+
+  - id: oil-diesel
+    long_name: Diesel 
+    is_renewable: false  
+
+  - id: solar
+    long_name: Solar resource
+    is_renewable: true
+  
+  - id: wind-onshore
+    long_name: Wind onshore resource
+    is_renewable: true
+
+  - id: wind-offshore
+    long_name: Wind offshore resource
+    is_renewable: true
+
+  - id: hydro 
+    long_name: Hydro resource
+    is_renewable: true
+
+  - id: DMYCO2
+    long_name: dummy CO2 output from CCS
+    is_renewable: false
+
+  - id: uranium
+    long_name: Uranium resource
+    is_renewable: false
+
+  - id: geothermal
+    long_name: Geothermal resource
+    is_renewable: true
+
+  - id: bioenergy
+    long_name: Bioenergy resource
+    is_renewable: true
+
+  - id: primary-electricity
+    long_name: Primary electricity
+    include_in_joint_reserve_margin: true
+    include_in_joint_renewable_target: true
+    is_renewable: false
+
+  - id: secondary-electricity
+    long_name: Secondary electricity
+    is_renewable: false
+    # specify annual demands
+    demand_annual: 
+      # define demand for each region
+      PHL-LU:
+        2023: 296.5
+        2024: 315.7
+        2025: 336.5
+        2026: 358.7
+        2027: 382.7
+        2028: 408.3
+        2029: 436
+        2030: 466
+        2031: 497.6
+        2032: 531.1
+        2033: 566.3
+        2034: 603.6
+        2035: 642.8
+        2036: 684.3
+        2037: 728
+        2038: 774
+        2039: 822.4
+        2040: 873.3
+        2041: 925.7
+        2042: 981.3
+        2043: 1040.1
+        2044: 1102.5
+        2045: 1168.7
+        2046: 1238.8
+        2047: 1313.2
+        2048: 1391.9
+        2049: 1475.5
+        2050: 1564
+      PHL-VI:
+        2023: 53.8
+        2024: 57.3
+        2025: 61.1
+        2026: 65.1
+        2027: 69.4
+        2028: 74.1
+        2029: 79.1
+        2030: 84.6
+        2031: 90.3
+        2032: 96.4
+        2033: 102.8
+        2034: 109.5
+        2035: 116.6
+        2036: 124.2
+        2037: 132.1
+        2038: 140.5
+        2039: 149.2
+        2040: 158.5
+        2041: 168
+        2042: 178.1
+        2043: 188.7
+        2044: 200.1
+        2045: 212.1
+        2046: 224.8
+        2047: 238.3
+        2048: 252.6
+        2049: 267.7
+        2050: 283.8
+      PHL-MI:
+        2023: 52.7
+        2024: 56.1
+        2025: 59.8
+        2026: 63.8
+        2027: 68
+        2028: 72.6
+        2029: 77.5
+        2030: 82.9
+        2031: 88.5
+        2032: 94.4
+        2033: 100.7
+        2034: 107.3
+        2035: 114.3
+        2036: 121.7
+        2037: 129.4
+        2038: 137.6
+        2039: 146.2
+        2040: 155.3
+        2041: 164.6
+        2042: 174.5
+        2043: 184.9
+        2044: 196
+        2045: 207.8
+        2046: 220.3
+        2047: 233.5
+        2048: 247.5
+        2049: 262.3
+        2050: 278.1
+    # specify demand profile for each region
+    demand_profile:
+      # all regions
+      "PHL-LU" :
+        # all years
+        "*" :
+          # demand by timeslice
+          s1-h1: 0.07
+          s1-h2: 0.07
+          s1-h3: 0.09
+          s1-h4: 0.10
+          s1-h5: 0.10
+          s1-h6: 0.08
+          s2-h1: 0.07
+          s2-h2: 0.07
+          s2-h3: 0.09
+          s2-h4: 0.09
+          s2-h5: 0.09
+          s2-h6: 0.08
+      "PHL-VI" :
+        # all years
+        "*" :
+          # demand by timeslice
+          s1-h1: 0.07
+          s1-h2: 0.07
+          s1-h3: 0.09
+          s1-h4: 0.10
+          s1-h5: 0.10
+          s1-h6: 0.08
+          s2-h1: 0.07
+          s2-h2: 0.07
+          s2-h3: 0.09
+          s2-h4: 0.09
+          s2-h5: 0.09
+          s2-h6: 0.08
+      "PHL-MI" :
+        # all years
+        "*" :
+          # demand by timeslice
+          s1-h1: 0.07
+          s1-h2: 0.07
+          s1-h3: 0.09
+          s1-h4: 0.10
+          s1-h5: 0.10
+          s1-h6: 0.08
+          s2-h1: 0.07
+          s2-h2: 0.07
+          s2-h3: 0.09
+          s2-h4: 0.09
+          s2-h5: 0.09
+          s2-h6: 0.08
+
+          
