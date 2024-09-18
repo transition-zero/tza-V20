@@ -70,6 +70,8 @@ commodities:
   - id: primary-electricity
     long_name: Primary electricity
     is_renewable: false
+    include_in_joint_reserve_margin: true
+    include_in_joint_renewable_target: true
 
   - id: secondary-electricity
     long_name: Secondary electricity

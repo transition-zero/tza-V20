@@ -6,6 +6,6 @@ description: >
 
 # Global variables
 global_variables:
-  base_year: 2023
-  base_demand: 200
+  base_year: 2021
+  base_demand: 9.06
   demand_growth_pcgt: 0.0459 # 4.59% growth rate
