@@ -72,6 +72,14 @@ capacity_gross_max:
     PHL-MI: 
       "*": 0.51
 
+  nuclear-power:
+    PHL-LU: 
+      "*": 2.4 # 5 GW taken from DoE max target
+    PHL-VI: 
+      "*": 1.2
+    PHL-MI: 
+      "*": 1.2
+
   regasification-onshore:
     PHL-LU:
       "*": 776.01 # based on largest regasification capacity in ASEAN region

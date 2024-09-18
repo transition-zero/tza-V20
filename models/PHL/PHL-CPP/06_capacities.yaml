@@ -925,6 +925,10 @@ activity_annual_max:
     PHL-LU: 
       "*": 10.87
 
+  carbon-capture-and-storage-transmission-and-distribution:
+    PHL-LU:
+      "*": 10    
+
 activity_annual_min:
 
   gas-domestic-step-1:

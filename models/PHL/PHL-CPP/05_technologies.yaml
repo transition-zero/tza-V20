@@ -1120,7 +1120,7 @@ technologies:
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.nuclear-power}" # from 09_activity_annual.yaml
     capacity_additional_max_floor: "${capacity_additional_max_floor.nuclear-power}" # from 09_activity_annual.yaml
     capacity_additional_max: "${capacity_additional_max.nuclear-power}" # from 09_activity_annual.yaml
-
+    capacity_gross_max: "${capacity_gross_max.nuclear-power}" # from 09_activity_annual.yaml
 
   - id: gas-CCGT-CCS
     long_name: combined cycle gas turbine with carbon capture
@@ -1247,7 +1247,7 @@ technologies:
           CO2: -1.0
           SEQCO2: 1
         opex_variable: "${opex_variable.carbon-capture-and-storage-transmission-and-distribution}" # from 08_costs.yaml
-
+    activity_annual_max: "${activity_annual_max.carbon-capture-and-storage-transmission-and-distribution}"  # from 06_capacities.yaml
   # --------------------------------------------  
   #
   #   STORAGE TECHNOLOGY
