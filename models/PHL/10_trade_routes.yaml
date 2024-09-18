@@ -1,0 +1,65 @@
+# -------------------------------------------------------------------------
+#
+#   TRADE
+#   
+#     Define all commodities' trade route. Specifically for:
+#       - coal
+#       - gas
+#       - power
+#
+#     Link to docs: 
+#       https://github.com/transition-zero/tz-osemosys/blob/main/docs/trade.md
+#
+#     Authors:
+#       - xx
+#
+# -------------------------------------------------------------------------
+
+
+trade:
+
+
+  - id: "Power trade"
+    long_name: "Inter-region power trade"
+    description: "trade route for electricity between regions"
+    commodity: "secondary-electricity"
+    trade_routes: {
+      "PHL-LU": {"PHL-VI": {"*": True},
+                "PHL-MI": {"*": True}},
+      "PHL-VI": {"PHL-MI": {"*": True}},
+    }
+    operating_life: 50
+    construct_region_pairs: True # all power trade routes are bi-directional
+
+    capex: {
+      "PHL-LU": {"PHL-VI": {"*": 35.29},
+                "PHL-MI": {"*": 44.58}},
+       "PHL-VI": {"PHL-MI": {"*": 31.96}}
+    }
+
+    residual_capacity: {
+      "PHL-VI": {"PHL-MI": {"*": 14.1912}} 
+    }   
+
+
+  # - id: coal-hard-trade
+  #   long_name: Hard coal trade
+  #   description: trade route instance for the hard coal commodity
+  #   commodity: coal-hard
+  #   trade_routes: {
+  #     "PHL-LU": {"PHL-MI": {"*": True},
+  #                "PHL-VI": {"*": True}}
+  #   }  
+  #   operational_life: 40
+  #   construct_region_pairs: false
+
+  # - id: coal-brown-trade
+  #   long_name: Brown coal trade
+  #   description: trade route instance for the hard coal commodity
+  #   commodity: coal-brown
+  #   trade_routes: {
+  #     "PHL-LU": {"PHL-MI": {"*": True},
+  #                "PHL-VI": {"*": True}}
+  #   }  
+  #   operational_life: 40
+  #   construct_region_pairs: false    
