@@ -256,120 +256,118 @@ capacity_additional_min:
 
   regasification-onshore:
     MDG:
-      2025: 154.107
+      2023: 0.
       
   regasification-floating:
     MDG:
-      2024: 256.845
+      2023: 0.
 
   coal-subcritical: # based on DOE's committed capacity
     MDG:
-      2027: 0.27
+      2023: 0.
 
   coal-supercritical: # based on DOE's committed capacity
     MDG:
-      2024: 0.45
-      2025: 0.35
-      2026: 0.35
+      2023: 0.
 
   coal-ultrasupercritical: # based on DOE's committed capacity
     MDG:
-      2024: 0.7
+      2023: 0.
 
   oil-internal-combustion-engine: # based on DOE's committed capacity
     MDG:
-      2024: 0.011
+      2023: 0.
 
   gas-CCGT: # based on DOE's committed capacity
     MDG:
-      2024: 1.32
+      2023: 0.
   
   geo-power: # based on DOE's committed capacity
     MDG:
-      2024: 0.06757
+      2023: 0.
 
   hydropower: # based on DOE's committed capacity
     MDG: 
-      2024: 0.02552
+      2023: 0.
 
   bioenergy-power:
     MDG: 
-      2024: 0.00508
+      2023: 0.
 
   solar-pv: # based on DOE's committed capacity
     MDG:
-      2024: 1.72027
+      2023: 0.
 
   windonshore-power: # based on DOE's committed capacity
     MDG:
-      2024: 0.160
+      2023: 0.
 
   battery-technology:
     MDG:
-      2024: 0.260
+      2023: 0.
 
 capacity_additional_max:
 
   nuclear-power:
     MDG: 
-      2023: 0.
+      2023: 9999
       
   coal-supercritical-CCS:
     MDG: 
-      2023: 0.
+      2023: 9999
 
   gas-CCGT-CCS:
     MDG: 
-      2023: 0.
+      2023: 9999
 
   oil-internal-combustion-engine:
     "*":
-      2041: 0.
+      2023: 9999
 
   gas-CCGT:
     "*":
-      2023: 0.
+      2023: 9999
 
   gas-OCGT:
     "*":
-      2023: 0.
+      2023: 9999
   
   solar-pv:
     "*":
-      2023: 0.
+      2023: 9999
 
   hydropower:
     "*":
-      2023: 0.
+      2023: 9999
 
   geo-power:
     "*":
-      2023: 0.
+      2023: 9999
 
   windonshore-power:
     "*":
-      2023: 0.
+      2023: 9999
 
   windoffshore-power:
     "*":
-      2023: 0.
+      2023: 9999
 
   bioenergy-power:
     "*":
-      2023: 0.
+      2023: 9999
 
   coal-subcritical:
     MDG:
-      2023: 0.
+      2023: 9999
 
   coal-supercritical:
     MDG:
-      2023: 0.
+      2023: 9999
 
   coal-ultrasupercritical:
     MDG:
-      2023: 0.
+      2023: 9999
 
   battery-technology:
     "*":
-      2023: 0.
+      2023: 9999
