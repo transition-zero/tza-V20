@@ -24,7 +24,7 @@ residual_capacity:
 
   regasification-floating:
     MDG: 
-      2023: 0.12
+      2023: 0.
 
   coal-supercritical:
     MDG: 
