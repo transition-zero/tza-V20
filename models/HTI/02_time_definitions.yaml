@@ -17,30 +17,15 @@
 time_definition:
   id: "${global_variables.base_year}_2050_annual_2hourly"
   years: "range(${global_variables.base_year},2051)"
-  seasons: ["s1","s2","s3","s4"] # divide the year into 4 equally (Jan-Mar, Apr-Jun, Jul-Sep, Oct-Dec)
-  daily_time_brackets: ["h1","h2","h3","h4"]
-    # h1: "00h00-06h00-utc", 
-    # h2: "06h00-12h00-utc", 
-    # h3: "12h00-18h00-utc", 
-    # h4: "18h00-24h00-utc",
+  seasons: [1,2,3,4] # divide the year into 4 equally (Jan-Mar, Apr-Jun, Jul-Sep, Oct-Dec)
+  daily_time_brackets: [1,2,3,4]
+  day_types: [1]
 
   timeslices: [
-    "s1-h1",
-    "s1-h2",
-    "s1-h3",
-    "s1-h4",
-    "s2-h1",
-    "s2-h2",
-    "s2-h3",
-    "s2-h4",]
-    # "nh_spring-summer-00h00-06h00-utc", 
-    # "nh_spring-summer-06h00-12h00-utc", 
-    # "nh_spring-summer-12h00-18h00-utc", 
-    # "nh_spring-summer-18h00-24h00-utc", 
-    # "nh_fall-winter-00h00-06h00-utc", 
-    # "nh_fall-winter-06h00-12h00-utc", 
-    # "nh_fall-winter-12h00-18h00-utc", 
-    # "nh_fall-winter-18h00-24h00-utc", 
+    "s1-h1","s1-h2","s1-h3","s1-h4",
+    "s2-h1","s2-h2","s2-h3","s2-h4",
+    "s3-h1","s3-h2","s3-h3","s3-h4",
+    "s4-h1","s4-h2","s4-h3","s4-h4",]
 
   timeslice_in_season: {
     "s1-h1": 1,
@@ -51,15 +36,16 @@ time_definition:
     "s2-h2": 2,
     "s2-h3": 2,
     "s2-h4": 2,
-    # "nh_spring-summer-00h00-06h00-utc": 1, 
-    # "nh_spring-summer-06h00-12h00-utc": 1, 
-    # "nh_spring-summer-12h00-18h00-utc": 1, 
-    # "nh_spring-summer-18h00-24h00-utc": 1, 
-    # "nh_fall-winter-00h00-06h00-utc": 2, 
-    # "nh_fall-winter-06h00-12h00-utc": 2, 
-    # "nh_fall-winter-12h00-18h00-utc": 2, 
-    # "nh_fall-winter-18h00-24h00-utc": 2, 
+    "s3-h1": 3,
+    "s3-h2": 3,
+    "s3-h3": 3,
+    "s3-h4": 3,
+    "s4-h1": 4,
+    "s4-h2": 4,
+    "s4-h3": 4,
+    "s4-h4": 4,
   }
+
   timeslice_in_timebracket: {
     "s1-h1": 1,
     "s1-h2": 2,
@@ -69,12 +55,31 @@ time_definition:
     "s2-h2": 2,
     "s2-h3": 3,
     "s2-h4": 4,
-    # "nh_spring-summer-00h00-06h00-utc": 1,
-    # "nh_spring-summer-06h00-12h00-utc": 2,
-    # "nh_spring-summer-12h00-18h00-utc": 3,
-    # "nh_spring-summer-18h00-24h00-utc": 4,
-    # "nh_fall-winter-00h00-06h00-utc": 1,
-    # "nh_fall-winter-06h00-12h00-utc": 2,
-    # "nh_fall-winter-12h00-18h00-utc": 3,
-    # "nh_fall-winter-18h00-24h00-utc": 4,
+    "s3-h1": 1,
+    "s3-h2": 2,
+    "s3-h3": 3,
+    "s3-h4": 4,
+    "s4-h1": 1,
+    "s4-h2": 2,
+    "s4-h3": 3,
+    "s4-h4": 4,
+  }
+
+  timeslice_in_daytype: {
+    "s1-h1": 1,
+    "s1-h2": 1,
+    "s1-h3": 1,
+    "s1-h4": 1,
+    "s2-h1": 1,
+    "s2-h2": 1,
+    "s2-h3": 1,
+    "s2-h4": 1,
+    "s3-h1": 1,
+    "s3-h2": 1,
+    "s3-h3": 1,
+    "s3-h4": 1,
+    "s4-h1": 1,
+    "s4-h2": 1,
+    "s4-h3": 1,
+    "s4-h4": 1,
   }

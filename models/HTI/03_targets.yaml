@@ -27,39 +27,38 @@ impacts:
   - id: CO2
     long_name: equivalent carbon dioxide emissions
     description: equivalent carbon dioxide emissions
-    exogenous_annual: 0.
+    exogenous_annual: null
     exogenous_total: null
     constraint_annual: 
-      2024: 0.87
-      2025: 0.89
-      2026: 0.906
-      2027: 0.922
-      2028: 0.938
-      2029: 0.954
-      2030: 0.97
-      2031: 0.986
-      2032: 1.002
-      2033: 1.018
-      2034: 1.034
-      2035: 1.05
-      2036: 1.066
-      2037: 1.082
-      2038: 1.098
-      2039: 1.114
-      2040: 1.13
-      2041: 1.15
-      2042: 1.17
-      2043: 1.19
-      2044: 1.21
-      2045: 1.23
-      2046: 1.248
-      2047: 1.266
-      2048: 1.284
-      2049: 1.302
-      2050: 1.32
+      HTI:
+        2025: 0.89
+        2026: 0.906
+        2027: 0.922
+        2028: 0.938
+        2029: 0.954
+        2030: 0.97
+        2031: 0.986
+        2032: 1.002
+        2033: 1.018
+        2034: 1.034
+        2035: 1.05
+        2036: 1.066
+        2037: 1.082
+        2038: 1.098
+        2039: 1.114
+        2040: 1.13
+        2041: 1.15
+        2042: 1.17
+        2043: 1.19
+        2044: 1.21
+        2045: 1.23
+        2046: 1.248
+        2047: 1.266
+        2048: 1.284
+        2049: 1.302
+        2050: 1.32
     constraint_total: null
-    penalty: # mn$/mntonne
-      HTI: 0.
+    penalty: 0. # mn$/mntonne
   - id: NOx
     long_name: equivalent nitric oxide emissions
     description: equivalent nitric oxide emissions

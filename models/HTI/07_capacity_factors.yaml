@@ -24,24 +24,12 @@
 
 availability_factor:
 
-  coal-supercritical:
+  coal-power:
     # all regions
     "*":
       # all years
       "*": 0.9
 
-  coal-subcritical:
-    # all regions
-    "*":
-      # all years
-      "*": 0.9
-
-  coal-ultrasupercritical:
-    # all regions
-    "*":
-      # all years
-      "*": 0.9
-  
   nuclear-power:
     # all regions
     "*":

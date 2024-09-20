@@ -22,15 +22,7 @@
 
 residual_capacity: 
 
-  coal-supercritical:
-    HTI: 
-      2023: 0.
-
-  coal-subcritical:
-    HTI: 
-      2023: 0.
-
-  coal-ultrasupercritical:
+  coal-power:
     HTI: 
       2023: 0.
 
@@ -60,7 +52,7 @@ residual_capacity:
 
   hydropower:
     HTI: 
-      2023: 0.
+      2023: 57
 
   geo-power:
     HTI: 
@@ -90,3 +82,62 @@ residual_capacity:
 # -------
 # Activity constraints
 # -------
+
+capacity_additional_min: 
+
+  coal-power:
+    HTI: 
+      "*": 0.
+
+  gas-CCGT:
+    HTI:
+      "*": 0.
+
+  gas-OCGT:
+    HTI:
+      "*": 0.
+
+  oil-internal-combustion-engine:
+    HTI:
+      "*": 0.
+
+  solar-pv:
+    HTI: 
+      "*": 0.
+
+  windonshore-power:
+    HTI: 
+      "*": 0.
+      
+  windoffshore-power:
+    HTI: 
+      "*": 0.
+
+  hydropower:
+    HTI: 
+      "*": 57
+
+  geo-power:
+    HTI: 
+      "*": 0.
+
+  bioenergy-power:
+    HTI: 
+      "*": 0.
+
+  nuclear-power:
+    HTI: 
+      "*": 0.
+
+  transmission:
+    HTI: 
+      "*": 0.
+  
+  battery-technology:
+    GAB: 
+      "*": 0.
+  
+  battery-storage:
+    GAB: 
+      "*": 0.
+

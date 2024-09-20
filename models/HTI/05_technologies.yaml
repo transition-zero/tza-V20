@@ -41,7 +41,6 @@ technologies:
         output_activity_ratio:
           coal: 1.0 # PJ/PJ
         opex_variable: "${fuel_price.coal}" # from costs.yaml
-    activity_total_max: "${activity_total_max.coal-hard-domestic-step-1}" # from capacities.yaml
 
   - id: gas-resource
     long_name: Gas resource production
@@ -53,7 +52,6 @@ technologies:
         output_activity_ratio:
           gas: 1.0 # PJ/PJ
         opex_variable: "${fuel_price.gas}" # from costs.yaml
-    activity_total_max: "${activity_total_max.gas-domestic-step-1}"  # from capacities.yaml
 
   - id: uranium-resource
     long_name: uranium resource
@@ -74,8 +72,8 @@ technologies:
         long_name: generation mode
         description: default generation mode
         output_activity_ratio:
-          oil-diesel: 1
-        opex_variable: "${fuel_price.oil-diesel}"  # from costs.yaml
+          oil: 1
+        opex_variable: "${fuel_price.oil}"  # from costs.yaml
 
   - id: bioenergy-resource
     long_name: Bioenergy resources
@@ -168,8 +166,8 @@ technologies:
   #
   # --------------------------------------------
 
-  - id: coal-supercritical
-    long_name: Supercritical coal-fired power stations
+  - id: coal-power
+    long_name: Coal power stations without differentiating their sub-type
     capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
     include_in_joint_reserve_margin: true
     operating_life: 30
@@ -181,67 +179,17 @@ technologies:
         #   Below we define the input-output ratios. In the example below, 
         #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio: 
-          coal:  2.69
+          coal:  2.5 # 40% efficiency
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.1  
-        opex_variable: "${opex_variable.coal-supercritical}" # from costs.yaml
+          CO2: 0.09
+        opex_variable: "${opex_variable.coal-power}" # from costs.yaml
     # load from other yaml files
-    residual_capacity: "${residual_capacity.coal-supercritical}" # from capacities.yaml
-    capex: "${capex.coal-supercritical}" # from costs.yaml
-    opex_fixed: "${opex_fixed.coal-supercritical}" # from costs.yaml
-    availability_factor: "${availability_factor.coal-supercritical}" # from capacity_factors.yaml
-
-  - id: coal-subcritical
-    long_name: Subcritical coal-fired power stations
-    capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
-    include_in_joint_reserve_margin: true
-    operating_life: 30
-    operating_modes:
-      - id: GENERATION
-        long_name: generation mode with coal input
-        description: generation mode with coal input
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
-        input_activity_ratio: 
-          coal:  2.69
-        output_activity_ratio:
-          primary-electricity: 1.0
-        emission_activity_ratio: 
-          CO2: 0.1
-        opex_variable: "${opex_variable.coal-subcritical}" # from costs.yaml
-    # load from other yaml files
-    residual_capacity: "${residual_capacity.coal-subcritical}" # from capacities.yaml
-    capex: "${capex.coal-subcritical}" # from costs.yaml
-    opex_fixed: "${opex_fixed.coal-subcritical}" # from costs.yaml
-    availability_factor: "${availability_factor.coal-subcritical}" # from capacity_factors.yaml
-
-  - id: coal-ultrasupercritical
-    long_name: Ultrasupercritical coal-fired power stations
-    capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
-    include_in_joint_reserve_margin: true
-    operating_life: 30
-    operating_modes:
-      - id: GENERATION
-        long_name: generation mode with coal input
-        description: generation mode with coal input
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
-        input_activity_ratio: 
-          coal:  2.69
-        output_activity_ratio:
-          primary-electricity: 1.0
-        emission_activity_ratio: 
-          CO2: 0.1
-        opex_variable: "${opex_variable.coal-subcritical}" # from costs.yaml
-    # load from other yaml files
-    residual_capacity: "${residual_capacity.coal-ultrasupercritical}" # from capacities.yaml
-    capex: "${capex.coal-ultrasupercritical}" # from costs.yaml
-    opex_fixed: "${opex_fixed.coal-ultrasupercritical}" # from costs.yaml
-    availability_factor: "${availability_factor.coal-ultrasupercritical}" # from capacity_factors.yaml
+    residual_capacity: "${residual_capacity.coal-power}" # from capacities.yaml
+    capex: "${capex.coal-power}" # from costs.yaml
+    opex_fixed: "${opex_fixed.coal-power}" # from costs.yaml
+    availability_factor: "${availability_factor.coal-power}" # from capacity_factors.yaml
 
   - id: solar-pv
     long_name: ground-mounted solar power stations
@@ -279,12 +227,12 @@ technologies:
         #   Below we define the input-output ratios. In the example below, 
         #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio:
-          gas:  1.639344262
+          gas:  1.67 # 60% efficiency
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
           CO2: 0.05
-        opex_variable: "${fuel_price.gas-CCGT}" # from costs.yaml
+        opex_variable: "${fuel_price.gas}" # from costs.yaml
     # load from other yaml files
     residual_capacity: "${residual_capacity.gas-CCGT}" # from capacities.yaml
     capex: "${capex.gas-CCGT}" # from costs.yaml
@@ -303,12 +251,12 @@ technologies:
         #   Below we define the input-output ratios. In the example below, 
         #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio:
-          gas:  2.94
+          gas:  2.5 # 40% efficiency
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.05
-        opex_variable: "${fuel_price.gas-OCGT}" # from costs.yaml
+          CO2: 0.07
+        opex_variable: "${fuel_price.gas}" # from costs.yaml
     # load from other yaml files
     residual_capacity: "${residual_capacity.gas-OCGT}" # from capacities.yaml
     capex: "${capex.gas-OCGT}" # from costs.yaml
@@ -328,12 +276,12 @@ technologies:
         #   Below we define the input-output ratios. In the example below, 
         #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio:
-          oil-diesel:  2.17
+          oil:  2.857 # 35% efficiency
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
           CO2: 0.07
-        opex_variable: "${fuel_price.oil-diesel}" # from costs.yaml   
+        opex_variable: "${fuel_price.oil}" # from costs.yaml   
     # load from other yaml files
     residual_capacity: "${residual_capacity.oil-internal-combustion-engine}" # from capacities.yaml
     capex: "${capex.oil-internal-combustion-engine}" # from costs.yaml
@@ -448,7 +396,7 @@ technologies:
           bioenergy: 1.0
         output_activity_ratio:
           primary-electricity: 1.0
-        opex_variable: "${fuel_price.bioenergy-power}" # from costs.yaml
+        opex_variable: "${fuel_price.bioenergy}" # from costs.yaml
     # load from other yaml files
     residual_capacity: "${residual_capacity.bioenergy-power}" # from capacities.yaml
     capex: "${capex.bioenergy-power}" # from costs.yaml
@@ -471,7 +419,7 @@ technologies:
           uranium: 1.0
         output_activity_ratio:
           primary-electricity: 1.0
-        opex_variable: "${fuel_price.nuclear-power}" # from costs.yaml
+        opex_variable: "${fuel_price.uranium}" # from costs.yaml
     # load from other yaml files
     residual_capacity: "${residual_capacity.nuclear-power}" # from capacities.yaml
     capex: "${capex.nuclear-power}" # from costs.yaml
@@ -542,7 +490,6 @@ technologies:
           "*": # all regions
             battery-storage: True # storage unit
         opex_variable: "${opex_variable.battery-technology}" # from costs.yaml 
-    capacity_additional_min: "${capacity_additional_min.battery-technology}" # from activity_annual.yaml
 
 
 # --------------------------------------------
