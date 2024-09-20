@@ -22,17 +22,13 @@
 
 residual_capacity: 
 
-  regasification-floating:
-    HTI: 
-      2023: 256.845025
-
   coal-supercritical:
     HTI: 
-      2023: 1.978
+      2023: 0.
 
   coal-subcritical:
     HTI: 
-      2023: 7.2546
+      2023: 0.
 
   coal-ultrasupercritical:
     HTI: 
@@ -40,7 +36,7 @@ residual_capacity:
 
   gas-CCGT:
     HTI:
-      2023: 3.73
+      2023: 0.
 
   gas-OCGT:
     HTI:
@@ -48,27 +44,27 @@ residual_capacity:
 
   oil-internal-combustion-engine:
     HTI:
-      2023: 0.
+      2023: 193.65
 
   solar-pv:
     HTI: 
-      2023: 0.9883
+      2023: 0.16
 
   windonshore-power:
     HTI: 
-      2023: 0.016
+      2023: 0.023904
       
   windoffshore-power:
     HTI: 
-      2023: 1.524
+      2023: 0.
 
   hydropower:
     HTI: 
-      2023: 2.9503
+      2023: 0.
 
   geo-power:
     HTI: 
-      2023: 0.961
+      2023: 0.
 
   bioenergy-power:
     HTI: 
@@ -94,22 +90,3 @@ residual_capacity:
 # -------
 # Activity constraints
 # -------
-
-activity_total_max:
-
-  gas-domestic-step-1:
-    HTI: 283.73184                
-  coal-hard-domestic-step-1:
-    HTI: 252.0488
-  coal-brown-domestic-step-1:
-    HTI: 110.96
-  coal-brown-domestic-step-2:
-    HTI: 360.62
-  coal-brown-domestic-step-3:
-    HTI: 332.88
-  coal-brown-domestic-step-4:
-    HTI: 832.2
-  coal-brown-domestic-step-5:
-    HTI: 332.88
-  coal-brown-domestic-step-6:
-    HTI: 804.46

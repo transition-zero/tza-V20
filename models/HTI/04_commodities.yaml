@@ -15,28 +15,16 @@
 
 commodities:
 
-  - id: coal-brown
-    long_name: Brown coal
-    is_renewable: false
-
-  - id: coal-hard
-    long_name: Hard coal
-    is_renewable: false  
-
-  - id: gas-liquefied
-    long_name: Liquefied gas
+  - id: coal
+    long_name: Coal resource
     is_renewable: false
 
   - id: gas
-    long_name: Aggregated gas commodity (both domestic and import)
+    long_name: Gas resource
     is_renewable: false
 
-  - id: oil-fuel-oil
-    long_name: Fuel oil used in power plants
-    is_renewable: false  
-
-  - id: oil-diesel
-    long_name: Diesel 
+  - id: oil
+    long_name: Oil resource for diesel
     is_renewable: false  
 
   - id: solar
@@ -76,9 +64,36 @@ commodities:
     is_renewable: false
     # specify annual demands
     demand_annual: 
-      # define demand for each region
       HTI:
-        "{ y : (${global_variables.base_demand}*(1+${global_variables.demand_growth_pcgt})**(y-${global_variables.base_year})) for y in ${time_definition.years} }"
+        2023: 1.08
+        2024: 1.07
+        2025: 1.06
+        2026: 1.07
+        2027: 1.08
+        2028: 1.08
+        2029: 1.09
+        2030: 1.1
+        2031: 1.12
+        2032: 1.15
+        2033: 1.17
+        2034: 1.19
+        2035: 1.22
+        2036: 1.25
+        2037: 1.27
+        2038: 1.33
+        2039: 1.35
+        2040: 1.38
+        2041: 1.41
+        2042: 1.44
+        2043: 1.47
+        2044: 1.5
+        2045: 1.53
+        2046: 1.56
+        2047: 1.59
+        2048: 1.62
+        2049: 1.65
+        2050: 1.68
+
         
     # specify demand profile for each region
     demand_profile:
@@ -86,16 +101,19 @@ commodities:
       "*" :
         # all years
         "*" :
-          # demand by timeslice
-          s1-h1: 0.02 # 0 - 4
-          s1-h2: 0.02 # 5 - 8
-          s1-h3: 0.04 # 9 - 12
-          s1-h4: 0.09 # 13 - 16
-          s1-h5: 0.13 # 17 - 20
-          s1-h6: 0.20 # 21 - 24
-          s2-h1: 0.02 # 0 - 4
-          s2-h2: 0.02 # 5 - 8
-          s2-h3: 0.04 # 9 - 12
-          s2-h4: 0.09 # 13 - 16
-          s2-h5: 0.13 # 17 - 20
-          s2-h6: 0.20 # 21 - 24
+          s1-h1: 0.08
+          s1-h2: 0.05
+          s1-h3: 0.06
+          s1-h4: 0.05
+          s2-h1: 0.08
+          s2-h2: 0.05
+          s2-h3: 0.06
+          s2-h4: 0.05
+          s3-h1: 0.08
+          s3-h2: 0.05
+          s3-h3: 0.06
+          s3-h4: 0.05
+          s4-h1: 0.08
+          s4-h2: 0.05
+          s4-h3: 0.06
+          s4-h4: 0.06
