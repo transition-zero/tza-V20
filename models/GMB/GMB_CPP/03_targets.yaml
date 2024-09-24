@@ -1,0 +1,88 @@
+# -------------------------------------------------------------------------
+#
+#   TARGETS
+#   
+#     Defining the emissions intensities and targets for the model.
+#
+#     We look at three main pollutants:
+#       - CO2
+#       - NOx
+#       - SOx
+#
+#     Link to docs: 
+#       https://docs.feo.transitionzero.org/docs/tz-osemosys/impact/
+#
+#     Authors:
+#       - @amanmajid
+#       - @abhishek0208
+#       - @Handriyanti
+#
+# -------------------------------------------------------------------------
+
+# -------
+# Emissions targets
+# -------
+
+impacts:
+  - id: CO2
+    long_name: equivalent carbon dioxide emissions
+    description: equivalent carbon dioxide emissions
+    exogenous_annual: null
+    exogenous_total: null
+    constraint_annual: 
+      2025: 0.26
+      2026: 0.254
+      2027: 0.248
+      2028: 0.242
+      2029: 0.236
+      2030: 0.23
+      2031: 0.22
+      2032: 0.21
+      2033: 0.2
+      2034: 0.19
+      2035: 0.18
+      2036: 0.17
+      2037: 0.16
+      2038: 0.15
+      2039: 0.14
+      2040: 0.13
+      2041: 0.118
+      2042: 0.106
+      2043: 0.094
+      2044: 0.082
+      2045: 0.07
+      2046: 0.058
+      2047: 0.046
+      2048: 0.034
+      2049: 0.022
+      2050: 0.01    
+    constraint_total: null
+    penalty: # mn$/mntonne
+      GMB: 0.
+  - id: NOx
+    long_name: equivalent nitric oxide emissions
+    description: equivalent nitric oxide emissions
+    exogenous_annual: 0.
+    exogenous_total: null
+    constraint_annual: 
+    constraint_total: null
+  - id: SOx
+    long_name: equivalent sulphur oxide emissions
+    description: equivalent sulphur oxide emissions
+    exogenous_annual: 0.
+    exogenous_total: null
+    constraint_annual: 
+    constraint_total: null
+
+# -------
+# Renewable targets
+# -------
+
+# renewable_production_target:
+#   GAB: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
+
+# -------
+# Other parameters
+# -------
+
+reserve_margin: 1.2
