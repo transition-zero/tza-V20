@@ -4,20 +4,17 @@
 #   
 #     Defining the emissions intensities and targets for the model.
 #
-#     We look at three main pollutants:
-#       - CO2
-#       - NOx
-#       - SOx
+#     We only look at CO2 emissions in this work. NOx and SOx are ignored.
 #
 #     Link to docs: 
 #       https://docs.feo.transitionzero.org/docs/tz-osemosys/impact/
 #
 #     Authors:
+#       - @djwels
 #       - @amanmajid
-#       - @abhishek0208
-#       - @Handriyanti
 #
 # -------------------------------------------------------------------------
+# START
 
 # -------
 # Emissions targets
@@ -143,5 +140,7 @@ impacts:
 # -------
 
 reserve_margin: 1.2 
-
 renewable_production_target: 
+
+# END
+# -------------------------------------------------------------------------  
