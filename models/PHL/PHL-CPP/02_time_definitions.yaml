@@ -8,63 +8,74 @@
 #       https://docs.feo.transitionzero.org/docs/tz-osemosys/time_definition/
 #
 #     Authors:
+#       - @djwels
 #       - @amanmajid
-#       - @abhishek0208
-#       - @Handriyanti
 #
 # -------------------------------------------------------------------------
+# START
 
 time_definition:
-  id: "${global_variables.base_year}_2050_annual_4hourly"
-  years: "range(2023,2051)"
+  id: "${global_variables.base_year}_2050_annual_4hourly" # from main.yaml
+  years: "range(2023,2051)" # from main.yaml
   seasons: [1, 2] # s1: dry season, s2: rainy season
   daily_time_brackets: [1, 2, 3, 4, 5, 6]
   day_types: [1]
-  timeslices: ["s1-h1", 
-               "s1-h2", 
-               "s1-h3", 
-               "s1-h4", 
-               "s1-h5", 
-               "s1-h6", 
-               "s2-h1", 
-               "s2-h2", 
-               "s2-h3", 
-               "s2-h4", 
-               "s2-h5", 
-               "s2-h6"]
-  timeslice_in_season: {"s1-h1": 1, 
-                        "s1-h2": 1, 
-                        "s1-h3": 1, 
-                        "s1-h4": 1, 
-                        "s1-h5": 1, 
-                        "s1-h6": 1,
-                        "s2-h1": 2, 
-                        "s2-h2": 2, 
-                        "s2-h3": 2, 
-                        "s2-h4": 2, 
-                        "s2-h5": 2, 
-                        "s2-h6": 2}
-  timeslice_in_timebracket: {"s1-h1": 1,
-                             "s1-h2": 2,
-                             "s1-h3": 3,
-                             "s1-h4": 4,
-                             "s1-h5": 5,
-                             "s1-h6": 6,
-                             "s2-h1": 1,
-                             "s2-h2": 2,
-                             "s2-h3": 3,
-                             "s2-h4": 4,
-                             "s2-h5": 5,
-                             "s2-h6": 6}
-  timeslice_in_daytype: {"s1-h1": 1, 
-                        "s1-h2": 1, 
-                        "s1-h3": 1, 
-                        "s1-h4": 1, 
-                        "s1-h5": 1, 
-                        "s1-h6": 1,
-                        "s2-h1": 1, 
-                        "s2-h2": 1, 
-                        "s2-h3": 1, 
-                        "s2-h4": 1, 
-                        "s2-h5": 1, 
-                        "s2-h6": 1} 
+  timeslices: [
+    "s1-h1", 
+    "s1-h2", 
+    "s1-h3", 
+    "s1-h4", 
+    "s1-h5", 
+    "s1-h6", 
+    "s2-h1", 
+    "s2-h2", 
+    "s2-h3", 
+    "s2-h4", 
+    "s2-h5", 
+    "s2-h6",
+  ]
+  timeslice_in_season: {
+    "s1-h1": 1, 
+    "s1-h2": 1, 
+    "s1-h3": 1, 
+    "s1-h4": 1, 
+    "s1-h5": 1, 
+    "s1-h6": 1,
+    "s2-h1": 2, 
+    "s2-h2": 2, 
+    "s2-h3": 2, 
+    "s2-h4": 2, 
+    "s2-h5": 2, 
+    "s2-h6": 2
+  }
+  timeslice_in_timebracket: {
+    "s1-h1": 1,
+    "s1-h2": 2,
+    "s1-h3": 3,
+    "s1-h4": 4,
+    "s1-h5": 5,
+    "s1-h6": 6,
+    "s2-h1": 1,
+    "s2-h2": 2,
+    "s2-h3": 3,
+    "s2-h4": 4,
+    "s2-h5": 5,
+    "s2-h6": 6,
+  }
+  timeslice_in_daytype: {
+    "s1-h1": 1, 
+    "s1-h2": 1, 
+    "s1-h3": 1, 
+    "s1-h4": 1, 
+    "s1-h5": 1, 
+    "s1-h6": 1,
+    "s2-h1": 1, 
+    "s2-h2": 1, 
+    "s2-h3": 1, 
+    "s2-h4": 1, 
+    "s2-h5": 1, 
+    "s2-h6": 1,
+  } 
+
+# END
+# -------------------------------------------------------------------------  
