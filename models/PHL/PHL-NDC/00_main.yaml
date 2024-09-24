@@ -1,7 +1,5 @@
 # Model Nameplate
-id: philippines
-long_name: "Philippines: V20 model"
+id: philippines-ndc
+long_name: "Philippines NDC (V20)"
 description: >
-  A three-node model of The Philippines.
-
-# Global variables
+  A three-node model of The Philippines representing the Nationally Determined Contributions (NDC) scenario developed for the V20 group.
