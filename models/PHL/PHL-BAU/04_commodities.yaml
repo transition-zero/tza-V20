@@ -9,9 +9,11 @@
 #       https://docs.feo.transitionzero.org/docs/tz-osemosys/commodity/
 #
 #     Authors:
-#       - xx
+#       - @djwels
+#       - @amanmajid
 #
 # -------------------------------------------------------------------------
+# START
 
 commodities:
 
@@ -221,5 +223,6 @@ commodities:
           s2-h4: 0.09
           s2-h5: 0.09
           s2-h6: 0.08
-
           
+# END
+# -------------------------------------------------------------------------  
