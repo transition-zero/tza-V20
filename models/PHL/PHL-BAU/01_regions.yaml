@@ -18,7 +18,6 @@ regions:
   - id: PHL-LU
     long_name: Philippines - Luzon
     description: Northernmost island of the three main islands of the Philippines.
-    # trade_routes: {PHL-VI: {"gas": {"*": True}}, PHL-MI: {"gas": {"*": True}}}
 
   - id: PHL-VI
     long_name: Philippines - Visayas
