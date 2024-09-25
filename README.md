@@ -22,6 +22,7 @@ The data and code provided here was developed by the following modellers/analyst
 - [Handriyanti Diah Puspitarini](https://www.transitionzero.org/team/handriyanti-diah-puspitarini)
 - [Abhishek Shivakumar](https://www.transitionzero.org/team/abhishek-shivakumar)
 - [Dan Welsby]()
+- [Irfan Mohamed]()
 
 # Getting started
 
