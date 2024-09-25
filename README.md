@@ -35,15 +35,15 @@ Next, create a project environment using the yaml file in the repository as belo
 conda:
 
 ```
-conda env create --prefix ./env --file environment_v20.yml
-conda activate ./env
+conda env create --name V20 --file env/V20.yml
+conda activate V20
 ```
 
 mamba:
 
 ```
-mamba env update -n V20 --file environment_v20.yml
-conda activate ./env
+mamba env create --name V20 --file env/V20.yml
+mamba activate V20
 ```
 
 Additionally, install a solver for optimisation. We recommend using [HiGHS](https://highs.dev/), which is free and open source.
