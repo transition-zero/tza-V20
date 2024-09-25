@@ -38,15 +38,6 @@ cost_of_capital: # WACC
   "*" :
     # all technologies
     "*": 0.11
-    # coal-supercritical: 0.11
-    # coal-subcritical: 0.11
-    # nuclear: 0.11
-    # solar-pv: 0.11
-    # windonshore-power: 0.11
-    # hydropower: 0.11
-    # geo-power: 0.11
-    # biogas-power: 0.11
-    # transmission: 0.11
 
 
 # --------------
@@ -150,7 +141,7 @@ capex:
 
   oil-internal-combustion-engine:
     HTI:
-      "*": 0
+      "*": 1450 # following costs from other countries
         
   solar-pv: 
     HTI:
@@ -371,7 +362,7 @@ capex:
 
   transmission:
     HTI :
-      "*": 448
+      "*": 276.74 # assuming to be similar as PHL - need to be checked
   
   battery-technology:
     HTI :
@@ -509,7 +500,7 @@ opex_fixed:
 
   oil-internal-combustion-engine:
     HTI:
-      "*": 0
+      "*": 35 # following costs from other countries
         
   solar-pv: 
     HTI:
@@ -676,7 +667,7 @@ opex_fixed:
 
   transmission: 
     "*" :
-      "*": 0.
+      "*": 9.69 # assuming to be similar as PHL - need to be checked
   
   battery-technology:
     "*" :
@@ -788,8 +779,7 @@ opex_variable:
 
   transmission: 
     "*":
-      "*": 3.0 # need to be checked
-  
+      "*": 0.
   battery-technology:
     "*" :
       "*": 0

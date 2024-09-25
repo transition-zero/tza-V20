@@ -1,0 +1,156 @@
+# -------------------------------------------------------------------------
+#
+#   CAPACITIES
+#   
+#     Define capacity attributes for each technology in each region.
+#
+#     There are two capacity components here:
+#       - Residual capacities
+#       - Residual capacity of storages
+#
+#     Link to docs: 
+#       - https://docs.feo.transitionzero.org/docs/tz-osemosys/technology/
+#
+#     Authors:
+#       -xx
+# -------------------------------------------------------------------------
+
+
+# -------
+# Residual capacities
+# -------
+
+residual_capacity: 
+
+  oil-internal-combustion-engine:
+    HTI:
+      2023: 0.194
+      2024: 0.194
+
+  solar-pv:
+    HTI: 
+      2023: 0.00016
+      2024: 0.00016
+
+  windonshore-power:
+    HTI: 
+      2023: 0.000023904
+      2024: 0.000023904
+
+  hydropower:
+    HTI: 
+      2023: 0.057
+      2024: 0.057
+
+
+# -------
+# Maximum and minimum additional capacity 
+# -------
+
+capacity_additional_max: # Isolating installed capacity in 2023
+
+  oil-internal-combustion-engine:
+    HTI:
+      2023: 0.
+      2024: 0.
+
+  solar-pv:
+    HTI: 
+      2023: 0.
+      2024: 0.
+
+  windonshore-power:
+    HTI: 
+      2023: 0.
+      2024: 0.
+
+  hydropower:
+    HTI: 
+      2023: 0.
+      2024: 0.
+
+  bioenergy-power:
+    HTI: 
+      2023: 0.
+      2024: 0.
+
+# capacity_additional_min: # Following NDC 2022
+
+#   solar-pv:
+#     HTI: 
+#       2030: 0.03
+
+#   windonshore-power:
+#     HTI: 
+#       2030: 0.05
+
+#   hydropower:
+#     HTI: 
+#       2030: 0.06
+
+#   bioenergy-power:
+#     HTI: 
+#       2030: 0.02
+
+
+# capacity_additional_max_floor:
+
+#   oil-internal-combustion-engine:
+#     HTI:
+#       2023: 0.7
+
+#   solar-pv:
+#     HTI: 
+#       2023: 0.02
+
+#   windonshore-power:
+#     HTI: 
+#       2023: 0.02
+
+#   hydropower:
+#     HTI: 
+#       2023: 0.02
+
+#   bioenergy-power:
+#     HTI: 
+#       2023: 0.02
+
+# -------
+# Gross potential
+# -------
+
+capacity_gross_max: # potential based on https://pubdocs.worldbank.org/en/176981447774252559/Haiti-Renewable-Energy-Investment-Plan-Final-13-May-2015.pdf
+
+  bioenergy-power:
+    HTI:
+      "*": 0.2
+
+  windonshore-power:
+    HTI:
+      "*": 0.1
+
+  solar-pv:
+    HTI:
+      "*": 0.3
+
+  hydropower:
+    HTI:
+      "*": 0.25 
+
+# -------
+# Growth rate
+# -------
+
+capacity_additional_max_growth_rate:
+
+  hydropower: 
+    HTI:
+      "*": 0.33 # following the growth in 2018 as recorded by EMBER - Sep 2024 data
+
+  oil-internal-combustion-engine:
+    HTI:
+      "*": 0.33 # following the growth in 2008 as recorded by EMBER - Sep 2024 data
+
+  bioenergy-power: 
+    HTI:
+      "*": 0.33

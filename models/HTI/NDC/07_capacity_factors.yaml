@@ -1,0 +1,163 @@
+# -------------------------------------------------------------------------
+# CAPACITY FACTORS
+#
+#   Defining technological capacity and availability factors. Here, capacity 
+#     factors are only applied for renewables. For thermal power plants, we
+#     apply an "availability_factor", which accounts for maintenance shutdowns
+#     but we allow the model to choose when to do this. 
+#
+#     Link to docs: 
+#       https://docs.feo.transitionzero.org/docs/tz-osemosys/technology/
+#
+#     Authors:
+#       - xx
+# -------------------------------------------------------------------------
+
+
+# --------------------------------------------
+#
+#   AVAILABILITY FACTOR
+#     - Applied only to thermal power plants.
+#     - Defined as a normalised quantity between 0 and 1.
+#
+# --------------------------------------------
+
+availability_factor:
+
+  coal-power:
+    # all regions
+    "*":
+      # all years
+      "*": 0.9
+
+  nuclear-power:
+    # all regions
+    "*":
+      # all years
+      "*": 0.9
+
+  gas-CCGT:
+    # all regions
+    "*":
+      # all years
+      "*": 0.9
+
+  gas-OCGT:
+    # all regions
+    "*":
+      # all years
+      "*": 0.9
+
+  oil-internal-combustion-engine:
+    # all regions
+    "*":
+      # all years
+      "*": 0.9  
+
+  
+# --------------------------------------------
+#
+#   CAPACITY FACTOR
+#     - Applied only to renewable power plants.
+#     - Defined as a normalised quantity between 0 and 1.
+#
+# --------------------------------------------
+
+capacity_factors:
+# Note: all profiles are calculated based on the data used in global interconnector study
+
+  solar-pv:
+   # all region
+   "*":
+    # all years
+    "*":
+      s1-h1: 0
+      s1-h2: 0.04
+      s1-h3: 0.49
+      s1-h4: 0.12
+      s2-h1: 0
+      s2-h2: 0.05
+      s2-h3: 0.43
+      s2-h4: 0.12
+      s3-h1: 0
+      s3-h2: 0.04
+      s3-h3: 0.39
+      s3-h4: 0.11
+      s4-h1: 0
+      s4-h2: 0.03
+      s4-h3: 0.38
+      s4-h4: 0.09
+
+  windonshore-power:
+   # all region
+   "*":
+    # all years
+    "*":
+      s1-h1: 0.12
+      s1-h2: 0.1
+      s1-h3: 0.12
+      s1-h4: 0.1
+      s2-h1: 0.1
+      s2-h2: 0.08
+      s2-h3: 0.13
+      s2-h4: 0.09
+      s3-h1: 0.08
+      s3-h2: 0.06
+      s3-h3: 0.1
+      s3-h4: 0.07
+      s4-h1: 0.1
+      s4-h2: 0.08
+      s4-h3: 0.12
+      s4-h4: 0.08
+
+  windoffshore-power:
+   # all region
+   "*":
+    # all years
+    "*":
+      s1-h1: 0.2
+      s1-h2: 0.15
+      s1-h3: 0.09
+      s1-h4: 0.11
+      s2-h1: 0.13
+      s2-h2: 0.07
+      s2-h3: 0.04
+      s2-h4: 0.08
+      s3-h1: 0.08
+      s3-h2: 0.05
+      s3-h3: 0.03
+      s3-h4: 0.05
+      s4-h1: 0.13
+      s4-h2: 0.1
+      s4-h3: 0.07
+      s4-h4: 0.05
+      
+  hydropower:
+   # all region
+   "*":
+    # all years
+    "*":
+      s1-h1: 0.5
+      s1-h2: 0.5
+      s1-h3: 0.5
+      s1-h4: 0.5
+      s2-h1: 0.64
+      s2-h2: 0.64
+      s2-h3: 0.64
+      s2-h4: 0.64
+      s3-h1: 0.73
+      s3-h2: 0.73
+      s3-h3: 0.73
+      s3-h4: 0.73
+      s4-h1: 0.76
+      s4-h2: 0.76
+      s4-h3: 0.76
+      s4-h4: 0.76
+
+  geo-power:
+    "*":
+      "*": 1
+
+  bioenergy-power:
+    "*":
+      "*": 0.7
