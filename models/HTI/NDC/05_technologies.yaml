@@ -183,7 +183,7 @@ technologies:
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.07
+          CO2: 0.2
         opex_variable: "${fuel_price.oil}" # from costs.yaml   
     # load from other yaml files
     residual_capacity: "${residual_capacity.oil-internal-combustion-engine}" # from capacities.yaml
@@ -326,7 +326,7 @@ technologies:
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.09
+          CO2: 0.22
         opex_variable: "${opex_variable.coal-power}" # from costs.yaml
     # load from other yaml files
     capex: "${capex.coal-power}" # from costs.yaml
@@ -354,7 +354,7 @@ technologies:
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.05
+          CO2: 0.08
         opex_variable: "${fuel_price.gas}" # from costs.yaml
     # load from other yaml files
     capex: "${capex.gas-CCGT}" # from costs.yaml
@@ -381,7 +381,7 @@ technologies:
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.07
+          CO2: 0.18
         opex_variable: "${fuel_price.gas}" # from costs.yaml
     # load from other yaml files
     capex: "${capex.gas-OCGT}" # from costs.yaml
@@ -420,6 +420,7 @@ technologies:
     long_name: geothermal power stations
     capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
     include_in_joint_reserve_margin: true
+    include_in_joint_renewable_target: true
     operating_life: 30
     operating_modes:
       - id: GENERATION

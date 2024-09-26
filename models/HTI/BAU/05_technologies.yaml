@@ -170,6 +170,7 @@ technologies:
     long_name: oil generation turbine with fuel input option
     capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
     include_in_joint_reserve_margin: true
+    include_in_joint_renewable_target: false
     operating_life: 40
     operating_modes:
       - id: GENERATION_DIESEL
@@ -183,7 +184,7 @@ technologies:
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.07
+          CO2: 0.2 # emission ratio (0.2) * input_activity_ratio
         opex_variable: "${fuel_price.oil}" # from costs.yaml   
     # load from other yaml files
     residual_capacity: "${residual_capacity.oil-internal-combustion-engine}" # from capacities.yaml
@@ -197,6 +198,7 @@ technologies:
     long_name: ground-mounted solar power stations
     capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
     include_in_joint_reserve_margin: false
+    include_in_joint_renewable_target: true
     operating_life: 25
     operating_modes:
       - id: GENERATION
@@ -224,6 +226,7 @@ technologies:
     long_name: onshore wind power stations
     capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
     include_in_joint_reserve_margin: false
+    include_in_joint_renewable_target: true
     operating_life: 27
     operating_modes:
       - id: GENERATION
@@ -251,6 +254,7 @@ technologies:
     long_name: hydropower stations
     capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
     include_in_joint_reserve_margin: true
+    include_in_joint_renewable_target: true
     operating_life: 50
     operating_modes:
       - id: GENERATION
@@ -279,6 +283,7 @@ technologies:
     long_name: bioenergy power stations
     capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
     include_in_joint_reserve_margin: true
+    include_in_joint_renewable_target: true
     operating_life: 25
     operating_modes:
       - id: GENERATION
@@ -306,6 +311,7 @@ technologies:
     long_name: Coal power stations without differentiating their sub-type
     capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
     include_in_joint_reserve_margin: true
+    include_in_joint_renewable_target: false
     operating_life: 30
     operating_modes:
       - id: GENERATION_COAL
@@ -319,7 +325,7 @@ technologies:
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.09
+          CO2: 0.22
         opex_variable: "${opex_variable.coal-power}" # from costs.yaml
     # load from other yaml files
     capex: "${capex.coal-power}" # from costs.yaml
@@ -334,6 +340,7 @@ technologies:
     long_name: combined cycle gas turbine
     capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
     include_in_joint_reserve_margin: true
+    include_in_joint_renewable_target: false
     operating_life: 40
     operating_modes:
       - id: GENERATION
@@ -347,7 +354,7 @@ technologies:
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.05
+          CO2: 0.08
         opex_variable: "${fuel_price.gas}" # from costs.yaml
     # load from other yaml files
     capex: "${capex.gas-CCGT}" # from costs.yaml
@@ -361,6 +368,7 @@ technologies:
     long_name: open cycle gas turbine
     capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
     include_in_joint_reserve_margin: true
+    include_in_joint_renewable_target: false
     operating_life: 40
     operating_modes:
       - id: GENERATION
@@ -374,7 +382,7 @@ technologies:
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.07
+          CO2: 0.18
         opex_variable: "${fuel_price.gas}" # from costs.yaml
     # load from other yaml files
     capex: "${capex.gas-OCGT}" # from costs.yaml
@@ -388,6 +396,7 @@ technologies:
   #   long_name: offshore wind power stations
   #   capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
   #   include_in_joint_reserve_margin: false
+  #   include_in_joint_renewable_target: false
   #   operating_life: 27
   #   operating_modes:
   #     - id: GENERATION
@@ -413,6 +422,7 @@ technologies:
     long_name: geothermal power stations
     capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
     include_in_joint_reserve_margin: true
+    include_in_joint_renewable_target: true
     operating_life: 30
     operating_modes:
       - id: GENERATION

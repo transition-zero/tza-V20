@@ -17,27 +17,27 @@ commodities:
 
   - id: oil
     long_name: Oil resource for diesel
-    is_renewable: false  -diesel
+    is_renewable: false 
 
   - id: solar
     long_name: Solar resource
-    is_renewable: false
+    is_renewable: true
   
   - id: wind-onshore
     long_name: Wind onshore resource
-    is_renewable: false
+    is_renewable: true
 
   - id: hydro 
     long_name: Hydro resource
-    is_renewable: false
+    is_renewable: true
 
   - id: bioenergy
     long_name: Bioenergy resource
-    is_renewable: false
+    is_renewable: true
 
   # - id: wind-offshore
   #   long_name: Wind offshore resource
-  #   is_renewable: false
+  #   is_renewable: true
 
   - id: coal
     long_name: Coal resource
@@ -53,7 +53,7 @@ commodities:
 
   - id: geothermal
     long_name: Geothermal resource
-    is_renewable: false
+    is_renewable: true
 
   - id: primary-electricity
     long_name: Primary electricity
