@@ -154,7 +154,8 @@ for country in countries_to_run:
 
         # ---
         # (4) Cost of technology (capital and O&M, per MW in each year)
-        # TODO
+        #   This is an input to the model and contained within the master V20 spreadsheet. We therefore do not
+        #   need to produce this here.
         
         
         # ---
