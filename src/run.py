@@ -42,7 +42,7 @@ for country in countries_to_run:
         # load model from folder
         model = Model.from_yaml(path_to_model)
         # solve
-        model.solve(solver='gurobi')
+        model.solve(solver='highs')
         
         # ---------
         # SAVE RESULTS
@@ -156,9 +156,31 @@ for country in countries_to_run:
         # (4) Cost of technology (capital and O&M, per MW in each year)
         # TODO
         
+        
         # ---
         # (5) Total investment required (timeframe) per year for new capacity plus grid and storage
-        # TODO
+        # TODO: This should be annualised costs
+
+        (
+            viz
+            .get
+            .AnnualCapitalInvestmentByTechnology(model)
+            .to_csv(
+                os.path.join(
+                    dir_path,
+                    'NonAnnualisedCapitalInvestmentByTechnology.csv',
+                )
+            )
+        )
+
+        # export figure
+        ax = viz.plot.CapitalInvestmentByTechnology(model)
+        plt.savefig(
+            os.path.join(
+                dir_path,
+                'NonAnnualisedCapitalInvestmentByTechnology.pdf'
+            )
+        )
 
         # ---
         # (6) LCOE by technology (incl. timeframe)
@@ -204,6 +226,14 @@ for country in countries_to_run:
                 'AnnualEmissionsByTechnology.pdf'
             )
         )
+
+        # ---
+        # (2) Annual emissions sequestration 
+        # TODO
+
+        # ---
+        # (3) Annual net emissions by power system
+        # TODO
 
         
 
