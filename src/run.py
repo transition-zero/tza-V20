@@ -159,8 +159,10 @@ for country in countries_to_run:
         
         # ---
         # (5) Total investment required (timeframe) per year for new capacity plus grid and storage
-        # TODO: This should be annualised costs
+        
+        # TODO: Annualised investment per year
 
+        # Non-annualised investment per year
         (
             viz
             .get
