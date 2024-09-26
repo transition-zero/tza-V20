@@ -190,8 +190,8 @@ technologies:
     capex: "${capex.oil-internal-combustion-engine}" # from costs.yaml
     opex_fixed: "${opex_fixed.oil-internal-combustion-engine}" # from costs.yaml
     capacity_additional_max: "${capacity_additional_max.oil-internal-combustion-engine}" # from capacity.yaml
-    # capacity_additional_max_floor: "${capacity_additional_max_floor.oil-internal-combustion-engine}" # from capacity.yaml
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.oil-internal-combustion-engine}" # from capacity.yaml
+    # capacity_additional_max_floor: "${capacity_additional_max_floor.oil-internal-combustion-engine}" # from capacity.yaml
 
   - id: solar-pv
     long_name: ground-mounted solar power stations
@@ -218,7 +218,7 @@ technologies:
     capacity_gross_max: "${capacity_gross_max.solar-pv}" # from capacity.yaml
     capacity_additional_max: "${capacity_additional_max.solar-pv}" # from capacity.yaml
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.solar-pv}" # from capacity.yaml
-    # capacity_additional_max_floor: "${capacity_additional_max_floor.solar-pv}" # from capacity.yaml
+    capacity_additional_max_floor: "${capacity_additional_max_floor.solar-pv}" # from capacity.yaml
 
   - id: windonshore-power
     long_name: onshore wind power stations
@@ -260,7 +260,7 @@ technologies:
         #   Below we define the input-output ratios. In the example below, 
         #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio:
-          hydro: 1.0
+          hydro: 1.11 # 90% efficiency based on https://www.usbr.gov/power/edu/pamphlet.pdf
         output_activity_ratio:
           primary-electricity: 1.0
         opex_variable: "${opex_variable.hydropower}" # from costs.yaml
@@ -271,9 +271,9 @@ technologies:
     capacity_factor: "${capacity_factors.hydropower}" # from capacity_factors.yaml
     capacity_gross_max: "${capacity_gross_max.hydropower}" # from capacity.yaml
     capacity_additional_max: "${capacity_additional_max.hydropower}" # from capacity.yaml
-    # capacity_additional_min: "${capacity_additional_min.hydropower}" # from capacity.yaml
     capacity_additional_max_floor: "${capacity_additional_max_floor.hydropower}" # from capacity.yaml
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.hydropower}" # from capacity.yaml
+    # capacity_additional_min: "${capacity_additional_min.hydropower}" # from capacity.yaml
 
   - id: bioenergy-power
     long_name: bioenergy power stations
@@ -288,7 +288,7 @@ technologies:
         #   Below we define the input-output ratios. In the example below, 
         #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio:
-          bioenergy: 1.0
+          bioenergy: 2.94 # 34% efficiency based on dry biomass fueled plant in https://iea.blob.core.windows.net/assets/1028bee0-2da1-4d68-8b0a-9e5e03e93690/essentials3.pdf 
         output_activity_ratio:
           primary-electricity: 1.0
         opex_variable: "${fuel_price.bioenergy}" # from costs.yaml
@@ -298,8 +298,8 @@ technologies:
     capacity_factor: "${capacity_factors.bioenergy-power}" # from capacity_factors.yaml
     capacity_gross_max: "${capacity_gross_max.bioenergy-power}" # from capacity.yaml
     capacity_additional_max: "${capacity_additional_max.bioenergy-power}" # from capacity.yaml
-    # capacity_additional_max_floor: "${capacity_additional_max_floor.bioenergy-power}" # from capacity.yaml
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.bioenergy-power}" # from capacity.yaml
+    capacity_additional_max_floor: "${capacity_additional_max_floor.bioenergy-power}" # from capacity.yaml
 
 
   - id: coal-power
@@ -322,11 +322,13 @@ technologies:
           CO2: 0.09
         opex_variable: "${opex_variable.coal-power}" # from costs.yaml
     # load from other yaml files
-    # residual_capacity: "${residual_capacity.coal-power}" # from capacities.yaml
     capex: "${capex.coal-power}" # from costs.yaml
     opex_fixed: "${opex_fixed.coal-power}" # from costs.yaml
     availability_factor: "${availability_factor.coal-power}" # from capacity_factors.yaml
     capacity_additional_max: "${capacity_additional_max.coal-power}" # from capacity_factors.yaml
+    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.coal-power}" # from capacity.yaml
+    capacity_additional_max_floor: "${capacity_additional_max_floor.coal-power}" # from capacity.yaml
+    # residual_capacity: "${residual_capacity.coal-power}" # from capacities.yaml
 
   - id: gas-CCGT
     long_name: combined cycle gas turbine
@@ -348,10 +350,12 @@ technologies:
           CO2: 0.05
         opex_variable: "${fuel_price.gas}" # from costs.yaml
     # load from other yaml files
-    # residual_capacity: "${residual_capacity.gas-CCGT}" # from capacities.yaml
     capex: "${capex.gas-CCGT}" # from costs.yaml
     opex_fixed: "${opex_fixed.gas-CCGT}" # from costs.yaml
     capacity_additional_max: "${capacity_additional_max.gas-CCGT}" # from capacity_factors.yaml
+    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.gas-CCGT}" # from capacity.yaml
+    capacity_additional_max_floor: "${capacity_additional_max_floor.gas-CCGT}" # from capacity.yaml
+    # residual_capacity: "${residual_capacity.gas-CCGT}" # from capacities.yaml
 
   - id: gas-OCGT
     long_name: open cycle gas turbine
@@ -373,10 +377,12 @@ technologies:
           CO2: 0.07
         opex_variable: "${fuel_price.gas}" # from costs.yaml
     # load from other yaml files
-    # residual_capacity: "${residual_capacity.gas-OCGT}" # from capacities.yaml
     capex: "${capex.gas-OCGT}" # from costs.yaml
     opex_fixed: "${opex_fixed.gas-OCGT}" # from costs.yaml
     capacity_additional_max: "${capacity_additional_max.gas-OCGT}" # from capacity_factors.yaml
+    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.gas-OCGT}" # from capacity.yaml
+    capacity_additional_max_floor: "${capacity_additional_max_floor.gas-OCGT}" # from capacity.yaml
+    # residual_capacity: "${residual_capacity.gas-OCGT}" # from capacities.yaml
 
   # - id: windoffshore-power
   #   long_name: offshore wind power stations
@@ -488,33 +494,34 @@ technologies:
   #
   # --------------------------------------------
 
-  # - id: battery-technology
-  #   long_name: Battery energy storage technology
-  #   capacity_activity_unit_ratio: 31.536
-  #   include_in_joint_reserve_margin: true
-  #   capex: "${capex.battery-technology}" # from costs.yaml
-  #   opex_fixed: "${opex_fixed.battery-technology}" # from costs.yaml
-  #   operating_life: 15
-  #   operating_modes:
-  #     - id: GEN
-  #       long_name: discharging mode
-  #       description: discharging mode
-  #       output_activity_ratio:
-  #         secondary-electricity: 1.
-  #       from_storage: 
-  #         "*": # all regions
-  #           battery-storage: True # storage unit
-  #       opex_variable: "${opex_variable.battery-technology}" # from costs.yaml
-  #     - id: CHARGE
-  #       long_name: charging mode
-  #       description: charging mode
-  #       input_activity_ratio:
-  #         primary-electricity: 1.
-  #       to_storage: 
-  #         "*": # all regions
-  #           battery-storage: True # storage unit
-  #       opex_variable: "${opex_variable.battery-technology}" # from costs.yaml 
-  #   capacity_additional_max: "${capacity_additional_max.battery-technology}" # from capacity_factors.yaml
+  - id: battery-technology
+    long_name: Battery energy storage technology
+    capacity_activity_unit_ratio: 31.536
+    include_in_joint_reserve_margin: true
+    capex: "${capex.battery-technology}" # from costs.yaml
+    opex_fixed: "${opex_fixed.battery-technology}" # from costs.yaml
+    operating_life: 15
+    operating_modes:
+      - id: GEN
+        long_name: discharging mode
+        description: discharging mode
+        output_activity_ratio:
+          secondary-electricity: 1.
+        from_storage: 
+          "*": # all regions
+            battery-storage: True # storage unit
+        opex_variable: "${opex_variable.battery-technology}" # from costs.yaml
+      - id: CHARGE
+        long_name: charging mode
+        description: charging mode
+        input_activity_ratio:
+          primary-electricity: 1.11 # 90% efficiency 
+        to_storage: 
+          "*": # all regions
+            battery-storage: True # storage unit
+        opex_variable: "${opex_variable.battery-technology}" # from costs.yaml 
+    capacity_additional_max: "${capacity_additional_max.battery-technology}" # from capacity.yaml
+    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.battery-technology}" # from capacity.yaml
 
 # --------------------------------------------
 #
@@ -524,23 +531,23 @@ technologies:
 #
 # --------------------------------------------
 
-# storage:
-#   - id: battery-storage
-#     capex: 
-#       "*": # all region
-#         "*": 0 # all year
-#     operating_life: 
-#       "*": 100 # all region
-#     minimum_charge: 
-#       "*": # all region
-#         "*": 0 # all year
-#     initial_level: 
-#       "*": 0 # all region
-#     residual_capacity: 
-#       "*": # all region
-#         "*": 0 # all year
-#     max_discharge_rate: 
-#       "*": 100 # all region
-#     max_charge_rate: 
-#       "*": 100 # all region
-#     storage_balance_day: true
+storage:
+  - id: battery-storage
+    capex: 
+      "*": # all region
+        "*": 0 # all year
+    operating_life: 
+      "*": 100 # all region
+    minimum_charge: 
+      "*": # all region
+        "*": 0 # all year
+    initial_level: 
+      "*": 0 # all region
+    residual_capacity: 
+      "*": # all region
+        "*": 0 # all year
+    max_discharge_rate: 
+      "*": 100 # all region
+    max_charge_rate: 
+      "*": 100 # all region
+    storage_balance_day: true

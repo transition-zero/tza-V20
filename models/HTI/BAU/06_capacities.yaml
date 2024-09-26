@@ -89,17 +89,45 @@ capacity_additional_max: # Isolating installed capacity in 2023 and 2024 because
       2023: 0.
       2024: 0.
 
+  battery-technology:
+    HTI: 
+      2023: 0.
+      2024: 0.
+
 
 capacity_additional_max_floor:
 
-  windonshore-power:
+  oil-internal-combustion-engine:
     HTI: 
-      2023: 0.02
+      "*": 0.02
 
   hydropower:
     HTI: 
-      2023: 0.02
+      "*": 0.02
 
+  windonshore-power:
+    HTI: 
+      "*": 0.01
+
+  solar-pv:
+    HTI: 
+      "*": 0.01
+
+  bioenergy-power:
+    HTI: 
+      "*": 0.01
+
+  coal-power:
+    HTI: 
+      "*": 0.05 # coal power plants less than 50 MW is not attractive for investment 
+
+  gas-CCGT:
+    HTI: 
+      "*": 0.05 # gas power plants less than 50 MW is not attractive for investment 
+
+  gas-OCGT:
+    HTI: 
+      "*": 0.05 # gas power plants less than 50 MW is not attractive for investment 
 
 
 # -------
@@ -144,12 +172,28 @@ capacity_additional_max_growth_rate:
 
   bioenergy-power: 
     HTI:
-      "*": 0.01
+      "*": 0.01 # assumption based on HTI's economic condition
 
   solar-pv: 
     HTI:
-      "*": 0.01
+      "*": 0.01 # assumption based on HTI's economic condition
 
   windonshore-power: 
+    HTI:
+      "*": 0.01 # assumption based on HTI's economic condition
+
+  battery-technology: 
+    HTI:
+      "*": 0.01 # assumption based on HTI's economic condition
+
+  coal-power: 
+    HTI:
+      "*": 0.01
+
+  gas-CCGT: 
+    HTI:
+      "*": 0.01
+
+  gas-OCGT: 
     HTI:
       "*": 0.01

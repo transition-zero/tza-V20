@@ -39,21 +39,21 @@ commodities:
   #   long_name: Wind offshore resource
   #   is_renewable: false
 
-  # - id: coal
-  #   long_name: Coal resource
-  #   is_renewable: false
+  - id: coal
+    long_name: Coal resource
+    is_renewable: false
 
-  # - id: gas
-  #   long_name: Gas resource
-  #   is_renewable: false
+  - id: gas
+    long_name: Gas resource
+    is_renewable: false
 
   # - id: uranium
   #   long_name: Uranium resource
   #   is_renewable: false
 
-  # - id: geothermal
-  #   long_name: Geothermal resource
-  #   is_renewable: false
+  - id: geothermal
+    long_name: Geothermal resource
+    is_renewable: false
 
   - id: primary-electricity
     long_name: Primary electricity
