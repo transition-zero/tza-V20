@@ -22,93 +22,20 @@
 
 residual_capacity: 
 
-  regasification-floating:
-    GMB: 
-      2023: 256.845025
-
-  coal-supercritical:
-    GMB: 
-      2023: 1.978
-
-  coal-subcritical:
-    GMB: 
-      2023: 7.2546
-
-  coal-ultrasupercritical:
-    GMB: 
-      2023: 0.
-
-  gas-CCGT:
-    GMB:
-      2023: 3.73
-
-  gas-OCGT:
-    GMB:
-      2023: 0.
-
   oil-internal-combustion-engine:
     GMB:
-      2023: 0.
+      2023: 0.0964
 
   solar-pv:
     GMB: 
-      2023: 0.9883
-
-  windonshore-power:
-    GMB: 
-      2023: 0.016
-      
-  windoffshore-power:
-    GMB: 
-      2023: 1.524
-
-  hydropower:
-    GMB: 
-      2023: 2.9503
-
-  geo-power:
-    GMB: 
-      2023: 0.961
-
-  bioenergy-power:
-    GMB: 
-      2023: 0.
-
-  nuclear-power:
-    GMB: 
-      2023: 0.
-
-  transmission:
-    GMB: 
-      2023: 0.
-
-  battery-technology:
-    GMB: 
-      2023: 0.
-  
-  battery-storage:
-    GMB: 
-      2023: 0.
+      2023: 0.023
 
 # -------
 # Activity constraints
 # -------
 
-activity_total_max:
+capacity_gross_max:
 
-  gas-domestic-step-1:
-    GMB: 283.73184                
-  coal-hard-domestic-step-1:
-    GMB: 252.0488
-  coal-brown-domestic-step-1:
-    GMB: 110.96
-  coal-brown-domestic-step-2:
-    GMB: 360.62
-  coal-brown-domestic-step-3:
-    GMB: 332.88
-  coal-brown-domestic-step-4:
-    GMB: 832.2
-  coal-brown-domestic-step-5:
-    GMB: 332.88
-  coal-brown-domestic-step-6:
-    GMB: 804.46
+  electricity-import:
+    GMB:
+      "*": 0.4 # https://nawec.gm/wp-content/uploads/2022/02/The-Gambia-Strategic-Electricity-Sector-Roadmap.pdf

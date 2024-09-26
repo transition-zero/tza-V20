@@ -15,13 +15,9 @@
 
 commodities:
 
-  - id: coal-brown
-    long_name: Brown coal
+  - id: coal
+    long_name: coal
     is_renewable: false
-
-  - id: coal-hard
-    long_name: Hard coal
-    is_renewable: false  
 
   - id: gas-liquefied
     long_name: Liquefied gas

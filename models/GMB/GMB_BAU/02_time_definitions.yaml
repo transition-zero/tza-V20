@@ -17,22 +17,22 @@
 time_definition:
   id: "${global_variables.base_year}_2050_annual_2hourly"
   years: "range(${global_variables.base_year},2051)"
-  seasons: ["nh_spring-summer", "nh_fall-winter"] # s1: dry season, s2: rainy season
+  seasons: ["s1", "s2"] # s1: dry season, s2: rainy season
   daily_time_brackets: [
-    "00h00-06h00-utc", 
-    "06h00-12h00-utc", 
-    "12h00-18h00-utc", 
-    "18h00-24h00-utc",
+    "h1", 
+    "h2", 
+    "h3", 
+    "h4",
   ]
   timeslices: [
-    "nh_spring-summer-00h00-06h00-utc", 
-    "nh_spring-summer-06h00-12h00-utc", 
-    "nh_spring-summer-12h00-18h00-utc", 
-    "nh_spring-summer-18h00-24h00-utc", 
-    "nh_fall-winter-00h00-06h00-utc", 
-    "nh_fall-winter-06h00-12h00-utc", 
-    "nh_fall-winter-12h00-18h00-utc", 
-    "nh_fall-winter-18h00-24h00-utc", 
+    "s1-h1", 
+    "s1-h2", 
+    "s1-h3", 
+    "s1-h4", 
+    "s2-h1", 
+    "s2-h2", 
+    "s2-h3", 
+    "s2-h4", 
   ]
   timeslice_in_season: {
     "nh_spring-summer-00h00-06h00-utc": 1, 
