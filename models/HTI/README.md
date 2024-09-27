@@ -14,6 +14,8 @@ This is the model for [Haiti](https://www.v-20.org/members/haiti/), using data s
 | Windonshore profile - for CF | [Global interconnector study](https://github.com/transition-zero/feo-esmod-osemosys/blob/master/resources/data/Won%202015.csv)
 | Hydropower profile - for CF | [Global interconnector study](https://github.com/transition-zero/feo-esmod-osemosys/blob/master/resources/data/Hydro_Monthly_Profiles%20(15%20year%20average).csv)
 
+All data for this particular model is summarized [in this Google sheet](https://docs.google.com/spreadsheets/d/1Bo346ft7rryxy7r9wooLwFs5c6Mevudn/edit?usp=sharing&ouid=111674383854079489042&rtpof=true&sd=true)
+
 Current status: 
 - Preliminary results and main assumptions taken for this model are presented [here](https://docs.google.com/document/d/1GXqUIXt5V5av3VLGAI0_97Uj_d9T1w-um76w8KUeUnY/edit#heading=h.p7vg52juaqd2). 
 - 3 scenarios for this model are [BAU](models/HTI/BAU), [NDC](models/HTI/NDC) and [CPP](models/HTI/CPP)
