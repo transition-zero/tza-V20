@@ -214,7 +214,8 @@ for country in countries_to_run:
         carbon_price=marginal_cost_of_emissions_annual(model),
         if technology: str = "*CCS*"
         capture_rate=0.9
-        else capture_rate=0
+        else 
+        capture_rate=0
         LCOE_Capacity=0.1 # representative 100 MW plant
         LCOE_Generation=(LCOE_Capacity * tech_load_factor.YEAR * OperationalLife * 8.76),
         LCOE_Capital_Cost=CapitalCost.YEAR * LCOE_Capacity,
