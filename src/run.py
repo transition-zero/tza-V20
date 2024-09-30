@@ -232,7 +232,28 @@ for country in countries_to_run:
 
         # ---
         # (2) Annual emissions sequestration 
-        # TODO
+
+        # export to csv
+        (
+            viz
+            .get
+            .AnnualEmissionsByTechnology(model, emission="SEQCO2")
+            .to_csv(
+                os.path.join(
+                    dir_path,
+                    'AnnualSequesteredEmissionsByTechnology.csv',
+                )
+            )
+        )
+
+        # export figure
+        ax = viz.plot.EmissionsByTechnology(model, emission="SEQCO2")
+        plt.savefig(
+            os.path.join(
+                dir_path,
+                'AnnualSequesteredEmissionsByTechnology.pdf'
+            )
+        )
 
         # ---
         # (3) Annual net emissions by power system
