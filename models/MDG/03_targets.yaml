@@ -27,9 +27,37 @@ impacts:
   - id: CO2
     long_name: equivalent carbon dioxide emissions
     description: equivalent carbon dioxide emissions
-    exogenous_annual: 0.
+    exogenous_annual: null
     exogenous_total: null
-    constraint_annual: 
+    constraint_annual:
+      MDG:
+        2024: 1.53
+        2025: 1.6
+        2026: 1.64
+        2027: 1.68
+        2028: 1.73
+        2029: 1.77
+        2030: 1.81
+        2031: 1.81
+        2032: 1.81
+        2033: 1.82
+        2034: 1.82
+        2035: 1.82
+        2036: 1.81
+        2037: 1.8
+        2038: 1.8
+        2039: 1.79
+        2040: 1.78
+        2041: 1.77
+        2042: 1.76
+        2043: 1.76
+        2044: 1.75
+        2045: 1.74
+        2046: 1.73
+        2047: 1.73
+        2048: 1.72
+        2049: 1.72
+        2050: 1.71
     constraint_total: null
     penalty: 0. # mn$/mntonne
   - id: SEQCO2

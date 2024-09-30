@@ -41,7 +41,7 @@ technologies:
         output_activity_ratio:
           coal-hard: 1.0 # PJ/PJ
         opex_variable: "${opex_variable.coal-hard-domestic-step-1}" # from 08_costs.yaml
-    # activity_total_max: "${activity_total_max.coal-hard-domestic-step-1}" # from 06_capacities.yaml
+    activity_total_max: "${activity_total_max.coal-hard-domestic-step-1}" # from 06_capacities.yaml
 
   - id: coal-brown-domestic-step-1
     long_name: Coal Brown (lignite) resource step 1
@@ -53,7 +53,7 @@ technologies:
         output_activity_ratio:
           coal-brown: 1.0 # PJ/PJ
         opex_variable: "${opex_variable.coal-brown-domestic-step-1}"  # from 08_costs.yaml
-    # activity_total_max: "${activity_total_max.coal-brown-domestic-step-1}" # from 06_capacities.yaml
+    activity_total_max: "${activity_total_max.coal-brown-domestic-step-1}" # from 06_capacities.yaml
 
   - id: gas-domestic-step-1
     long_name: Domestic gas production resource cost step 1
@@ -65,7 +65,7 @@ technologies:
         output_activity_ratio:
           gas: 1.0 # PJ/PJ
         opex_variable: "${opex_variable.gas-domestic-step-1}"  # from 08_costs.yaml
-    # activity_total_max: "${activity_total_max.gas-domestic-step-1}"  # from 06_capacities.yaml
+    activity_total_max: "${activity_total_max.gas-domestic-step-1}"  # from 06_capacities.yaml
     activity_annual_max: "${activity_annual_max.gas-domestic-step-1}"  # from 06_capacities.yaml
     activity_annual_min: "${activity_annual_min.gas-domestic-step-1}"  # from 06_capacities.yaml
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.gas-domestic-step-1}" # from 09_activity_annual.yaml
@@ -303,7 +303,7 @@ technologies:
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.269  
+          CO2: 0.2724  
         opex_variable: "${opex_variable.coal-supercritical}" # from 08_costs.yaml
     # load from other yaml files
     residual_capacity: "${residual_capacity.coal-supercritical}" # from 06_capacities.yaml
@@ -347,7 +347,7 @@ technologies:
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.269
+          CO2: 0.2724
         opex_variable: "${opex_variable.coal-subcritical}" # from 08_costs.yaml
     # load from other yaml files
     residual_capacity: "${residual_capacity.coal-subcritical}" # from 06_capacities.yaml
@@ -391,7 +391,7 @@ technologies:
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.269
+          CO2: 0.2724
         opex_variable: "${opex_variable.coal-ultrasupercritical}" # from 08_costs.yaml
     # load from other yaml files
     capex: "${capex.coal-ultrasupercritical}" # from 08_costs.yaml
@@ -419,7 +419,7 @@ technologies:
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.082
+          CO2: 0.1252
         opex_variable: "${opex_variable.gas-CCGT}" # from 08_costs.yaml
     # load from other yaml files
     residual_capacity: "${residual_capacity.gas-CCGT}" # from 06_capacities.yaml
@@ -450,7 +450,7 @@ technologies:
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.147
+          CO2: 0.1494
         opex_variable: "${opex_variable.gas-OCGT}" # from 08_costs.yaml
     # load from other yaml files
     residual_capacity: "${residual_capacity.gas-OCGT}" # from 06_capacities.yaml
@@ -480,7 +480,7 @@ technologies:
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.1519
+          CO2: 0.2177
         opex_variable: "${opex_variable.oil-internal-combustion-engine}" # from 08_costs.yaml
       - id: GEN_FO
         long_name: generation mode
@@ -493,7 +493,7 @@ technologies:
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.1519
+          CO2: 0.2177
         opex_variable: "${opex_variable.oil-internal-combustion-engine}" # from 08_costs.yaml        
     # load from other yaml files
     residual_capacity: "${residual_capacity.oil-internal-combustion-engine}" # from 06_capacities.yaml
@@ -853,7 +853,7 @@ technologies:
         long_name: discharging mode
         description: discharging mode
         output_activity_ratio:
-          secondary-electricity: 1.
+          primary-electricity: 1.
         from_storage: 
           "*": # all regions
             battery-storage: True # storage unit
@@ -909,9 +909,9 @@ storage:
   - id: battery-storage
     capex: 
       "*": # all region
-        "*": 9999 # all year
+        "*": 1000 # all year
     operating_life: 
-      "*": 100 # all region
+      "*": 10 # all region
     minimum_charge: 
       "*": # all region
         "*": 0 # all year

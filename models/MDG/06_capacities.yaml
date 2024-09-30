@@ -233,27 +233,23 @@ residual_capacity:
 activity_total_max:
 
   gas-domestic-step-1:
-    MDG: 283.73184                
+    MDG: 0.                
   coal-hard-domestic-step-1:
-    MDG: 252.0488
+    MDG: 0.
   coal-brown-domestic-step-1:
-    MDG: 110.96
-  coal-brown-domestic-step-2:
-    MDG: 360.62
-  coal-brown-domestic-step-3:
-    MDG: 332.88
-  coal-brown-domestic-step-4:
-    MDG: 832.2
-  coal-brown-domestic-step-5:
-    MDG: 332.88
-  coal-brown-domestic-step-6:
-    MDG: 804.46
+    MDG: 0.
 
 activity_annual_max:
 
   gas-domestic-step-1:
     MDG: 
-      "*": 82.33
+      "*": 0.
+  coal-hard-domestic-step-1:
+    MDG:
+      "*": 0.
+  coal-brown-domestic-step-1:
+    MDG:
+      "*": 0.
 
 activity_annual_min:
 

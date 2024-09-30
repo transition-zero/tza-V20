@@ -17,25 +17,25 @@
 capacity_gross_max: 
 
   solar-pv:
-    "*": 86.29
+    "*": 621.9
 
   windonshore-power:
-    "*": 21.09
+    "*": 1478.76
 
   windoffshore-power:
-    "*": 229.58
+    "*": 129.06
   
   hydropower:
-    "*": 11.64
+    "*": 59.96
 
   pumped-hydro:
-    "*": 3.236 # taken existing capacity and added 2.5 GW of under considerations projects
+    "*": 59.96 
 
   geo-power:
     "*": 0.
 
   bioenergy-power:
-    "*": 0.32 # 3.05 GW taken from NGFS average across GCAM scenarios for IDN and split based on DOE's bioenergy committed capacity share
+    "*": 9999.
 
   regasification-onshore:
     "*": 776.01 # based on largest regasification capacity in ASEAN region
@@ -49,65 +49,49 @@ capacity_gross_max:
 capacity_additional_max_growth_rate:
 
   solar-pv:
-    "*": 0.38
+    "*": 0.4
 
   windonshore-power:
-    "*": 0.17    
+    "*": 0.4    
 
   windoffshore-power:
-    "*": 0.17
+    "*": 0.4
 
   bioenergy-power:
-    "*": 0.5
+    "*": 0.2
 
   geo-power:
-    "*": 0.5  
+    "*": 0.2  
    
   gas-CCGT:
-    "*": 0.5  
+    "*": 0.2  
   
   gas-OCGT:
-    "*": 0.5  
+    "*": 0.2  
 
   coal-subcritical:
-    "*": 0.5  
+    "*": 0.2 
 
   coal-supercritical:
-    "*": 0.5  
+    "*": 0.2  
 
   coal-ultrasupercritical:
-    "*": 0.5  
+    "*": 0.2  
 
   oil-internal-combustion-engine:
-    "*": 0.5        
+    "*": 0.2        
 
   nuclear-power:
     "*": 0.5        
 
   gas-CCGT-CCS:
-    "*": 0.5    
+    "*": 0.2    
 
   coal-supercritical-CCS:
-    "*": 0.5      
+    "*": 0.2      
 
   gas-domestic-step-1:
-    "*": 1.22  
-
-  gas-domestic-step-2:
-    "*": 1.22  
-
-  gas-domestic-step-3:
-    "*": 1.22  
-
-  gas-domestic-step-4:
-    "*": 1.22  
-
-  gas-domestic-step-5:
-    "*": 1.22  
-
-  gas-domestic-step-6:
-    "*": 1.22 
-
+    "*": 0.2 
 
 capacity_additional_max_floor:
 
@@ -154,7 +138,7 @@ capacity_additional_max_floor:
     "*": 0.2  
 
   gas-domestic-step-1:
-    "*": 6.85  
+    "*": 0.2  
 
     
 capacity_additional_min:
@@ -223,11 +207,11 @@ capacity_additional_max:
       
   coal-supercritical-CCS:
     MDG: 
-      2023: 0.
+      "*": 0.
 
   gas-CCGT-CCS:
     MDG: 
-      2023: 0.
+      "*": 0.
 
   oil-internal-combustion-engine:
     "*":
