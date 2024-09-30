@@ -210,14 +210,14 @@ for country in countries_to_run:
         
 
         tech_load_factor=ProductionAnnual.sel(FUEL='primary-electricity') / (GrossCapacity * CapacityToActivityUnit),            
-        shadow_price_MWh=(marginal_cost_demand * YearSplit).sum(dims="TIMESLICE") * 3.6,
+        shadow_price=(marginal_cost_of_demand.sel(FUEL=index(InputActivityRatio)) * YearSplit).sum(dims="TIMESLICE") * 3.6,
         carbon_price=marginal_cost_of_emissions_annual(model),
         LCOE_Capacity=0.1 # representative 100 MW plant
         LCOE_Generation=(LCOE_Capacity * tech_load_factor.YEAR * OperationalLife * 8.76),
         LCOE_Capital_Cost=CapitalCost.YEAR * LCOE_Capacity,
         LCOE_Fixed_Cost=FixedCost.YEAR * LCOE_Capacity * OperationalLife,
-        LCOE_Variable_Cost=(VariableCost.YEAR * 3.6),
-        LCOE_Fuel_Cost=(shadow_price.YEAR)/(1 / InputActivityRatio),
+        LCOE_Variable_Cost=(VariableCost.YEAR * 3.6)* LCOE_Generation,
+        LCOE_Fuel_Cost=((shadow_price.YEAR)/(1 / InputActivityRatio)) * LCOE_Generation,
         LCOE_Carbon_Price=carbon_price.YEAR * EmissionsActivityRatio * LCOE_Generation,
         LCOE_Costs_Discount=((LCOE_Capital_Cost + LCOE_Fixed_Cost + LCOE_Variable_Cost + LCOE_Carbon_Cost) * (1+DiscountRate) ** (-OperationalLife)),
         LCOE_Generation_Discount= ((LCOE_Generation) * (1 + DiscountRate) ** (-OperationalLife)),
