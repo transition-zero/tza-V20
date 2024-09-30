@@ -1,5 +1,5 @@
 
-<img src="https://github.com/transition-zero/V20/blob/main/data/images/readme-banner.png" alt="" width="650" align="center">
+<img src="https://github.com/transition-zero/V20/blob/main/data/images/readme-banner.png" alt="" width="651" align="center">
 
 # The Vulnerable Twenty (V20)
 
