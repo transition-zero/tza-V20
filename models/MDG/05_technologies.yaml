@@ -43,67 +43,6 @@ technologies:
         opex_variable: "${opex_variable.coal-hard-domestic-step-1}" # from 08_costs.yaml
     # activity_total_max: "${activity_total_max.coal-hard-domestic-step-1}" # from 06_capacities.yaml
 
-  - id: coal-hard-domestic-step-2
-    long_name: Coal Hard (bituminous, anthracite) resource cost step 2
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          coal-hard: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.coal-hard-domestic-step-2}" # from 08_costs.yaml
-    # activity_total_max: "${activity_total_max.coal-hard-domestic-step-2}" # from 06_capacities.yaml
-
-  - id: coal-hard-domestic-step-3
-    long_name: Coal Hard (bituminous, anthracite) resource cost step 3
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          coal-hard: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.coal-hard-domestic-step-3}" # from 08_costs.yaml
-    # activity_total_max: "${activity_total_max.coal-hard-domestic-step-3}" # from 06_capacities.yaml
-
-  - id: coal-hard-domestic-step-4
-    long_name: Coal Hard (bituminous, anthracite) resource cost step 4
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          coal-hard: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.coal-hard-domestic-step-4}" # from 08_costs.yaml
-    # activity_total_max: "${activity_total_max.coal-hard-domestic-step-4}" # from 06_capacities.yaml
-
-  - id: coal-hard-domestic-step-5
-    long_name: Coal Hard (bituminous, anthracite) resource cost step 5
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          coal-hard: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.coal-hard-domestic-step-5}" # from 08_costs.yaml
-    # activity_total_max: "${activity_total_max.coal-hard-domestic-step-5}" # from 06_capacities.yaml
-
-  - id: coal-hard-domestic-step-6
-    long_name: Coal Hard (bituminous, anthracite) resource cost step 6
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          coal-hard: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.coal-hard-domestic-step-6}" # from 08_costs.yaml
-    # activity_total_max: "${activity_total_max.coal-hard-domestic-step-6}" # from 06_capacities.yaml
-
-
   - id: coal-brown-domestic-step-1
     long_name: Coal Brown (lignite) resource step 1
     operating_life: 1 # years
@@ -115,66 +54,6 @@ technologies:
           coal-brown: 1.0 # PJ/PJ
         opex_variable: "${opex_variable.coal-brown-domestic-step-1}"  # from 08_costs.yaml
     # activity_total_max: "${activity_total_max.coal-brown-domestic-step-1}" # from 06_capacities.yaml
-
-  - id: coal-brown-domestic-step-2
-    long_name: Coal Brown (lignite) resource step 2
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          coal-brown: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.coal-brown-domestic-step-2}"  # from 08_costs.yaml
-    # activity_total_max: "${activity_total_max.coal-brown-domestic-step-2}" # from 06_capacities.yaml
-
-  - id: coal-brown-domestic-step-3
-    long_name: Coal Brown (lignite) resource step 3
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          coal-brown: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.coal-brown-domestic-step-3}"  # from 08_costs.yaml
-    # activity_total_max: "${activity_total_max.coal-brown-domestic-step-3}" # from 06_capacities.yaml
-
-  - id: coal-brown-domestic-step-4
-    long_name: Coal Brown (lignite) resource step 4
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          coal-brown: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.coal-brown-domestic-step-4}"  # from 08_costs.yaml
-    # activity_total_max: "${activity_total_max.coal-brown-domestic-step-4}" # from 06_capacities.yaml
-
-  - id: coal-brown-domestic-step-5
-    long_name: Coal Brown (lignite) resource step 5
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          coal-brown: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.coal-brown-domestic-step-5}"  # from 08_costs.yaml
-    # activity_total_max: "${activity_total_max.coal-brown-domestic-step-5}" # from 06_capacities.yaml
-
-  - id: coal-brown-domestic-step-6
-    long_name: Coal Brown (lignite) resource step 6
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          coal-brown: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.coal-brown-domestic-step-6}"  # from 08_costs.yaml
-    # activity_total_max: "${activity_total_max.coal-brown-domestic-step-6}" # from 06_capacities.yaml     
 
   - id: gas-domestic-step-1
     long_name: Domestic gas production resource cost step 1
@@ -192,91 +71,6 @@ technologies:
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.gas-domestic-step-1}" # from 09_activity_annual.yaml
     capacity_additional_max_floor: "${capacity_additional_max_floor.gas-domestic-step-1}" # from 09_activity_annual.yaml   
     capacity_factor_annual_min: "${capacity_factor_annual_min.gas-domestic-step-1}" # from 07_capacity_factors.yaml   
-
-  - id: gas-domestic-step-2
-    long_name: Domestic gas production resource cost step 2
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic-step-2}"  # from 08_costs.yaml
-    # activity_total_max: "${activity_total_max.gas-domestic-step-2}"  # from 06_capacities.yaml
-    activity_annual_max: "${activity_annual_max.gas-domestic-step-2}"  # from 06_capacities.yaml
-    activity_annual_min: "${activity_annual_min.gas-domestic-step-2}"  # from 06_capacities.yaml
-    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.gas-domestic-step-2}" # from 09_activity_annual.yaml
-    capacity_additional_max_floor: "${capacity_additional_max_floor.gas-domestic-step-2}" # from 09_activity_annual.yaml
-    capacity_factor_annual_min: "${capacity_factor_annual_min.gas-domestic-step-2}" # from 07_capacity_factors.yaml  
-
-  - id: gas-domestic-step-3
-    long_name: Domestic gas production resource cost step 3
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic-step-3}"  # from 08_costs.yaml
-    # activity_total_max: "${activity_total_max.gas-domestic-step-3}"  # from 06_capacities.yaml
-    activity_annual_max: "${activity_annual_max.gas-domestic-step-3}"  # from 06_capacities.yaml
-    activity_annual_min: "${activity_annual_min.gas-domestic-step-3}"  # from 06_capacities.yaml
-    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.gas-domestic-step-3}" # from 09_activity_annual.yaml
-    capacity_additional_max_floor: "${capacity_additional_max_floor.gas-domestic-step-3}" # from 09_activity_annual.yaml
-    capacity_factor_annual_min: "${capacity_factor_annual_min.gas-domestic-step-3}" # from 07_capacity_factors.yaml  
-
-  - id: gas-domestic-step-4
-    long_name: Domestic gas production resource cost step 4
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic-step-4}"  # from 08_costs.yaml
-    # activity_total_max: "${activity_total_max.gas-domestic-step-4}"  # from 06_capacities.yaml
-    activity_annual_max: "${activity_annual_max.gas-domestic-step-4}"  # from 06_capacities.yaml
-    activity_annual_min: "${activity_annual_min.gas-domestic-step-4}"  # from 06_capacities.yaml
-    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.gas-domestic-step-4}" # from 09_activity_annual.yaml
-    capacity_additional_max_floor: "${capacity_additional_max_floor.gas-domestic-step-4}" # from 09_activity_annual.yaml
-    capacity_factor_annual_min: "${capacity_factor_annual_min.gas-domestic-step-4}" # from 07_capacity_factors.yaml  
-
-  - id: gas-domestic-step-5
-    long_name: Domestic gas production resource cost step 5
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic-step-5}"  # from 08_costs.yaml
-    # activity_total_max: "${activity_total_max.gas-domestic-step-5}"  # from 06_capacities.yaml
-    activity_annual_max: "${activity_annual_max.gas-domestic-step-5}"  # from 06_capacities.yaml
-    activity_annual_min: "${activity_annual_min.gas-domestic-step-5}"  # from 06_capacities.yaml
-    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.gas-domestic-step-5}" # from 09_activity_annual.yaml
-    capacity_additional_max_floor: "${capacity_additional_max_floor.gas-domestic-step-5}" # from 09_activity_annual.yaml
-    capacity_factor_annual_min: "${capacity_factor_annual_min.gas-domestic-step-5}" # from 07_capacity_factors.yaml  
-
-  - id: gas-domestic-step-6
-    long_name: Domestic gas production resource cost step 6
-    operating_life: 1 # years
-    operating_modes:
-      - id: GEN
-        long_name: generation mode
-        description: default generation mode
-        output_activity_ratio:
-          gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic-step-6}"  # from 08_costs.yaml
-    # activity_total_max: "${activity_total_max.gas-domestic-step-6}"  # from 06_capacities.yaml
-    activity_annual_max: "${activity_annual_max.gas-domestic-step-6}"  # from 06_capacities.yaml
-    activity_annual_min: "${activity_annual_min.gas-domestic-step-6}"  # from 06_capacities.yaml
-    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.gas-domestic-step-6}" # from 09_activity_annual.yaml
-    capacity_additional_max_floor: "${capacity_additional_max_floor.gas-domestic-step-6}" # from 09_activity_annual.yaml
-    capacity_factor_annual_min: "${capacity_factor_annual_min.gas-domestic-step-6}" # from 07_capacity_factors.yaml  
 
   - id: uranium-resource
     long_name: uranium resource
@@ -516,8 +310,8 @@ technologies:
     capex: "${capex.coal-supercritical}" # from 08_costs.yaml
     opex_fixed: "${opex_fixed.coal-supercritical}" # from 08_costs.yaml
     availability_factor: "${availability_factor.coal-supercritical}" # from 07_capacity_factors.yaml
-    #capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.coal-supercritical}" # from 09_activity_annual.yaml
-    #capacity_additional_max_floor: "${capacity_additional_max_floor.coal-supercritical}" # from 09_activity_annual.yaml 
+    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.coal-supercritical}" # from 09_activity_annual.yaml
+    capacity_additional_max_floor: "${capacity_additional_max_floor.coal-supercritical}" # from 09_activity_annual.yaml 
     capacity_factor_annual_min: "${capacity_factor_annual_min.coal-supercritical}" # from 07_capacity_factors.yaml
     capacity_additional_min: "${capacity_additional_min.coal-supercritical}" # from 09_activity_annual.yaml
     capacity_additional_max: "${capacity_additional_max.coal-supercritical}" # from 09_activity_annual.yaml
@@ -560,8 +354,8 @@ technologies:
     capex: "${capex.coal-subcritical}" # from 08_costs.yaml
     opex_fixed: "${opex_fixed.coal-subcritical}" # from 08_costs.yaml
     availability_factor: "${availability_factor.coal-subcritical}" # from 07_capacity_factors.yaml
-    #capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.coal-subcritical}" # from 09_activity_annual.yaml
-    #capacity_additional_max_floor: "${capacity_additional_max_floor.coal-subcritical}" # from 09_activity_annual.yaml 
+    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.coal-subcritical}" # from 09_activity_annual.yaml
+    capacity_additional_max_floor: "${capacity_additional_max_floor.coal-subcritical}" # from 09_activity_annual.yaml 
     capacity_factor_annual_min: "${capacity_factor_annual_min.coal-subcritical}" # from 07_capacity_factors.yaml
     capacity_additional_min: "${capacity_additional_min.coal-subcritical}" # from 09_activity_annual.yaml
     capacity_additional_max: "${capacity_additional_max.coal-subcritical}" # from 09_activity_annual.yaml
@@ -603,8 +397,8 @@ technologies:
     capex: "${capex.coal-ultrasupercritical}" # from 08_costs.yaml
     opex_fixed: "${opex_fixed.coal-ultrasupercritical}" # from 08_costs.yaml
     availability_factor: "${availability_factor.coal-ultrasupercritical}" # from 07_capacity_factors.yaml
-    #capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.coal-ultrasupercritical}" # from 09_activity_annual.yaml
-    #capacity_additional_max_floor: "${capacity_additional_max_floor.coal-ultrasupercritical}" # from 09_activity_annual.yaml 
+    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.coal-ultrasupercritical}" # from 09_activity_annual.yaml
+    capacity_additional_max_floor: "${capacity_additional_max_floor.coal-ultrasupercritical}" # from 09_activity_annual.yaml 
     capacity_additional_min: "${capacity_additional_min.coal-ultrasupercritical}" # from 09_activity_annual.yaml
     capacity_additional_max: "${capacity_additional_max.coal-ultrasupercritical}" # from 09_activity_annual.yaml
 
@@ -635,13 +429,8 @@ technologies:
     capacity_factor_annual_min: "${capacity_factor_annual_min.gas-CCGT}" # from 07_capacity_factors.yaml
     capacity_additional_min: "${capacity_additional_min.gas-CCGT}" # from 09_activity_annual.yaml
     capacity_additional_max: "${capacity_additional_max.gas-CCGT}" # from 09_activity_annual.yaml
-    #capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.gas-CCGT}" # from 09_activity_annual.yaml
-    #capacity_additional_max_floor: "${capacity_additional_max_floor.gas-CCGT}" # from 09_activity_annual.yaml   
-    # activity_annual_min: 
-    #   PHL-MI: 
-    #     2030: 5
-    #   PHL-VI:
-    #     2030: 5 
+    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.gas-CCGT}" # from 09_activity_annual.yaml
+    capacity_additional_max_floor: "${capacity_additional_max_floor.gas-CCGT}" # from 09_activity_annual.yaml   
 
 
   - id: gas-OCGT
@@ -942,8 +731,8 @@ technologies:
     capex: "${capex.gas-CCGT-CCS}" # from 08_costs.yaml
     opex_fixed: "${opex_fixed.gas-CCGT-CCS}" # from 08_costs.yaml
     availability_factor: "${availability_factor.gas-CCGT-CCS}" # from 07_capacity_factors.yaml
-    #capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.gas-CCGT-CCS}" # from 09_activity_annual.yaml
-    #capacity_additional_max_floor: "${capacity_additional_max_floor.gas-CCGT-CCS}" # from 09_activity_annual.yaml  
+    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.gas-CCGT-CCS}" # from 09_activity_annual.yaml
+    capacity_additional_max_floor: "${capacity_additional_max_floor.gas-CCGT-CCS}" # from 09_activity_annual.yaml  
     capacity_additional_max: "${capacity_additional_max.gas-CCGT-CCS}" # from  09_activity_annual.yaml
     
 
@@ -985,8 +774,8 @@ technologies:
     capex: "${capex.coal-supercritical-CCS}" # from 08_costs.yaml
     opex_fixed: "${opex_fixed.coal-supercritical-CCS}" # from 08_costs.yaml
     availability_factor: "${availability_factor.coal-supercritical-CCS}" # from 07_capacity_factors.yaml
-    #capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.coal-supercritical-CCS}" # from 09_activity_annual.yaml
-    #capacity_additional_max_floor: "${capacity_additional_max_floor.coal-supercritical-CCS}" # from 09_activity_annual.yaml 
+    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.coal-supercritical-CCS}" # from 09_activity_annual.yaml
+    capacity_additional_max_floor: "${capacity_additional_max_floor.coal-supercritical-CCS}" # from 09_activity_annual.yaml 
     capacity_additional_max: "${capacity_additional_max.coal-supercritical-CCS}" # from  09_activity_annual.yaml 
     
   # --------------------------------------------
@@ -1120,7 +909,7 @@ storage:
   - id: battery-storage
     capex: 
       "*": # all region
-        "*": 0 # all year
+        "*": 9999 # all year
     operating_life: 
       "*": 100 # all region
     minimum_charge: 

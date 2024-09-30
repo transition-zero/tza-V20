@@ -330,93 +330,12 @@ opex_variable:
   coal-hard-domestic-step-1: 
     "*":
       "*": 2.75
-  coal-hard-domestic-step-2: 
-    "*":
-      "*": 3.33
-  coal-hard-domestic-step-3: 
-    "*":
-      "*": 4.42
-  coal-hard-domestic-step-4: 
-    "*":
-      "*": 5.49
-  coal-hard-domestic-step-5: 
-    "*":
-      "*": 7.12
-  coal-hard-domestic-step-6: 
-    "*":
-      "*": 9.27
   coal-brown-domestic-step-1: 
     "*":
       "*": 1.76
-  coal-brown-domestic-step-2: 
-    "*":
-      "*": 2.75
-  coal-brown-domestic-step-3: 
-    "*":
-      "*": 4.63
-  coal-brown-domestic-step-4: 
-    "*":
-      "*": 6.47
-  coal-brown-domestic-step-5: 
-    "*":
-      "*": 9.26
-  coal-brown-domestic-step-6: 
-    "*":
-      "*": 12.94
   gas-domestic-step-1: 
     "*":
       "*": 5.70
-  gas-domestic-step-2: 
-    "*":
-      "*": 6.12
-  gas-domestic-step-3: 
-    "*":
-      "*": 6.23
-  gas-domestic-step-4:
-    "*":
-      "*": 6.52
-  gas-domestic-step-5:
-    "*":
-      "*": 6.65
-  gas-domestic-step-6: 
-    "*":
-      "*": 6.70
-  gas-domestic-step-7: 
-    "*":
-      "*": 6.79
-  gas-domestic-step-8:
-    "*":
-      "*": 6.80
-  gas-domestic-step-9: 
-    "*":
-      "*": 7.03
-  gas-domestic-step-10: 
-    "*":
-      "*": 7.32
-  gas-domestic-step-11:
-    "*":
-      "*": 7.39
-  gas-domestic-step-12: 
-    "*":
-      "*": 7.55
-  gas-domestic-step-13: 
-    "*":
-      "*": 7.98
-  gas-domestic-step-14: 
-    "*":
-      "*": 8.04
-  gas-domestic-step-15: 
-    "*":
-      "*": 8.45
-  gas-domestic-step-16: 
-    "*":
-      "*": 8.90
-  gas-domestic-step-17: 
-    "*":
-      "*": 10.63
-  gas-domestic-step-18: 
-    "*": 
-      "*": 11.62
   carbon-capture-and-storage-transmission-and-distribution:
     "*":
       "*": 30 # unit is dollars per ton of CO2 transported; taken high end of CO2 T&S costs from: https://zeroemissionsplatform.eu/co2-storage-cost/

@@ -17,44 +17,34 @@
 capacity_gross_max: 
 
   solar-pv:
-    MDG: 
-      "*": 86.29
+    "*": 86.29
 
   windonshore-power:
-    MDG: 
-      "*": 21.09
+    "*": 21.09
 
   windoffshore-power:
-    MDG: 
-      "*": 229.58
+    "*": 229.58
   
   hydropower:
-    MDG: 
-      "*": 11.64
+    "*": 11.64
 
   pumped-hydro:
-    MDG: 
-      "*": 3.236 # taken existing capacity and added 2.5 GW of under considerations projects
+    "*": 3.236 # taken existing capacity and added 2.5 GW of under considerations projects
 
   geo-power:
-    MDG: 
-      "*": 1.5 # Updated from 1
+    "*": 0.
 
   bioenergy-power:
-    MDG: 
-      "*": 0.32 # 3.05 GW taken from NGFS average across GCAM scenarios for IDN and split based on DOE's bioenergy committed capacity share
+    "*": 0.32 # 3.05 GW taken from NGFS average across GCAM scenarios for IDN and split based on DOE's bioenergy committed capacity share
 
   regasification-onshore:
-    MDG:
-      "*": 776.01 # based on largest regasification capacity in ASEAN region
+    "*": 776.01 # based on largest regasification capacity in ASEAN region
   
   regasification-floating:
-    MDG:
-      "*": 776.01 # based on largest regasification capacity in ASEAN region
+    "*": 776.01 # based on largest regasification capacity in ASEAN region
 
   liquefaction-onshore:
-    MDG:
-      "*": 0.
+    "*": 0.
 
 capacity_additional_max_growth_rate:
 
@@ -68,37 +58,37 @@ capacity_additional_max_growth_rate:
     "*": 0.17
 
   bioenergy-power:
-    "*": 0.2
+    "*": 0.5
 
   geo-power:
-    "*": 0.2  
+    "*": 0.5  
    
   gas-CCGT:
-    "*": 0.2
+    "*": 0.5  
   
   gas-OCGT:
-    "*": 0.2
+    "*": 0.5  
 
   coal-subcritical:
-    "*": 0.2
+    "*": 0.5  
 
   coal-supercritical:
-    "*": 0.2
+    "*": 0.5  
 
   coal-ultrasupercritical:
-    "*": 0.2
+    "*": 0.5  
 
   oil-internal-combustion-engine:
-    "*": 0.2      
+    "*": 0.5        
 
   nuclear-power:
-    "*": 0.2      
+    "*": 0.5        
 
   gas-CCGT-CCS:
-    "*": 0.2  
+    "*": 0.5    
 
   coal-supercritical-CCS:
-    "*": 0.2    
+    "*": 0.5      
 
   gas-domestic-step-1:
     "*": 1.22  
@@ -118,67 +108,32 @@ capacity_additional_max_growth_rate:
   gas-domestic-step-6:
     "*": 1.22 
 
-  gas-domestic-step-7:
-    "*": 1.22  
-
-  gas-domestic-step-8:
-    "*": 1.22  
-
-  gas-domestic-step-9:
-    "*": 1.22  
-
-  gas-domestic-step-10:
-    "*": 1.22  
-
-  gas-domestic-step-11:
-    "*": 1.22  
-
-  gas-domestic-step-12:
-    "*": 1.22  
-
-  gas-domestic-step-13:
-    "*": 1.22  
-
-  gas-domestic-step-14:
-    "*": 1.22  
-
-  gas-domestic-step-15:
-    "*": 1.22  
-
-  gas-domestic-step-16:
-    "*": 1.22  
-
-  gas-domestic-step-17:
-    "*": 1.22  
-
-  gas-domestic-step-18:
-    "*": 1.22  
 
 capacity_additional_max_floor:
 
   solar-pv:
-    "*": 2. # Previous number is: 0.08, changed this into 2 GW following DOE's committed capacity (rounding the max)
+    "*": 0.2 
 
   windonshore-power:
-    "*": 0.8 # Previous number is: 0.4, changed this into 0.8 GW following DOE's committed capacity (rounding the max)
+    "*": 0.2 
       
   windoffshore-power:
-    "*": 0.4
-
-  bioenergy-power:
     "*": 0.2
 
+  bioenergy-power:
+    "*": 0.2 
+
   geo-power:
-    "*": 0.3 # Previous number is: 0.2, changed this into 0.3 GW following sum of DOE's committed capacity (rounding the max)
+    "*": 0.2
   
   gas-CCGT:
-    "*": 0.273 # 10% of installed Luzon capacity
+    "*": 0.2
 
   gas-OCGT:
-    "*": 0.273
+    "*": 0.2
 
   coal-subcritical:
-    "*": 0.2 
+    "*": 0.2  
 
   coal-supercritical:
     "*": 0.2
@@ -187,70 +142,20 @@ capacity_additional_max_floor:
     "*": 0.2  
 
   oil-internal-combustion-engine:
-    "*": 0.2
+    "*": 0.2 
 
   nuclear-power:
-    "*": 0.62 # installed capacity of unused Bataan        
+    "*": 0. 
 
   gas-CCGT-CCS:
-    "*": 0.8   
+    "*": 0.2 
 
   coal-supercritical-CCS:
-    "*": 0.8     
+    "*": 0.2  
 
   gas-domestic-step-1:
     "*": 6.85  
 
-  gas-domestic-step-2:
-    "*": 4.11  
-
-  gas-domestic-step-3:
-    "*": 12.69   
-
-  gas-domestic-step-4:
-    "*": 2.74  
-
-  gas-domestic-step-5:
-    "*": 2.66  
-
-  gas-domestic-step-6:
-    "*": 4.73 
-
-  gas-domestic-step-7:
-    "*": 7.63  
-
-  gas-domestic-step-8:
-    "*": 12.69  
-
-  gas-domestic-step-9:
-    "*": 2.28  
-
-  gas-domestic-step-10:
-    "*": 5.09  
-
-  gas-domestic-step-11:
-    "*": 7.63  
-
-  gas-domestic-step-12:
-    "*": 1.60  
-
-  gas-domestic-step-13:
-    "*": 2.82  
-
-  gas-domestic-step-14:
-    "*": 5.09  
-
-  gas-domestic-step-15:
-    "*": 1.37  
-
-  gas-domestic-step-16:
-    "*": 1.89  
-
-  gas-domestic-step-17:
-    "*": 1.09  
-
-  gas-domestic-step-18:
-    "*": 0.9  
     
 capacity_additional_min:
 
@@ -288,7 +193,10 @@ capacity_additional_min:
 
   hydropower: # based on DOE's committed capacity
     MDG: 
-      2023: 0.
+      2024: 0.205
+      2026: 0.035
+      2027: 0.12
+      2030: 0.204
 
   bioenergy-power:
     MDG: 
@@ -296,11 +204,12 @@ capacity_additional_min:
 
   solar-pv: # based on DOE's committed capacity
     MDG:
-      2023: 0.
+      2025: 0.025
 
   windonshore-power: # based on DOE's committed capacity
     MDG:
-      2023: 0.
+      2024: 0.012
+      2030: 0.24
 
   battery-technology:
     MDG:
@@ -310,64 +219,64 @@ capacity_additional_max:
 
   nuclear-power:
     MDG: 
-      2023: 9999
+      2023: 0.
       
   coal-supercritical-CCS:
     MDG: 
-      2023: 9999
+      2023: 0.
 
   gas-CCGT-CCS:
     MDG: 
-      2023: 9999
+      2023: 0.
 
   oil-internal-combustion-engine:
     "*":
-      2023: 9999
+      2023: 0.
 
   gas-CCGT:
     "*":
-      2023: 9999
+      2023: 0.
 
   gas-OCGT:
     "*":
-      2023: 9999
+      2023: 0.
   
   solar-pv:
     "*":
-      2023: 9999
+      2023: 0.
 
   hydropower:
     "*":
-      2023: 9999
+      2023: 0.
 
   geo-power:
     "*":
-      2023: 9999
+      2023: 0.
 
   windonshore-power:
     "*":
-      2023: 9999
+      2023: 0.
 
   windoffshore-power:
     "*":
-      2023: 9999
+      2023: 0.
 
   bioenergy-power:
     "*":
-      2023: 9999
+      2023: 0.
 
   coal-subcritical:
     MDG:
-      2023: 9999
+      2023: 0.
 
   coal-supercritical:
     MDG:
-      2023: 9999
+      2023: 0.
 
   coal-ultrasupercritical:
     MDG:
-      2023: 9999
+      2023: 0.
 
   battery-technology:
     "*":
-      2023: 9999
+      2023: 0.
