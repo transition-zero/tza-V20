@@ -257,8 +257,28 @@ for country in countries_to_run:
 
         # ---
         # (3) Annual net emissions by power system
-        # TODO
 
+        # export to csv
+        (
+            viz
+            .get
+            .AnnualEmissionsByRegion(model)
+            .to_csv(
+                os.path.join(
+                    dir_path,
+                    'AnnualNetEmissionsByRegion.csv',
+                )
+            )
+        )
+
+        # export figure
+        ax = viz.plot.EmissionsByRegion(model)
+        plt.savefig(
+            os.path.join(
+                dir_path,
+                'AnnualNetEmissionsByRegion.pdf'
+            )
+        )
         
 
 print('-'*50)
