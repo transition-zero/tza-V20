@@ -164,7 +164,7 @@ technologies:
         description: default generation mode
         output_activity_ratio:
           bioenergy: 1.0 # PJ/PJ
-        opex_variable: 2.58 
+        opex_variable: 5.9 
 
 
   - id: gas-import-liquefied
@@ -909,7 +909,7 @@ storage:
   - id: battery-storage
     capex: 
       "*": # all region
-        "*": 1000 # all year
+        "*": 300 # all year
     operating_life: 
       "*": 10 # all region
     minimum_charge: 

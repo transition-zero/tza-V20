@@ -51,43 +51,49 @@ capex:
     # all regions
     "*": 
       # all years
-      "{y: 1503 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      #"{y: 1503 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "*": 2500
   coal-subcritical:
     "*":
-      "{y: 1852 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      #"{y: 1852 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "*": 2500
   coal-ultrasupercritical:
     "*":
-      "{y: 1652 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      #"{y: 1652 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "*": 2500
   gas-CCGT:    
     "*":
-      "{y: 930 * (0.995 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      #"{y: 930 * (0.995 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "*": 1200
   gas-OCGT:
     "*":
-      "{y: 838 * (0.996 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      #"{y: 838 * (0.996 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "*": 700
   oil-internal-combustion-engine:
     "*":
-      "{y: 736 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      #"{y: 736 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "*": 1450.0
   solar-pv: 
     "*":
-      "{y: 945 * (0.975 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: 1063 * (0.975 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   windonshore-power:
     "*":
-      "{y: 1575 * (0.984 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: 1251 * (0.984 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   windoffshore-power:
     "*":
-      "{y: 3544 * (0.983 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: 3211 * (0.983 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   hydropower: # using hydro-large value
     "*":
-      "{y: 1850 * (0.997 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: 3000 * (0.997 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   geo-power: # using geothermal binary value
     "*":
-      "{y: 5100 * (0.995 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: 4000 * (0.995 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   bioenergy-power: # using biomass small value
     "*":
-      "{y: 2040 * (0.991 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: 2500 * (0.991 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   nuclear-power: 
     "*":
-      "{y: 9000 * (0.99 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: 6137 * (0.99 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   gas-CCGT-CCS:
     "*":
       "{y: 2390 * (0.99 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
@@ -122,43 +128,49 @@ opex_fixed:
     # all regions
     "*": 
       # all years
-      "{y: 42.4 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      #"{y: 42.4 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "*": 78.0
   coal-subcritical:
     "*":
-      "{y: 50.8 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      #"{y: 50.8 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "*": 78.0
   coal-ultrasupercritical:
     "*":
-      "{y: 61.8 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      #"{y: 61.8 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "*": 78.0
   gas-CCGT:    
     "*":
-      "{y: 28.08 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      #"{y: 28.08 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "*": 35.0
   gas-OCGT:
     "*":
-      "{y: 24.8 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      #"{y: 24.8 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "*": 20.0
   oil-internal-combustion-engine:
     "*":
-      "{y: 9.4 * (0.997 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      #"{y: 9.4 * (0.997 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "*": 35.0
   solar-pv: 
     "*":
-      "{y: 11.5 * (0.975 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: 13.8 * (0.975 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   windonshore-power:
     "*":
-      "{y: 41 * (0.984 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: 50 * (0.984 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   windoffshore-power:
     "*":
-      "{y: 91.6 * (0.983 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: 128.4 * (0.983 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   hydropower: # using hydro-large value
     "*":
-      "{y: 40.35 * (0.996 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: 90.0 * (0.996 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   geo-power: # using geothermal binary value
     "*":
-      "{y: 82.9 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: 120.0 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   bioenergy-power: # using biomass small value
     "*":
-      "{y: 51.75 * (0.991 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: 75 * (0.991 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   nuclear-power: # using SMR value
     "*":
-      "{y: 127 * (0.996 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: 184.1 * (0.996 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   gas-CCGT-CCS:
     "*":
       "{y: 59 * (0.984 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
@@ -188,46 +200,46 @@ opex_fixed:
 opex_variable:
   coal-supercritical: 
     "*":
-      "{y: 0.29 * (0.983 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: (8.4 / 3.6) * (0.983 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   coal-ultrasupercritical:
     "*":
-      "{y: 0.18 * (0.997 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: (8.4 / 3.6) * (0.997 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   coal-subcritical:
     "*":
-      "{y: 0.41 * (0.997 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: (8.4 / 3.6) * (0.997 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   oil-internal-combustion-engine:
     "*":
-      "{y: 1.88 * (0.995 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: (6.4 / 3.6) * (0.995 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   gas-CCGT:
     "*":
-      "{y: 0.43 * (0.993 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: (1.9 / 3.6) * (0.993 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   gas-OCGT: 
     "*":
-      "{y: 0.47 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: (6.4 / 3.6) * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   solar-pv:
     "*":
       "*": 0.
   windonshore-power:
     "*":
-      "{y: 0.49 * (0.985 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "*": 0.
   windoffshore-power:
     "*":
-      "{y: 1.43 * (0.983 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "*": 0.
   nuclear-power: 
     "*":
-      "{y: 0.67 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: (2.5 / 3.6) for y in ${time_definition.years}}"
   hydropower: 
     "*":
-      "{y: 0.19 * (0.996 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "*": 0.
   geo-power: 
     "*":
-      "{y: 0.11 * (0.995 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "*": 0.
   bioenergy-power: 
     "*":
-      "{y: 0.92 * (0.991 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: (5.0 / 3.6) for y in ${time_definition.years}}"
   gas-CCGT-CCS:
     "*":
-      "{y: 0.89 * (0.988 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"    
+      "{y: (5.0 / 3.6) * (0.988 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"    
   coal-supercritical-CCS:
     "*":
       "{y: 0.98 * (0.99 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"          
