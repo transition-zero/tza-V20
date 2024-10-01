@@ -231,29 +231,31 @@ for country in countries_to_run:
         )
 
         # ---
-        # (2) Annual emissions sequestration 
+        # (2) Annual emissions sequestration
+        # only run if there are sequestered emissions in the model 
 
-        # export to csv
-        (
-            viz
-            .get
-            .AnnualEmissionsByTechnology(model, emission="SEQCO2")
-            .to_csv(
-                os.path.join(
-                    dir_path,
-                    'AnnualSequesteredEmissionsByTechnology.csv',
+        if 'SEQCO2' in model.solution.coords['EMISSION']:
+            # export to csv
+            (
+                viz
+                .get
+                .AnnualEmissionsByTechnology(model, emission="SEQCO2")
+                .to_csv(
+                    os.path.join(
+                        dir_path,
+                        'AnnualSequesteredEmissionsByTechnology.csv',
+                    )
                 )
             )
-        )
 
-        # export figure
-        ax = viz.plot.EmissionsByTechnology(model, emission="SEQCO2")
-        plt.savefig(
-            os.path.join(
-                dir_path,
-                'AnnualSequesteredEmissionsByTechnology.pdf'
+            # export figure
+            ax = viz.plot.EmissionsByTechnology(model, emission="SEQCO2")
+            plt.savefig(
+                os.path.join(
+                    dir_path,
+                    'AnnualSequesteredEmissionsByTechnology.pdf'
+                )
             )
-        )
 
         # ---
         # (3) Annual net emissions by power system
