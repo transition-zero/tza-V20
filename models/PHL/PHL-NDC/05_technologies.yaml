@@ -1268,7 +1268,7 @@ technologies:
         long_name: discharging mode
         description: discharging mode
         output_activity_ratio:
-          secondary-electricity: 1.
+          primary-electricity: 1.
         from_storage: 
           "*": # all regions
             battery-storage: True # storage unit
