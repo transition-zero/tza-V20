@@ -419,7 +419,8 @@ technologies:
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.1252
+          #CO2: 0.1252
+          CO2: 0.05
         opex_variable: "${opex_variable.gas-CCGT}" # from 08_costs.yaml
     # load from other yaml files
     residual_capacity: "${residual_capacity.gas-CCGT}" # from 06_capacities.yaml
@@ -472,9 +473,6 @@ technologies:
       - id: GEN_DSL
         long_name: generation mode
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio:
           oil-diesel:  2.17
         output_activity_ratio:
@@ -485,9 +483,6 @@ technologies:
       - id: GEN_FO
         long_name: generation mode
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio:
           oil-fuel-oil:  2.17
         output_activity_ratio:
