@@ -7,5 +7,5 @@ description: >
 # Global variables
 global_variables:
   base_year: 2023
-  base_demand: 200
-  demand_growth_pcgt: 0.0459 # 4.59% growth rate
+  base_demand: 1.95
+  demand_growth_pcgt: 0.067 # Table 5 from: https://nawec.gm/wp-content/uploads/2022/02/The-Gambia-Strategic-Electricity-Sector-Roadmap.pdf#:~:text=The%20strategic%20roadmap%20projects%20the%20electricity%20demand%20of%20the%20Gambia
