@@ -39,3 +39,12 @@ capacity_gross_max:
   electricity-import:
     GMB:
       "*": 0.4 # https://nawec.gm/wp-content/uploads/2022/02/The-Gambia-Strategic-Electricity-Sector-Roadmap.pdf
+
+  solar-pv:
+    GMB:
+      "*": 0.618 # existing capacity plus identified 0.595 GW potential in identified sites https://nawec.gm/wp-content/uploads/2022/02/The-Gambia-Strategic-Electricity-Sector-Roadmap.pdf#:~:text=The%20strategic%20roadmap%20projects%20the%20electricity%20demand%20of%20the%20Gambia
+
+  windonshore-power:
+    GMB:
+      "*": 0.2006 # https://nawec.gm/wp-content/uploads/2022/02/The-Gambia-Strategic-Electricity-Sector-Roadmap.pdf#:~:text=The%20strategic%20roadmap%20projects%20the%20electricity%20demand%20of%20the%20Gambia
+
