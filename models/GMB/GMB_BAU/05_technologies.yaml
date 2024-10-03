@@ -279,7 +279,7 @@ technologies:
     capex: "${capex.solar-pv}" # from costs.yaml
     opex_fixed: "${opex_fixed.solar-pv}" # from costs.yaml
     capacity_factor: "${capacity_factors.solar-pv}" # from capacity_factors.yaml
-
+    capacity_gross_max: "${capacity_gross_max.solar-pv}" # from capacities.yaml
 
   - id: gas-CCGT
     long_name: combined cycle gas turbine
@@ -309,7 +309,6 @@ technologies:
     #     2030: 5
     #   PHL-VI:
     #     2030: 5 
-
 
   - id: gas-OCGT
     long_name: open cycle gas turbine
@@ -397,6 +396,7 @@ technologies:
     capex: "${capex.windonshore-power}" # from costs.yaml
     opex_fixed: "${opex_fixed.windonshore-power}" # from costs.yaml
     capacity_factor: "${capacity_factors.windonshore-power}" # from capacity_factors.yaml
+    capacity_gross_max: "${capacity_gross_max.windonshore-power}" # from capacities.yaml
 
   - id: windoffshore-power
     long_name: offshore wind power stations
