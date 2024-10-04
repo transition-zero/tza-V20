@@ -56,7 +56,7 @@ capex:
     # all regions
     GMB: 
       # all years
-      "*": "{y: 2500 * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "*": 2500
 
   gas-CCGT:    
     GMB:
@@ -201,7 +201,7 @@ opex_variable:
       "*": 1.8
 
   solar-pv:
-    "*":
+    GMB:
       "*": 0.
 
   windonshore-power:

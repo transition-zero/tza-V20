@@ -16,7 +16,7 @@
 
 time_definition:
   id: "${global_variables.base_year}_2050_annual_4hourly" # from main.yaml
-  years: "range(2023,2051)" # from main.yaml
+  years: "range(2023,2051)"
   seasons: [1, 2] # s1: dry season, s2: rainy season
   daily_time_brackets: [1, 2, 3, 4, 5, 6]
   day_types: [1]

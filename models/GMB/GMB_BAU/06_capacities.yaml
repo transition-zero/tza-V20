@@ -24,14 +24,15 @@ residual_capacity:
 
   oil-internal-combustion-engine:
     GMB:
-      2023: 0.0964
+      "*": 0.0964
 
   solar-pv:
     GMB: 
-      2023: 0.023
+      "*": 0.023
 
   transmission:
-    GMB: 0.12
+    GMB: 
+      "*": 0.12
 
 
 # -------
@@ -45,7 +46,7 @@ capacity_gross_max:
       "*": 0.4 # https://nawec.gm/wp-content/uploads/2022/02/The-Gambia-Strategic-Electricity-Sector-Roadmap.pdf
 
   solar-pv:
-    GMB:
+    GMB: 
       "*": 0.618 # existing capacity plus identified 0.595 GW potential in identified sites https://nawec.gm/wp-content/uploads/2022/02/The-Gambia-Strategic-Electricity-Sector-Roadmap.pdf#:~:text=The%20strategic%20roadmap%20projects%20the%20electricity%20demand%20of%20the%20Gambia
 
   windonshore-power:
@@ -67,9 +68,7 @@ capacity_gross_max:
 activity_total_max:
 
   coal-domestic:
-    GMB:
-      "*": 0.
+    GMB: 0.
 
   gas-domestic:
-    GMB: 
-      "*": 0.          
+    GMB: 0.          

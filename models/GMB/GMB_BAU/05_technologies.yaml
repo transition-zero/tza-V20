@@ -254,29 +254,29 @@ technologies:
     opex_fixed: "${opex_fixed.coal-power}" # from costs.yaml
     availability_factor: "${availability_factor.coal-power}" # from capacity_factors.yaml
 
-  - id: solar-pv
-    long_name: ground-mounted solar power stations
-    capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
-    include_in_joint_reserve_margin: false
-    operating_life: 25
-    operating_modes:
-      - id: GENERATION
-        long_name: generation mode
-        description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
-        input_activity_ratio:
-          solar: 1.0
-        output_activity_ratio:
-          primary-electricity: 1.0
-        opex_variable: "${opex_variable.solar-pv}" # from costs.yaml
-    # load from other yaml files
-    residual_capacity: "${residual_capacity.solar-pv}" # from capacities.yaml
-    capex: "${capex.solar-pv}" # from costs.yaml
-    opex_fixed: "${opex_fixed.solar-pv}" # from costs.yaml
-    capacity_factor: "${capacity_factors.solar-pv}" # from capacity_factors.yaml
-    capacity_gross_max: "${capacity_gross_max.solar-pv}" # from capacities.yaml
+  # - id: solar-pv
+  #   long_name: ground-mounted solar power stations
+  #   capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
+  #   include_in_joint_reserve_margin: false
+  #   operating_life: 25
+  #   operating_modes:
+  #     - id: GENERATION
+  #       long_name: generation mode
+  #       description: default generation mode
+  #       # Note:
+  #       #   Below we define the input-output ratios. In the example below, 
+  #       #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
+  #       input_activity_ratio:
+  #         solar: 1.0
+  #       output_activity_ratio:
+  #         primary-electricity: 1.0
+  #       opex_variable: "${opex_variable.solar-pv}" # from costs.yaml
+  #   # load from other yaml files
+  #   residual_capacity: "${residual_capacity.solar-pv}" # from capacities.yaml
+  #   capex: "${capex.solar-pv}" # from costs.yaml
+  #   opex_fixed: "${opex_fixed.solar-pv}" # from costs.yaml
+  #   capacity_factor: "${capacity_factors.solar-pv}" # from capacity_factors.yaml
+  #   capacity_gross_max: "${capacity_gross_max.solar-pv}" # from capacities.yaml
 
   - id: gas-CCGT
     long_name: combined cycle gas turbine
