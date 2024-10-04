@@ -30,6 +30,10 @@ residual_capacity:
     GMB: 
       2023: 0.023
 
+  transmission:
+    GMB: 0.12
+
+
 # -------
 # Activity constraints
 # -------
@@ -48,3 +52,24 @@ capacity_gross_max:
     GMB:
       "*": 0.2006 # https://nawec.gm/wp-content/uploads/2022/02/The-Gambia-Strategic-Electricity-Sector-Roadmap.pdf#:~:text=The%20strategic%20roadmap%20projects%20the%20electricity%20demand%20of%20the%20Gambia
 
+  windoffshore-power:
+    GMB:
+      "*": 0.96 # https://www.sciencedirect.com/science/article/abs/pii/S0360544219323254
+
+  hydropower:
+    GMB:
+      "*": 0.
+
+  geo-power:
+    GMB:
+      "*": 0.  
+
+activity_total_max:
+
+  coal-domestic:
+    GMB:
+      "*": 0.
+
+  gas-domestic:
+    GMB: 
+      "*": 0.          

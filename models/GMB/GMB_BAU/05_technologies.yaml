@@ -40,9 +40,8 @@ technologies:
         description: default generation mode
         output_activity_ratio:
           coal: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.coal-domestic}" # from costs.yaml
+        opex_variable: 0.001  
     activity_total_max: "${activity_total_max.coal-domestic}" # from capacities.yaml
-
 
   - id: gas-domestic
     long_name: Domestic gas production 
@@ -53,7 +52,7 @@ technologies:
         description: default generation mode
         output_activity_ratio:
           gas: 1.0 # PJ/PJ
-        opex_variable: "${opex_variable.gas-domestic}"  # from costs.yaml
+        opex_variable: 0.001  
     activity_total_max: "${activity_total_max.gas-domestic}"  # from capacities.yaml
 
   - id: uranium-resource
@@ -66,7 +65,6 @@ technologies:
         output_activity_ratio:
           uranium: 1.0 # PJ/PJ
         opex_variable: "${fuel_price.uranium}" # from costs.yaml
-
 
   - id: solar-resource
     long_name: Solar resources
@@ -170,7 +168,7 @@ technologies:
         description: default generation mode
         output_activity_ratio:
           coal: 1
-        opex_variable: "${opex_variable.coal-import}"  # from costs.yaml      
+        opex_variable: "${opex_variable.coal-import-hard}"  # from costs.yaml      
 
   - id: oil-diesel-production
     long_name: Process producing diesel
@@ -252,7 +250,6 @@ technologies:
         emission_activity_ratio: 
           CO2: 0.09  
         opex_variable: "${opex_variable.coal-power}" # from costs.yaml
-    residual_capacity: "${residual_capacity.coal-power}" # from capacities.yaml
     capex: "${capex.coal-power}" # from costs.yaml
     opex_fixed: "${opex_fixed.coal-power}" # from costs.yaml
     availability_factor: "${availability_factor.coal-power}" # from capacity_factors.yaml
@@ -301,9 +298,9 @@ technologies:
           CO2: 0.082
         opex_variable: "${opex_variable.gas-CCGT}" # from costs.yaml
     # load from other yaml files
-    residual_capacity: "${residual_capacity.gas-CCGT}" # from capacities.yaml
     capex: "${capex.gas-CCGT}" # from costs.yaml
     opex_fixed: "${opex_fixed.gas-CCGT}" # from costs.yaml
+    availability_factor: "${availability_factor.gas-CCGT}" # from capacity_factors.yaml
     # activity_annual_min: 
     #   PHL-MI: 
     #     2030: 5
@@ -330,10 +327,9 @@ technologies:
           CO2: 0.147
         opex_variable: "${opex_variable.gas-OCGT}" # from costs.yaml
     # load from other yaml files
-    residual_capacity: "${residual_capacity.gas-OCGT}" # from capacities.yaml
     capex: "${capex.gas-OCGT}" # from costs.yaml
     opex_fixed: "${opex_fixed.gas-OCGT}" # from costs.yaml
-
+    availability_factor: "${availability_factor.gas-OCGT}" # from capacity_factors.yaml
 
   - id: oil-internal-combustion-engine
     long_name: oil generation turbine with fuel input option
@@ -392,7 +388,6 @@ technologies:
           primary-electricity: 1.0
         opex_variable: "${opex_variable.windonshore-power}" # from costs.yaml
     # load from other yaml files
-    residual_capacity: "${residual_capacity.windonshore-power}" # from capacities.yaml
     capex: "${capex.windonshore-power}" # from costs.yaml
     opex_fixed: "${opex_fixed.windonshore-power}" # from costs.yaml
     capacity_factor: "${capacity_factors.windonshore-power}" # from capacity_factors.yaml
@@ -416,7 +411,6 @@ technologies:
           primary-electricity: 1.0
         opex_variable: "${opex_variable.windoffshore-power}" # from costs.yaml
     # load from other yaml files
-    residual_capacity: "${residual_capacity.windoffshore-power}" # from capacities.yaml
     capex: "${capex.windoffshore-power}" # from costs.yaml
     opex_fixed: "${opex_fixed.windoffshore-power}" # from costs.yaml
     capacity_factor: "${capacity_factors.windoffshore-power}" # from capacity_factors.yaml
@@ -439,10 +433,10 @@ technologies:
           primary-electricity: 1.0
         opex_variable: "${opex_variable.hydropower}" # from costs.yaml
     # load from other yaml files
-    residual_capacity: "${residual_capacity.hydropower}" # from capacities.yaml
     capex: "${capex.hydropower}" # from costs.yaml
     opex_fixed: "${opex_fixed.hydropower}" # from costs.yaml
     capacity_factor: "${capacity_factors.hydropower}" # from capacity_factors.yaml
+    capacity_gross_max: "${capacity_gross_max.hydropower}" # from capacities.yaml
 
   - id: geo-power
     long_name: geothermal power stations
@@ -462,10 +456,9 @@ technologies:
           primary-electricity: 1.0
         opex_variable: "${opex_variable.geo-power}" # from costs.yaml
     # load from other yaml files
-    residual_capacity: "${residual_capacity.geo-power}" # from capacities.yaml
     capex: "${capex.geo-power}" # from costs.yaml
     opex_fixed: "${opex_fixed.geo-power}" # from costs.yaml
-    capacity_factor: "${capacity_factors.geo-power}" # from capacity_factors.yaml
+    capacity_gross_max: "${capacity_gross_max.geo-power}" # from capacities.yaml
 
   - id: bioenergy-power
     long_name: bioenergy power stations
@@ -485,10 +478,8 @@ technologies:
           primary-electricity: 1.0
         opex_variable: "${opex_variable.bioenergy-power}" # from costs.yaml
     # load from other yaml files
-    residual_capacity: "${residual_capacity.bioenergy-power}" # from capacities.yaml
     capex: "${capex.bioenergy-power}" # from costs.yaml
     opex_fixed: "${opex_fixed.bioenergy-power}" # from costs.yaml
-    capacity_factor: "${capacity_factors.bioenergy-power}" # from capacity_factors.yaml
 
   - id: nuclear-power
     long_name: nuclear power stations
@@ -508,7 +499,6 @@ technologies:
           primary-electricity: 1.0
         opex_variable: "${opex_variable.nuclear-power}" # from costs.yaml
     # load from other yaml files
-    residual_capacity: "${residual_capacity.nuclear-power}" # from capacities.yaml
     capex: "${capex.nuclear-power}" # from costs.yaml
     opex_fixed: "${opex_fixed.nuclear-power}" # from costs.yaml
     availability_factor: "${availability_factor.nuclear-power}" # from capacity_factors.yaml
@@ -577,8 +567,6 @@ technologies:
           "*": # all regions
             battery-storage: True # storage unit
         opex_variable: "${opex_variable.battery-technology}" # from costs.yaml 
-    capacity_additional_min: "${capacity_additional_min.battery-technology}" # from activity_annual.yaml
-    capacity_additional_max: "${capacity_additional_max.battery-technology}" # from activity_annual.yaml
 
 #   # --------------------------------------------  
 #   #

@@ -10,11 +10,11 @@ output_path = '../outputs/solved_models/'
 
 countries_to_run = [
     # 'GAB',
-    # 'GMB',
+    'GMB',
     # 'HTI',
     # 'MDG',
     # 'PAK',
-    'PHL',
+    # 'PHL',
     # 'RWA',
 ]
 

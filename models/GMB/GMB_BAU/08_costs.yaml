@@ -229,19 +229,19 @@ opex_variable:
       "*": 1.4
 
   transmission: 
-    "*":
+    GMB:
       "*": 3.0 # need to be checked
   
   battery-technology:
-    "*" :
+    GMB:
       "*": 0
 
   electricity-import: 
-    "*":
+    GMB:
       "*": 6.67 # https://www.trade.gov/country-commercial-guides/senegal-energy assume 24c/kWh  
 
   gas-import-liquefied:
-    "*": 
+    GMB: 
       2023: 9.05697343932461
       2024: 7.91953268103077
       2025: 7.36976964785541
@@ -272,7 +272,7 @@ opex_variable:
       2050: 7.63517249145731
 
   coal-import-hard:
-    "*":
+    GMB:
       2023: 10.4436860068259
       2024: 9.419795221843
       2025: 8.39590443686007
@@ -303,24 +303,12 @@ opex_variable:
       2050: 2.62798634812287
 
   oil-diesel-production: 
-    "*":
+    GMB:
       "*": 15.14
 
   oil-fuel-oil-production:
-    "*":
-      "*": 15.14
-
-  coal-hard-domestic-step-1: 
-    "*":
-      "*": 1.75
-
-  coal-brown-domestic-step-1: 
-    "*":
-      "*": 1.12
-
-  gas-domestic-step-1: 
     GMB:
-      "*": 3.49
+      "*": 15.14
 
 
 # ---------------------------
