@@ -66,6 +66,7 @@ commodities:
   - id: primary-electricity
     long_name: Primary electricity
     is_renewable: false
+    include_in_joint_reserve_margin: true
 
   - id: secondary-electricity
     long_name: Secondary electricity
@@ -74,7 +75,7 @@ commodities:
     demand_annual: 
       # define demand for each region
       GMB:
-        "{ y : (${global_variables.base_demand}*(1+${global_variables.demand_growth_pcgt})**(y-${global_variables.base_year})) for y in ${time_definition.years} }"
+        "{ y: (${global_variables.base_demand} * (1 + ${global_variables.demand_growth_pcgt}) ** (y - ${global_variables.base_year})) for y in ${time_definition.years}}"
         
     # specify demand profile for each region
     demand_profile:

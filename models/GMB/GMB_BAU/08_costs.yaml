@@ -34,7 +34,6 @@ discount_rate:
 # cost of capital by technology
 # ------------------------------
 cost_of_capital: # WACC
-
   coal-power: 0.1125
   gas-CCGT: 0.1125
   gas-OCGT: 0.1125
@@ -54,62 +53,48 @@ cost_of_capital: # WACC
 capex:
   coal-power:
     # all regions
-    GMB: 
+    "*": 
       # all years
       "*": 2500
-
   gas-CCGT:    
-    GMB:
-      "*": "{y: 1200 * (0.1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-  
+    "*":
+      "*": 1200
   gas-OCGT:
-    GMB:
-      "*": "{y: 700 * (0.967 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-
+    "*":
+      "*": 700
   oil-internal-combustion-engine:
-    GMB:
-      "*": "{y: 1450 * (0.967 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-        
+    "*":
+      "*": 1450
   solar-pv: 
-    GMB:
-      "*": "{y: 1063 * (0.985 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-
+    "*": 
+      "{y: 1063 * (0.985 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   windonshore-power:
-    GMB:
-      "*": "{y: 1251 * (0.989 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-
+    "*": 
+      "{y: 1251 * (0.989 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   windoffshore-power:
-    GMB:
-      "*": "{y: 3211 * (0.987 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-
+    "*": 
+      "{y: 3211 * (0.987 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   hydropower: # using hydro-large value
-    GMB:
-      "*": "{y: 3000 * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-
+    "*":
+      "*": 3000
   geo-power: # using geothermal binary value
-    GMB:
-      "*": "{y: 4000 * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-
+    "*":
+      "*": 4000
   bioenergy-power: # using biomass small value
-    GMB:
-      "*": "{y: 2500 * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-
+    "*":
+      "*": 2500
   nuclear-power: # using SMR value
-    GMB:
-      "*": "{y: 6137 * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-
+    "*":
+      "*": 6137
   regasification:
-    "*" :
+    "*":
       "*": 12.8
-
   transmission:
-    "*" :
+    "*":
       "*": 448
-  
   battery-technology:
-    "*" :
-      "*": "{y: 1256 * (0.977 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-  
+    "*": 
+      "{y: 1256 * (0.977 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   electricity-import:
     "*":
       "*": 448
@@ -119,193 +104,160 @@ capex:
 # ----------------
 
 opex_fixed:
-
   coal-power:
     # all regions
-    GMB: 
+    "*": 
       # all years
       "*": 78
-
   gas-CCGT:    
-    GMB:
+    "*":
       "*": 35
-
   gas-OCGT:
-    GMB:
+    "*":
       "*": 20
-
   oil-internal-combustion-engine:
-    GMB:
+    "*":
       "*": 35
-        
   solar-pv: 
-    GMB:
-      "*": "{y: 13.8 * (0.985 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-
+    "*":
+      "{y: 13.8 * (0.985 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   windonshore-power:
-    GMB:
-      "*": "{y: 50 * (0.988 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-
+    "*":
+      "{y: 50 * (0.988 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   windoffshore-power:
-    GMB:
-      "*": "{y: 128.4 * (0.984 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-
+    "*": 
+      "{y: 128.4 * (0.984 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   hydropower: # using hydro-large value
-    GMB:
+    "*":
       "*": 90
-
   geo-power: # using geothermal binary value
-    GMB:
+    "*":
       "*": 120
-
   bioenergy-power: # using biomass small value
-    GMB:
+    "*":
       "*": 75
-
   nuclear-power: # using SMR value
-    GMB:
+    "*":
       "*": 184.1
-
   regasification:
-    "*" :
+    "*":
       "*": 0.32
-
   transmission: 
-    "*" :
+    "*":
       "*":  15.7 # assumes 3.5% of CAPEX
-  
   battery-technology:
-    "*" :
-      "*": "{y: 31.9 * (0.977 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-
+    "*":
+      "{y: 31.9 * (0.977 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   electricity-import:
     "*":
       "*": 15.7
 
 opex_variable:
-
   coal-power: 
-    GMB:
+    "*":
       "*": 2.3
-
   oil-internal-combustion-engine:
-    GMB:
+    "*":
       "*": 1.8
-
   gas-CCGT:
-    GMB:
+    "*":
       "*": 0.53
-
   gas-OCGT: 
-    GMB:
+    "*":
       "*": 1.8
-
   solar-pv:
-    GMB:
+    "*":
       "*": 0.
-
   windonshore-power:
-    GMB:
+    "*":
       "*": 0.
-
   windoffshore-power:
-    GMB:
+    "*":
       "*": 0.
-
   nuclear-power: 
-    GMB:
+    "*":
       "*": 0.69
-
   hydropower: 
-    GMB:
+    "*":
       "*": 0.
-
   geo-power: 
-    GMB:
+    "*":
       "*": 0.
-
   bioenergy-power: 
-    GMB:
+    "*":
       "*": 1.4
-
   transmission: 
-    GMB:
+    "*":
       "*": 3.0 # need to be checked
-  
   battery-technology:
-    GMB:
+    "*":
       "*": 0
-
   electricity-import: 
-    GMB:
+    "*":
       "*": 6.67 # https://www.trade.gov/country-commercial-guides/senegal-energy assume 24c/kWh  
-
   gas-import-liquefied:
-    GMB: 
-      2023: 9.05697343932461
-      2024: 7.91953268103077
-      2025: 7.36976964785541
-      2026: 6.97166538245257
-      2027: 6.76313457676537
-      2028: 6.71574121183646
-      2029: 6.7441772307938
-      2030: 6.82000661468006
-      2031: 6.94322936349522
-      2032: 7.10436680425352
-      2033: 7.30341893695494
-      2034: 7.44559903174167
-      2035: 7.54986443458527
-      2036: 7.55934310757105
-      2037: 7.60673647249996
-      2038: 7.72995922131513
-      2039: 7.65412983742887
-      2040: 7.7963099322156
-      2041: 7.87213931610186
-      2042: 7.86266064311608
-      2043: 7.80578860520138
-      2044: 7.76787391325826
-      2045: 7.76787391325826
-      2046: 7.76787391325826
-      2047: 7.72995922131513
-      2048: 7.71100187534357
-      2049: 7.64465116444309
-      2050: 7.63517249145731
-
+    "*": 
+      2023: 9.06
+      2024: 7.92
+      2025: 7.37
+      2026: 6.97
+      2027: 6.76
+      2028: 6.72
+      2029: 6.74
+      2030: 6.82
+      2031: 6.94
+      2032: 7.1
+      2033: 7.3
+      2034: 7.45
+      2035: 7.55
+      2036: 7.56
+      2037: 7.61
+      2038: 7.73
+      2039: 7.65
+      2040: 7.8
+      2041: 7.87
+      2042: 7.86
+      2043: 7.81
+      2044: 7.77
+      2045: 7.77
+      2046: 7.77
+      2047: 7.73
+      2048: 7.71
+      2049: 7.64
+      2050: 7.64
   coal-import-hard:
-    GMB:
-      2023: 10.4436860068259
-      2024: 9.419795221843
-      2025: 8.39590443686007
-      2026: 7.37201365187713
-      2027: 6.3481228668942
-      2028: 5.32423208191126
-      2029: 4.30034129692833
-      2030: 3.27645051194539
-      2031: 3.24402730375427
-      2032: 3.21160409556314
-      2033: 3.17918088737201
-      2034: 3.14675767918089
-      2035: 3.11433447098976
-      2036: 3.08191126279864
-      2037: 3.04948805460751
-      2038: 3.01706484641638
-      2039: 2.98464163822526
-      2040: 2.95221843003413
-      2041: 2.919795221843
-      2042: 2.88737201365188
-      2043: 2.85494880546075
-      2044: 2.82252559726963
-      2045: 2.7901023890785
-      2046: 2.75767918088737
-      2047: 2.72525597269625
-      2048: 2.69283276450512
-      2049: 2.66040955631399
-      2050: 2.62798634812287
-
+    "*":
+      2023: 10.44
+      2024: 9.42
+      2025: 8.4
+      2026: 7.37
+      2027: 6.35
+      2028: 5.32
+      2029: 4.3
+      2030: 3.28
+      2031: 3.24
+      2032: 3.21
+      2033: 3.18
+      2034: 3.15
+      2035: 3.11
+      2036: 3.08
+      2037: 3.05
+      2038: 3.02
+      2039: 2.98
+      2040: 2.95
+      2041: 2.92
+      2042: 2.89
+      2043: 2.85
+      2044: 2.82
+      2045: 2.79
+      2046: 2.76
+      2047: 2.73
+      2048: 2.69
+      2049: 2.66
+      2050: 2.63
   oil-diesel-production: 
     GMB:
       "*": 15.14
-
   oil-fuel-oil-production:
     GMB:
       "*": 15.14
@@ -317,5 +269,5 @@ opex_variable:
 
 fuel_price:
   uranium:
-    "*" :
+    GMB:
       "*" : 0.27 # source: https://www.osti.gov/servlets/purl/840500
