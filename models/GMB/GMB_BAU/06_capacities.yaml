@@ -71,4 +71,32 @@ activity_total_max:
     GMB: 0.
 
   gas-domestic:
-    GMB: 0.          
+    GMB: 0.         
+
+capacity_additional_max_growth_rate:
+
+  solar-pv:
+    "*": 0.36 # global compound growth rate between 2000-2022
+  
+  windonshore-power:
+    "*": 0.2 # global compound growth rate between 2000-2022
+
+  windoffshore-power:
+    "*": 0.2 # global compound growth rate between 2000-2022
+
+  bioenergy-power:
+    "*": 0.2
+
+capacity_additional_max_floor:
+
+  solar-pv:
+    "*": 0.36 # global compound growth rate between 2000-2022
+  
+  windonshore-power:
+    "*": 0.2 # global compound growth rate between 2000-2022
+
+  windoffshore-power:
+    "*": 0.2 # global compound growth rate between 2000-2022
+
+  bioenergy-power:
+    "*": 0.02  

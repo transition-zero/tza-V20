@@ -277,6 +277,8 @@ technologies:
     opex_fixed: "${opex_fixed.solar-pv}" # from 08_costs.yaml
     capacity_factor: "${capacity_factors.solar-pv}" # from 07_capacity_factors.yaml
     capacity_gross_max: "${capacity_gross_max.solar-pv}" # from 06_capacities.yaml
+    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.solar-pv}" # from 06_capacities.yaml
+    capacity_additional_max_floor: "${capacity_additional_max_floor.solar-pv}" # from 06_capacities.yaml
 
   - id: gas-CCGT
     long_name: combined cycle gas turbine
@@ -391,6 +393,8 @@ technologies:
     opex_fixed: "${opex_fixed.windonshore-power}" # from costs.yaml
     capacity_factor: "${capacity_factors.windonshore-power}" # from capacity_factors.yaml
     capacity_gross_max: "${capacity_gross_max.windonshore-power}" # from capacities.yaml
+    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.windonshore-power}" # from 06_capacities.yaml
+    capacity_additional_max_floor: "${capacity_additional_max_floor.windonshore-power}" # from 06_capacities.yaml    
 
   - id: windoffshore-power
     long_name: offshore wind power stations
@@ -413,6 +417,8 @@ technologies:
     capex: "${capex.windoffshore-power}" # from costs.yaml
     opex_fixed: "${opex_fixed.windoffshore-power}" # from costs.yaml
     capacity_factor: "${capacity_factors.windoffshore-power}" # from capacity_factors.yaml
+    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.windoffshore-power}" # from 06_capacities.yaml
+    capacity_additional_max_floor: "${capacity_additional_max_floor.windoffshore-power}" # from 06_capacities.yaml    
 
   - id: hydropower
     long_name: hydropower stations
@@ -479,6 +485,8 @@ technologies:
     # load from other yaml files
     capex: "${capex.bioenergy-power}" # from costs.yaml
     opex_fixed: "${opex_fixed.bioenergy-power}" # from costs.yaml
+    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.bioenergy-power}" # from 06_capacities.yaml
+    capacity_additional_max_floor: "${capacity_additional_max_floor.bioenergy-power}" # from 06_capacities.yaml        
 
   - id: nuclear-power
     long_name: nuclear power stations
