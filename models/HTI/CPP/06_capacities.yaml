@@ -54,20 +54,35 @@ capacity_additional_max: # Isolating installed capacity in 2023 and 2024 because
       2023: 0.
       2024: 0.
 
-  coal-power:
+  coal-power: # no new installed assets before 2030 
     HTI:
       2023: 0.
       2024: 0.
+      2025: 0.
+      2026: 0.
+      2027: 0.
+      2028: 0.
+      2029: 0.
 
-  gas-CCGT:
+  gas-CCGT: # no new installed assets before 2030 
     HTI:
       2023: 0.
       2024: 0.
+      2025: 0.
+      2026: 0.
+      2027: 0.
+      2028: 0.
+      2029: 0.
 
-  gas-OCGT:
+  gas-OCGT: # no new installed assets before 2030 
     HTI:
       2023: 0.
       2024: 0.
+      2025: 0.
+      2026: 0.
+      2027: 0.
+      2028: 0.
+      2029: 0.
 
   solar-pv:
     HTI: 
@@ -75,6 +90,11 @@ capacity_additional_max: # Isolating installed capacity in 2023 and 2024 because
       2024: 0.
 
   windonshore-power:
+    HTI: 
+      2023: 0.
+      2024: 0.
+
+  windoffshore-power:
     HTI: 
       2023: 0.
       2024: 0.
@@ -196,34 +216,41 @@ capacity_gross_min:
 
 capacity_additional_max_floor:
 
-  hydropower:
+  oil-internal-combustion-engine:
     HTI: 
       "*": 0.02
 
+  hydropower:
+    HTI: 
+      "*": 0.02 # lower value of the installed hydropower 
+
   windonshore-power:
     HTI: 
-      "*": 0.01
+      "*": 0.02 
+
+  windoffshore-power:
+    HTI: 
+      "*": 0.02 
 
   solar-pv:
     HTI: 
-      "*": 0.01
+      "*": 0.02
 
   bioenergy-power:
     HTI: 
-      "*": 0.01
+      "*": 0.02
 
   coal-power:
     HTI: 
-      "*": 0.05 # coal power plants less than 50 MW is not attractive for investment 
+      "*": 0.001 
 
   gas-CCGT:
     HTI: 
-      "*": 0.05 # gas power plants less than 50 MW is not attractive for investment 
+      "*": 0.001 
 
   gas-OCGT:
     HTI: 
-      "*": 0.05 # gas power plants less than 50 MW is not attractive for investment 
-
+      "*": 0.001 
 
 # -------
 # Gross potential
@@ -238,6 +265,10 @@ capacity_gross_max: # potential based on https://pubdocs.worldbank.org/en/176981
   windonshore-power:
     HTI:
       "*": 0.1
+
+  windoffshore-power:
+    HTI:
+      "*": 0.1 # Need to be checked
 
   solar-pv:
     HTI:
@@ -259,36 +290,40 @@ capacity_additional_max_growth_rate:
 
   hydropower: 
     HTI:
-      "*": 0.02 # following the growth as recorded by EMBER - Sep 2024 data
+      "*": 0.3 # following the growth as recorded by EMBER - Sep 2024 data
 
   oil-internal-combustion-engine:
     HTI:
-      "*": 0.05 # following the growth as recorded by EMBER - Sep 2024 data
+      "*": 0.2 # following the growth as recorded by EMBER - Sep 2024 data
 
   bioenergy-power: 
     HTI:
-      "*": 0.01 # assumption based on HTI's economic condition
+      "*": 0.1
 
   solar-pv: 
     HTI:
-      "*": 0.01 # assumption based on HTI's economic condition
+      "*": 0.36 # global compound growth rate between 2000-2022
 
   windonshore-power: 
     HTI:
-      "*": 0.01 # assumption based on HTI's economic condition
+      "*": 0.2 # global compound growth rate between 2000-2022
+
+  windoffshore-power:
+    HTI:
+      "*": 0.2 # global compound growth rate between 2000-2022
 
   battery-technology: 
     HTI:
-      "*": 0.01 # assumption based on HTI's economic condition
+      "*": 0.3
 
   coal-power: 
     HTI:
-      "*": 0.01
+      "*": 0.1
 
   gas-CCGT: 
     HTI:
-      "*": 0.01
+      "*": 0.1
 
   gas-OCGT: 
     HTI:
-      "*": 0.01
+      "*": 0.1
