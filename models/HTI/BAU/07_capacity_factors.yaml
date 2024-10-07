@@ -137,22 +137,22 @@ capacity_factors:
    "*":
     # all years
     "*":
-      s1-h1: 0.5
-      s1-h2: 0.5
-      s1-h3: 0.5
-      s1-h4: 0.5
-      s2-h1: 0.64
-      s2-h2: 0.64
-      s2-h3: 0.64
-      s2-h4: 0.64
-      s3-h1: 0.73
-      s3-h2: 0.73
-      s3-h3: 0.73
-      s3-h4: 0.73
-      s4-h1: 0.76
-      s4-h2: 0.76
-      s4-h3: 0.76
-      s4-h4: 0.76
+      s1-h1: 0.22
+      s1-h2: 0.22
+      s1-h3: 0.22
+      s1-h4: 0.22
+      s2-h1: 0.28
+      s2-h2: 0.28
+      s2-h3: 0.28
+      s2-h4: 0.28
+      s3-h1: 0.32
+      s3-h2: 0.32
+      s3-h3: 0.32
+      s3-h4: 0.32
+      s4-h1: 0.33
+      s4-h2: 0.33
+      s4-h3: 0.33
+      s4-h4: 0.33
 
   geo-power:
     "*":
@@ -161,3 +161,21 @@ capacity_factors:
   bioenergy-power:
     "*":
       "*": 0.7
+
+capacity_factor_annual_min:
+
+  oil-internal-combustion-engine:
+    "*":
+      "*": 0.62 # prohibiting oil assets to be retired early (no national plans on that) - value is calculated from 2023's result
+
+  coal-power:
+    "*":
+      "*": 0.3
+
+  gas-OCGT:
+    "*":
+      "*": 0.3
+
+  gas-CCGT:
+    "*":
+      "*": 0.3
