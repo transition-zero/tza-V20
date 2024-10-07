@@ -69,6 +69,10 @@ capacity_gross_max:
     GMB:
       "*": 0.1 # NAWEC assumes zero biomass, https://nawec.gm/wp-content/uploads/2022/02/The-Gambia-Strategic-Electricity-Sector-Roadmap.pdf      
 
+  nuclear-power:
+    GMB:
+      "*": 0.
+      
 activity_total_max:
 
   coal-domestic:

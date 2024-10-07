@@ -525,6 +525,8 @@ technologies:
     opex_fixed: "${opex_fixed.nuclear-power}" # from costs.yaml
     availability_factor: "${availability_factor.nuclear-power}" # from capacity_factors.yaml
     capacity_factor_annual_min: "${capacity_factor_annual_min.nuclear-power}" # from capacity_factors.yaml
+    capacity_gross_max: "${capacity_gross_max.nuclear-power}" # from 06_capacities.yaml     
+
 
   # --------------------------------------------
   #
