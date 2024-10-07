@@ -94,20 +94,20 @@ technologies:
           bioenergy: 1.0 # PJ/PJ
         opex_variable: "${fuel_price.bioenergy}"  # from costs.yaml
 
-  # - id: wind-offshore-resource
-  #   long_name: Wind offshore resources
-  #   operating_life: 100 # years
-  #   operating_modes:
-  #     - id: PRIMARY_PRODUCTION
-  #       long_name: generation mode
-  #       description: default generation mode
-  #       output_activity_ratio:
-  #         wind-offshore: 1.0 # PJ/PJ
-  #       emission_activity_ratio:
-  #         CO2: 0.   # MtCO2/PJ
-  #         NOx: 0.   # MtCO2/PJ
-  #         SOx: 0.   # MtCO2/PJ
-  #       opex_variable: 0.001
+  - id: wind-offshore-resource
+    long_name: Wind offshore resources
+    operating_life: 100 # years
+    operating_modes:
+      - id: PRIMARY_PRODUCTION
+        long_name: generation mode
+        description: default generation mode
+        output_activity_ratio:
+          wind-offshore: 1.0 # PJ/PJ
+        emission_activity_ratio:
+          CO2: 0.   # MtCO2/PJ
+          NOx: 0.   # MtCO2/PJ
+          SOx: 0.   # MtCO2/PJ
+        opex_variable: 0.001
 
   - id: coal-resource
     long_name: Coal resource production
@@ -192,6 +192,7 @@ technologies:
     opex_fixed: "${opex_fixed.oil-internal-combustion-engine}" # from costs.yaml
     capacity_additional_max: "${capacity_additional_max.oil-internal-combustion-engine}" # from capacity.yaml
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.oil-internal-combustion-engine}" # from capacity.yaml
+    capacity_factor_annual_min: "${capacity_factor_annual_min.oil-internal-combustion-engine}" # from capacity_factors.yaml
     # capacity_additional_max_floor: "${capacity_additional_max_floor.oil-internal-combustion-engine}" # from capacity.yaml
 
   - id: solar-pv
@@ -334,6 +335,7 @@ technologies:
     capacity_additional_max: "${capacity_additional_max.coal-power}" # from capacity_factors.yaml
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.coal-power}" # from capacity.yaml
     capacity_additional_max_floor: "${capacity_additional_max_floor.coal-power}" # from capacity.yaml
+    capacity_factor_annual_min: "${capacity_factor_annual_min.coal-power}" # from capacity_factors.yaml
     # residual_capacity: "${residual_capacity.coal-power}" # from capacities.yaml
 
   - id: gas-CCGT
@@ -362,6 +364,7 @@ technologies:
     capacity_additional_max: "${capacity_additional_max.gas-CCGT}" # from capacity_factors.yaml
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.gas-CCGT}" # from capacity.yaml
     capacity_additional_max_floor: "${capacity_additional_max_floor.gas-CCGT}" # from capacity.yaml
+    capacity_factor_annual_min: "${capacity_factor_annual_min.gas-CCGT}" # from capacity_factors.yaml
     # residual_capacity: "${residual_capacity.gas-CCGT}" # from capacities.yaml
 
   - id: gas-OCGT
@@ -390,33 +393,34 @@ technologies:
     capacity_additional_max: "${capacity_additional_max.gas-OCGT}" # from capacity_factors.yaml
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.gas-OCGT}" # from capacity.yaml
     capacity_additional_max_floor: "${capacity_additional_max_floor.gas-OCGT}" # from capacity.yaml
+    capacity_factor_annual_min: "${capacity_factor_annual_min.gas-OCGT}" # from capacity_factors.yaml
     # residual_capacity: "${residual_capacity.gas-OCGT}" # from capacities.yaml
 
-  # - id: windoffshore-power
-  #   long_name: offshore wind power stations
-  #   capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
-  #   include_in_joint_reserve_margin: false
-  #   include_in_joint_renewable_target: false
-  #   operating_life: 27
-  #   operating_modes:
-  #     - id: GENERATION
-  #       long_name: generation mode
-  #       description: default generation mode
-  #       # Note:
-  #       #   Below we define the input-output ratios. In the example below, 
-  #       #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
-  #       input_activity_ratio:
-  #         wind-offshore: 1.0
-  #       output_activity_ratio:
-  #         primary-electricity: 1.0
-  #       opex_variable: "${opex_variable.windoffshore-power}" # from costs.yaml
-  #   # load from other yaml files
-  #   residual_capacity: "${residual_capacity.windoffshore-power}" # from capacities.yaml
-  #   capex: "${capex.windoffshore-power}" # from costs.yaml
-  #   opex_fixed: "${opex_fixed.windoffshore-power}" # from costs.yaml
-  #   capacity_factor: "${capacity_factors.windoffshore-power}" # from capacity_factors.yaml
-  #   capacity_gross_max: "${capacity_gross_max.windoffshore-power}" # from capacity.yaml
-  #   capacity_additional_max: "${capacity_additional_max.windoffshore-power}" # from capacity_factors.yaml
+  - id: windoffshore-power
+    long_name: offshore wind power stations
+    capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
+    include_in_joint_reserve_margin: false
+    include_in_joint_renewable_target: false
+    operating_life: 27
+    operating_modes:
+      - id: GENERATION
+        long_name: generation mode
+        description: default generation mode
+        # Note:
+        #   Below we define the input-output ratios. In the example below, 
+        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
+        input_activity_ratio:
+          wind-offshore: 1.0
+        output_activity_ratio:
+          primary-electricity: 1.0
+        opex_variable: "${opex_variable.windoffshore-power}" # from costs.yaml
+    # load from other yaml files
+    # residual_capacity: "${residual_capacity.windoffshore-power}" # from capacities.yaml
+    capex: "${capex.windoffshore-power}" # from costs.yaml
+    opex_fixed: "${opex_fixed.windoffshore-power}" # from costs.yaml
+    capacity_factor: "${capacity_factors.windoffshore-power}" # from capacity_factors.yaml
+    capacity_gross_max: "${capacity_gross_max.windoffshore-power}" # from capacity.yaml
+    capacity_additional_max: "${capacity_additional_max.windoffshore-power}" # from capacity_factors.yaml
 
   - id: geo-power
     long_name: geothermal power stations
@@ -516,7 +520,7 @@ technologies:
         long_name: discharging mode
         description: discharging mode
         output_activity_ratio:
-          primary-electricity: 1.
+          primary-electricity: 1
         from_storage: 
           "*": # all regions
             battery-storage: True # storage unit

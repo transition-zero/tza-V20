@@ -94,20 +94,20 @@ technologies:
           bioenergy: 1.0 # PJ/PJ
         opex_variable: "${fuel_price.bioenergy}"  # from costs.yaml
 
-  # - id: wind-offshore-resource
-  #   long_name: Wind offshore resources
-  #   operating_life: 100 # years
-  #   operating_modes:
-  #     - id: PRIMARY_PRODUCTION
-  #       long_name: generation mode
-  #       description: default generation mode
-  #       output_activity_ratio:
-  #         wind-offshore: 1.0 # PJ/PJ
-  #       emission_activity_ratio:
-  #         CO2: 0.   # MtCO2/PJ
-  #         NOx: 0.   # MtCO2/PJ
-  #         SOx: 0.   # MtCO2/PJ
-  #       opex_variable: 0.001
+  - id: wind-offshore-resource
+    long_name: Wind offshore resources
+    operating_life: 100 # years
+    operating_modes:
+      - id: PRIMARY_PRODUCTION
+        long_name: generation mode
+        description: default generation mode
+        output_activity_ratio:
+          wind-offshore: 1.0 # PJ/PJ
+        emission_activity_ratio:
+          CO2: 0.   # MtCO2/PJ
+          NOx: 0.   # MtCO2/PJ
+          SOx: 0.   # MtCO2/PJ
+        opex_variable: 0.001
 
   - id: coal-resource
     long_name: Coal resource production
@@ -170,6 +170,7 @@ technologies:
     long_name: oil generation turbine with fuel input option
     capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
     include_in_joint_reserve_margin: true
+    include_in_joint_renewable_target: false
     operating_life: 40
     operating_modes:
       - id: GENERATION_DIESEL
@@ -183,7 +184,7 @@ technologies:
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.2
+          CO2: 0.2 # emission ratio (0.2) * input_activity_ratio
         opex_variable: "${fuel_price.oil}" # from costs.yaml   
     # load from other yaml files
     residual_capacity: "${residual_capacity.oil-internal-combustion-engine}" # from capacities.yaml
@@ -191,6 +192,7 @@ technologies:
     opex_fixed: "${opex_fixed.oil-internal-combustion-engine}" # from costs.yaml
     capacity_additional_max: "${capacity_additional_max.oil-internal-combustion-engine}" # from capacity.yaml
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.oil-internal-combustion-engine}" # from capacity.yaml
+    capacity_factor_annual_min: "${capacity_factor_annual_min.oil-internal-combustion-engine}" # from capacity_factors.yaml
     # capacity_additional_max_floor: "${capacity_additional_max_floor.oil-internal-combustion-engine}" # from capacity.yaml
 
   - id: solar-pv
@@ -218,7 +220,6 @@ technologies:
     capacity_factor: "${capacity_factors.solar-pv}" # from capacity_factors.yaml
     capacity_gross_max: "${capacity_gross_max.solar-pv}" # from capacity.yaml
     capacity_additional_max: "${capacity_additional_max.solar-pv}" # from capacity.yaml
-    capacity_gross_min: "${capacity_gross_min.solar-pv}" # from capacity.yaml
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.solar-pv}" # from capacity.yaml
     capacity_additional_max_floor: "${capacity_additional_max_floor.solar-pv}" # from capacity.yaml
 
@@ -247,7 +248,6 @@ technologies:
     capacity_factor: "${capacity_factors.windonshore-power}" # from capacity_factors.yaml
     capacity_gross_max: "${capacity_gross_max.windonshore-power}" # from capacity.yaml
     capacity_additional_max: "${capacity_additional_max.windonshore-power}" # from capacity.yaml
-    capacity_gross_min: "${capacity_gross_min.windonshore-power}" # from capacity.yaml
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.windonshore-power}" # from capacity.yaml
     capacity_additional_max_floor: "${capacity_additional_max_floor.windonshore-power}" # from capacity.yaml
 
@@ -265,7 +265,7 @@ technologies:
         #   Below we define the input-output ratios. In the example below, 
         #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio:
-          hydro: 1.0
+          hydro: 1.11 # 90% efficiency based on https://www.usbr.gov/power/edu/pamphlet.pdf
         output_activity_ratio:
           primary-electricity: 1.0
         opex_variable: "${opex_variable.hydropower}" # from costs.yaml
@@ -276,10 +276,10 @@ technologies:
     capacity_factor: "${capacity_factors.hydropower}" # from capacity_factors.yaml
     capacity_gross_max: "${capacity_gross_max.hydropower}" # from capacity.yaml
     capacity_additional_max: "${capacity_additional_max.hydropower}" # from capacity.yaml
-    capacity_gross_min: "${capacity_gross_min.hydropower}" # from capacity.yaml
     capacity_additional_max_floor: "${capacity_additional_max_floor.hydropower}" # from capacity.yaml
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.hydropower}" # from capacity.yaml
-    
+    # capacity_additional_min: "${capacity_additional_min.hydropower}" # from capacity.yaml
+
   - id: bioenergy-power
     long_name: bioenergy power stations
     capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
@@ -294,7 +294,7 @@ technologies:
         #   Below we define the input-output ratios. In the example below, 
         #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio:
-          bioenergy: 1.0
+          bioenergy: 2.94 # 34% efficiency based on dry biomass fueled plant in https://iea.blob.core.windows.net/assets/1028bee0-2da1-4d68-8b0a-9e5e03e93690/essentials3.pdf 
         output_activity_ratio:
           primary-electricity: 1.0
         opex_variable: "${fuel_price.bioenergy}" # from costs.yaml
@@ -304,7 +304,6 @@ technologies:
     capacity_factor: "${capacity_factors.bioenergy-power}" # from capacity_factors.yaml
     capacity_gross_max: "${capacity_gross_max.bioenergy-power}" # from capacity.yaml
     capacity_additional_max: "${capacity_additional_max.bioenergy-power}" # from capacity.yaml
-    capacity_gross_min: "${capacity_gross_min.bioenergy-power}" # from capacity.yaml
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.bioenergy-power}" # from capacity.yaml
     capacity_additional_max_floor: "${capacity_additional_max_floor.bioenergy-power}" # from capacity.yaml
 
@@ -313,6 +312,7 @@ technologies:
     long_name: Coal power stations without differentiating their sub-type
     capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
     include_in_joint_reserve_margin: true
+    include_in_joint_renewable_target: false
     operating_life: 30
     operating_modes:
       - id: GENERATION_COAL
@@ -335,12 +335,14 @@ technologies:
     capacity_additional_max: "${capacity_additional_max.coal-power}" # from capacity_factors.yaml
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.coal-power}" # from capacity.yaml
     capacity_additional_max_floor: "${capacity_additional_max_floor.coal-power}" # from capacity.yaml
+    capacity_factor_annual_min: "${capacity_factor_annual_min.coal-power}" # from capacity_factors.yaml
     # residual_capacity: "${residual_capacity.coal-power}" # from capacities.yaml
 
   - id: gas-CCGT
     long_name: combined cycle gas turbine
     capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
     include_in_joint_reserve_margin: true
+    include_in_joint_renewable_target: false
     operating_life: 40
     operating_modes:
       - id: GENERATION
@@ -362,12 +364,14 @@ technologies:
     capacity_additional_max: "${capacity_additional_max.gas-CCGT}" # from capacity_factors.yaml
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.gas-CCGT}" # from capacity.yaml
     capacity_additional_max_floor: "${capacity_additional_max_floor.gas-CCGT}" # from capacity.yaml
+    capacity_factor_annual_min: "${capacity_factor_annual_min.gas-CCGT}" # from capacity_factors.yaml
     # residual_capacity: "${residual_capacity.gas-CCGT}" # from capacities.yaml
 
   - id: gas-OCGT
     long_name: open cycle gas turbine
     capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
     include_in_joint_reserve_margin: true
+    include_in_joint_renewable_target: false
     operating_life: 40
     operating_modes:
       - id: GENERATION
@@ -389,32 +393,34 @@ technologies:
     capacity_additional_max: "${capacity_additional_max.gas-OCGT}" # from capacity_factors.yaml
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.gas-OCGT}" # from capacity.yaml
     capacity_additional_max_floor: "${capacity_additional_max_floor.gas-OCGT}" # from capacity.yaml
+    capacity_factor_annual_min: "${capacity_factor_annual_min.gas-OCGT}" # from capacity_factors.yaml
     # residual_capacity: "${residual_capacity.gas-OCGT}" # from capacities.yaml
 
-  # - id: windoffshore-power
-  #   long_name: offshore wind power stations
-  #   capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
-  #   include_in_joint_reserve_margin: false
-  #   operating_life: 27
-  #   operating_modes:
-  #     - id: GENERATION
-  #       long_name: generation mode
-  #       description: default generation mode
-  #       # Note:
-  #       #   Below we define the input-output ratios. In the example below, 
-  #       #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
-  #       input_activity_ratio:
-  #         wind-offshore: 1.0
-  #       output_activity_ratio:
-  #         primary-electricity: 1.0
-  #       opex_variable: "${opex_variable.windoffshore-power}" # from costs.yaml
-  #   # load from other yaml files
-  #   residual_capacity: "${residual_capacity.windoffshore-power}" # from capacities.yaml
-  #   capex: "${capex.windoffshore-power}" # from costs.yaml
-  #   opex_fixed: "${opex_fixed.windoffshore-power}" # from costs.yaml
-  #   capacity_factor: "${capacity_factors.windoffshore-power}" # from capacity_factors.yaml
-  #   capacity_gross_max: "${capacity_gross_max.windoffshore-power}" # from capacity.yaml
-  #   capacity_additional_max: "${capacity_additional_max.windoffshore-power}" # from capacity_factors.yaml
+  - id: windoffshore-power
+    long_name: offshore wind power stations
+    capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
+    include_in_joint_reserve_margin: false
+    include_in_joint_renewable_target: false
+    operating_life: 27
+    operating_modes:
+      - id: GENERATION
+        long_name: generation mode
+        description: default generation mode
+        # Note:
+        #   Below we define the input-output ratios. In the example below, 
+        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
+        input_activity_ratio:
+          wind-offshore: 1.0
+        output_activity_ratio:
+          primary-electricity: 1.0
+        opex_variable: "${opex_variable.windoffshore-power}" # from costs.yaml
+    # load from other yaml files
+    # residual_capacity: "${residual_capacity.windoffshore-power}" # from capacities.yaml
+    capex: "${capex.windoffshore-power}" # from costs.yaml
+    opex_fixed: "${opex_fixed.windoffshore-power}" # from costs.yaml
+    capacity_factor: "${capacity_factors.windoffshore-power}" # from capacity_factors.yaml
+    capacity_gross_max: "${capacity_gross_max.windoffshore-power}" # from capacity.yaml
+    capacity_additional_max: "${capacity_additional_max.windoffshore-power}" # from capacity_factors.yaml
 
   - id: geo-power
     long_name: geothermal power stations
@@ -514,7 +520,7 @@ technologies:
         long_name: discharging mode
         description: discharging mode
         output_activity_ratio:
-          secondary-electricity: 1.
+          primary-electricity: 1
         from_storage: 
           "*": # all regions
             battery-storage: True # storage unit
@@ -528,7 +534,8 @@ technologies:
           "*": # all regions
             battery-storage: True # storage unit
         opex_variable: "${opex_variable.battery-technology}" # from costs.yaml 
-    # capacity_additional_max: "${capacity_additional_max.battery-technology}" # from capacity_factors.yaml
+    capacity_additional_max: "${capacity_additional_max.battery-technology}" # from capacity.yaml
+    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.battery-technology}" # from capacity.yaml
 
 # --------------------------------------------
 #
