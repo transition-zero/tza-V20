@@ -22,8 +22,8 @@ countries_to_run = [
 
 scenarios_to_run = [
     'BAU',
-    #'CPP',
-    #'NDC',
+    'CPP',
+    'NDC',
 ]
 
 # ---------
