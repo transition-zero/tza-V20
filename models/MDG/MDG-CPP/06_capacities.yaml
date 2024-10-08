@@ -215,7 +215,8 @@ residual_capacity:
 
   transmission:
     MDG: 
-      "{ y : (${global_variables.base_demand} / 31.536) for y in ${time_definition.years} }"
+      "*": 0.658
+      #"{ y : (${global_variables.base_demand} / 31.536) for y in ${time_definition.years} }"
   
   battery-technology:
     MDG: 
