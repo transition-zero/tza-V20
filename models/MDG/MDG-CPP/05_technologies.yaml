@@ -419,7 +419,7 @@ technologies:
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.1252
+          CO2: 0.082
         opex_variable: "${opex_variable.gas-CCGT}" # from 08_costs.yaml
     # load from other yaml files
     residual_capacity: "${residual_capacity.gas-CCGT}" # from 06_capacities.yaml
@@ -909,7 +909,7 @@ storage:
   - id: battery-storage
     capex: 
       "*": # all region
-        "*": 300 # all year
+        "*": 0 # all year
     operating_life: 
       "*": 10 # all region
     minimum_charge: 
