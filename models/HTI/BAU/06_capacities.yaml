@@ -42,6 +42,10 @@ residual_capacity:
       "*": 0.057
       # 2024: 0.057
 
+  transmission: 
+    HTI:
+      "*": 0.25
+
 
 # -------
 # Maximum and minimum additional capacity 

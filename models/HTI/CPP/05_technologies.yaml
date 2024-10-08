@@ -498,6 +498,7 @@ technologies:
     # load from other yaml files
     capex: "${capex.transmission}" # from costs.yaml
     opex_fixed: "${opex_fixed.transmission}" # from costs.yaml
+    residual_capacity: "${residual_capacity.transmission}" # from capacities.yaml
 
 
   # --------------------------------------------
