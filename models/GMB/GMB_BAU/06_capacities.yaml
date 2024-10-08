@@ -30,6 +30,10 @@ residual_capacity:
     GMB: 
       "*": 0.023
 
+  windonshore-power:
+    GMB:
+      "*": 0.015    
+
   transmission:
     GMB: 
       "*": 0.12

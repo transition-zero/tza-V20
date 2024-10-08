@@ -402,6 +402,7 @@ technologies:
     # load from other yaml files
     capex: "${capex.windonshore-power}" # from costs.yaml
     opex_fixed: "${opex_fixed.windonshore-power}" # from costs.yaml
+    residual_capacity: "${residual_capacity.windonshore-power}" # from 06_capacities.yaml
     capacity_factor: "${capacity_factors.windonshore-power}" # from capacity_factors.yaml
     capacity_gross_max: "${capacity_gross_max.windonshore-power}" # from capacities.yaml
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.windonshore-power}" # from 06_capacities.yaml
