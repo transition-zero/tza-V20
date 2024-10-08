@@ -716,7 +716,7 @@ opex_variable:
 
   oil-internal-combustion-engine:
     HTI:
-      "*": 0
+      "*": 1.8
 
   gas-CCGT:
     HTI:
