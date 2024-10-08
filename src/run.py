@@ -22,8 +22,8 @@ countries_to_run = [
 
 scenarios_to_run = [
     'BAU',
-    'CPP',
-    'NDC',
+    #'CPP',
+    #'NDC',
 ]
 
 # ---------
@@ -161,7 +161,27 @@ for country in countries_to_run:
         # ---
         # (5) Total investment required (timeframe) per year for new capacity plus grid and storage
         
-        # TODO: Annualised investment per year
+        # Annualised investment per year
+        (
+            viz
+            .get
+            .AnnualCapitalInvestmentByTechnologyAnnualised(model, 'sum')
+            .to_csv(
+                os.path.join(
+                    dir_path,
+                    'AnnualisedCapitalInvestmentByTechnology.csv',
+                )
+            )
+        )
+
+        # export figure
+        ax = viz.plot.CapitalInvestmentByTechnologyAnnualised(model)
+        plt.savefig(
+            os.path.join(
+                dir_path,
+                'AnnualisedCapitalInvestmentByTechnology.pdf'
+            )
+        )
 
         # Non-annualised investment per year
         (
