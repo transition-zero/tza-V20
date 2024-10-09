@@ -14,7 +14,7 @@ countries_to_run = [
     # 'GAB',
     # 'GMB',
     # 'HTI',
-    # 'MDG',
+    'MDG',
     # 'PAK',
     'PHL',
     # 'RWA',
@@ -211,7 +211,27 @@ for country in countries_to_run:
 
         # ---
         # (7) Average electricity price at the country level
-        # TODO
+        # export to csv
+        (
+            viz
+            .get
+            .AnnualCostOfElectricityGeneration(model)
+            .to_csv(
+                os.path.join(
+                    dir_path,
+                    'AnnualCostOfElectricityGeneration.csv',
+                )
+            )
+        )
+
+        # export figure figure
+        ax = viz.plot.CostOfElectricityGeneration(model)
+        plt.savefig(
+            os.path.join(
+                dir_path,
+                'AnnualCostOfElectricityGeneration.pdf'
+            )
+        )
 
         # ---
         # (8) Energy access (access to electricity, % of population)
