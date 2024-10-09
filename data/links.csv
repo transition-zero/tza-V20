@@ -1,6 +1,0 @@
-link,start_id,end_id,start_region,end_region,capacity
-link_01,PK7,PK6,Sindh,Punjab,2000
-link_02,PK7,PK2,Sindh,Balochistan,800
-link_03,PK6,PK4,Punjab,Islamabad,2000
-link_04,PK6,PK5,Punjab,Khyber Pakhtunkhwa,2000
-link_05,PK4,PK5,Islamabad,Khyber Pakhtunkhwa,2000

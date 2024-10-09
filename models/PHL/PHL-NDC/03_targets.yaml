@@ -1,0 +1,146 @@
+# -------------------------------------------------------------------------
+#
+#   TARGETS
+#   
+#     Defining the emissions intensities and targets for the model.
+#
+#     We only look at CO2 emissions in this work. NOx and SOx are ignored.
+#
+#     Link to docs: 
+#       https://docs.feo.transitionzero.org/docs/tz-osemosys/impact/
+#
+#     Authors:
+#       - @djwels
+#       - @amanmajid
+#
+# -------------------------------------------------------------------------
+# START
+
+# -------
+# Emissions targets
+# -------
+
+impacts:
+  - id: CO2
+    long_name: equivalent carbon dioxide emissions
+    description: equivalent carbon dioxide emissions
+    exogenous_annual: null
+    exogenous_total: null
+    constraint_annual:
+      PHL-LU:
+        2025: 60.55
+        2026: 62.41
+        2027: 64.27
+        2028: 66.14
+        2029: 68
+        2030: 69.86
+        2031: 69.74
+        2032: 69.62
+        2033: 69.5
+        2034: 69.38
+        2035: 69.25
+        2036: 66.63
+        2037: 64
+        2038: 61.37
+        2039: 58.75
+        2040: 56.12
+        2041: 52.13
+        2042: 48.14
+        2043: 44.16
+        2044: 40.17
+        2045: 36.18
+        2046: 35.01
+        2047: 33.84
+        2048: 32.67
+        2049: 31.5
+        2050: 30.32
+      PHL-VI:
+        2025: 5.96
+        2026: 6.15
+        2027: 6.33
+        2028: 6.51
+        2029: 6.7
+        2030: 6.88
+        2031: 6.87
+        2032: 6.86
+        2033: 6.84
+        2034: 6.83
+        2035: 6.82
+        2036: 6.56
+        2037: 6.3
+        2038: 6.04
+        2039: 5.79
+        2040: 5.53
+        2041: 5.13
+        2042: 4.74
+        2043: 4.35
+        2044: 3.96
+        2045: 3.56
+        2046: 3.45
+        2047: 3.33
+        2048: 3.22
+        2049: 3.1
+        2050: 2.99
+      PHL-MI:
+        2025: 10.76
+        2026: 11.09
+        2027: 11.42
+        2028: 11.75
+        2029: 12.08
+        2030: 12.42
+        2031: 12.39
+        2032: 12.37
+        2033: 12.35
+        2034: 12.33
+        2035: 12.31
+        2036: 11.84
+        2037: 11.37
+        2038: 10.91
+        2039: 10.44
+        2040: 9.97
+        2041: 9.26
+        2042: 8.56
+        2043: 7.85
+        2044: 7.14
+        2045: 6.43
+        2046: 6.22
+        2047: 6.01
+        2048: 5.8
+        2049: 5.6
+        2050: 5.39
+    constraint_total: null
+    penalty: 0. # mn$/mntonne
+  - id: SEQCO2
+    long_name: equivalent carbon dioxide emissions sequestered
+    description: equivalent carbon dioxide emissions
+    exogenous_annual: 0.
+    exogenous_total: null
+    constraint_annual: 
+    constraint_total: 
+      PHL-LU: 251 # from Global CCS Institute (p. 38) and ADB (p. 68): https://www.globalccsinstitute.com/wp-content/uploads/2020/01/Consoli_Global-CCS-Institue_2015_Global-Storage-Portfolio-1.pdf; https://www.adb.org/sites/default/files/publication/31122/carbon-capture-storage-southeast-asia.pdf
+      PHL-VI: 0
+      PHL-MI: 0
+  - id: NOx
+    long_name: equivalent nitric oxide emissions
+    description: equivalent nitric oxide emissions
+    exogenous_annual: 0.
+    exogenous_total: null
+    constraint_annual: 
+    constraint_total: null
+  - id: SOx
+    long_name: equivalent sulphur oxide emissions
+    description: equivalent sulphur oxide emissions
+    exogenous_annual: 0.
+    exogenous_total: null
+    constraint_annual: 
+    constraint_total: null
+
+# -------
+# Other parameters
+# -------
+
+reserve_margin: 1.2 
+renewable_production_target: 
+
+# END
+# -------------------------------------------------------------------------  

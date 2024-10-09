@@ -1,0 +1,33 @@
+# -------------------------------------------------------------------------
+#
+#   REGIONS (NODES)
+#   
+#     Define each spatial domain in the model.
+#
+#     Link to docs: 
+#       - https://docs.feo.transitionzero.org/docs/tz-osemosys/technology/
+#
+#     Authors:
+#       - @djwels
+#       - @amanmajid
+#
+# -------------------------------------------------------------------------
+# START
+
+regions:
+
+  - id: PHL-LU
+    long_name: Philippines - Luzon
+    description: Northernmost island of the three main islands of the Philippines.
+
+  - id: PHL-VI
+    long_name: Philippines - Visayas
+    description: Central island of the three main islands of the Philippines.
+
+  - id: PHL-MI
+    long_name: Philippines - Mindanao
+    description: Southernmost island of the three main islands of the Philippines.
+
+
+# END
+# -------------------------------------------------------------------------  

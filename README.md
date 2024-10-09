@@ -7,13 +7,13 @@ TransitionZero has partnered with the [V20 group](https://www.v-20.org/) to prod
 
 Specifically, we have collated data and developed models for:
 
-1. 🇬🇦 [Gabon]()
-2. 🇬🇲 [The Gambia]()
-3. 🇭🇹 [Haiti]()
-4. 🇲🇬 [Madagascar]()
-5. 🇵🇰 [Pakistan](https://github.com/transition-zero/V20/tree/main/models/PAK)
-6. 🇵🇭 [Philippines]()
-7. 🇷🇼 [Rwanda]() 
+1. 🇲🇬 [Madagascar](https://github.com/transition-zero/tza-V20/tree/HTI/models/MDG)
+2. 🇭🇹 [Haiti](https://github.com/transition-zero/tza-V20/tree/HTI/models/HTI)
+3. 🇵🇭 [Philippines](https://github.com/transition-zero/tza-V20/tree/HTI/models/PHL)
+4. 🇵🇰 [Pakistan](https://github.com/transition-zero/tza-V20/tree/HTI/models/PAK)
+5. 🇬🇦 [Gabon](https://github.com/transition-zero/tza-V20/tree/HTI/models/GAB)
+6. 🇬🇲 [The Gambia](https://github.com/transition-zero/tza-V20/tree/HTI/models/GMB)
+7. 🇷🇼 [Rwanda](https://github.com/transition-zero/tza-V20/tree/HTI/models/RWA) 
 
 # Contributors
 The data and code provided here was developed by the following modellers/analysts at TransitionZero:
@@ -22,6 +22,7 @@ The data and code provided here was developed by the following modellers/analyst
 - [Handriyanti Diah Puspitarini](https://www.transitionzero.org/team/handriyanti-diah-puspitarini)
 - [Abhishek Shivakumar](https://www.transitionzero.org/team/abhishek-shivakumar)
 - [Dan Welsby]()
+- [Irfan Mohamed]()
 
 # Getting started
 
@@ -34,15 +35,15 @@ Next, create a project environment using the yaml file in the repository as belo
 conda:
 
 ```
-conda env create --prefix ./env --file environment_v20.yml
-conda activate ./env
+conda env create --name V20 --file env/V20.yml
+conda activate V20
 ```
 
 mamba:
 
 ```
-mamba env update -n V20 --file environment_v20.yml
-conda activate ./env
+mamba env create --name V20 --file env/V20.yml
+mamba activate V20
 ```
 
 Additionally, install a solver for optimisation. We recommend using [HiGHS](https://highs.dev/), which is free and open source.
@@ -71,9 +72,3 @@ To discuss ideas for the project, please contact [@amanmajid](mailto:aman.m@tran
 Copyright 2020-2023 [TransitionZero](https://www.transitionzero.org/)
 
 This repository is licensed under the open source [XXX](...).
-
-# TODO
-
-- [ ] Add data from Google spreadsheet into yaml files for each country
-- [ ] Create folders per scenario (BAU, CPP, NDC) for each country 
-- [ ] Check the emissions budgets because they look wrong
