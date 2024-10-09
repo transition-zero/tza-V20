@@ -1,0 +1,110 @@
+# -------------------------------------------------------------------------
+#
+#   TARGETS
+#   
+#     Defining the emissions intensities and targets for the model.
+#
+#     We look at three main pollutants:
+#       - CO2
+#       - NOx
+#       - SOx
+#
+#     Link to docs: 
+#       https://docs.feo.transitionzero.org/docs/tz-osemosys/impact/
+#
+#     Authors:
+#       - @amanmajid
+#       - @abhishek0208
+#       - @Handriyanti
+#
+# -------------------------------------------------------------------------
+
+# -------
+# Emissions targets
+# -------
+
+impacts:
+  - id: CO2
+    long_name: equivalent carbon dioxide emissions
+    description: equivalent carbon dioxide emissions
+    exogenous_annual: null
+    exogenous_total: null
+    constraint_annual: # MtCO2/year
+      HTI:
+        2024: 0.87
+        2025: 0.86
+        2026: 0.848
+        2027: 0.836
+        2028: 0.824
+        2029: 0.812
+        2030: 0.8
+        2031: 0.784
+        2032: 0.768
+        2033: 0.752
+        2034: 0.736
+        2035: 0.72
+        2036: 0.698
+        2037: 0.676
+        2038: 0.654
+        2039: 0.632
+        2040: 0.61
+        2041: 0.586
+        2042: 0.562
+        2043: 0.538
+        2044: 0.514
+        2045: 0.49
+        2046: 0.46
+        2047: 0.43
+        2048: 0.4
+        2049: 0.37
+        2050: 0.34
+    constraint_total: null
+    penalty: 0. # mn$/mntonne
+  - id: NOx
+    long_name: equivalent nitric oxide emissions
+    description: equivalent nitric oxide emissions
+    exogenous_annual: 0.
+    exogenous_total: null
+    constraint_annual: 
+    constraint_total: null
+  - id: SOx
+    long_name: equivalent sulphur oxide emissions
+    description: equivalent sulphur oxide emissions
+    exogenous_annual: 0.
+    exogenous_total: null
+    constraint_annual: 
+    constraint_total: null
+
+# -------
+# Renewable targets
+# -------
+
+renewable_production_target:
+  HTI:
+    2030: 0.47
+    2031: 0.47
+    2032: 0.47
+    2033: 0.47
+    2034: 0.47
+    2035: 0.47
+    2036: 0.47
+    2037: 0.47
+    2038: 0.47
+    2039: 0.47
+    2040: 0.47
+    2041: 0.47
+    2042: 0.47
+    2043: 0.47
+    2044: 0.47
+    2045: 0.47
+    2046: 0.47
+    2047: 0.47
+    2048: 0.47
+    2049: 0.47
+    2050: 0.47
+
+# -------
+# Other parameters
+# -------
+
+reserve_margin: 1.2

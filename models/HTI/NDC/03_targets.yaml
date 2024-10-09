@@ -27,12 +27,39 @@ impacts:
   - id: CO2
     long_name: equivalent carbon dioxide emissions
     description: equivalent carbon dioxide emissions
-    exogenous_annual: 0.
+    exogenous_annual: null
     exogenous_total: null
-    constraint_annual: 
+    constraint_annual: # MtCO2/year
+      HTI:
+        2024: 0.87
+        2025: 0.88
+        2026: 0.886
+        2027: 0.892
+        2028: 0.898
+        2029: 0.904
+        2030: 0.91
+        2031: 0.908
+        2032: 0.906
+        2033: 0.904
+        2034: 0.902
+        2035: 0.9
+        2036: 0.894
+        2037: 0.888
+        2038: 0.882
+        2039: 0.876
+        2040: 0.87
+        2041: 0.86
+        2042: 0.85
+        2043: 0.84
+        2044: 0.83
+        2045: 0.82
+        2046: 0.806
+        2047: 0.792
+        2048: 0.778
+        2049: 0.764
+        2050: 0.75
     constraint_total: null
-    penalty: # mn$/mntonne
-      HTI: 0.
+    penalty: 0. # mn$/mntonne
   - id: NOx
     long_name: equivalent nitric oxide emissions
     description: equivalent nitric oxide emissions
@@ -52,9 +79,29 @@ impacts:
 # Renewable targets
 # -------
 
-# renewable_production_target:
-#   GAB: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
-
+renewable_production_target:
+  HTI:
+    2030: 0.47
+    2031: 0.47
+    2032: 0.47
+    2033: 0.47
+    2034: 0.47
+    2035: 0.47
+    2036: 0.47
+    2037: 0.47
+    2038: 0.47
+    2039: 0.47
+    2040: 0.47
+    2041: 0.47
+    2042: 0.47
+    2043: 0.47
+    2044: 0.47
+    2045: 0.47
+    2046: 0.47
+    2047: 0.47
+    2048: 0.47
+    2049: 0.47
+    2050: 0.47
 
 # -------
 # Other parameters

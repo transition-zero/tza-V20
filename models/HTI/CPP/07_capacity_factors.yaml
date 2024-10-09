@@ -1,0 +1,269 @@
+# -------------------------------------------------------------------------
+# CAPACITY FACTORS
+#
+#   Defining technological capacity and availability factors. Here, capacity 
+#     factors are only applied for renewables. For thermal power plants, we
+#     apply an "availability_factor", which accounts for maintenance shutdowns
+#     but we allow the model to choose when to do this. 
+#
+#     Link to docs: 
+#       https://docs.feo.transitionzero.org/docs/tz-osemosys/technology/
+#
+#     Authors:
+#       - xx
+# -------------------------------------------------------------------------
+
+
+# --------------------------------------------
+#
+#   AVAILABILITY FACTOR
+#     - Applied only to thermal power plants.
+#     - Defined as a normalised quantity between 0 and 1.
+#
+# --------------------------------------------
+
+availability_factor:
+
+  coal-unspecified:
+    # all regions
+    "*":
+      # all years
+      "*": 0.9
+
+  nuclear-power:
+    # all regions
+    "*":
+      # all years
+      "*": 0.9
+
+  gas-CCGT:
+    # all regions
+    "*":
+      # all years
+      "*": 0.9
+
+  gas-OCGT:
+    # all regions
+    "*":
+      # all years
+      "*": 0.9
+
+  oil-internal-combustion-engine:
+    # all regions
+    "*":
+      # all years
+      "*": 0.9  
+
+  
+# --------------------------------------------
+#
+#   CAPACITY FACTOR
+#     - Applied only to renewable power plants.
+#     - Defined as a normalised quantity between 0 and 1.
+#
+# --------------------------------------------
+
+capacity_factors:
+# Note: all profiles are calculated based on the data used in global interconnector study
+
+  solar-pv:
+   # all region
+   "*":
+    # all years
+    "*":
+      s1-h1: 0
+      s1-h2: 0.05
+      s1-h3: 0.52
+      s1-h4: 0.16
+      s2-h1: 0
+      s2-h2: 0.05
+      s2-h3: 0.45
+      s2-h4: 0.15
+      s3-h1: 0
+      s3-h2: 0.04
+      s3-h3: 0.4
+      s3-h4: 0.14
+      s4-h1: 0
+      s4-h2: 0.03
+      s4-h3: 0.39
+      s4-h4: 0.12
+
+  windonshore-power:
+   # all region
+   "*":
+    # all years
+    "*":
+      s1-h1: 0.11
+      s1-h2: 0.11
+      s1-h3: 0.13
+      s1-h4: 0.13
+      s2-h1: 0.09
+      s2-h2: 0.08
+      s2-h3: 0.13
+      s2-h4: 0.11
+      s3-h1: 0.07
+      s3-h2: 0.06
+      s3-h3: 0.11
+      s3-h4: 0.09
+      s4-h1: 0.09
+      s4-h2: 0.09
+      s4-h3: 0.13
+      s4-h4: 0.1
+
+  windoffshore-power:
+   # all region
+   "*":
+    # all years
+    "*":
+      s1-h1: 0.19
+      s1-h2: 0.16
+      s1-h3: 0.1
+      s1-h4: 0.14
+      s2-h1: 0.12
+      s2-h2: 0.07
+      s2-h3: 0.04
+      s2-h4: 0.09
+      s3-h1: 0.07
+      s3-h2: 0.05
+      s3-h3: 0.03
+      s3-h4: 0.06
+      s4-h1: 0.12
+      s4-h2: 0.1
+      s4-h3: 0.07
+      s4-h4: 0.06
+      
+  hydropower: # TODO: Need to check the values because they are too high
+   # all region
+   "*":
+    # all years
+    "*":
+      s1-h1: 0.22
+      s1-h2: 0.22
+      s1-h3: 0.22
+      s1-h4: 0.22
+      s2-h1: 0.28
+      s2-h2: 0.28
+      s2-h3: 0.28
+      s2-h4: 0.28
+      s3-h1: 0.32
+      s3-h2: 0.32
+      s3-h3: 0.32
+      s3-h4: 0.32
+      s4-h1: 0.33
+      s4-h2: 0.33
+      s4-h3: 0.33
+      s4-h4: 0.33
+
+  geo-power:
+    "*":
+      "*": 1
+
+  bioenergy-power:
+    "*":
+      "*": 0.7
+
+capacity_factor_annual_min:
+
+  oil-internal-combustion-engine: # oil assets retired gradually
+    "*": 
+      2023: 0.62
+      2024: 0.57
+      2025: 0.53
+      2026: 0.48
+      2027: 0.44
+      2028: 0.39
+      2029: 0.35
+      2030: 0.3
+      2031: 0.28
+      2032: 0.27
+      2033: 0.25
+      2034: 0.24
+      2035: 0.22
+      2036: 0.21
+      2037: 0.19
+      2038: 0.18
+      2039: 0.16
+      2040: 0.15
+      2041: 0.13
+      2042: 0.12
+      2043: 0.1
+      2044: 0.09
+      2045: 0.07
+      2046: 0.06
+      2047: 0.04
+      2048: 0.03
+      2049: 0.01
+      2050: 0
+
+
+  coal-unspecified:
+    "*":
+      2030: 0.3
+      2031: 0.28
+      2032: 0.27
+      2033: 0.25
+      2034: 0.24
+      2035: 0.22
+      2036: 0.21
+      2037: 0.19
+      2038: 0.18
+      2039: 0.16
+      2040: 0.15
+      2041: 0.13
+      2042: 0.12
+      2043: 0.1
+      2044: 0.09
+      2045: 0.07
+      2046: 0.06
+      2047: 0.04
+      2048: 0.03
+      2049: 0.01
+      2050: 0
+
+  gas-OCGT:
+    "*":
+      2030: 0.3
+      2031: 0.28
+      2032: 0.27
+      2033: 0.25
+      2034: 0.24
+      2035: 0.22
+      2036: 0.21
+      2037: 0.19
+      2038: 0.18
+      2039: 0.16
+      2040: 0.15
+      2041: 0.13
+      2042: 0.12
+      2043: 0.1
+      2044: 0.09
+      2045: 0.07
+      2046: 0.06
+      2047: 0.04
+      2048: 0.03
+      2049: 0.01
+      2050: 0
+
+  gas-CCGT:
+    "*":
+      2030: 0.3
+      2031: 0.28
+      2032: 0.27
+      2033: 0.25
+      2034: 0.24
+      2035: 0.22
+      2036: 0.21
+      2037: 0.19
+      2038: 0.18
+      2039: 0.16
+      2040: 0.15
+      2041: 0.13
+      2042: 0.12
+      2043: 0.1
+      2044: 0.09
+      2045: 0.07
+      2046: 0.06
+      2047: 0.04
+      2048: 0.03
+      2049: 0.01
+      2050: 0
