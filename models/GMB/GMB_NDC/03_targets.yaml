@@ -27,9 +27,35 @@ impacts:
   - id: CO2
     long_name: equivalent carbon dioxide emissions
     description: equivalent carbon dioxide emissions
-    exogenous_annual: 0.
+    exogenous_annual: null
     exogenous_total: null
     constraint_annual: 
+      2025: 0.26
+      2026: 0.258
+      2027: 0.256
+      2028: 0.254
+      2029: 0.252
+      2030: 0.25
+      2031: 0.246
+      2032: 0.242
+      2033: 0.238
+      2034: 0.234
+      2035: 0.23
+      2036: 0.222
+      2037: 0.214
+      2038: 0.206
+      2039: 0.198
+      2040: 0.19
+      2041: 0.182
+      2042: 0.174
+      2043: 0.166
+      2044: 0.158
+      2045: 0.15
+      2046: 0.142
+      2047: 0.134
+      2048: 0.126
+      2049: 0.118
+      2050: 0.11
     constraint_total: null
     penalty: # mn$/mntonne
       GMB: 0.
@@ -59,4 +85,4 @@ impacts:
 # Other parameters
 # -------
 
-reserve_margin: 1.2
+reserve_margin: 1.15 # https://nawec.gm/wp-content/uploads/2022/02/The-Gambia-Strategic-Electricity-Sector-Roadmap.pdf

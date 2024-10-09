@@ -12,11 +12,11 @@ output_path = '../outputs/results/'
 
 countries_to_run = [
     # 'GAB',
-    # 'GMB',
+    'GMB',
     # 'HTI',
     'MDG',
     # 'PAK',
-    'PHL',
+    # 'PHL',
     # 'RWA',
 ]
 

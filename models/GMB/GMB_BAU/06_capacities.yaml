@@ -1,0 +1,182 @@
+# -------------------------------------------------------------------------
+#
+#   CAPACITIES
+#   
+#     Define capacity attributes for each technology in each region.
+#
+#     There are two capacity components here:
+#       - Residual capacities
+#       - Residual capacity of storages
+#
+#     Link to docs: 
+#       - https://docs.feo.transitionzero.org/docs/tz-osemosys/technology/
+#
+#     Authors:
+#       -xx
+# -------------------------------------------------------------------------
+
+
+# -------
+# Residual capacities
+# -------
+
+residual_capacity: 
+
+  oil-internal-combustion-engine:
+    GMB:
+      "*": 0.0964
+
+  solar-pv:
+    GMB: 
+      "*": 0.023
+
+  windonshore-power:
+    GMB:
+      "*": 0.015    
+
+  transmission:
+    GMB: 
+      "*": 0.12
+
+
+# -------
+# Activity constraints
+# -------
+
+capacity_gross_max:
+
+  electricity-import:
+    GMB:
+      "*": 0.4 # https://nawec.gm/wp-content/uploads/2022/02/The-Gambia-Strategic-Electricity-Sector-Roadmap.pdf
+
+  solar-pv:
+    GMB: 
+      "*": 0.618 # existing capacity plus identified 0.595 GW potential in identified sites https://nawec.gm/wp-content/uploads/2022/02/The-Gambia-Strategic-Electricity-Sector-Roadmap.pdf#:~:text=The%20strategic%20roadmap%20projects%20the%20electricity%20demand%20of%20the%20Gambia
+
+  windonshore-power:
+    GMB:
+      "*": 0.2006 # https://nawec.gm/wp-content/uploads/2022/02/The-Gambia-Strategic-Electricity-Sector-Roadmap.pdf#:~:text=The%20strategic%20roadmap%20projects%20the%20electricity%20demand%20of%20the%20Gambia
+
+  windoffshore-power:
+    GMB:
+      "*": 0.96 # https://www.sciencedirect.com/science/article/abs/pii/S0360544219323254
+
+  hydropower:
+    GMB:
+      "*": 0.
+
+  geo-power:
+    GMB:
+      "*": 0.
+
+  bioenergy-power:
+    GMB:
+      "*": 0.1 # NAWEC assumes zero biomass, https://nawec.gm/wp-content/uploads/2022/02/The-Gambia-Strategic-Electricity-Sector-Roadmap.pdf      
+
+  nuclear-power:
+    GMB:
+      "*": 0.
+      
+activity_total_max:
+
+  coal-domestic:
+    GMB: 0.
+
+  gas-domestic:
+    GMB: 0.         
+
+capacity_additional_max_growth_rate:
+
+  solar-pv:
+    "*": 0.36 # global compound growth rate between 2000-2022
+  
+  windonshore-power:
+    "*": 0.2 # global compound growth rate between 2000-2022
+
+  windoffshore-power:
+    "*": 0.2 # global compound growth rate between 2000-2022
+
+  bioenergy-power:
+    "*": 0.1
+
+  gas-CCGT:
+     "*": 0.1 
+
+  gas-OCGT:
+     "*": 0.1     
+
+  oil-internal-combustion-engine:
+    "*": 0.1     
+
+  coal-unspecified:
+    "*": 0.1
+
+  battery-technology:
+    "*": 0.3  
+
+capacity_additional_max_floor:
+
+  solar-pv:
+    "*": 0.1 
+  
+  windonshore-power:
+    "*": 0.1 
+
+  windoffshore-power:
+    "*": 0.1 
+
+  bioenergy-power:
+    "*": 0.1 
+
+  gas-CCGT:
+     "*": 0.1 
+
+  gas-OCGT:
+     "*": 0.1     
+
+  oil-internal-combustion-engine:
+    "*": 0.1  
+
+  coal-unspecified:
+    "*": 0.1
+
+  battery-technology:
+    "*": 0.02     
+
+capacity_additional_max:
+
+  bioenergy-power:
+    GMB: 
+      2023: 0.
+      2024: 0.
+
+  battery-technology:
+    GMB:
+      2023: 0.
+
+  electricity-import:
+    GMB:
+      2023: 0
+      2024: 0
+      2025: 0    
+
+  gas-CCGT:
+    GMB: 
+      2023: 0.
+      2024: 0.
+
+  gas-OCGT:
+    GMB: 
+      2023: 0.
+      2024: 0.
+
+  coal-unspecified:
+    GMB: 
+      2023: 0.
+      2024: 0.
+
+  oil-internal-combustion-engine:
+    GMB: 
+      2023: 0.
+      2024: 0.        
+

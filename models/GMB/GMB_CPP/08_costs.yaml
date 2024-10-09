@@ -1,0 +1,274 @@
+# -------------------------------------------------------------------------
+#
+#   COSTS
+#   
+#     Define all cost parameters for the model. Specifically:
+#       - Depreciation method
+#       - Discount rate
+#       - Cost of capital
+#       - Capital costs
+#       - Fixed O&M costs
+#       - Fuel prices
+#
+#     Link to docs: 
+#       https://docs.feo.transitionzero.org/docs/tz-osemosys/technology/
+#
+#     Authors:
+#       - xx
+#
+# -------------------------------------------------------------------------
+
+# ------------------
+# Financial methods
+# ------------------
+
+depreciation_method: "straight-line"
+
+# -------------------------------
+# social discount rate by region
+# -------------------------------
+discount_rate: 
+  "*": 0.05
+
+# ------------------------------
+# cost of capital by technology
+# ------------------------------
+cost_of_capital: # WACC
+  coal-unspecified: 0.1125
+  gas-CCGT: 0.1125
+  gas-OCGT: 0.1125
+  oil-internal-combustion-engine: 0.1125
+  solar-pv: 0.1025
+  windonshore-power: 0.1025
+  windoffshore-power: 0.1025
+  nuclear-power: 0.1125
+  geo-power: 0.1025
+  bioenergy-power: 0.1125
+  hydropower: 0.1025
+  battery-technology: 0.1025
+
+# --------------
+# Capital costs
+# --------------
+
+capex:
+  coal-unspecified:
+    # all regions
+    "*": 
+      # all years
+      "*": 2500
+  gas-CCGT:    
+    "*":
+      "*": 1200
+  gas-OCGT:
+    "*":
+      "*": 700
+  oil-internal-combustion-engine:
+    "*":
+      "*": 1450
+  solar-pv: 
+    "*": 
+      "{y: 1063 * (0.985 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+  windonshore-power:
+    "*": 
+      "{y: 1251 * (0.989 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+  windoffshore-power:
+    "*": 
+      "{y: 3211 * (0.987 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+  hydropower: # using hydro-large value
+    "*":
+      "*": 3000
+  geo-power: # using geothermal binary value
+    "*":
+      "*": 4000
+  bioenergy-power: # using biomass small value
+    "*":
+      "*": 2500
+  nuclear-power: # using SMR value
+    "*":
+      "*": 6137
+  regasification:
+    "*":
+      "*": 12.8
+  transmission:
+    "*":
+      "*": 448
+  battery-technology:
+    "*": 
+      "{y: 1711 * (0.977 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+  electricity-import:
+    "*":
+      "*": 448
+
+# ----------------
+# Fixed O&M costs
+# ----------------
+
+opex_fixed:
+  coal-unspecified:
+    # all regions
+    "*": 
+      # all years
+      "*": 78
+  gas-CCGT:    
+    "*":
+      "*": 35
+  gas-OCGT:
+    "*":
+      "*": 20
+  oil-internal-combustion-engine:
+    "*":
+      "*": 35
+  solar-pv: 
+    "*":
+      "{y: 13.8 * (0.985 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+  windonshore-power:
+    "*":
+      "{y: 50 * (0.988 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+  windoffshore-power:
+    "*": 
+      "{y: 128.4 * (0.984 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+  hydropower: # using hydro-large value
+    "*":
+      "*": 90
+  geo-power: # using geothermal binary value
+    "*":
+      "*": 120
+  bioenergy-power: # using biomass small value
+    "*":
+      "*": 75
+  nuclear-power: # using SMR value
+    "*":
+      "*": 184.1
+  regasification:
+    "*":
+      "*": 0.32
+  transmission: 
+    "*":
+      "*":  15.7 # assumes 3.5% of CAPEX
+  battery-technology:
+    "*":
+      "{y: 43.46 * (0.977 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+  electricity-import:
+    "*":
+      "*": 15.7
+
+opex_variable:
+  coal-unspecified: 
+    "*":
+      "*": 2.3
+  oil-internal-combustion-engine:
+    "*":
+      "*": 1.8
+  gas-CCGT:
+    "*":
+      "*": 0.53
+  gas-OCGT: 
+    "*":
+      "*": 1.8
+  solar-pv:
+    "*":
+      "*": 0.
+  windonshore-power:
+    "*":
+      "*": 0.
+  windoffshore-power:
+    "*":
+      "*": 0.
+  nuclear-power: 
+    "*":
+      "*": 0.69
+  hydropower: 
+    "*":
+      "*": 0.
+  geo-power: 
+    "*":
+      "*": 0.
+  bioenergy-power: 
+    "*":
+      "*": 1.4
+  transmission: 
+    "*":
+      "*": 3.0 # need to be checked
+  battery-technology:
+    "*":
+      "*": 0
+  electricity-import: 
+    "*":
+      "*": 30.6 # https://nawec.gm/wp-content/uploads/2022/02/The-Gambia-Strategic-Electricity-Sector-Roadmap.pdf $110/MWh  
+  gas-import-liquefied:
+    "*": 
+      2023: 9.06
+      2024: 7.92
+      2025: 7.37
+      2026: 6.97
+      2027: 6.76
+      2028: 6.72
+      2029: 6.74
+      2030: 6.82
+      2031: 6.94
+      2032: 7.1
+      2033: 7.3
+      2034: 7.45
+      2035: 7.55
+      2036: 7.56
+      2037: 7.61
+      2038: 7.73
+      2039: 7.65
+      2040: 7.8
+      2041: 7.87
+      2042: 7.86
+      2043: 7.81
+      2044: 7.77
+      2045: 7.77
+      2046: 7.77
+      2047: 7.73
+      2048: 7.71
+      2049: 7.64
+      2050: 7.64
+  coal-import-hard:
+    "*":
+      2023: 10.44
+      2024: 9.42
+      2025: 8.4
+      2026: 7.37
+      2027: 6.35
+      2028: 5.32
+      2029: 4.3
+      2030: 3.28
+      2031: 3.24
+      2032: 3.21
+      2033: 3.18
+      2034: 3.15
+      2035: 3.11
+      2036: 3.08
+      2037: 3.05
+      2038: 3.02
+      2039: 2.98
+      2040: 2.95
+      2041: 2.92
+      2042: 2.89
+      2043: 2.85
+      2044: 2.82
+      2045: 2.79
+      2046: 2.76
+      2047: 2.73
+      2048: 2.69
+      2049: 2.66
+      2050: 2.63
+  oil-diesel-production: 
+    GMB:
+      "*": 15.14
+  oil-fuel-oil-production:
+    GMB:
+      "*": 15.14
+
+
+# ---------------------------
+# Fuel prices (M$/PJ or $/GJ)
+# ---------------------------
+
+fuel_price:
+  uranium:
+    GMB:
+      "*" : 0.27 # source: https://www.osti.gov/servlets/purl/840500

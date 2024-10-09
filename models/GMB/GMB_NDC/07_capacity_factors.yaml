@@ -1,0 +1,168 @@
+# -------------------------------------------------------------------------
+# CAPACITY FACTORS
+#
+#   Defining technological capacity and availability factors. Here, capacity 
+#     factors are only applied for renewables. For thermal power plants, we
+#     apply an "availability_factor", which accounts for maintenance shutdowns
+#     but we allow the model to choose when to do this. 
+#
+#     Link to docs: 
+#       https://docs.feo.transitionzero.org/docs/tz-osemosys/technology/
+#
+#     Authors:
+#       - xx
+# -------------------------------------------------------------------------
+
+
+# --------------------------------------------
+#
+#   AVAILABILITY FACTOR
+#     - Applied only to thermal power plants.
+#     - Defined as a normalised quantity between 0 and 1.
+#
+# --------------------------------------------
+
+availability_factor:
+
+  coal-unspecified:
+    # all regions
+    "*":
+      # all years
+      "*": 0.9
+  
+  nuclear-power:
+    # all regions
+    "*":
+      # all years
+      "*": 0.9
+
+  gas-CCGT:
+    # all regions
+    "*":
+      # all years
+      "*": 0.9
+
+  gas-OCGT:
+    # all regions
+    "*":
+      # all years
+      "*": 0.9
+
+  oil-internal-combustion-engine:
+    # all regions
+    "*":
+      # all years
+      "*": 0.9  
+
+  geo-power:
+    "*":
+      "*": 0.8
+
+  bioenergy-power:
+    "*":
+      "*": 0.9
+
+  nuclear-power:
+    "*":
+      "*": 0.9
+
+  electricity-import:
+    "*":
+      "*": 0.9    
+
+  battery-technology:
+    "*":
+      "*": 0.9    
+
+# --------------------------------------------
+#
+#   CAPACITY FACTOR
+#     - Applied only to renewable power plants.
+#     - Defined as a normalised quantity between 0 and 1.
+#
+# --------------------------------------------
+
+capacity_factors:
+
+  solar-pv:
+    GMB:
+    # all years
+      "*":
+        s1-h1: 0
+        s1-h2: 0.01
+        s1-h3: 0.4
+        s1-h4: 0.67
+        s1-h5: 0.22
+        s1-h6: 0
+        s2-h1: 0
+        s2-h2: 0
+        s2-h3: 0.31
+        s2-h4: 0.54
+        s2-h5: 0.16
+        s2-h6: 0
+
+  windonshore-power:
+    GMB:
+    # all years
+      "*":
+        s1-h1: 0.41
+        s1-h2: 0.26
+        s1-h3: 0.19
+        s1-h4: 0.15
+        s1-h5: 0.1
+        s1-h6: 0.39
+        s2-h1: 0.15
+        s2-h2: 0.14
+        s2-h3: 0.1
+        s2-h4: 0.1
+        s2-h5: 0.07
+        s2-h6: 0.12
+
+  windoffshore-power:
+    GMB:
+    # all years
+      "*":
+        s1-h1: 0.31
+        s1-h2: 0.24
+        s1-h3: 0.21
+        s1-h4: 0.21
+        s1-h5: 0.17
+        s1-h6: 0.4
+        s2-h1: 0.14
+        s2-h2: 0.14
+        s2-h3: 0.09
+        s2-h4: 0.1
+        s2-h5: 0.07
+        s2-h6: 0.13
+ 
+  hydropower:
+    GMB:
+    # all years
+      "*":
+        s1-h1: 0.25
+        s1-h2: 0.25
+        s1-h3: 0.25
+        s1-h4: 0.25
+        s1-h5: 0.25
+        s1-h6: 0.25
+        s2-h1: 0.58
+        s2-h2: 0.58
+        s2-h3: 0.58
+        s2-h4: 0.58
+        s2-h5: 0.58
+        s2-h6: 0.58
+
+capacity_factor_annual_min:
+
+  oil-internal-combustion-engine:
+    GMB:
+      "*": 0.01
+
+  electricity-import:
+    GMB:
+      "*": 0.1    
+
+  nuclear-power:
+    GMB:
+      "*": 0.6  
+
