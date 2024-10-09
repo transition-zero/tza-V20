@@ -58,7 +58,7 @@ capacity_additional_max: # Isolating installed capacity in 2023 and 2024 because
       2023: 0.
       2024: 0.
 
-  coal-power: # no new installed assets before 2030 
+  coal-unspecified: # no new installed assets before 2030 
     HTI:
       2023: 0.
       2024: 0.
@@ -145,7 +145,7 @@ capacity_additional_max_floor:
     HTI: 
       "*": 0.02
 
-  coal-power:
+  coal-unspecified:
     HTI: 
       "*": 0.001 
 
@@ -222,7 +222,7 @@ capacity_additional_max_growth_rate:
     HTI:
       "*": 0.3
 
-  coal-power: 
+  coal-unspecified: 
     HTI:
       "*": 0.1
 

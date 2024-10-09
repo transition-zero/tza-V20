@@ -24,7 +24,7 @@
 
 availability_factor:
 
-  coal-power:
+  coal-unspecified:
     # all regions
     "*":
       # all years
@@ -196,7 +196,7 @@ capacity_factor_annual_min:
       2050: 0
 
 
-  coal-power:
+  coal-unspecified:
     "*":
       2030: 0.3
       2031: 0.28

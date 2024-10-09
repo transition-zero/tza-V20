@@ -308,7 +308,7 @@ technologies:
     capacity_additional_max_floor: "${capacity_additional_max_floor.bioenergy-power}" # from capacity.yaml
 
 
-  - id: coal-power
+  - id: coal-unspecified
     long_name: Coal power stations without differentiating their sub-type
     capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
     include_in_joint_reserve_margin: true
@@ -327,16 +327,16 @@ technologies:
           primary-electricity: 1.0
         emission_activity_ratio: 
           CO2: 0.22
-        opex_variable: "${opex_variable.coal-power}" # from costs.yaml
+        opex_variable: "${opex_variable.coal-unspecified}" # from costs.yaml
     # load from other yaml files
-    capex: "${capex.coal-power}" # from costs.yaml
-    opex_fixed: "${opex_fixed.coal-power}" # from costs.yaml
-    availability_factor: "${availability_factor.coal-power}" # from capacity_factors.yaml
-    capacity_additional_max: "${capacity_additional_max.coal-power}" # from capacity_factors.yaml
-    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.coal-power}" # from capacity.yaml
-    capacity_additional_max_floor: "${capacity_additional_max_floor.coal-power}" # from capacity.yaml
-    capacity_factor_annual_min: "${capacity_factor_annual_min.coal-power}" # from capacity_factors.yaml
-    # residual_capacity: "${residual_capacity.coal-power}" # from capacities.yaml
+    capex: "${capex.coal-unspecified}" # from costs.yaml
+    opex_fixed: "${opex_fixed.coal-unspecified}" # from costs.yaml
+    availability_factor: "${availability_factor.coal-unspecified}" # from capacity_factors.yaml
+    capacity_additional_max: "${capacity_additional_max.coal-unspecified}" # from capacity_factors.yaml
+    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.coal-unspecified}" # from capacity.yaml
+    capacity_additional_max_floor: "${capacity_additional_max_floor.coal-unspecified}" # from capacity.yaml
+    capacity_factor_annual_min: "${capacity_factor_annual_min.coal-unspecified}" # from capacity_factors.yaml
+    # residual_capacity: "${residual_capacity.coal-unspecified}" # from capacities.yaml
 
   - id: gas-CCGT
     long_name: combined cycle gas turbine

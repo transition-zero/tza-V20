@@ -24,7 +24,7 @@
 
 availability_factor:
 
-  coal-power:
+  coal-unspecified:
     # all regions
     "*":
       # all years
@@ -168,7 +168,7 @@ capacity_factor_annual_min:
     "*":
       "*": 0.62 # prohibiting oil assets to be retired early (no national plans on that) - value is calculated from 2023's result
 
-  coal-power:
+  coal-unspecified:
     "*":
       "*": 0.3
 

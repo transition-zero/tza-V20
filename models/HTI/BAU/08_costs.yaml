@@ -46,7 +46,7 @@ cost_of_capital: # WACC
 
 capex:
 
-  coal-power:
+  coal-unspecified:
     HTI:
       2023: 2825.6
       2024: 2825.6
@@ -405,7 +405,7 @@ capex:
 # ----------------
 
 opex_fixed:
-  coal-power:
+  coal-unspecified:
     HTI:
       2023: 77.2
       2024: 77.2
@@ -683,7 +683,7 @@ opex_fixed:
 
 opex_variable:
 
-  coal-power: 
+  coal-unspecified: 
     HTI:
       2023: 2.33
       2024: 2.33
