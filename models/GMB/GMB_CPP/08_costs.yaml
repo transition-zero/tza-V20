@@ -34,7 +34,7 @@ discount_rate:
 # cost of capital by technology
 # ------------------------------
 cost_of_capital: # WACC
-  coal-power: 0.1125
+  coal-unspecified: 0.1125
   gas-CCGT: 0.1125
   gas-OCGT: 0.1125
   oil-internal-combustion-engine: 0.1125
@@ -52,7 +52,7 @@ cost_of_capital: # WACC
 # --------------
 
 capex:
-  coal-power:
+  coal-unspecified:
     # all regions
     "*": 
       # all years
@@ -105,7 +105,7 @@ capex:
 # ----------------
 
 opex_fixed:
-  coal-power:
+  coal-unspecified:
     # all regions
     "*": 
       # all years
@@ -154,7 +154,7 @@ opex_fixed:
       "*": 15.7
 
 opex_variable:
-  coal-power: 
+  coal-unspecified: 
     "*":
       "*": 2.3
   oil-internal-combustion-engine:

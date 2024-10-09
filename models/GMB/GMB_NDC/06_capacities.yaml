@@ -32,7 +32,7 @@ residual_capacity:
 
   windonshore-power:
     GMB:
-      "*": 0.015     
+      "*": 0.015    
 
   transmission:
     GMB: 
@@ -76,7 +76,7 @@ capacity_gross_max:
   nuclear-power:
     GMB:
       "*": 0.
-
+      
 activity_total_max:
 
   coal-domestic:
@@ -108,7 +108,7 @@ capacity_additional_max_growth_rate:
   oil-internal-combustion-engine:
     "*": 0.1     
 
-  coal-power:
+  coal-unspecified:
     "*": 0.1
 
   battery-technology:
@@ -137,7 +137,7 @@ capacity_additional_max_floor:
   oil-internal-combustion-engine:
     "*": 0.1  
 
-  coal-power:
+  coal-unspecified:
     "*": 0.1
 
   battery-technology:
@@ -170,7 +170,7 @@ capacity_additional_max:
       2023: 0.
       2024: 0.
 
-  coal-power:
+  coal-unspecified:
     GMB: 
       2023: 0.
       2024: 0.

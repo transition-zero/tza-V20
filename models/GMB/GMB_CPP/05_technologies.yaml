@@ -235,7 +235,7 @@ technologies:
   #
   # --------------------------------------------
 
-  - id: coal-power
+  - id: coal-unspecified
     long_name: unspecified coal power plant
     capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
     include_in_joint_reserve_margin: true
@@ -253,13 +253,13 @@ technologies:
           primary-electricity: 1.0
         emission_activity_ratio: 
           CO2: 0.09  
-        opex_variable: "${opex_variable.coal-power}" # from costs.yaml
-    capex: "${capex.coal-power}" # from costs.yaml
-    opex_fixed: "${opex_fixed.coal-power}" # from costs.yaml
-    availability_factor: "${availability_factor.coal-power}" # from capacity_factors.yaml
-    capacity_additional_max: "${capacity_additional_max.coal-power}" # from 06_capacities.yaml
-    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.coal-power}" # from 06_capacities.yaml
-    capacity_additional_max_floor: "${capacity_additional_max_floor.coal-power}" # from 06_capacities.yaml
+        opex_variable: "${opex_variable.coal-unspecified}" # from costs.yaml
+    capex: "${capex.coal-unspecified}" # from costs.yaml
+    opex_fixed: "${opex_fixed.coal-unspecified}" # from costs.yaml
+    availability_factor: "${availability_factor.coal-unspecified}" # from capacity_factors.yaml
+    capacity_additional_max: "${capacity_additional_max.coal-unspecified}" # from 06_capacities.yaml
+    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.coal-unspecified}" # from 06_capacities.yaml
+    capacity_additional_max_floor: "${capacity_additional_max_floor.coal-unspecified}" # from 06_capacities.yaml
 
   - id: solar-pv
     long_name: ground-mounted solar power stations
