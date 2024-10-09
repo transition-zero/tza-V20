@@ -13,7 +13,7 @@ output_path = '../outputs/results/'
 countries_to_run = [
     # 'GAB',
     # 'GMB',
-    # 'HTI',
+    'HTI',
     'MDG',
     # 'PAK',
     'PHL',
@@ -224,7 +224,7 @@ for country in countries_to_run:
             )
         )
 
-        # export figure figure
+        # export figure
         ax = viz.plot.CostOfElectricityGeneration(model)
         plt.savefig(
             os.path.join(
@@ -239,7 +239,27 @@ for country in countries_to_run:
 
         # ---
         # (9) Number of new jobs in power generation and grid
-        # TODO
+        (
+            viz
+            .get
+            .AnnualRenewableJobsByTechnology(model)
+            .to_csv(
+                os.path.join(
+                    dir_path,
+                    'AnnualRenewableJobsByTechnology.csv',
+                )
+            )
+        )
+
+        # make figure
+        ax = viz.plot.RenewableJobsByTechnology(model)
+        ax.set_ylabel('Cumulative jobs by technology')
+        plt.savefig(
+            os.path.join(
+                dir_path,
+                'RenewableJobsByTechnology.pdf'
+            )
+        )
 
         # ---------
         # ADDITIONAL OUTPUTS
