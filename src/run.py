@@ -42,7 +42,7 @@ for country in countries_to_run:
         # load model from folder
         model = Model.from_yaml(path_to_model)
         # solve
-        model.solve(solver='highs')
+        model.solve(solver='gurobi')
         
         # ---------
         # SAVE RESULTS
@@ -165,7 +165,7 @@ for country in countries_to_run:
         (
             viz
             .get
-            .AnnualCapitalInvestmentByTechnologyAnnualised(model, 'sum')
+            .AnnualisedCapitalInvestmentByTechnology(model, 'sum')
             .to_csv(
                 os.path.join(
                     dir_path,
@@ -175,7 +175,7 @@ for country in countries_to_run:
         )
 
         # export figure
-        ax = viz.plot.CapitalInvestmentByTechnologyAnnualised(model)
+        ax = viz.plot.CapitalInvestmentByTechnology(model)
         plt.savefig(
             os.path.join(
                 dir_path,
@@ -253,7 +253,6 @@ for country in countries_to_run:
 
         # make figure
         ax = viz.plot.RenewableJobsByTechnology(model)
-        ax.set_ylabel('Cumulative jobs by technology')
         plt.savefig(
             os.path.join(
                 dir_path,
