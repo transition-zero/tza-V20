@@ -1,0 +1,11 @@
+# Model Nameplate
+id: madagascar
+long_name: "Madagascar: V20 model"
+description: >
+  A single-node (i.e., national) model of Madagascar.
+
+# Global variables
+global_variables:
+  base_year: 2023
+  base_demand: 9.06
+  demand_growth_pcgt: 0.053 # 5.3% growth rate from OSeMOSYS Global study
