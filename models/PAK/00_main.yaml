@@ -2,24 +2,12 @@
 id: pakistan
 long_name: "Pakistan: V20 model"
 description: >
-  A seven-node model of Pakistan.
+  A single-node model of Pakistan developed for the V20 group.
 
 # Global variables
 global_variables:
-  base_year: 2023
+  base_year: 2022
   base_demand: 
-    PK1: 200
-    PK2: 200
-    PK3: 200
-    PK4: 200
-    PK5: 200
-    PK6: 200
-    PK7: 200
+    PK: 526 # taken from US EIA data
   demand_growth_pcgt: 
-    PK1: 0.0459 # 4.59% growth rate
-    PK2: 0.0459 # 4.59% growth rate
-    PK3: 0.0459 # 4.59% growth rate
-    PK4: 0.0459 # 4.59% growth rate
-    PK5: 0.0459 # 4.59% growth rate
-    PK6: 0.0459 # 4.59% growth rate
-    PK7: 0.0459 # 4.59% growth rate 
+    PK: 0.0459 # 4.59% growth rate (placeholder for now)

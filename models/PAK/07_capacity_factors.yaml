@@ -10,7 +10,7 @@
 #       https://docs.feo.transitionzero.org/docs/tz-osemosys/technology/
 #
 #     Authors:
-#       - xx
+#       - @irfanm-tz
 # -------------------------------------------------------------------------
 
 
@@ -156,3 +156,14 @@ capacity_factors:
   bioenergy-power:
     "*":
       "*": 0.7
+
+
+# --------------------------------------------
+#
+#   CAPACITY FACTOR MINIMUM PER YEAR
+#     - Applied only to thermal power plants.
+#     - Making the model is flexible to choose which 
+#       thermal power plants is suitable to supply the demand per year
+#     - Originally built for analyzing coal retirement optimum year
+#
+# --------------------------------------------

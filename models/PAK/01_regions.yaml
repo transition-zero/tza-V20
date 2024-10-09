@@ -13,6 +13,8 @@
 #       - Punjab
 #       - Sindh
 #
+#     Our Pakistan model has 1 region.
+
 #     Link to docs: 
 #       - https://docs.feo.transitionzero.org/docs/tz-osemosys/technology/
 #
@@ -20,32 +22,38 @@
 #       - @amanmajid
 #       - @abhishek0208
 #       - @Handriyanti
+#       - @irfanm-tz
 #
 # -------------------------------------------------------------------------
 
 regions:
 
-  - id: PK1
-    long_name: Azad Kashmir
+  - id: PK
+    long_name: Pakistan
 
-  - id: PK2
-    long_name: Balochistan
+# regions:
 
-  - id: PK3
-    long_name: Gilgit Baltistan
+#   - id: PK1
+#     long_name: Azad Kashmir
 
-  - id: PK4
-    long_name: Islamabad
+#   - id: PK2
+#     long_name: Balochistan
 
-  - id: PK5
-    long_name: Khyber Pakhtunkhwa
+#   - id: PK3
+#     long_name: Gilgit Baltistan
 
-  - id: PK6
-    long_name: Punjab
-    # trade_routes:
-    #   PK5: 
-    #     primary-electricity: 
-    #       "*" : True
+#   - id: PK4
+#     long_name: Islamabad
 
-  - id: PK7
-    long_name: Sindh
+#   - id: PK5
+#     long_name: Khyber Pakhtunkhwa
+
+#   - id: PK6
+#     long_name: Punjab
+#     # trade_routes:
+#     #   PK5: 
+#     #     primary-electricity: 
+#     #       "*" : True
+
+#   - id: PK7
+#     long_name: Sindh

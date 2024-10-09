@@ -12,7 +12,7 @@
 #       - https://docs.feo.transitionzero.org/docs/tz-osemosys/technology/
 #
 #     Authors:
-#       -xx
+#       - @irfanm-tz 
 # -------------------------------------------------------------------------
 
 
@@ -32,7 +32,8 @@ residual_capacity:
 
   coal-subcritical:
     "*": 
-      2023: 7.2546
+      # 2023: 7.2546
+      "*" : 7.2546
 
   coal-ultrasupercritical:
     "*": 
