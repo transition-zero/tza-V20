@@ -22,44 +22,44 @@
 
 residual_capacity: 
 
-  regasification-floating:
-    "*": 
-      2023: 256.845025
+  # regasification-floating:
+  #   "*": 
+  #     2023: 256.845025
 
   coal-supercritical:
     "*": 
       2023: 1.978
 
-  coal-subcritical:
-    "*": 
-      # 2023: 7.2546
-      "*" : 7.2546
+  # coal-subcritical:
+  #   "*": 
+  #     # 2023: 7.2546
+  #     "*" : 7.2546
 
-  coal-ultrasupercritical:
-    "*": 
-      2023: 0.
+  # coal-ultrasupercritical:
+  #   "*": 
+  #     2023: 0.
 
   gas-CCGT:
     "*":
       2023: 3.73
 
-  gas-OCGT:
-    "*":
-      2023: 0.
+  # gas-OCGT:
+  #   "*":
+  #     2023: 0.
 
-  oil-internal-combustion-engine:
-    "*":
-      2023: 0.
+  # oil-internal-combustion-engine:
+  #   "*":
+  #     2023: 0.
 
   solar-pv:
     "*": 
       2023: 0.9883
 
-  windonshore-power:
+  wind-onshore:
     "*": 
       2023: 0.016
       
-  windoffshore-power:
+  wind-offshore:
     "*": 
       2023: 1.524
 
@@ -67,15 +67,15 @@ residual_capacity:
     "*": 
       2023: 2.9503
 
-  geo-power:
-    "*": 
-      2023: 0.961
+  # geo-power:
+  #   "*": 
+  #     2023: 0.961
 
-  bioenergy-power:
-    "*": 
-      2023: 0.
+  # bioenergy-power:
+  #   "*": 
+  #     2023: 0.
 
-  nuclear-power:
+  nuclear:
     "*": 
       2023: 0.
 
@@ -96,22 +96,3 @@ residual_capacity:
 # -------
 # Activity constraints
 # -------
-
-activity_total_max:
-
-  gas-domestic-step-1:
-    "*": 283.73184                
-  coal-hard-domestic-step-1:
-    "*": 252.0488
-  coal-brown-domestic-step-1:
-    "*": 110.96
-  coal-brown-domestic-step-2:
-    "*": 360.62
-  coal-brown-domestic-step-3:
-    "*": 332.88
-  coal-brown-domestic-step-4:
-    "*": 832.2
-  coal-brown-domestic-step-5:
-    "*": 332.88
-  coal-brown-domestic-step-6:
-    "*": 804.46

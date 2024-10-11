@@ -24,6 +24,24 @@
 
 availability_factor:
 
+  regasification-floating:
+    # all regions
+    "*":
+      # all years
+      "*": 0.95 
+
+  regasification-onshore:
+    # all regions
+    "*":
+      # all years
+      "*": 0.95 
+
+  liquefaction-onshore:
+    # all regions
+    "*":
+      # all years
+      "*": 0.95 
+
   coal-supercritical:
     # all regions
     "*":
@@ -42,7 +60,7 @@ availability_factor:
       # all years
       "*": 0.9
   
-  nuclear-power:
+  nuclear:
     # all regions
     "*":
       # all years
@@ -65,6 +83,26 @@ availability_factor:
     "*":
       # all years
       "*": 0.9  
+
+  gas-CCGT-CCS:
+    # all regions
+    "*":
+      # all years
+      "*": 0.9
+
+  coal-supercritical-CCS:
+    # all regions
+    "*":
+      # all years
+      "*": 0.9 
+
+  geo-power:
+    "*":
+      "*": 0.8
+
+  bioenergy-power:
+    "*":
+      "*": 0.9 
 
   
 # --------------------------------------------
@@ -95,7 +133,7 @@ capacity_factors:
       s2-h5: 0.15 # 16 - 20
       s2-h6: 0. # 20 - 24
 
-  windonshore-power:
+  wind-onshore:
    # all region
    "*":
     # all years
@@ -113,7 +151,7 @@ capacity_factors:
       s2-h5: 0.15 # 16 - 20
       s2-h6: 0.25 # 20 - 24
 
-  windoffshore-power:
+  wind-offshore:
    # all region
    "*":
     # all years

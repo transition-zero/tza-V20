@@ -33,7 +33,33 @@ impacts:
     constraint_annual: 
     constraint_total: null
     penalty: # mn$/mntonne
-      PK: 0.
+      PK: # BAU scenario taken from V20 data
+        2025: 69.36
+        2026: 71.932
+        2027: 74.504
+        2028: 77.076
+        2029: 79.648
+        2030: 82.22
+        2031: 84.812
+        2032: 87.404
+        2033: 89.996
+        2034: 92.588
+        2035: 95.18
+        2036: 98.176
+        2037: 101.172
+        2038: 104.168
+        2039: 107.164
+        2040: 110.16
+        2041: 112.946
+        2042: 115.732
+        2043: 118.518
+        2044: 121.304
+        2045: 124.09
+        2046: 128.46
+        2047: 132.83
+        2048: 137.2
+        2049: 141.57
+        2050: 145.94
   - id: NOx
     long_name: equivalent nitric oxide emissions
     description: equivalent nitric oxide emissions

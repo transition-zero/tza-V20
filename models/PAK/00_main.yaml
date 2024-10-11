@@ -6,7 +6,7 @@ description: >
 
 # Global variables
 global_variables:
-  base_year: 2022
+  base_year: 2023
   base_demand: 
     PK: 526 # taken from US EIA data
   demand_growth_pcgt: 
