@@ -177,7 +177,7 @@ capacity_additional_min:
 
   hydropower: # based on DOE's committed capacity
     MDG: 
-      2024: 0.205
+      2023: 0.
       2026: 0.035
       2027: 0.12
       2030: 0.204
