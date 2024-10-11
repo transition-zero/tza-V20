@@ -269,7 +269,7 @@ residual_capacity:
 
   transmission:
     PK: 
-      "*": 0.658
+      "*": 45 # this is set as the base capacity needed in year 2023
       #"{ y : (${global_variables.base_demand} / 31.536) for y in ${time_definition.years} }"
   
   battery-technology:
