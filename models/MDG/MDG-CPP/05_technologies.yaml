@@ -909,7 +909,7 @@ storage:
   - id: battery-storage
     capex: 
       "*": # all region
-        "*": 0 # all year
+        "*": 0.001 # all year
     operating_life: 
       "*": 10 # all region
     minimum_charge: 
