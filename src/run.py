@@ -42,7 +42,7 @@ for country in countries_to_run:
         # load model from folder
         model = Model.from_yaml(path_to_model)
         # solve
-        model.solve(solver='gurobi')
+        model.solve(solver='highs')
         
         # ---------
         # SAVE RESULTS
@@ -109,7 +109,7 @@ for country in countries_to_run:
         (
             viz
             .get
-            .AnnualCapacityByTechnology(model)
+            .AnnualGenerationCapacityByTechnology(model)
             .to_csv(
                 os.path.join(
                     dir_path,
@@ -119,7 +119,7 @@ for country in countries_to_run:
         )
 
         # export figure
-        ax = viz.plot.CapacityByTechnology(model)
+        ax = viz.plot.GenerationCapacityByTechnology(model)
         plt.savefig(
             os.path.join(
                 dir_path,
