@@ -55,6 +55,10 @@ commodities:
     long_name: Hydro resource
     is_renewable: true
 
+  - id: DMYCO2
+    long_name: dummy CO2 output from CCS
+    is_renewable: false
+
   - id: uranium
     long_name: Uranium resource
     is_renewable: false
@@ -78,7 +82,8 @@ commodities:
     is_renewable: false
     # specify annual demands
     demand_annual: 
-      PK: "{ y : (${global_variables.base_demand.PK}*(1+${global_variables.demand_growth_pcgt.PK})**(y-${global_variables.base_year})) for y in ${time_definition.years} }"
+      PK: 
+        "{ y : (${global_variables.base_demand.PK}*(1+${global_variables.demand_growth_pcgt.PK})**(y-${global_variables.base_year})) for y in ${time_definition.years} }"
         
     # specify demand profile for each region
     demand_profile:

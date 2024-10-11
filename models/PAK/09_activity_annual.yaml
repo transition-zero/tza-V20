@@ -1,0 +1,266 @@
+# -------------------------------------------------------------------------
+#
+#   ACTIVITY
+#   
+#     Define total maximum level of activity allowed for a technology in model period and
+#     one year. In this model, maximum annual activity represent total 
+#     renewable energy potential (MW) in each region. 
+#
+#     Link to docs: 
+#       - https://docs.feo.transitionzero.org/docs/tz-osemosys/technology/
+#
+#     Authors:
+#       - @irfanm-tz
+#
+# -------------------------------------------------------------------------
+
+capacity_gross_max: 
+
+  solar-pv:
+    "*": 621.9
+
+  windonshore-power:
+    "*": 1478.76
+
+  windoffshore-power:
+    "*": 129.06
+  
+  hydropower:
+    "*": 59.96
+
+  pumped-hydro:
+    "*": 59.96 
+
+  geo-power:
+    "*": 0.
+
+  bioenergy-power:
+    "*": 9999.
+
+  regasification-onshore:
+    "*": 776.01 # based on largest regasification capacity in ASEAN region
+  
+  regasification-floating:
+    "*": 776.01 # based on largest regasification capacity in ASEAN region
+
+  liquefaction-onshore:
+    "*": 0.
+
+capacity_additional_max_growth_rate:
+
+  solar-pv:
+    "*": 0.4
+
+  windonshore-power:
+    "*": 0.4    
+
+  windoffshore-power:
+    "*": 0.4
+
+  bioenergy-power:
+    "*": 0.2
+
+  geo-power:
+    "*": 0.2  
+   
+  gas-CCGT:
+    "*": 0.2  
+  
+  gas-OCGT:
+    "*": 0.2  
+
+  coal-subcritical:
+    "*": 0.2 
+
+  coal-supercritical:
+    "*": 0.2  
+
+  coal-ultrasupercritical:
+    "*": 0.2  
+
+  oil-internal-combustion-engine:
+    "*": 0.2        
+
+  nuclear-power:
+    "*": 0.5        
+
+  gas-CCGT-CCS:
+    "*": 0.2    
+
+  coal-supercritical-CCS:
+    "*": 0.2      
+
+  gas-domestic-step-1:
+    "*": 0.2 
+
+capacity_additional_max_floor:
+
+  solar-pv:
+    "*": 0.2 
+
+  windonshore-power:
+    "*": 0.2 
+      
+  windoffshore-power:
+    "*": 0.2
+
+  bioenergy-power:
+    "*": 0.2 
+
+  geo-power:
+    "*": 0.2
+  
+  gas-CCGT:
+    "*": 0.2
+
+  gas-OCGT:
+    "*": 0.2
+
+  coal-subcritical:
+    "*": 0.2  
+
+  coal-supercritical:
+    "*": 0.2
+
+  coal-ultrasupercritical:
+    "*": 0.2  
+
+  oil-internal-combustion-engine:
+    "*": 0.2 
+
+  nuclear-power:
+    "*": 0. 
+
+  gas-CCGT-CCS:
+    "*": 0.2 
+
+  coal-supercritical-CCS:
+    "*": 0.2  
+
+  gas-domestic-step-1:
+    "*": 0.2  
+
+    
+capacity_additional_min:
+
+  regasification-onshore:
+    PK:
+      2023: 0.
+      
+  regasification-floating:
+    PK:
+      2023: 0.
+
+  coal-subcritical: # based on DOE's committed capacity
+    PK:
+      2023: 0.
+
+  coal-supercritical: # based on DOE's committed capacity
+    PK:
+      2023: 0.
+
+  coal-ultrasupercritical: # based on DOE's committed capacity
+    PK:
+      2023: 0.
+
+  oil-internal-combustion-engine: # based on DOE's committed capacity
+    PK:
+      2023: 0.
+
+  gas-CCGT: # based on DOE's committed capacity
+    PK:
+      2023: 0.
+  
+  geo-power: # based on DOE's committed capacity
+    PK:
+      2023: 0.
+
+  hydropower: # based on DOE's committed capacity
+    PK: 
+      2023: 0.
+      2026: 0.035
+      2027: 0.12
+      2030: 0.204
+
+  bioenergy-power:
+    PK: 
+      2023: 0.
+
+  solar-pv: # based on DOE's committed capacity
+    PK:
+      2025: 0.025
+
+  windonshore-power: # based on DOE's committed capacity
+    PK:
+      2024: 0.012
+      2030: 0.24
+
+  battery-technology:
+    PK:
+      2023: 0.
+
+capacity_additional_max:
+
+  nuclear-power:
+    PK: 
+      2023: 0.
+      
+  coal-supercritical-CCS:
+    PK: 
+      "*": 0.
+
+  gas-CCGT-CCS:
+    PK: 
+      "*": 0.
+
+  oil-internal-combustion-engine:
+    "*":
+      2023: 0.
+
+  gas-CCGT:
+    "*":
+      2023: 0.
+
+  gas-OCGT:
+    "*":
+      2023: 0.
+  
+  solar-pv:
+    "*":
+      2023: 0.
+
+  hydropower:
+    "*":
+      2023: 0.
+
+  geo-power:
+    "*":
+      2023: 0.
+
+  windonshore-power:
+    "*":
+      2023: 0.
+
+  windoffshore-power:
+    "*":
+      2023: 0.
+
+  bioenergy-power:
+    "*":
+      2023: 0.
+
+  coal-subcritical:
+    PK:
+      2023: 0.
+
+  coal-supercritical:
+    PK:
+      2023: 0.
+
+  coal-ultrasupercritical:
+    PK:
+      2023: 0.
+
+  battery-technology:
+    "*":
+      2023: 0.

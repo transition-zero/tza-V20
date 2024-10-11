@@ -74,13 +74,13 @@ impacts:
     exogenous_total: null
     constraint_annual: 
     constraint_total: null
-  # - id: SEQCO2
-  #   long_name: equivalent carbon dioxide emissions sequestered
-  #   description: equivalent carbon dioxide emissions
-  #   exogenous_annual: 0.
-  #   exogenous_total: null
-  #   constraint_annual: 
-  #   constraint_total: null
+  - id: SEQCO2
+    long_name: equivalent carbon dioxide emissions sequestered
+    description: equivalent carbon dioxide emissions
+    exogenous_annual: 0.
+    exogenous_total: null
+    constraint_annual: 
+    constraint_total: null
 
 # -------
 # Renewable targets
