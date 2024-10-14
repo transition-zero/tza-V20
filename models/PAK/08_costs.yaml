@@ -42,7 +42,7 @@ cost_of_capital: # WACC
     # coal-subcritical: 0.11
     # nuclear: 0.11
     # solar-pv: 0.11
-    # windonshore-power: 0.11
+    # windonshore-power:: 0.11
     # hydropower: 0.11
     # geo-power: 0.11
     # biogas-power: 0.11
