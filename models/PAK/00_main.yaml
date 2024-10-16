@@ -8,6 +8,6 @@ description: >
 global_variables:
   base_year: 2023
   base_demand: 
-    PK: 526 # taken from US EIA data
+    PK: 440 # taken from US EIA data
   demand_growth_pcgt: 
     PK: 0.0459 # 4.59% growth rate (placeholder for now)

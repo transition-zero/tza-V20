@@ -17,34 +17,34 @@
 capacity_gross_max: 
 
   solar-pv:
-    "*": 621.9
+    "*": 9999. #621.9
 
   windonshore-power:
-    "*": 1478.76
+    "*": 9999. #1478.76
 
   windoffshore-power:
-    "*": 129.06
+    "*": 9999. #129.06
   
   hydropower:
-    "*": 59.96
+    "*": 99999. # 59.96
 
   pumped-hydro:
-    "*": 59.96 
+    "*": 9999. # 59.96 
 
   geo-power:
-    "*": 0.
+    "*": 9999. # 0.
 
   bioenergy-power:
-    "*": 9999.
+    "*": 9999. # 9999.
 
   regasification-onshore:
-    "*": 776.01 # based on largest regasification capacity in ASEAN region
+    "*": 9999. # 776.01 # based on largest regasification capacity in ASEAN region
   
   regasification-floating:
-    "*": 776.01 # based on largest regasification capacity in ASEAN region
+    "*": 9999. # 776.01 # based on largest regasification capacity in ASEAN region
 
   liquefaction-onshore:
-    "*": 0.
+    "*": 9999. # 0.
 
 capacity_additional_max_growth_rate:
 
@@ -151,31 +151,31 @@ capacity_additional_min:
     PK:
       2023: 0.
 
-  coal-subcritical: # based on DOE's committed capacity
+  coal-subcritical:
     PK:
       2023: 0.
 
-  coal-supercritical: # based on DOE's committed capacity
+  coal-supercritical:
     PK:
       2023: 0.
 
-  coal-ultrasupercritical: # based on DOE's committed capacity
+  coal-ultrasupercritical:
     PK:
       2023: 0.
 
-  oil-internal-combustion-engine: # based on DOE's committed capacity
+  oil-internal-combustion-engine:
     PK:
       2023: 0.
 
-  gas-CCGT: # based on DOE's committed capacity
+  gas-CCGT:
     PK:
       2023: 0.
   
-  geo-power: # based on DOE's committed capacity
+  geo-power:
     PK:
       2023: 0.
 
-  hydropower: # based on DOE's committed capacity
+  hydropower:
     PK: 
       2023: 0.
       2026: 0.035
@@ -186,11 +186,11 @@ capacity_additional_min:
     PK: 
       2023: 0.
 
-  solar-pv: # based on DOE's committed capacity
+  solar-pv:
     PK:
       2025: 0.025
 
-  windonshore-power: # based on DOE's committed capacity
+  windonshore-power:
     PK:
       2024: 0.012
       2030: 0.24

@@ -83,7 +83,6 @@ technologies:
           uranium: 1.0 # PJ/PJ
         opex_variable: "${fuel_price.uranium}" # from 08_costs.yaml
 
-
   - id: solar-resource
     long_name: Solar resources
     operating_life: 100 # years
@@ -330,7 +329,7 @@ technologies:
         #   Below we define the input-output ratios. In the example below, 
         #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio: 
-          coal-hard:  2.63
+          coal-hard:  2.63 # this should be lower than super and ultrasuper? - https://www.gem.wiki/Coal_power_technologies
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
@@ -374,7 +373,7 @@ technologies:
         #   Below we define the input-output ratios. In the example below, 
         #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio: 
-          coal-hard:  2.34
+          coal-hard:  2.34 # 
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
@@ -394,6 +393,7 @@ technologies:
           CO2: 0.2724
         opex_variable: "${opex_variable.coal-ultrasupercritical}" # from 08_costs.yaml
     # load from other yaml files
+    residual_capacity: "${residual_capacity.coal-ultrasupercritical}" # from 06_capacities.yaml
     capex: "${capex.coal-ultrasupercritical}" # from 08_costs.yaml
     opex_fixed: "${opex_fixed.coal-ultrasupercritical}" # from 08_costs.yaml
     availability_factor: "${availability_factor.coal-ultrasupercritical}" # from 07_capacity_factors.yaml
@@ -401,6 +401,37 @@ technologies:
     capacity_additional_max_floor: "${capacity_additional_max_floor.coal-ultrasupercritical}" # from 09_activity_annual.yaml 
     capacity_additional_min: "${capacity_additional_min.coal-ultrasupercritical}" # from 09_activity_annual.yaml
     capacity_additional_max: "${capacity_additional_max.coal-ultrasupercritical}" # from 09_activity_annual.yaml
+
+  - id: coal-unspecified
+    long_name: Coal power stations without differentiating their sub-type
+    capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
+    include_in_joint_reserve_margin: true
+    include_in_joint_renewable_target: false
+    operating_life: 30
+    operating_modes:
+      - id: GENERATION_COAL
+        long_name: generation mode with coal input
+        description: generation mode with coal input
+        # Note:
+        #   Below we define the input-output ratios. In the example below, 
+        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
+        input_activity_ratio: 
+          coal-hard:  2.62 # assuming similar to super and subcritical
+        output_activity_ratio:
+          primary-electricity: 1.0
+        emission_activity_ratio: 
+          CO2: 0.22
+        opex_variable: "${opex_variable.coal-unspecified}" # from costs.yaml
+    # load from other yaml files
+    residual_capacity: "${residual_capacity.coal-unspecified}" # from capacities.yaml
+    capex: "${capex.coal-unspecified}" # from costs.yaml
+    opex_fixed: "${opex_fixed.coal-unspecified}" # from costs.yaml
+    availability_factor: "${availability_factor.coal-unspecified}" # from capacity_factors.yaml
+    # capacity_additional_max: "${capacity_additional_max.coal-unspecified}" # from capacity_factors.yaml
+    # capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.coal-unspecified}" # from capacity.yaml
+    # capacity_additional_max_floor: "${capacity_additional_max_floor.coal-unspecified}" # from capacity.yaml
+    # capacity_factor_annual_min: "${capacity_factor_annual_min.coal-unspecified}" # from capacity_factors.yaml
+
 
   - id: gas-CCGT
     long_name: combined cycle gas turbine
@@ -699,9 +730,11 @@ technologies:
           primary-electricity: 1.0
         opex_variable: "${opex_variable.nuclear-power}" # from 08_costs.yaml
     # load from other yaml files
+    residual_capacity: "${residual_capacity.nuclear-power}" # from 06_capacities.yaml
     capex: "${capex.nuclear-power}" # from 08_costs.yaml
     opex_fixed: "${opex_fixed.nuclear-power}" # from 08_costs.yaml
     availability_factor: "${availability_factor.nuclear-power}" # from 07_capacity_factors.yaml
+    capacity_factor_annual_min: "${capacity_factor_annual_min.nuclear-power}" # from 07_capacity_factors.yaml
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.nuclear-power}" # from 09_activity_annual.yaml
     capacity_additional_max_floor: "${capacity_additional_max_floor.nuclear-power}" # from 09_activity_annual.yaml
     capacity_additional_max: "${capacity_additional_max.nuclear-power}" # from 09_activity_annual.yaml
