@@ -49,10 +49,9 @@ cost_of_capital: # WACC
     # transmission: 0.11
 
 
-# --------------
-# Capital costs ($/kW)
-# --------------
-
+# ----------------------------
+# Capital costs (mn$/GW, $/kW)
+# ----------------------------
 
 capex:
   coal-supercritical:
@@ -124,63 +123,55 @@ capex:
     "*":
       "*": 1045
 
-# ----------------
-# Fixed O&M costs
-# ----------------
+# ----------------------------------------
+# Fixed O&M costs (mn$/GW/year, $/kW/year)
+# ----------------------------------------
 
 opex_fixed:
   coal-supercritical:
     # all regions
     "*": 
       # all years
-      #"{y: 42.4 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-      "*": 78.0
+      "{y: 77.2 * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}" # change learning rate later
   coal-subcritical:
     "*":
-      #"{y: 50.8 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-      "*": 78.0
+      "{y: 77.2 * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}" # change learning rate later
   coal-ultrasupercritical:
     "*":
-      #"{y: 61.8 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-      "*": 78.0
+      "{y: 77.2 * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}" # change learning rate later
   coal-unspecified:
     "*":
-      #"{y: 61.8 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-      "*": 78.0
+      "{y: 77.2 * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}" # change learning rate later
   gas-CCGT:    
     "*":
-      #"{y: 28.08 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-      "*": 30.5
+      "{y: 30.5 * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}" # change learning rate later
   gas-OCGT:
     "*":
-      #"{y: 24.8 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-      "*": 23.7
+      "{y: 23.7 * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}" # change learning rate later
   oil-internal-combustion-engine:
     "*":
-      #"{y: 9.4 * (0.997 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-      "*": 35.0
+      "*": 35.0 # no value given for oil in PAK, rates from other countries taken
   solar-pv: 
     "*":
-      "{y: 13.8 * (0.975 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: 21 * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}" # change learning rate later
   windonshore-power:
     "*":
-      "{y: 50 * (0.984 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: 29.8 * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}" # change learning rate later
   windoffshore-power:
     "*":
-      "{y: 128.4 * (0.983 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
-  hydropower: # using hydro-large value
+      "{y: 85.1 * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}" # change learning rate later
+  hydropower:
     "*":
-      "{y: 90.0 * (0.996 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: 87.0 * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}" # change learning rate later
   geo-power: # using geothermal binary value
     "*":
-      "{y: 120.0 * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: 162.7 * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}" # change learning rate later
   bioenergy-power: # using biomass small value
     "*":
-      "{y: 75 * (0.991 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: 157.2 * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}" # change learning rate later
   nuclear-power:
     "*":
       "*": 152.1
-      # "{y: 184.1 * (0.996 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
   gas-CCGT-CCS:
     "*":
       "{y: 59 * (0.984 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
@@ -189,7 +180,7 @@ opex_fixed:
       "{y: 97 * (0.989 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"    
   battery-technology:
     "*": 
-      "{y: 31.39 * (0.974 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"    
+      "{y: 31.39 * (0.974 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}" # have to check this 
   regasification-floating:
     "*" :
       "*": 0.09
@@ -204,31 +195,34 @@ opex_fixed:
       "*": 9.69    
   pumped-hydro:
     "*":
-      "*": 13.51    
+      "*": 87.0 # add learning rate later    
 
+# ---------------------------------------------
+# Variable O&M cost (mn$/PJ, $/GJ, ($/MWh)/3.6)
+# ---------------------------------------------
 
 opex_variable:
   coal-supercritical: 
     "*":
-      "{y: (8.4 / 3.6) * (0.983 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: (8.4 / 3.6) * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}" # change learning rate later 
   coal-ultrasupercritical:
     "*":
-      "{y: (8.4 / 3.6) * (0.997 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: (8.4 / 3.6) * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}" # change learning rate later
   coal-subcritical:
     "*":
-      "{y: (8.4 / 3.6) * (0.997 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: (8.4 / 3.6) * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}" # change learning rate later
   coal-unspecified:
     "*":
-      "{y: (8.4 / 3.6) * (0.997 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: (8.4 / 3.6) * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}" # change learning rate later
   oil-internal-combustion-engine:
     "*":
-      "{y: (6.4 / 3.6) * (0.995 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: (6.4 / 3.6) * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}" # no rate given, use other country for now, and no l.r.
   gas-CCGT:
     "*":
-      "{y: (1.9 / 3.6) * (0.993 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: (1.9 / 3.6) * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}" # change learning rate later
   gas-OCGT: 
     "*":
-      "{y: (6.4 / 3.6) * (0.998 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}"
+      "{y: (6.4 / 3.6) * (1 ** (y-min(${time_definition.years}))) for y in ${time_definition.years}}" # change learning rate later
   solar-pv:
     "*":
       "*": 0.
@@ -240,7 +234,7 @@ opex_variable:
       "*": 0.
   nuclear-power: 
     "*":
-      "{y: (2.5 / 3.6) for y in ${time_definition.years}}"
+      "*": 2.5
   hydropower: 
     "*":
       "*": 0.
@@ -375,4 +369,4 @@ opex_variable:
 fuel_price:
   uranium:
     "*" :
-      "*" : 0.8 # average EIA AEO 2022 uranium costs
+      "{y: (2.25 / 3.6) for y in ${time_definition.years}}" # from V20 data
