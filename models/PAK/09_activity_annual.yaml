@@ -17,31 +17,34 @@
 capacity_gross_max: 
 
   solar-pv:
-    "*": 9999. #621.9
+    "*": 1229.52 # from global interconnectors study
 
   windonshore-power:
-    "*": 9999. #1478.76
+    "*": 626 # https://doi.org/10.1016/j.energy.2019.116630
 
   windoffshore-power:
-    "*": 9999. #129.06
+    "*": 53.39  # from global interconnectors study
   
   hydropower:
-    "*": 99999. # 59.96
+    "*": 91 # from global interconnectors study
+  
+  nuclear-power:
+    "*": 100 # placeholder (for context France has 63GW)
 
   pumped-hydro:
     "*": 9999. # 59.96 
 
   geo-power:
-    "*": 9999. # 0.
+    "*": 0. # from global interconnectors study
 
   bioenergy-power:
-    "*": 9999. # 9999.
+    "*": 20. # rough number taken from https://pubmed.ncbi.nlm.nih.gov/34990677/ - but this ignores imports
 
   regasification-onshore:
-    "*": 9999. # 776.01 # based on largest regasification capacity in ASEAN region
+    "*": 9999. # 776.01 # (to be updated) based on largest regasification capacity in ASEAN region 
   
   regasification-floating:
-    "*": 9999. # 776.01 # based on largest regasification capacity in ASEAN region
+    "*": 9999. # 776.01 # (to be updated) based on largest regasification capacity in ASEAN region
 
   liquefaction-onshore:
     "*": 9999. # 0.

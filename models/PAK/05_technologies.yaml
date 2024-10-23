@@ -163,7 +163,7 @@ technologies:
         description: default generation mode
         output_activity_ratio:
           bioenergy: 1.0 # PJ/PJ
-        opex_variable: 5.9 
+        opex_variable: 4.97
 
 
   - id: gas-import-liquefied
@@ -187,6 +187,17 @@ technologies:
         output_activity_ratio:
           coal-hard: 1
         opex_variable: "${opex_variable.coal-import-hard}"  # from 08_costs.yaml
+
+  - id: coal-import-brown
+    long_name: Imported brown coal
+    capacity_activity_unit_ratio: 1
+    operating_modes:
+      - id: GEN
+        long_name: generation mode
+        description: default generation mode
+        output_activity_ratio:
+          coal-brown: 1
+        opex_variable: "${opex_variable.coal-import-brown}"  # from 08_costs.yaml
 
   - id: oil-refined-import
     long_name: Imported refined oil products 
@@ -281,22 +292,16 @@ technologies:
       - id: GEN_H
         long_name: hard coal input
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio: 
           coal-hard:  2.63
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.2367  
+          CO2: 0.2367 # needs changing
         opex_variable: "${opex_variable.coal-supercritical}" # from 08_costs.yaml
       - id: GEN_B
         long_name: brown coal input
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio: 
           coal-brown:  2.69
         output_activity_ratio:
@@ -325,28 +330,22 @@ technologies:
       - id: GEN_H
         long_name: hard coal input
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio: 
-          coal-hard:  2.63 # this should be lower than super and ultrasuper? - https://www.gem.wiki/Coal_power_technologies
+          coal-hard:  2.91 # this should be lower than super and ultrasuper? - https://www.gem.wiki/Coal_power_technologies
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.2367 
+          CO2: 0.2367 # needs changing
         opex_variable: "${opex_variable.coal-subcritical}" # from 08_costs.yaml
       - id: GEN_B
         long_name: brown coal input
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio: 
-          coal-brown:  2.69
+          coal-brown:  2.91
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.2724
+          CO2: 0.262
         opex_variable: "${opex_variable.coal-subcritical}" # from 08_costs.yaml
     # load from other yaml files
     residual_capacity: "${residual_capacity.coal-subcritical}" # from 06_capacities.yaml
@@ -369,11 +368,8 @@ technologies:
       - id: GEN_H
         long_name: hard coal input
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio: 
-          coal-hard:  2.34 # 
+          coal-hard:  2.69 # 
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
@@ -382,15 +378,12 @@ technologies:
       - id: GEN_B
         long_name: brown coal input
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio: 
           coal-brown:  2.69
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.2724
+          CO2: 0.2724 # needs changing
         opex_variable: "${opex_variable.coal-ultrasupercritical}" # from 08_costs.yaml
     # load from other yaml files
     residual_capacity: "${residual_capacity.coal-ultrasupercritical}" # from 06_capacities.yaml
@@ -409,18 +402,25 @@ technologies:
     include_in_joint_renewable_target: false
     operating_life: 30
     operating_modes:
-      - id: GENERATION_COAL
-        long_name: generation mode with coal input
-        description: generation mode with coal input
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
+      - id: GEN_H
+        long_name: generation mode with hard coal input
+        description: generation mode with hard coal input
         input_activity_ratio: 
-          coal-hard:  2.62 # assuming similar to super and subcritical
+          coal-hard:  2.87 # assuming similar to subcritical
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.22
+          CO2: 0.33 #0.22 # needs changing
+        opex_variable: "${opex_variable.coal-unspecified}" # from costs.yaml
+      - id: GEN_B
+        long_name: generation mode with brown coal input
+        description: generation mode with brown coal input
+        input_activity_ratio: 
+          coal-brown:  2.87 # assuming similar to super and subcritical
+        output_activity_ratio:
+          primary-electricity: 1.0
+        emission_activity_ratio: 
+          CO2: 0.35 # 0.22 # needs changing
         opex_variable: "${opex_variable.coal-unspecified}" # from costs.yaml
     # load from other yaml files
     residual_capacity: "${residual_capacity.coal-unspecified}" # from capacities.yaml
@@ -442,9 +442,6 @@ technologies:
       - id: GEN
         long_name: generation mode
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio:
           gas:  1.64
         output_activity_ratio:
@@ -473,9 +470,6 @@ technologies:
       - id: GEN
         long_name: generation mode
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio:
           gas:  2.94
         output_activity_ratio:
@@ -492,6 +486,32 @@ technologies:
     capacity_additional_max_floor: "${capacity_additional_max_floor.gas-OCGT}" # from 09_activity_annual.yaml  
     capacity_factor_annual_min: "${capacity_factor_annual_min.gas-OCGT}" # from 07_capacity_factors.yaml    
     capacity_additional_max: "${capacity_additional_max.gas-OCGT}" # from 09_activity_annual.yaml
+
+  - id: gas-steam-turbine
+    long_name: gas steam turbine
+    capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
+    include_in_joint_reserve_margin: true
+    operating_life: 40
+    operating_modes:
+      - id: GEN
+        long_name: generation mode
+        description: default generation mode
+        input_activity_ratio:
+          gas:  2.94
+        output_activity_ratio:
+          primary-electricity: 1.0
+        emission_activity_ratio: 
+          CO2: 0.1494
+        opex_variable: "${opex_variable.gas-steam-turbine}" # from 08_costs.yaml
+    # load from other yaml files
+    residual_capacity: "${residual_capacity.gas-steam-turbine}" # from 06_capacities.yaml
+    capex: "${capex.gas-steam-turbine}" # from 08_costs.yaml
+    opex_fixed: "${opex_fixed.gas-steam-turbine}" # from 08_costs.yaml
+    availability_factor: "${availability_factor.gas-steam-turbine}" # from 07_capacity_factors.yaml
+    # capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.gas-steam-turbine}" # from 09_activity_annual.yaml
+    # capacity_additional_max_floor: "${capacity_additional_max_floor.gas-steam-turbine}" # from 09_activity_annual.yaml  
+    capacity_factor_annual_min: "${capacity_factor_annual_min.gas-steam-turbine}" # from 07_capacity_factors.yaml    
+    # capacity_additional_max: "${capacity_additional_max.gas-steam-turbine}" # from 09_activity_annual.yaml
     
 
   - id: oil-internal-combustion-engine
@@ -503,9 +523,6 @@ technologies:
       - id: GEN_DSL
         long_name: generation mode
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio:
           oil-diesel:  2.17
         output_activity_ratio:
@@ -516,9 +533,6 @@ technologies:
       - id: GEN_FO
         long_name: generation mode
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio:
           oil-fuel-oil:  2.17
         output_activity_ratio:
@@ -536,6 +550,42 @@ technologies:
     capacity_additional_min: "${capacity_additional_min.oil-internal-combustion-engine}" # from 09_activity_annual.yaml
     capacity_additional_max: "${capacity_additional_max.oil-internal-combustion-engine}" # from 09_activity_annual.yaml
 
+  - id: oil-steam-turbine
+    long_name: oil steam turbine
+    capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
+    include_in_joint_reserve_margin: true
+    operating_life: 40
+    operating_modes:
+      - id: GEN_DSL
+        long_name: generation mode
+        description: default generation mode
+        input_activity_ratio:
+          oil-diesel:  2.17
+        output_activity_ratio:
+          primary-electricity: 1.0
+        emission_activity_ratio: 
+          CO2: 0.2177
+        opex_variable: "${opex_variable.oil-internal-combustion-engine}" # the same as ICE atm
+      - id: GEN_FO
+        long_name: generation mode
+        description: default generation mode
+        input_activity_ratio:
+          oil-fuel-oil:  2.17
+        output_activity_ratio:
+          primary-electricity: 1.0
+        emission_activity_ratio: 
+          CO2: 0.2177
+        opex_variable: "${opex_variable.oil-internal-combustion-engine}" # the same as ICE atm        
+    # load from other yaml files
+    residual_capacity: "${residual_capacity.oil-internal-combustion-engine}" # # the same as ICE atm
+    capex: "${capex.oil-internal-combustion-engine}" # # the same as ICE atm
+    opex_fixed: "${opex_fixed.oil-internal-combustion-engine}" # # the same as ICE atm
+    # capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.oil-internal-combustion-engine}" # from 09_activity_annual.yaml
+    # capacity_additional_max_floor: "${capacity_additional_max_floor.oil-internal-combustion-engine}" # from 09_activity_annual.yaml   
+    # capacity_factor_annual_min: "${capacity_factor_annual_min.oil-internal-combustion-engine}" # from 07_capacity_factors.yaml
+    # capacity_additional_min: "${capacity_additional_min.oil-internal-combustion-engine}" # from 09_activity_annual.yaml
+    # capacity_additional_max: "${capacity_additional_max.oil-internal-combustion-engine}" # from 09_activity_annual.yaml
+
   - id: solar-pv
     long_name: ground-mounted solar power stations
     capacity_activity_unit_ratio: 31.536 # PJ/yr into GW
@@ -546,9 +596,6 @@ technologies:
       - id: GEN
         long_name: generation mode
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio:
           solar: 1.0
         output_activity_ratio:
@@ -559,11 +606,11 @@ technologies:
     capex: "${capex.solar-pv}" # from 08_costs.yaml
     opex_fixed: "${opex_fixed.solar-pv}" # from 08_costs.yaml
     capacity_factor: "${capacity_factors.solar-pv}" # from 07_capacity_factors.yaml
-    capacity_gross_max: "${capacity_gross_max.solar-pv}" # from 09_activity_annual.yaml
-    capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.solar-pv}" # from 09_activity_annual.yaml
-    capacity_additional_max_floor: "${capacity_additional_max_floor.solar-pv}" # from 09_activity_annual.yaml
-    capacity_additional_min: "${capacity_additional_min.solar-pv}" # from 09_activity_annual.yaml
-    capacity_additional_max: "${capacity_additional_max.solar-pv}" # from 09_activity_annual.yaml
+    # capacity_gross_max: "${capacity_gross_max.solar-pv}" # from 09_activity_annual.yaml
+    # capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.solar-pv}" # from 09_activity_annual.yaml
+    # capacity_additional_max_floor: "${capacity_additional_max_floor.solar-pv}" # from 09_activity_annual.yaml
+    # capacity_additional_min: "${capacity_additional_min.solar-pv}" # from 09_activity_annual.yaml
+    # capacity_additional_max: "${capacity_additional_max.solar-pv}" # from 09_activity_annual.yaml
 
   - id: windonshore-power
     long_name: onshore wind power stations
@@ -575,9 +622,6 @@ technologies:
       - id: GEN
         long_name: generation mode
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio:
           wind-onshore: 1.0
         output_activity_ratio:
@@ -604,9 +648,6 @@ technologies:
       - id: GEN
         long_name: generation mode
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio:
           wind-offshore: 1.0
         output_activity_ratio:
@@ -631,9 +672,6 @@ technologies:
       - id: GEN
         long_name: generation mode
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio:
           hydro: 1.0
         output_activity_ratio:
@@ -659,9 +697,6 @@ technologies:
       - id: GEN
         long_name: generation mode
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio:
           geothermal: 1.0
         output_activity_ratio:
@@ -691,9 +726,6 @@ technologies:
       - id: GEN
         long_name: generation mode
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio:
           bioenergy: 3.125
         output_activity_ratio:
@@ -721,9 +753,6 @@ technologies:
       - id: GEN
         long_name: generation mode
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio:
           uranium: 2.74
         output_activity_ratio:
@@ -734,6 +763,7 @@ technologies:
     capex: "${capex.nuclear-power}" # from 08_costs.yaml
     opex_fixed: "${opex_fixed.nuclear-power}" # from 08_costs.yaml
     availability_factor: "${availability_factor.nuclear-power}" # from 07_capacity_factors.yaml
+    capacity_gross_max: "${capacity_gross_max.nuclear-power}" # from 09_activity_annual.yaml
     capacity_factor_annual_min: "${capacity_factor_annual_min.nuclear-power}" # from 07_capacity_factors.yaml
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.nuclear-power}" # from 09_activity_annual.yaml
     capacity_additional_max_floor: "${capacity_additional_max_floor.nuclear-power}" # from 09_activity_annual.yaml
@@ -749,9 +779,6 @@ technologies:
       - id: GEN
         long_name: generation mode
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio:
           gas:  1.64
         output_activity_ratio:
@@ -778,9 +805,6 @@ technologies:
       - id: GEN_H
         long_name: hard coal input
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio: 
           coal-hard:  2.63
         output_activity_ratio:
@@ -792,9 +816,6 @@ technologies:
       - id: GEN_B
         long_name: brown coal input
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio: 
           coal-brown:  2.69
         output_activity_ratio:
@@ -828,9 +849,6 @@ technologies:
       - id: GEN
         long_name: generation mode
         description: default generation mode
-        # Note:
-        #   Below we define the input-output ratios. In the example below, 
-        #   the technology consumes 3 PJ of coal to produce 1 PJ of electricity.
         input_activity_ratio:
           primary-electricity: 1.0
         output_activity_ratio:

@@ -28,12 +28,12 @@ impacts:
   - id: CO2
     long_name: equivalent carbon dioxide emissions
     description: equivalent carbon dioxide emissions
-    exogenous_annual: 0.
+    exogenous_annual: null
     exogenous_total: null
-    constraint_annual: 
-    constraint_total: null
-    penalty: # mn$/mntonne
+    constraint_annual:
       PK: # BAU scenario taken from V20 data
+        #2023: 67.65
+        2024: 68.51
         2025: 69.36
         2026: 71.932
         2027: 74.504
@@ -60,6 +60,64 @@ impacts:
         2048: 137.2
         2049: 141.57
         2050: 145.94
+      # PK: # NDC scenario taken from V20 data
+      #   2024: 68.02
+      #   2025: 68.39
+      #   2026: 68.824
+      #   2027: 69.258
+      #   2028: 69.692
+      #   2029: 70.126
+      #   2030: 70.56
+      #   2031: 70.448
+      #   2032: 70.336
+      #   2033: 70.224
+      #   2034: 70.112
+      #   2035: 70
+      #   2036: 69.208
+      #   2037: 68.416
+      #   2038: 67.624
+      #   2039: 66.832
+      #   2040: 66.04
+      #   2041: 64.26
+      #   2042: 62.48
+      #   2043: 60.7
+      #   2044: 58.92
+      #   2045: 57.14
+      #   2046: 56.342
+      #   2047: 55.544
+      #   2048: 54.746
+      #   2049: 53.948
+      #   2050: 53.15
+      # PK: # CPP scenario taken from V20 data
+      #   2024: 67.33
+      #   2025: 67.01
+      #   2026: 62.848
+      #   2027: 58.686
+      #   2028: 54.524
+      #   2029: 50.362
+      #   2030: 46.2
+      #   2031: 43.148
+      #   2032: 40.096
+      #   2033: 37.044
+      #   2034: 33.992
+      #   2035: 30.94
+      #   2036: 28.784
+      #   2037: 26.628
+      #   2038: 24.472
+      #   2039: 22.316
+      #   2040: 20.16
+      #   2041: 18.036
+      #   2042: 15.912
+      #   2043: 13.788
+      #   2044: 11.664
+      #   2045: 9.54
+      #   2046: 7.688
+      #   2047: 5.836
+      #   2048: 3.984
+      #   2049: 2.132
+      #   2050: 0.28
+    constraint_total: null
+    penalty: 0 # mn$/mntonne
   - id: NOx
     long_name: equivalent nitric oxide emissions
     description: equivalent nitric oxide emissions
@@ -86,17 +144,10 @@ impacts:
 # Renewable targets
 # -------
 
-# renewable_production_target:
-#   PK1: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
-#   PK2: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
-#   PK3: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
-#   PK4: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
-#   PK5: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
-#   PK6: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
-#   PK7: "{y:0.1*((2041-y)/(2041-2022))+0.4 for y in ${time_definition.years}}"
+# no known targets
 
 # -------
 # Other parameters
 # -------
 
-reserve_margin: 1.2
+reserve_margin: 1.12 # 12% reserve margin, https://doi.org/10.1016/j.energy.2015.10.103
