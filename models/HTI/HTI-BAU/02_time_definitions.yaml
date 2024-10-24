@@ -17,69 +17,154 @@
 time_definition:
   id: "${global_variables.base_year}_2050_annual_2hourly"
   years: "range(${global_variables.base_year},2051)"
-  seasons: [1,2,3,4] # divide the year into 4 equally (Jan-Mar, Apr-Jun, Jul-Sep, Oct-Dec)
-  daily_time_brackets: [1,2,3,4]
+  seasons: ["nh_spring", "nh_summer", "nh_fall", "nh_winter"]
+  daily_time_brackets: [
+    "00h00-06h00-utc", 
+    "06h00-12h00-utc", 
+    "12h00-18h00-utc", 
+    "18h00-24h00-utc",
+  ]
   day_types: [1]
-
+  
   timeslices: [
-    "s1-h1","s1-h2","s1-h3","s1-h4",
-    "s2-h1","s2-h2","s2-h3","s2-h4",
-    "s3-h1","s3-h2","s3-h3","s3-h4",
-    "s4-h1","s4-h2","s4-h3","s4-h4",]
-
+    "nh_spring-00h00-06h00-utc", 
+    "nh_spring-06h00-12h00-utc", 
+    "nh_spring-12h00-18h00-utc", 
+    "nh_spring-18h00-24h00-utc",
+    "nh_summer-00h00-06h00-utc", 
+    "nh_summer-06h00-12h00-utc", 
+    "nh_summer-12h00-18h00-utc", 
+    "nh_summer-18h00-24h00-utc",
+    "nh_fall-00h00-06h00-utc", 
+    "nh_fall-06h00-12h00-utc", 
+    "nh_fall-12h00-18h00-utc", 
+    "nh_fall-18h00-24h00-utc",
+    "nh_winter-00h00-06h00-utc", 
+    "nh_winter-06h00-12h00-utc", 
+    "nh_winter-12h00-18h00-utc", 
+    "nh_winter-18h00-24h00-utc",  
+  ]
   timeslice_in_season: {
-    "s1-h1": 1,
-    "s1-h2": 1,
-    "s1-h3": 1,
-    "s1-h4": 1,
-    "s2-h1": 2,
-    "s2-h2": 2,
-    "s2-h3": 2,
-    "s2-h4": 2,
-    "s3-h1": 3,
-    "s3-h2": 3,
-    "s3-h3": 3,
-    "s3-h4": 3,
-    "s4-h1": 4,
-    "s4-h2": 4,
-    "s4-h3": 4,
-    "s4-h4": 4,
+    "nh_spring-00h00-06h00-utc": "nh_spring", 
+    "nh_spring-06h00-12h00-utc": "nh_spring", 
+    "nh_spring-12h00-18h00-utc": "nh_spring", 
+    "nh_spring-18h00-24h00-utc": "nh_spring",
+    "nh_summer-00h00-06h00-utc": "nh_summer", 
+    "nh_summer-06h00-12h00-utc": "nh_summer", 
+    "nh_summer-12h00-18h00-utc": "nh_summer", 
+    "nh_summer-18h00-24h00-utc": "nh_summer",
+    "nh_fall-00h00-06h00-utc": "nh_fall", 
+    "nh_fall-06h00-12h00-utc": "nh_fall", 
+    "nh_fall-12h00-18h00-utc": "nh_fall", 
+    "nh_fall-18h00-24h00-utc": "nh_fall",
+    "nh_winter-00h00-06h00-utc": "nh_winter",
+    "nh_winter-06h00-12h00-utc": "nh_winter",
+    "nh_winter-12h00-18h00-utc": "nh_winter",
+    "nh_winter-18h00-24h00-utc": "nh_winter",
   }
-
   timeslice_in_timebracket: {
-    "s1-h1": 1,
-    "s1-h2": 2,
-    "s1-h3": 3,
-    "s1-h4": 4,
-    "s2-h1": 1,
-    "s2-h2": 2,
-    "s2-h3": 3,
-    "s2-h4": 4,
-    "s3-h1": 1,
-    "s3-h2": 2,
-    "s3-h3": 3,
-    "s3-h4": 4,
-    "s4-h1": 1,
-    "s4-h2": 2,
-    "s4-h3": 3,
-    "s4-h4": 4,
+    "nh_spring-00h00-06h00-utc": "00h00-06h00-utc",  
+    "nh_spring-06h00-12h00-utc": "06h00-12h00-utc",
+    "nh_spring-12h00-18h00-utc": "12h00-18h00-utc",
+    "nh_spring-18h00-24h00-utc": "18h00-24h00-utc",
+    "nh_summer-00h00-06h00-utc": "00h00-06h00-utc",
+    "nh_summer-06h00-12h00-utc": "06h00-12h00-utc",
+    "nh_summer-12h00-18h00-utc": "12h00-18h00-utc",
+    "nh_summer-18h00-24h00-utc": "18h00-24h00-utc",
+    "nh_fall-00h00-06h00-utc": "00h00-06h00-utc",
+    "nh_fall-06h00-12h00-utc": "06h00-12h00-utc",
+    "nh_fall-12h00-18h00-utc": "12h00-18h00-utc",
+    "nh_fall-18h00-24h00-utc": "18h00-24h00-utc",
+    "nh_winter-00h00-06h00-utc": "00h00-06h00-utc",
+    "nh_winter-06h00-12h00-utc": "06h00-12h00-utc",
+    "nh_winter-12h00-18h00-utc": "12h00-18h00-utc",
+    "nh_winter-18h00-24h00-utc": "18h00-24h00-utc",
+  }
+  timeslice_in_daytype: {
+    "nh_spring-00h00-06h00-utc": 1, 
+    "nh_spring-06h00-12h00-utc": 1, 
+    "nh_spring-12h00-18h00-utc": 1, 
+    "nh_spring-18h00-24h00-utc": 1,
+    "nh_summer-00h00-06h00-utc": 1, 
+    "nh_summer-06h00-12h00-utc": 1, 
+    "nh_summer-12h00-18h00-utc": 1, 
+    "nh_summer-18h00-24h00-utc": 1,
+    "nh_fall-00h00-06h00-utc": 1, 
+    "nh_fall-06h00-12h00-utc": 1,
+    "nh_fall-12h00-18h00-utc": 1,
+    "nh_fall-18h00-24h00-utc": 1,
+    "nh_winter-00h00-06h00-utc": 1, 
+    "nh_winter-06h00-12h00-utc": 1, 
+    "nh_winter-12h00-18h00-utc": 1, 
+    "nh_winter-18h00-24h00-utc": 1,
   }
 
-  timeslice_in_daytype: {
-    "s1-h1": 1,
-    "s1-h2": 1,
-    "s1-h3": 1,
-    "s1-h4": 1,
-    "s2-h1": 1,
-    "s2-h2": 1,
-    "s2-h3": 1,
-    "s2-h4": 1,
-    "s3-h1": 1,
-    "s3-h2": 1,
-    "s3-h3": 1,
-    "s3-h4": 1,
-    "s4-h1": 1,
-    "s4-h2": 1,
-    "s4-h3": 1,
-    "s4-h4": 1,
-  }
+# time_definition:
+#   id: "${global_variables.base_year}_2050_annual_2hourly"
+#   years: "range(${global_variables.base_year},2051)"
+#   seasons: [1,2,3,4] # divide the year into 4 equally (Jan-Mar, Apr-Jun, Jul-Sep, Oct-Dec)
+#   daily_time_brackets: [1,2,3,4]
+#   day_types: [1]
+
+#   timeslices: [
+#     "s1-h1","s1-h2","s1-h3","s1-h4",
+#     "s2-h1","s2-h2","s2-h3","s2-h4",
+#     "s3-h1","s3-h2","s3-h3","s3-h4",
+#     "s4-h1","s4-h2","s4-h3","s4-h4",]
+
+#   timeslice_in_season: {
+#     "s1-h1": 1,
+#     "s1-h2": 1,
+#     "s1-h3": 1,
+#     "s1-h4": 1,
+#     "s2-h1": 2,
+#     "s2-h2": 2,
+#     "s2-h3": 2,
+#     "s2-h4": 2,
+#     "s3-h1": 3,
+#     "s3-h2": 3,
+#     "s3-h3": 3,
+#     "s3-h4": 3,
+#     "s4-h1": 4,
+#     "s4-h2": 4,
+#     "s4-h3": 4,
+#     "s4-h4": 4,
+#   }
+
+#   timeslice_in_timebracket: {
+#     "s1-h1": 1,
+#     "s1-h2": 2,
+#     "s1-h3": 3,
+#     "s1-h4": 4,
+#     "s2-h1": 1,
+#     "s2-h2": 2,
+#     "s2-h3": 3,
+#     "s2-h4": 4,
+#     "s3-h1": 1,
+#     "s3-h2": 2,
+#     "s3-h3": 3,
+#     "s3-h4": 4,
+#     "s4-h1": 1,
+#     "s4-h2": 2,
+#     "s4-h3": 3,
+#     "s4-h4": 4,
+#   }
+
+#   timeslice_in_daytype: {
+#     "s1-h1": 1,
+#     "s1-h2": 1,
+#     "s1-h3": 1,
+#     "s1-h4": 1,
+#     "s2-h1": 1,
+#     "s2-h2": 1,
+#     "s2-h3": 1,
+#     "s2-h4": 1,
+#     "s3-h1": 1,
+#     "s3-h2": 1,
+#     "s3-h3": 1,
+#     "s3-h4": 1,
+#     "s4-h1": 1,
+#     "s4-h2": 1,
+#     "s4-h3": 1,
+#     "s4-h4": 1,
+#   }

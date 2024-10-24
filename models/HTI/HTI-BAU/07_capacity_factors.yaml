@@ -71,88 +71,88 @@ capacity_factors:
    "*":
     # all years
     "*":
-      s1-h1: 0
-      s1-h2: 0.05
-      s1-h3: 0.52
-      s1-h4: 0.16
-      s2-h1: 0
-      s2-h2: 0.05
-      s2-h3: 0.45
-      s2-h4: 0.15
-      s3-h1: 0
-      s3-h2: 0.04
-      s3-h3: 0.4
-      s3-h4: 0.14
-      s4-h1: 0
-      s4-h2: 0.03
-      s4-h3: 0.39
-      s4-h4: 0.12
+      nh_spring-00h00-06h00-utc: 0
+      nh_spring-06h00-12h00-utc: 0.05
+      nh_spring-12h00-18h00-utc: 0.52
+      nh_spring-18h00-24h00-utc: 0.16
+      nh_summer-00h00-06h00-utc: 0
+      nh_summer-06h00-12h00-utc: 0.05
+      nh_summer-12h00-18h00-utc: 0.45
+      nh_summer-18h00-24h00-utc: 0.15
+      nh_fall-00h00-06h00-utc: 0
+      nh_fall-06h00-12h00-utc: 0.04
+      nh_fall-12h00-18h00-utc: 0.4
+      nh_fall-18h00-24h00-utc: 0.14
+      nh_winter-00h00-06h00-utc: 0
+      nh_winter-06h00-12h00-utc: 0.03
+      nh_winter-12h00-18h00-utc: 0.39
+      nh_winter-18h00-24h00-utc: 0.12
 
   wind-onshore:
    # all region
    "*":
     # all years
     "*":
-      s1-h1: 0.11
-      s1-h2: 0.11
-      s1-h3: 0.13
-      s1-h4: 0.13
-      s2-h1: 0.09
-      s2-h2: 0.08
-      s2-h3: 0.13
-      s2-h4: 0.11
-      s3-h1: 0.07
-      s3-h2: 0.06
-      s3-h3: 0.11
-      s3-h4: 0.09
-      s4-h1: 0.09
-      s4-h2: 0.09
-      s4-h3: 0.13
-      s4-h4: 0.1
+      nh_spring-00h00-06h00-utc: 0.11
+      nh_spring-06h00-12h00-utc: 0.11
+      nh_spring-12h00-18h00-utc: 0.13
+      nh_spring-18h00-24h00-utc: 0.13
+      nh_summer-00h00-06h00-utc: 0.09
+      nh_summer-06h00-12h00-utc: 0.08
+      nh_summer-12h00-18h00-utc: 0.13
+      nh_summer-18h00-24h00-utc: 0.11
+      nh_fall-00h00-06h00-utc: 0.07
+      nh_fall-06h00-12h00-utc: 0.06
+      nh_fall-12h00-18h00-utc: 0.11
+      nh_fall-18h00-24h00-utc: 0.09
+      nh_winter-00h00-06h00-utc: 0.09
+      nh_winter-06h00-12h00-utc: 0.09
+      nh_winter-12h00-18h00-utc: 0.13
+      nh_winter-18h00-24h00-utc: 0.1
 
   wind-offshore:
    # all region
    "*":
     # all years
     "*":
-      s1-h1: 0.19
-      s1-h2: 0.16
-      s1-h3: 0.1
-      s1-h4: 0.14
-      s2-h1: 0.12
-      s2-h2: 0.07
-      s2-h3: 0.04
-      s2-h4: 0.09
-      s3-h1: 0.07
-      s3-h2: 0.05
-      s3-h3: 0.03
-      s3-h4: 0.06
-      s4-h1: 0.12
-      s4-h2: 0.1
-      s4-h3: 0.07
-      s4-h4: 0.06
+      nh_spring-00h00-06h00-utc: 0.19
+      nh_spring-06h00-12h00-utc: 0.16
+      nh_spring-12h00-18h00-utc: 0.1
+      nh_spring-18h00-24h00-utc: 0.14
+      nh_summer-00h00-06h00-utc: 0.12
+      nh_summer-06h00-12h00-utc: 0.07
+      nh_summer-12h00-18h00-utc: 0.04
+      nh_summer-18h00-24h00-utc: 0.09
+      nh_fall-00h00-06h00-utc: 0.07
+      nh_fall-06h00-12h00-utc: 0.05
+      nh_fall-12h00-18h00-utc: 0.03
+      nh_fall-18h00-24h00-utc: 0.06
+      nh_winter-00h00-06h00-utc: 0.12
+      nh_winter-06h00-12h00-utc: 0.1
+      nh_winter-12h00-18h00-utc: 0.07
+      nh_winter-18h00-24h00-utc: 0.06
       
   hydro: # TODO: Need to check the values because they are too high
    # all region
    "*":
     # all years
     "*":
-      s1-h1: 0.22
-      s1-h2: 0.22
-      s1-h3: 0.22
-      s1-h4: 0.22
-      s2-h1: 0.28
-      s2-h2: 0.28
-      s2-h3: 0.28
-      s2-h4: 0.28
-      s3-h1: 0.32
-      s3-h2: 0.32
-      s3-h3: 0.32
-      s3-h4: 0.32
-      s4-h1: 0.33
-      s4-h2: 0.33
-      s4-h3: 0.33
-      s4-h4: 0.33
+      nh_spring-00h00-06h00-utc: 0.22
+      nh_spring-06h00-12h00-utc: 0.22
+      nh_spring-12h00-18h00-utc: 0.22
+      nh_spring-18h00-24h00-utc: 0.22
+      nh_summer-00h00-06h00-utc: 0.28
+      nh_summer-06h00-12h00-utc: 0.28
+      nh_summer-12h00-18h00-utc: 0.28
+      nh_summer-18h00-24h00-utc: 0.28
+      nh_fall-00h00-06h00-utc: 0.32
+      nh_fall-06h00-12h00-utc: 0.32
+      nh_fall-12h00-18h00-utc: 0.32
+      nh_fall-18h00-24h00-utc: 0.32
+      nh_winter-00h00-06h00-utc: 0.33
+      nh_winter-06h00-12h00-utc: 0.33
+      nh_winter-12h00-18h00-utc: 0.33
+      nh_winter-18h00-24h00-utc: 0.33
 
   geothermal:
     "*":
