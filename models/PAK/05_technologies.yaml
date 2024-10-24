@@ -70,7 +70,18 @@ technologies:
     activity_annual_min: "${activity_annual_min.gas-domestic-step-1}"  # from 06_capacities.yaml
     capacity_additional_max_growth_rate: "${capacity_additional_max_growth_rate.gas-domestic-step-1}" # from 09_activity_annual.yaml
     capacity_additional_max_floor: "${capacity_additional_max_floor.gas-domestic-step-1}" # from 09_activity_annual.yaml   
-    capacity_factor_annual_min: "${capacity_factor_annual_min.gas-domestic-step-1}" # from 07_capacity_factors.yaml   
+    capacity_factor_annual_min: "${capacity_factor_annual_min.gas-domestic-step-1}" # from 07_capacity_factors.yaml
+    
+  - id: gas-domestic-production
+    long_name: Domestic gas production resource
+    operating_life: 100
+    operating_modes:
+      - id: GEN
+        long_name: generation mode
+        description: default generation mode
+        output_activity_ratio:
+          gas: 1.0 # PJ/PJ
+        opex_variable: "${fuel_price.gas-domestic}"  # from 08_costs.yaml
 
   - id: uranium-resource
     long_name: uranium resource
@@ -293,21 +304,21 @@ technologies:
         long_name: hard coal input
         description: default generation mode
         input_activity_ratio: 
-          coal-hard:  2.63
+          coal-hard:  2.56 # based on average historical efficiency as reported by NEPRA
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.2367 # needs changing
+          CO2: 0.242 # https://www.gem.wiki/Estimating_carbon_dioxide_emissions_from_coal_plants#IPCC
         opex_variable: "${opex_variable.coal-supercritical}" # from 08_costs.yaml
       - id: GEN_B
         long_name: brown coal input
         description: default generation mode
         input_activity_ratio: 
-          coal-brown:  2.69
+          coal-brown:  2.56 # based on average historical efficiency as reported by NEPRA
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.2724  
+          CO2: 0.259 # https://www.gem.wiki/Estimating_carbon_dioxide_emissions_from_coal_plants#IPCC 
         opex_variable: "${opex_variable.coal-supercritical}" # from 08_costs.yaml
     # load from other yaml files
     residual_capacity: "${residual_capacity.coal-supercritical}" # from 06_capacities.yaml
@@ -331,21 +342,21 @@ technologies:
         long_name: hard coal input
         description: default generation mode
         input_activity_ratio: 
-          coal-hard:  2.91 # this should be lower than super and ultrasuper? - https://www.gem.wiki/Coal_power_technologies
+          coal-hard:  2.63 # based on average historical efficiency as reported by NEPRA
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.2367 # needs changing
+          CO2: 0.249 # https://www.gem.wiki/Estimating_carbon_dioxide_emissions_from_coal_plants#IPCC
         opex_variable: "${opex_variable.coal-subcritical}" # from 08_costs.yaml
       - id: GEN_B
         long_name: brown coal input
         description: default generation mode
         input_activity_ratio: 
-          coal-brown:  2.91
+          coal-brown:  2.63 # based on average historical efficiency as reported by NEPRA
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.262
+          CO2: 0.266 # https://www.gem.wiki/Estimating_carbon_dioxide_emissions_from_coal_plants#IPCC
         opex_variable: "${opex_variable.coal-subcritical}" # from 08_costs.yaml
     # load from other yaml files
     residual_capacity: "${residual_capacity.coal-subcritical}" # from 06_capacities.yaml
@@ -369,21 +380,21 @@ technologies:
         long_name: hard coal input
         description: default generation mode
         input_activity_ratio: 
-          coal-hard:  2.69 # 
+          coal-hard:  2.27 # based on estimates of new USC coal plants - https://www.gem.wiki/Estimating_carbon_dioxide_emissions_from_coal_plants#Global_Coal_Plant_Tracker 
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.2106  
+          CO2: 0.215 # https://www.gem.wiki/Estimating_carbon_dioxide_emissions_from_coal_plants#IPCC
         opex_variable: "${opex_variable.coal-ultrasupercritical}" # from 08_costs.yaml
       - id: GEN_B
         long_name: brown coal input
         description: default generation mode
         input_activity_ratio: 
-          coal-brown:  2.69
+          coal-brown:  2.27 # based on estimates of new USC coal plants - https://www.gem.wiki/Estimating_carbon_dioxide_emissions_from_coal_plants#Global_Coal_Plant_Tracker 
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.2724 # needs changing
+          CO2: 0.229 # https://www.gem.wiki/Estimating_carbon_dioxide_emissions_from_coal_plants#IPCC 
         opex_variable: "${opex_variable.coal-ultrasupercritical}" # from 08_costs.yaml
     # load from other yaml files
     residual_capacity: "${residual_capacity.coal-ultrasupercritical}" # from 06_capacities.yaml
@@ -406,21 +417,21 @@ technologies:
         long_name: generation mode with hard coal input
         description: generation mode with hard coal input
         input_activity_ratio: 
-          coal-hard:  2.87 # assuming similar to subcritical
+          coal-hard:  2.63 # assuming similar to subcritical
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.33 #0.22 # needs changing
+          CO2: 0.249 # https://www.gem.wiki/Estimating_carbon_dioxide_emissions_from_coal_plants#IPCC
         opex_variable: "${opex_variable.coal-unspecified}" # from costs.yaml
       - id: GEN_B
         long_name: generation mode with brown coal input
         description: generation mode with brown coal input
         input_activity_ratio: 
-          coal-brown:  2.87 # assuming similar to super and subcritical
+          coal-brown:  2.63 # assuming similar to subcritical
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
-          CO2: 0.35 # 0.22 # needs changing
+          CO2: 0.266 # https://www.gem.wiki/Estimating_carbon_dioxide_emissions_from_coal_plants#IPCC
         opex_variable: "${opex_variable.coal-unspecified}" # from costs.yaml
     # load from other yaml files
     residual_capacity: "${residual_capacity.coal-unspecified}" # from capacities.yaml
@@ -471,7 +482,7 @@ technologies:
         long_name: generation mode
         description: default generation mode
         input_activity_ratio:
-          gas:  2.94
+          gas:  2.5 # 2.94
         output_activity_ratio:
           primary-electricity: 1.0
         emission_activity_ratio: 
