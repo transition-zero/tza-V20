@@ -22,22 +22,22 @@
 
 residual_capacity: 
 
-  oil-internal-combustion-engine:
+  petroleum-products-internal-combustion-engine:
     HTI:
       "*": 0.194
       # 2024: 0.194
 
-  solar-pv:
+  photovoltaic:
     HTI: 
       "*": 0.00016
       # 2024: 0.00016
 
-  windonshore-power:
+  wind-onshore:
     HTI: 
       "*": 0.000023904
       # 2024: 0.000023904
 
-  hydropower:
+  hydro:
     HTI: 
       "*": 0.057
       # 2024: 0.057
@@ -53,7 +53,7 @@ residual_capacity:
 
 capacity_additional_max: # Isolating installed capacity in 2023 and 2024 because we follow installed capacity in those years
 
-  oil-internal-combustion-engine:
+  petroleum-products-internal-combustion-engine:
     HTI:
       2023: 0.
       2024: 0.
@@ -68,7 +68,7 @@ capacity_additional_max: # Isolating installed capacity in 2023 and 2024 because
       2028: 0.
       2029: 0.
 
-  gas-CCGT: # no new installed assets before 2030 
+  combined-cycle: # no new installed assets before 2030 
     HTI:
       2023: 0.
       2024: 0.
@@ -78,7 +78,7 @@ capacity_additional_max: # Isolating installed capacity in 2023 and 2024 because
       2028: 0.
       2029: 0.
 
-  gas-OCGT: # no new installed assets before 2030 
+  open-cycle-gas-turbine: # no new installed assets before 2030 
     HTI:
       2023: 0.
       2024: 0.
@@ -88,32 +88,32 @@ capacity_additional_max: # Isolating installed capacity in 2023 and 2024 because
       2028: 0.
       2029: 0.
 
-  solar-pv:
+  photovoltaic:
     HTI: 
       2023: 0.
       2024: 0.
 
-  windonshore-power:
+  wind-onshore:
     HTI: 
       2023: 0.
       2024: 0.
 
-  windoffshore-power:
+  wind-offshore:
     HTI: 
       2023: 0.
       2024: 0.
 
-  hydropower:
+  hydro:
     HTI: 
       2023: 0.
       2024: 0.
 
-  bioenergy-power:
+  biopower:
     HTI: 
       2023: 0.
       2024: 0.
 
-  battery-technology:
+  battery:
     HTI: 
       2023: 0.
       2024: 0.
@@ -121,27 +121,27 @@ capacity_additional_max: # Isolating installed capacity in 2023 and 2024 because
 
 capacity_additional_max_floor:
 
-  oil-internal-combustion-engine:
+  petroleum-products-internal-combustion-engine:
     HTI: 
       "*": 0.02
 
-  hydropower:
+  hydro:
     HTI: 
       "*": 0.02 # lower value of the installed hydropower 
 
-  windonshore-power:
+  wind-onshore:
     HTI: 
       "*": 0.02 
 
-  windoffshore-power:
+  wind-offshore:
     HTI: 
       "*": 0.02 
 
-  solar-pv:
+  photovoltaic:
     HTI: 
       "*": 0.02
 
-  bioenergy-power:
+  biopower:
     HTI: 
       "*": 0.02
 
@@ -149,11 +149,11 @@ capacity_additional_max_floor:
     HTI: 
       "*": 0.001 
 
-  gas-CCGT:
+  combined-cycle:
     HTI: 
       "*": 0.001 
 
-  gas-OCGT:
+  open-cycle-gas-turbine:
     HTI: 
       "*": 0.001 
 
@@ -164,27 +164,27 @@ capacity_additional_max_floor:
 
 capacity_gross_max: # potential based on https://pubdocs.worldbank.org/en/176981447774252559/Haiti-Renewable-Energy-Investment-Plan-Final-13-May-2015.pdf
 
-  bioenergy-power:
+  biopower:
     HTI:
       "*": 0.2
 
-  windonshore-power:
+  wind-onshore:
     HTI:
       "*": 0.1
 
-  windoffshore-power:
+  wind-offshore:
     HTI:
       "*": 0.1 # Need to be checked
 
-  solar-pv:
+  photovoltaic:
     HTI:
       "*": 0.3
 
-  hydropower:
+  hydro:
     HTI:
       "*": 0.25 
 
-  geo-power:
+  geothermal:
     HTI:
       "*": 0.
 
@@ -194,31 +194,31 @@ capacity_gross_max: # potential based on https://pubdocs.worldbank.org/en/176981
 
 capacity_additional_max_growth_rate:
 
-  hydropower: 
+  hydro: 
     HTI:
       "*": 0.3 # following the growth as recorded by EMBER - Sep 2024 data
 
-  oil-internal-combustion-engine:
+  petroleum-products-internal-combustion-engine:
     HTI:
       "*": 0.2 # following the growth as recorded by EMBER - Sep 2024 data
 
-  bioenergy-power: 
+  biopower: 
     HTI:
       "*": 0.1
 
-  solar-pv: 
+  photovoltaic: 
     HTI:
       "*": 0.36 # global compound growth rate between 2000-2022
 
-  windonshore-power: 
+  wind-onshore: 
     HTI:
       "*": 0.2 # global compound growth rate between 2000-2022
 
-  windoffshore-power:
+  wind-offshore:
     HTI:
       "*": 0.2 # global compound growth rate between 2000-2022
 
-  battery-technology: 
+  battery: 
     HTI:
       "*": 0.3
 
@@ -226,10 +226,10 @@ capacity_additional_max_growth_rate:
     HTI:
       "*": 0.1
 
-  gas-CCGT: 
+  combined-cycle: 
     HTI:
       "*": 0.1
 
-  gas-OCGT: 
+  open-cycle-gas-turbine: 
     HTI:
       "*": 0.1

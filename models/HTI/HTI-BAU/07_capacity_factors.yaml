@@ -36,19 +36,19 @@ availability_factor:
       # all years
       "*": 0.9
 
-  gas-CCGT:
+  combined-cycle:
     # all regions
     "*":
       # all years
       "*": 0.9
 
-  gas-OCGT:
+  open-cycle-gas-turbine:
     # all regions
     "*":
       # all years
       "*": 0.9
 
-  oil-internal-combustion-engine:
+  petroleum-products-internal-combustion-engine:
     # all regions
     "*":
       # all years
@@ -66,7 +66,7 @@ availability_factor:
 capacity_factors:
 # Note: all profiles are calculated based on the data used in global interconnector study
 
-  solar-pv:
+  photovoltaic:
    # all region
    "*":
     # all years
@@ -88,7 +88,7 @@ capacity_factors:
       s4-h3: 0.39
       s4-h4: 0.12
 
-  windonshore-power:
+  wind-onshore:
    # all region
    "*":
     # all years
@@ -110,7 +110,7 @@ capacity_factors:
       s4-h3: 0.13
       s4-h4: 0.1
 
-  windoffshore-power:
+  wind-offshore:
    # all region
    "*":
     # all years
@@ -132,7 +132,7 @@ capacity_factors:
       s4-h3: 0.07
       s4-h4: 0.06
       
-  hydropower: # TODO: Need to check the values because they are too high
+  hydro: # TODO: Need to check the values because they are too high
    # all region
    "*":
     # all years
@@ -154,18 +154,18 @@ capacity_factors:
       s4-h3: 0.33
       s4-h4: 0.33
 
-  geo-power:
+  geothermal:
     "*":
       "*": 1
 
-  bioenergy-power:
+  biopower:
     "*":
       "*": 0.7
       
 
 capacity_factor_annual_min:
 
-  oil-internal-combustion-engine: # oil assets retired gradually
+  petroleum-products-internal-combustion-engine: # oil assets retired gradually
     "*": 
       2023: 0.62
       2024: 0.57
@@ -221,7 +221,7 @@ capacity_factor_annual_min:
       2049: 0.01
       2050: 0
 
-  gas-OCGT:
+  open-cycle-gas-turbine:
     "*":
       2030: 0.3
       2031: 0.28
@@ -245,7 +245,7 @@ capacity_factor_annual_min:
       2049: 0.01
       2050: 0
 
-  gas-CCGT:
+  combined-cycle:
     "*":
       2030: 0.3
       2031: 0.28
